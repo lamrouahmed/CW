@@ -1,6 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+/*-------- Desktop Media Queries ---------*/
+
+$minDesktop: 1200px;
+$maxDesktop: 1600px;
+
+@mixin desktop {
+    @media (min-width: #{$minDesktop}) and (max-width: #{$maxDesktop}){
+        @content;
+    }
+}
+
+
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 768px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}){
+        @content;
+    }
+}
+
+
+
+/*---------------------------------------------------  Mobile  --------------------------------------------------------- */
+
+
 
 *,
 *::after,
@@ -141,4 +169,27 @@ body {
         }
     }
 
+}
+
+
+/*---------------------------------------------------  Desktop  --------------------------------------------------------- */
+
+
+
+@include desktop {
+
+    .wrapper {
+        border: 1px solid #d7cdcd;
+        padding: 3em 0em;
+        border-radius: 15px;    
+    }
+}
+
+@include tablet {
+
+    .wrapper {
+        border: 1px solid #d7cdcd;
+        padding: 3em 0em;
+        border-radius: 15px;    
+    }
 }

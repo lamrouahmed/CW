@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*-------- Desktop Media Queries ---------*/
+/*-------- Tablet Media Queries ---------*/
+/*---------------------------------------------------  Mobile  --------------------------------------------------------- */
 *,
 *::after,
 *::before {
@@ -153,5 +156,22 @@ body {
   color: #FFF;
   background-color: #4b8beb;
   margin-top: 1em;
+}
+
+/*---------------------------------------------------  Desktop  --------------------------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .wrapper {
+    border: 1px solid #d7cdcd;
+    padding: 3em 0em;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .wrapper {
+    border: 1px solid #d7cdcd;
+    padding: 3em 0em;
+    border-radius: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
