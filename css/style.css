@@ -117,6 +117,10 @@ body {
   font-weight: 500;
 }
 
+.wrapper .form form input[type=text]:focus {
+  outline: none;
+}
+
 .wrapper .form form .sign,
 .wrapper .form form .log {
   text-decoration: none;
