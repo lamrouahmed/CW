@@ -134,6 +134,7 @@ body {
   height: 3em;
   border: 1px solid #000;
   border-radius: 10px;
+  margin-top: 3em;
 }
 
 .wrapper .form form .sign {
@@ -141,12 +142,12 @@ body {
   font-weight: 700;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  margin-bottom: 1em;
 }
 
 .wrapper .form form .log {
   border: none;
   color: #FFF;
   background-color: #4b8beb;
+  margin-top: 1em;
 }
 /*# sourceMappingURL=style.css.map */
