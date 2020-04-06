@@ -142,15 +142,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   height: 3em;
   border: 1px solid #000;
-  border-radius: 10px;
+  border-radius: 2px;
   margin-top: 3em;
-}
-
-.wrapper .form form .sign {
-  background-color: none;
-  font-weight: 700;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
 .wrapper .form form .log {
@@ -158,6 +151,16 @@ body {
   color: #FFF;
   background-color: #4b8beb;
   margin-top: 1em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper .form form .log:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-color: #1d6de6;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .mobileNav .hamburger {
@@ -227,7 +230,7 @@ body {
 .nav .navList {
   padding: 0;
   margin: 0;
-  margin-top: 100%;
+  margin-top: 18rem;
   width: 100%;
   height: 100%;
 }
@@ -273,9 +276,21 @@ body {
     margin: 0 auto;
   }
   .wrapper .container {
-    border: 1px solid #d7cdcd;
+    -webkit-box-shadow: 0px 0px 5px -2px #c5bbbb;
+            box-shadow: 0px 0px 5px -2px #c5bbbb;
     padding: 2em 0;
-    border-radius: 15px;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  .wrapper .container:hover {
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    -webkit-box-shadow: 0px 0px 6px -2px gray;
+            box-shadow: 0px 0px 6px -2px gray;
+    border-radius: 0;
   }
 }
 
@@ -286,9 +301,21 @@ body {
     margin: 0 auto;
   }
   .wrapper .container {
-    border: 1px solid #d7cdcd;
+    -webkit-box-shadow: 0px 0px 5px -2px #dbd1d1;
+            box-shadow: 0px 0px 5px -2px #dbd1d1;
     padding: 2em 0;
-    border-radius: 15px;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  .wrapper .container:hover {
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    -webkit-box-shadow: 0px 0px 6px -2px gray;
+            box-shadow: 0px 0px 6px -2px gray;
+    border-radius: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
