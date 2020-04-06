@@ -3,7 +3,7 @@ const $$ = e => document.querySelectorAll(e)
 const labels = $$('.sLabel');
 const spans = $$('.border');
 const hamburger = $('.hamburger');
-const hamburgerSpans = $('.hamburger span');
+const nav = $('.nav');
 
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
 
@@ -31,4 +31,5 @@ hamburger.addEventListener('click',toggleBurger);
 
 function toggleBurger() {
     hamburger.classList.toggle('cross');
+    nav.classList.toggle('navBlock')
 }

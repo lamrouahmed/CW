@@ -7,7 +7,7 @@ $minDesktop: 1200px;
 $maxDesktop: 1600px;
 
 @mixin desktop {
-    @media (min-width: #{$minDesktop}) and (max-width: #{$maxDesktop}){
+    @media (min-width: #{$minDesktop}) and (max-width: #{$maxDesktop}) {
         @content;
     }
 }
@@ -19,7 +19,7 @@ $minTablet: 768px;
 $maxTablet: 1200px;
 
 @mixin tablet {
-    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}){
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
         @content;
     }
 }
@@ -36,14 +36,12 @@ $maxTablet: 1200px;
     box-sizing: border-box;
 }
 
-html, body {
+body {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
-
-
 
 
 
@@ -124,6 +122,9 @@ html, body {
                 border-bottom: 1px solid rgb(168, 162, 162);
                 width: 100%;
                 background-color: transparent;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+
 
                 &::placeholder {
                     font-family: 'Montserrat', sans-serif;
@@ -131,7 +132,7 @@ html, body {
                 }
 
 
- 
+
                 &:focus {
                     outline: none;
                 }
@@ -170,48 +171,44 @@ html, body {
 
 }
 
-.mobileNav{
-        width: 100%;
-        height: 1em;
-        display: flex;
-        position: relative;
-    
+.mobileNav {
+
     .hamburger {
-        width: 3em;
+        width: 2.5em;
         cursor: pointer;
-        position: absolute;
         height: 1.3em;
-        top: 2em;
-        right: 1em;
-        height: 100%;     
+        z-index: 3;
+        position: absolute;
+        right: .45em;
+        top: 1em;
 
         span {
             display: block;
-            height: 1px;
-            width: 2.2em;
-            background-color: rgb(0, 0, 0);
+            height: 2px;
+            width: 100%;
+            background-color: black;
+            -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
             position: absolute;
-            right: 0%;
-            top:0%;
-            transition: all 400ms ease-in-out;
-
-
+            right: 30%;
+            top: 30%;
             &:nth-child(2) {
-                top: 50%;
-                width: 1.6em;
-                
+                width: 60%;
+                top: 63%;
             }
 
             &:nth-child(3) {
-                width: 1.1em;
+                width: 50%;
                 top: 100%;
             }
         }
-}
+    }
+
     .cross {
 
         span {
-            transition: all 400ms ease-in-out;
+            transition: all 300ms ease-in-out;
+
             &:nth-child(1) {
                 transform: rotate(130deg);
             }
@@ -221,12 +218,60 @@ html, body {
             }
 
             &:nth-child(3) {
-                width: 2.2em;
+                width: 100%;
                 transform: rotate(40deg);
+            }
+        }
+    }
+}
+
+.nav {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    transform: translateX(200%);
+    background-color: rgba(67, 138, 185, 0.712);
+    transition: all 200ms ease-in-out;
+    .navList {
+
+        padding: 0;
+        margin: 0;
+        margin-top: 100%;
+        width: 100%;
+        height: 100%;
+        .navItem {
+            list-style: none;
+            text-align: center;
+            padding:0;
+            margin: 0;
+            
+            &:hover .navLink {
+                color: #000;
+                background-color: #FFF;
+            }
+
+
+            .navLink {
+                text-decoration: none;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                cursor: pointer;
+                color: #FFF;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+
 
             }
         }
     }
+}
+
+.navBlock {
+    transform: translateX(100%);
+    transition: all 200ms ease-in-out;
 }
 
 
@@ -243,11 +288,12 @@ html, body {
     .mobileNav {
         display: none;
     }
+
     .wrapper {
 
         width: 45%;
-   
-        margin: 0 auto;        
+
+        margin: 0 auto;
 
         .container {
             border: 1px solid #d7cdcd;
@@ -273,8 +319,8 @@ html, body {
     .wrapper {
 
         width: 60%;
-   
-        margin: 0 auto;        
+
+        margin: 0 auto;
 
         .container {
             border: 1px solid #d7cdcd;

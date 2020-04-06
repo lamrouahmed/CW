@@ -9,9 +9,9 @@
           box-sizing: border-box;
 }
 
-html, body {
+body {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
@@ -98,6 +98,8 @@ html, body {
   border-bottom: 1px solid #a8a2a2;
   width: 100%;
   background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .wrapper .form form input[type=text]::-webkit-input-placeholder {
@@ -158,50 +160,41 @@ html, body {
   margin-top: 1em;
 }
 
-.mobileNav {
-  width: 100%;
-  height: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .mobileNav .hamburger {
-  width: 3em;
+  width: 2.5em;
   cursor: pointer;
-  position: absolute;
   height: 1.3em;
-  top: 2em;
-  right: 1em;
-  height: 100%;
+  z-index: 3;
+  position: absolute;
+  right: .45em;
+  top: 1em;
 }
 
 .mobileNav .hamburger span {
   display: block;
-  height: 1px;
-  width: 2.2em;
+  height: 2px;
+  width: 100%;
   background-color: black;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   position: absolute;
-  right: 0%;
-  top: 0%;
-  -webkit-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  right: 30%;
+  top: 30%;
 }
 
 .mobileNav .hamburger span:nth-child(2) {
-  top: 50%;
-  width: 1.6em;
+  width: 60%;
+  top: 63%;
 }
 
 .mobileNav .hamburger span:nth-child(3) {
-  width: 1.1em;
+  width: 50%;
   top: 100%;
 }
 
 .mobileNav .cross span {
-  -webkit-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .mobileNav .cross span:nth-child(1) {
@@ -214,9 +207,60 @@ html, body {
 }
 
 .mobileNav .cross span:nth-child(3) {
-  width: 2.2em;
+  width: 100%;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
+}
+
+.nav {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  background-color: rgba(67, 138, 185, 0.712);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.nav .navList {
+  padding: 0;
+  margin: 0;
+  margin-top: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.nav .navList .navItem {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav .navList .navItem:hover .navLink {
+  color: #000;
+  background-color: #FFF;
+}
+
+.nav .navList .navItem .navLink {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  color: #FFF;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.navBlock {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 /*---------------------------------------------------  Desktop  --------------------------------------------------------- */
