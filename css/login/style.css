@@ -17,7 +17,7 @@ body {
 }
 
 .wrapper {
-  height: 93%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +42,8 @@ body {
 .wrapper .logo .brand {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  font-weight: 600;
+  letter-spacing: 5px;
 }
 
 .wrapper .form {
@@ -151,16 +152,39 @@ body {
   color: #FFF;
   background-color: #4b8beb;
   margin-top: 1em;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
-.wrapper .form form .log:hover {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+.wrapper .form form .log:hover, .wrapper .form form .log:focus {
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   background-color: #1d6de6;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.wrapper .notMem {
+  margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.wrapper .notMem h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.wrapper .notMem span a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #6b6666;
 }
 
 .mobileNav .hamburger {
@@ -198,6 +222,7 @@ body {
 .mobileNav .cross span {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  background-color: #FFF;
 }
 
 .mobileNav .cross span:nth-child(1) {
@@ -222,7 +247,7 @@ body {
   z-index: 2;
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
-  background-color: rgba(67, 138, 185, 0.712);
+  background-color: #426b86;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
