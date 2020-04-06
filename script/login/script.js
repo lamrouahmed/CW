@@ -2,8 +2,8 @@ const $ = e => document.querySelector(e)
 const $$ = e => document.querySelectorAll(e)
 const labels = $$('.sLabel');
 const spans = $$('.border');
-
-
+const hamburger = $('.hamburger');
+const hamburgerSpans = $('.hamburger span');
 
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
 
@@ -22,3 +22,13 @@ function addBorder(index) {
 }
 
 
+// function googleTranslateElementInit() {
+//     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+//   }
+
+hamburger.addEventListener('click',toggleBurger);
+
+
+function toggleBurger() {
+    hamburger.classList.toggle('cross');
+}
