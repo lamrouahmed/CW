@@ -26,10 +26,16 @@ function addBorder(index) {
 //     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 //   }
 
-hamburger.addEventListener('click',toggleBurger);
 
 
-function toggleBurger() {
-    hamburger.classList.toggle('cross');
-    nav.classList.toggle('navBlock')
-}
+
+
+
+
+// hamburger.addEventListener('click',toggleBurger);
+
+
+// function toggleBurger() {
+//     hamburger.classList.toggle('cross');
+//     nav.classList.toggle('navBlock')
+// }
