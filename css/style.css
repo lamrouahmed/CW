@@ -9,6 +9,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .imgTop {
@@ -178,6 +179,11 @@ body {
   font-weight: normal;
 }
 
+.container .girl {
+  -webkit-animation: girl 1000ms ease-in-out;
+          animation: girl 1000ms ease-in-out;
+}
+
 .container .girl img {
   display: block;
   height: 42em;
@@ -196,6 +202,8 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-animation: content 1000ms ease-in-out;
+          animation: content 1000ms ease-in-out;
 }
 
 .container .start .startBtn a {
@@ -204,5 +212,66 @@ body {
   border-radius: 40px;
   border: 2px solid #FFF;
   padding: .9em 2em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.container .start .startBtn a:hover {
+  color: #000;
+  background-color: #FFF;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+@-webkit-keyframes girl {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes girl {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes content {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes content {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

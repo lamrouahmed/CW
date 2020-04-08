@@ -14,6 +14,7 @@ body {
     height: 100vh;
     // background: #141E30;  /* fallback for old browsers */
     // background: linear-gradient(to right, #243B55, #141E30); 
+    overflow: hidden;
 
 }
 
@@ -176,12 +177,15 @@ body {
             height: 42em;
             width: 50em;
         }
+        animation: girl 1000ms ease-in-out;
+
     }
     .content {
         display: flex;
         flex-direction: column;
         margin: 6em;
         justify-content: space-evenly;
+        animation: content 1000ms ease-in-out;
         
     }
 
@@ -191,5 +195,37 @@ body {
         border-radius: 40px;
         border: 2px solid #FFF;
         padding: .9em 2em;
+        transition: all 200ms ease-in-out;
+
+
+        &:hover {
+            color: #000; 
+            background-color: #FFF;
+            transition: all 200ms ease-in-out;
+        }
+    }
+}
+
+
+@keyframes girl {
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes content {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
