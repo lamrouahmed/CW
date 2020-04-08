@@ -157,4 +157,52 @@ body {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: left;
+}
+
+.container .desc h3 {
+  font-weight: bold;
+}
+
+.container .text h1 {
+  font-weight: normal;
+}
+
+.container .girl img {
+  display: block;
+  height: 42em;
+  width: 50em;
+}
+
+.container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 6em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .start .startBtn a {
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 2px solid #FFF;
+  padding: .9em 2em;
+}
 /*# sourceMappingURL=style.css.map */
