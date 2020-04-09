@@ -19,6 +19,12 @@ body {
   height: 100%;
 }
 
+.header {
+  background-color: #2a6dfe;
+  position: relative;
+  z-index: 69;
+}
+
 .header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,6 +146,11 @@ body {
   border-radius: 2px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header .navBar .btn a:hover {
@@ -157,6 +168,10 @@ body {
   background-color: #FFF;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+.header .navBar .signup a {
+  padding: .9em 2em;
 }
 
 .container {
@@ -221,6 +236,103 @@ body {
   background-color: #FFF;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF;
+  position: fixed;
+  right: 0;
+  top: -90%;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.popup .choose {
+  position: relative;
+  z-index: 69;
+  width: 90%;
+  height: 100%;
+}
+
+.popup .Btn {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  position: relative;
+  margin-right: 2em;
+  display: block;
+  padding-bottom: 1em;
+}
+
+.popup .Btn::after {
+  content: url("../img/SVG/right2.svg");
+  position: absolute;
+  right: 0;
+  width: 1.2em;
+  bottom: 28%;
+  display: block;
+  left: 100%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.popup .Btn:hover::after {
+  left: 105%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.popup .choice {
+  border-bottom: 1px solid #000;
+  width: 25em;
+}
+
+.popupBlock {
+  top: 0%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.popupBlock .choose {
+  top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cross svg {
+  position: absolute;
+  z-index: 70;
+  bottom: 80%;
+  width: 1.5em;
+  height: 1.5em;
+  right: 20%;
+  cursor: pointer;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  padding: .5em;
+}
+
+.cross svg:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  fill: #df4c41;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @-webkit-keyframes girl {

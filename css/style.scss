@@ -27,6 +27,10 @@ body {
 
 .header {
 
+    background-color: #2a6dfe;
+    position: relative;
+    z-index: 69;
+
     .logo {
         display: flex;
         align-items: center;
@@ -129,6 +133,8 @@ body {
             background-color: rgb(255, 255, 255);
             border-radius: 2px;
             transition: all 200ms ease-in-out;
+            cursor: pointer;
+            user-select: none;
 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.925);
@@ -145,6 +151,10 @@ body {
                 background-color: #FFF;
                 transition: all 200ms ease-in-out;
             }
+        }
+
+        .signup a {
+            padding: .9em 2em;
         }
     }
 }
@@ -171,22 +181,25 @@ body {
     .text h1 {
         font-weight: normal;
     }
+
     .girl {
         img {
             display: block;
             height: 42em;
             width: 50em;
         }
+
         animation: girl 1000ms ease-in-out;
 
     }
+
     .content {
         display: flex;
         flex-direction: column;
         margin: 6em;
         justify-content: space-evenly;
         animation: content 1000ms ease-in-out;
-        
+
     }
 
     .start .startBtn a {
@@ -199,7 +212,7 @@ body {
 
 
         &:hover {
-            color: #000; 
+            color: #000;
             background-color: #FFF;
             transition: all 200ms ease-in-out;
         }
@@ -207,11 +220,116 @@ body {
 }
 
 
+
+
+
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    position: fixed;
+    right: 0;
+    top: -90%;
+    z-index: 2;
+    transition: all 200ms ease-in-out;
+
+    .choose {
+        position: relative;
+        z-index: 69;
+        width: 90%;
+        height: 100%;
+    }
+
+
+    .Btn {
+        text-decoration: none;
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 1.5em;
+        position: relative;
+        margin-right: 2em;
+        display: block;
+        padding-bottom: 1em;
+
+        &::after {
+            content: url('../img/SVG/right2.svg');
+            position: absolute;
+            right: 0;
+            width: 1.2em;
+            bottom: 28%;
+            display: block;
+            left: 100%;
+            transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                left: 105%;
+                transition: all 200ms ease-in-out;
+
+            }
+        }
+    }
+
+    .choice {
+        border-bottom: 1px solid #000;
+        width: 25em;
+    }
+}
+
+
+.popupBlock {
+    top: 0%;
+    transition: all 200ms ease-in-out;
+
+    .choose {
+        top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.cross {
+    svg {
+        position: absolute;
+        z-index: 70;
+        bottom: 80%;
+        width: 1.5em;
+        height: 1.5em;
+        right: 20%;
+        cursor: pointer;
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: all 200ms ease-in-out;
+        padding: .5em;
+        
+        &:hover {
+            transition: all 200ms ease-in-out;
+            fill: #df4c41;
+            transform: rotate(180deg);
+
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
 @keyframes girl {
-    from{
+    from {
         opacity: 0;
         transform: translateX(100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -220,10 +338,11 @@ body {
 
 
 @keyframes content {
-    from{
+    from {
         opacity: 0;
         transform: translateY(50%);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
