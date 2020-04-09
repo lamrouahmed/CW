@@ -5,10 +5,12 @@ const popups = $$('.popup');
 const [login, signup] = btns;
 const [signP, logP] = popups;
 const close =  $$('.cross svg');
+const choices = $$('.Btn');
+
 
 btns.forEach(btn => btn.addEventListener('click', (e) => popUp(e)));
 close.forEach(cross => cross.addEventListener('click', (e) => hidePopup(e)));
-
+choices.forEach(choice => choice.addEventListener('click', hide));
 function popUp(e) { 
     hide();
     e.target.dataset.key === "log" && logP.classList.add('popupBlock')
