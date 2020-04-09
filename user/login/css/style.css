@@ -212,7 +212,7 @@ body {
             flex-direction: row;
   }
   .wrapper .imgContainer {
-    background-image: url("/img/login/login.jpg");
+    background-image: url("../img/login4.jpeg");
     width: 68%;
     display: block;
     height: 100%;

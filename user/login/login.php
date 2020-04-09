@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
@@ -32,18 +32,18 @@
         </div>
         <div class="container">
             <div class="logo">
-                <img src="./svg/login/car-service.svg" />
+                <img src="./img/car-service.svg" />
                 <h2 class="brand">LOGIN</h2>
             </div>
             <div class="form">
-                <form method="POST">
+                <form method="POST" action="login.inc.php">
                     <label class="sLabel">
-                        <input type="text" name="Username" placeholder="Username">
+                        <input type="text" name="username" placeholder="Username">
                         <span class="border"></span>
 
                     </label>
                     <label class="sLabel">
-                        <input type="text" name="Password" placeholder="Password">
+                        <input type="text" name="password" placeholder="Password">
                         <span class="border"></span>
                     </label>
 
@@ -58,6 +58,6 @@
     </div>
 </body>
 <!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  -->
-<script src="./script/login/script.js" async></script>
+<script src="./script/script.js" async></script>
 
 </html>

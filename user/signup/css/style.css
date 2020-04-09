@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*-------- Desktop Media Queries ---------*/
+/*-------- Tablet Media Queries ---------*/
+/*---------------------------------------------------  Desktop  --------------------------------------------------------- */
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .logo img {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper .logo .title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.form {
+  width: 80%;
+}
+
+.form .input {
+  border: none;
+  border-bottom: 1px solid #a8a2a2;
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  height: 4em;
+}
+
+.form .input::-webkit-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.form .input:-ms-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.form .input::-ms-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.form .input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.form .input:focus {
+  outline: none;
+}
+
+.form .label {
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  display: block;
+}
+
+.form .label .border {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4%;
+  background-color: #339bd9;
+  bottom: -1%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.form .label .clicked {
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.form .fullName,
+.form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .password .label:first-child, .form .fullName .label:first-child {
+  margin-right: 2em;
+}
+
+.form .log {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  height: 3em;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-top: 3em;
+  border: none;
+  color: #FFF;
+  background-color: #4b8beb;
+  margin-top: 1em;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.form .log:hover, .form .log:focus {
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  background-color: #1d6de6;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.alreadyMember {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.alreadyMember h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.alreadyMember span a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #6b6666;
+}
+
+/*---------------------------------------------------  Mobile  --------------------------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .wrapper .form {
+    width: initial;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .wrapper .form {
+    width: initial;
+  }
+}
+/*# sourceMappingURL=style.css.map */
