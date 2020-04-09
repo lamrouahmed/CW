@@ -139,21 +139,7 @@ body {
                 }
             }
 
-            .sign,
-            .log {
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #000;
-                font-family: 'Montserrat', sans-serif;
-                height: 3em;
-                border: 1px solid #000;
-                border-radius: 2px;
-                margin-top: 3em;
-
-
-            }
+ 
 
 
 
@@ -163,7 +149,17 @@ body {
                 background-color: rgb(75, 139, 235);
                 margin-top: 1em;
                 transition: all 100ms ease-in-out;
-
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Montserrat', sans-serif;
+                height: 3em;
+                border-radius: 2px;
+                margin-top: 3em;
+                width: 100%;
+                font-size: 1em;
+                cursor: pointer;
                 &:hover,
                 &:focus {
                     transition: all 100ms ease-in-out;

@@ -28,7 +28,7 @@ body {
 }
 
 .wrapper .logo img {
-  width: 20%;
+  width: 75%;
   display: block;
   margin: 0 auto;
 }
@@ -135,14 +135,15 @@ body {
   border: 1px solid #000;
   border-radius: 2px;
   margin-top: 3em;
-  width: 100%;
-  font-size: 1em;
+  cursor: pointer;
   border: none;
   color: #FFF;
   background-color: #4b8beb;
   margin-top: 1em;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
+  width: 100%;
+  font-size: 1em;
 }
 
 .form .sign:hover, .form .sign:focus {

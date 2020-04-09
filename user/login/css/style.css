@@ -127,8 +127,13 @@ body {
   outline: none;
 }
 
-.wrapper .form form .sign,
 .wrapper .form form .log {
+  border: none;
+  color: #FFF;
+  background-color: #4b8beb;
+  margin-top: 1em;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,21 +144,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #000;
   font-family: 'Montserrat', sans-serif;
   height: 3em;
-  border: 1px solid #000;
   border-radius: 2px;
   margin-top: 3em;
-}
-
-.wrapper .form form .log {
-  border: none;
-  color: #FFF;
-  background-color: #4b8beb;
-  margin-top: 1em;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 .wrapper .form form .log:hover, .wrapper .form form .log:focus {

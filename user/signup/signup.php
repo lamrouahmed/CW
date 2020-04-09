@@ -15,7 +15,7 @@
             <img src="./img/user.svg"/>
             <h2 class="title">Sign up</h2>
         </div>
-        <form action="POST" action="signup.inc.php" class="form">
+        <form method="POST" action="signup.inc.php" class="form">
             <div class="fullName">
                 <label class="label">
                     <input class="input" type="text" name="u_last_name" placeholder="Last Name">
@@ -56,7 +56,7 @@
                     <span class="border"></span>
                 </label>
             </div>
-            <a href="" class="log">SIGN UP</a>
+            <button href="" class="sign">SIGN UP</button>
         </form>  
 
         <div class="alreadyMember">

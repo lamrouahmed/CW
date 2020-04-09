@@ -52,7 +52,7 @@ body {
 
 
         img {
-            width: 20%;
+            width: 75%;
             display: block;
             margin: 0 auto;
         }
@@ -132,8 +132,11 @@ body {
 
     .sign {
         text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         align-items: center;
+
         justify-content: center;
         color: #000;
         font-family: 'Montserrat', sans-serif;
@@ -141,13 +144,14 @@ body {
         border: 1px solid #000;
         border-radius: 2px;
         margin-top: 3em;
-        width: 100%;
-        font-size: 1em;
+        cursor: pointer;
         border: none;
         color: #FFF;
-        background-color: rgb(75, 139, 235);
+        background-color: #4b8beb;
         margin-top: 1em;
         transition: all 100ms ease-in-out;
+        width: 100%;
+        font-size: 1em;
 
         &:hover,
         &:focus {
