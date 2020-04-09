@@ -32,6 +32,12 @@
                     <span class="border"></span>
                 </label>
             </div>
+            <div class="cin">
+                <label class="label">
+                    <input class="input" type="text" name="w_cin" placeholder="Cin">
+                    <span class="border"></span>
+                </label>
+            </div>
 
             <div class="phone">
                 <label class="label">

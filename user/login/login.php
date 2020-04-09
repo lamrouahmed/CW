@@ -27,12 +27,12 @@
         </div>
     </header>
     <div class="wrapper">
-        <div class="imgContainer">
+        <!-- <div class="imgContainer">
             
-        </div>
+        </div> -->
         <div class="container">
             <div class="logo">
-                <img src="./img/car-service.svg" />
+                <img src="./img/user.svg" />
                 <h2 class="brand">LOGIN</h2>
             </div>
             <div class="form">
@@ -47,7 +47,7 @@
                         <span class="border"></span>
                     </label>
 
-                    <button href="" class="log">LOG IN</button>
+                    <button type="submit" class="log" name="u_login">LOG IN</button>
                 </form>
             </div>
             <div class="notMem">
