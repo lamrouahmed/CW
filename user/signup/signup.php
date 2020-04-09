@@ -56,11 +56,11 @@
                     <span class="border"></span>
                 </label>
             </div>
-            <button href="" class="sign">SIGN UP</button>
+            <button class="sign" name="u_signup">SIGN UP</button>
         </form>  
 
         <div class="alreadyMember">
-            <h2>Already a member ? <span><a href="#">Log in!</a></span></h2>
+            <h2>Already a member ? <span><a href="../login/login.php">Log in!</a></span></h2>
         </div> 
 
     </div>
