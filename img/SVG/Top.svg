@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 671.91"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="1574.57" y1="520.42" x2="-212.79" y2="98.32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="0.05" stop-color="#2a6dfe"/></linearGradient></defs><title>Top</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M0,588c219.5,219.5,1366-61,1366-61V0H0Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 671.9" style="enable-background:new 0 0 1366 671.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#183435;}
+</style>
+<title>Top</title>
+<g>
+	<g id="Layer_1-2">
+		<path class="st0" d="M0,588c219.5,219.5,1366-61,1366-61V0H0V588z"/>
+	</g>
+</g>
+</svg>
