@@ -5,12 +5,13 @@ const spans = $$('.border');
 const hamburger = $('.hamburger');
 const nav = $('.nav');
 const next = $('.next a');
+const previous = $('.prev a');
 const parts = $$('.form > div');
 const [part1, part2] = parts;
 
 
 next.addEventListener('click', nextStep);
-
+previous.addEventListener('click', prevStep);
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
@@ -27,8 +28,15 @@ function addBorder(index) {
 }
 
 function nextStep() {
-    console.log(part1, part2);
+    part1.classList.add('part1None');
+    part2.classList.add('part2Block');
+    part1.classList.remove('part1Block');
 
-    part1.style.display = "none";
-    part2.style.display = "block";
+}
+
+function prevStep() {
+    part1.classList.remove('part1None');
+    part2.classList.remove('part2Block');
+    part1.classList.add('part1Block');
+
 }

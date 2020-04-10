@@ -43,6 +43,9 @@ body {
 
 .form {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form .input {
@@ -132,7 +135,7 @@ body {
           justify-content: center;
   color: #000;
   font-family: 'Montserrat', sans-serif;
-  height: 3em;
+  height: 2.8em;
   border-radius: 2px;
   margin-top: 3em;
   cursor: pointer;
@@ -155,16 +158,12 @@ body {
 }
 
 .form .next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   margin-top: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  -webkit-box-pack: end;
 }
 
 .form .next a {
@@ -193,21 +192,46 @@ body {
 }
 
 .form .part2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  visibility: hidden;
+  position: absolute;
+  z-index: 0;
   width: 20em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  opacity: 0;
 }
 
-.form .part1 {
-  display: none;
+.form .part2Block {
+  visibility: visible;
+  z-index: 1;
+  position: unset;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  opacity: 1;
+}
+
+.form .part1None {
+  visibility: hidden;
+  position: absolute;
+  z-index: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  opacity: 0;
+}
+
+.form .part1Block {
+  position: unset;
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .form .prev {
@@ -232,7 +256,7 @@ body {
           justify-content: center;
   color: #000;
   font-family: 'Montserrat', sans-serif;
-  height: 3em;
+  height: 2.8em;
   border-radius: 2px;
   margin-top: 3em;
   cursor: pointer;
