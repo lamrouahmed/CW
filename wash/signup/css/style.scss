@@ -33,6 +33,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 
@@ -132,16 +133,12 @@ body {
 
     .sign {
         text-decoration: none;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         align-items: center;
-
         justify-content: center;
         color: #000;
         font-family: 'Montserrat', sans-serif;
         height: 3em;
-        border: 1px solid #000;
         border-radius: 2px;
         margin-top: 3em;
         cursor: pointer;
@@ -150,7 +147,7 @@ body {
         background-color: #3d7b7d;
         margin-top: 1em;
         transition: all 100ms ease-in-out;
-        width: 100%;
+        width: 40%;
         font-size: 1em;
 
         &:hover,
@@ -158,6 +155,83 @@ body {
             transition: all 100ms ease-in-out;
             background-color: darken(#3d7b7d, 10%);
             transform: scale(.98);
+        }
+    }
+
+    .next  {
+
+        display: flex;
+        justify-content: end;
+        margin-top: 1em;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            background-color: #3d7b7d;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 2px;
+            font-family: 'Montserrat', sans-serif;
+            padding: .8em 2.5em;
+            width: 10%;
+            display: block;
+            text-align: center;
+            transition: all 200ms ease-in-out;
+    
+            &:hover,
+            &:focus {
+                transition: all 200ms ease-in-out;
+                background-color: darken(#3d7b7d, 10%);
+                transform: scale(.95);
+            }
+        }
+
+
+
+    }
+
+    .part2 {
+        display: flex;
+        width: 20em;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .part1 {
+        display: none;
+    }
+
+    .prev {
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+    
+            justify-content: center;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            height: 3em;
+            border-radius: 2px;
+            margin-top: 3em;
+            cursor: pointer;
+            border: none;
+            color: #FFF;
+            background-color: #3d7b7d;
+            margin-top: 1em;
+            transition: all 100ms ease-in-out;
+            width: 100%;
+            font-size: 1em;
+            width: 40%;
+            &:hover,
+            &:focus {
+                transition: all 100ms ease-in-out;
+                background-color: darken(#3d7b7d, 10%);
+                transform: scale(.98);
+            }
         }
     }
 
