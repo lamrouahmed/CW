@@ -8,12 +8,12 @@ const next = $('.next a');
 const previous = $('.prev a');
 const parts = $$('.form > div');
 const [part1, part2] = parts;
-
+const inputs = $$('.input');
 
 next.addEventListener('click', nextStep);
 previous.addEventListener('click', prevStep);
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
-
+inputs.forEach((input, index) => input.addEventListener('focus', () => addBorder(index)))
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
 
 

@@ -4,8 +4,10 @@ const labels = $$('.label');
 const spans = $$('.border');
 const hamburger = $('.hamburger');
 const nav = $('.nav');
+const inputs = $$('.input');
 
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
+inputs.forEach((input, index) => input.addEventListener('focus', () => addBorder(index)))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
 
