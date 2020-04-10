@@ -2,6 +2,26 @@
 
 
 
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 768px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 *,
 *::after,
 *::before {
@@ -12,8 +32,6 @@
 body {
     width: 100vw;
     height: 100vh;
-    // background: #141E30;  /* fallback for old browsers */
-    // background: linear-gradient(to right, #243B55, #141E30); 
     overflow: hidden;
 
 }
@@ -366,5 +384,30 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@include tablet {
+    
+    .choose {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .cross {
+        svg {
+            right: 4%;
+            bottom: 80%;
+        }
     }
 }
