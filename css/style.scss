@@ -28,6 +28,19 @@ $maxMobile: 736px;
 }
 
 
+/*-------- Other Mobile Media Queries ---------*/
+
+$minMob: 360px;
+$maxMob: 646px;
+
+
+@mixin mob {
+    @media (min-width: #{$minMob}) and (max-width: #{$maxMob}) {
+        @content;
+    }
+}
+
+
 
 
 
@@ -468,10 +481,6 @@ body {
 
 @include mobile {
 
-// .popup {
-//     top: -100%;
-
-// }
 
     .logo {
         position: absolute;
@@ -663,4 +672,16 @@ body {
         }
     }
 
+}
+
+
+@include mob {
+
+    .btns {
+        margin-top: 3em;
+    }
+
+    .choice {
+        width: 21em !important;
+    }
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*-------- Tablet Media Queries ---------*/
 /*-------- Mobile Media Queries ---------*/
+/*-------- Other Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -622,6 +623,15 @@ body {
     width: 100%;
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 646px) {
+  .btns {
+    margin-top: 3em;
+  }
+  .choice {
+    width: 21em !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
