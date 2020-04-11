@@ -6,8 +6,10 @@ const [login, signup] = btns;
 const [signP, logP] = popups;
 const close =  $$('.cross svg');
 const choices = $$('.Btn');
+const hamburger = $('.ham');
+const nav = $('.list');
 
-
+hamburger.addEventListener('click',toggleBurger);
 btns.forEach(btn => btn.addEventListener('click', (e) => popUp(e)));
 close.forEach(cross => cross.addEventListener('click', (e) => hidePopup(e)));
 choices.forEach(choice => choice.addEventListener('click', hide));
@@ -25,6 +27,12 @@ function hidePopup(e) {
 
 function hide() {
     popups.forEach(popup => popup.classList.remove('popupBlock'));
+}
+
+
+function toggleBurger() {
+    hamburger.classList.toggle('navCross');
+    nav.classList.toggle('listBlock')
 }
 
 

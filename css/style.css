@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*-------- Tablet Media Queries ---------*/
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -69,12 +70,19 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 1em;
+  padding: 1em 10em;
+}
+
+.header .navBar .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header .navBar .navList {
   margin: 0;
   padding: 0;
+  margin-right: 5em;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,7 +94,7 @@ body {
 
 .header .navBar .navList .navItem {
   display: block;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 .header .navBar .navList .navItem a {
@@ -133,6 +141,7 @@ body {
 
 .header .navBar .btn {
   margin-right: 1em;
+  white-space: nowrap;
 }
 
 .header .navBar .btn a {
@@ -214,12 +223,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 6em;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-animation: content 1000ms ease-in-out;
           animation: content 1000ms ease-in-out;
+  height: 19em;
+  margin-left: 3em;
+  margin-top: 10em;
 }
 
 .container .start .startBtn a {
@@ -412,7 +423,14 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 737px) and (max-width: 1200px) {
+  .girl img {
+    height: 38em !important;
+    width: 27em !important;
+  }
+  .btn {
+    white-space: nowrap;
+  }
   .choose {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -420,9 +438,184 @@ body {
             flex-direction: column;
     width: 100% !important;
   }
+  .content {
+    margin: 0 !important;
+    margin-left: 1em !important;
+    height: 27em !important;
+    margin-top: 6em !important;
+  }
   .cross svg {
     right: 4%;
     bottom: 80%;
+  }
+  .navBar {
+    padding: 1em 0 !important;
+  }
+  .navItem {
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 736px) {
+  .logo {
+    position: absolute;
+    left: 0;
+  }
+  .logo h1 {
+    margin: 0 !important;
+    font-size: 1em;
+  }
+  .logo svg {
+    height: 2em !important;
+    width: 3em !important;
+  }
+  .navBar {
+    position: relative;
+  }
+  .navBar .btn a {
+    font-size: .8em !important;
+    padding: .8em !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 4em !important;
+    height: 1.3em !important;
+  }
+  .navBar .signup a {
+    padding: .9em !important;
+  }
+  .list {
+    position: absolute;
+    height: 100vh;
+    width: 75vw;
+    background-color: #213b4a;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  .list .navList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 22%;
+    top: 10%;
+    margin: 0 !important;
+  }
+  .list .navList .navItem {
+    padding: 1em;
+  }
+  .list .btns {
+    position: absolute;
+    right: 13%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 40%;
+  }
+  .list .btns a {
+    margin-bottom: 1em;
+    width: 10em !important;
+    font-size: 1em !important;
+  }
+  .listBlock {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  .popup {
+    z-index: 69 !important;
+  }
+  .ham {
+    width: 2.5em;
+    cursor: pointer;
+    height: 1.3em;
+    z-index: 420;
+    position: absolute;
+    right: .45em;
+    top: 1em;
+  }
+  .ham span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+  }
+  .ham span:nth-child(2) {
+    width: 60%;
+    top: 63%;
+  }
+  .ham span:nth-child(3) {
+    width: 50%;
+    top: 100%;
+  }
+  .choose {
+    width: 100% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .choice {
+    width: 24em !important;
+  }
+  .popup .Btn {
+    font-size: 1.5em;
+  }
+  .cross svg {
+    right: 5% !important;
+  }
+  .container {
+    display: block;
+    height: 100% !important;
+  }
+  .container .content {
+    margin: 0 !important;
+    height: 50%;
+    text-align: center !important;
+    margin-top: 7em !important;
+  }
+  .girl img {
+    display: none !important;
+  }
+  .navCross {
+    z-index: 420;
+  }
+  .navCross span {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    background-color: #FFF;
+  }
+  .navCross span:nth-child(1) {
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
+  }
+  .navCross span:nth-child(2) {
+    opacity: 0;
+  }
+  .navCross span:nth-child(3) {
+    width: 100%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

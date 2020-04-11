@@ -4,7 +4,7 @@
 
 /*-------- Tablet Media Queries ---------*/
 
-$minTablet: 768px;
+$minTablet: 737px;
 $maxTablet: 1200px;
 
 @mixin tablet {
@@ -12,6 +12,21 @@ $maxTablet: 1200px;
         @content;
     }
 }
+
+
+
+/*-------- Mobile Media Queries ---------*/
+
+$minMobile: 414px;
+$maxMobile: 736px;
+
+
+@mixin mobile {
+    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+        @content;
+    }
+}
+
 
 
 
@@ -83,18 +98,24 @@ body {
     .navBar {
         display: flex;
         justify-content: space-around;
-        padding: 1em;
+        padding: 1em 10em;
+
+
+        .list {
+            display: flex;
+        }
 
         .navList {
             margin: 0;
             padding: 0;
+            margin-right: 5em;
             list-style: none;
             display: flex;
             align-items: center;
 
             .navItem {
                 display: block;
-                margin-right: 2em;
+                margin-right: 1em;
             }
 
             .navItem a {
@@ -137,7 +158,7 @@ body {
 
         .btn {
             margin-right: 1em;
-
+            white-space: nowrap;
         }
 
         .btn a {
@@ -214,9 +235,11 @@ body {
     .content {
         display: flex;
         flex-direction: column;
-        margin: 6em;
         justify-content: space-evenly;
         animation: content 1000ms ease-in-out;
+        height: 19em;
+        margin-left: 3em;
+        margin-top: 10em;
 
     }
 
@@ -252,6 +275,7 @@ body {
     z-index: 2;
     transition: opacity 1000ms ease-in-out;
     opacity: 0;
+
     .choose {
         position: relative;
         z-index: 69;
@@ -322,6 +346,7 @@ body {
     top: 0%;
     transition: all 400ms ease-in-out;
     opacity: 1;
+
     .choose {
         top: 10%;
         display: flex;
@@ -343,7 +368,7 @@ body {
         transform-box: fill-box;
         transition: all 200ms ease-in-out;
         padding: .5em;
-        
+
         &:hover {
             transition: all 200ms ease-in-out;
             fill: #df4c41;
@@ -398,10 +423,28 @@ body {
 
 
 @include tablet {
-    
+
+    .girl {
+        img {
+            height: 38em !important;
+            width: 27em !important;
+        }
+    }
+
+    .btn {
+        white-space: nowrap;
+    }
+
     .choose {
         flex-direction: column;
         width: 100% !important;
+    }
+
+    .content {
+        margin: 0 !important;
+        margin-left: 1em !important;
+        height: 27em !important;
+        margin-top: 6em !important;
     }
 
     .cross {
@@ -410,4 +453,201 @@ body {
             bottom: 80%;
         }
     }
+
+    .navBar {
+        padding: 1em 0 !important;
+
+    }
+
+
+    .navItem {
+        margin: 0 !important;
+    }
+}
+
+
+@include mobile {
+
+    .logo {
+        position: absolute;
+        left: 0;
+
+        h1 {
+            margin: 0 !important;
+            font-size: 1em;
+        }
+
+        svg {
+            height: 2em !important;
+            width: 3em !important;
+        }
+    }
+
+
+    .navBar {
+        position: relative;
+
+
+        .btn a {
+            font-size: .8em !important;
+            padding: .8em !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            width: 4em !important;
+            height: 1.3em !important;
+        }
+
+        .signup a {
+            padding: .9em !important;
+        }
+
+
+    }
+
+    .list {
+        position: absolute;
+        height: 100vh;
+        width: 75vw;
+        background-color: #213b4a;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+
+        .navList {
+            flex-direction: column;
+            position: absolute;
+            right: 22%;
+            top: 10%;
+            //display: none !important;
+            margin: 0 !important;
+
+            .navItem {
+                padding: 1em;
+            }
+        }
+
+        .btns {
+            position: absolute;
+            right: 13%;
+            flex-direction: column;
+            top: 40%;
+
+            a {
+                margin-bottom: 1em;
+                width: 10em !important;
+                font-size: 1em !important;
+            }
+        }
+
+
+    }
+
+    .listBlock {
+        transform: translateX(0%);
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+    }
+
+    .popup {
+        z-index: 69 !important;
+    }
+
+    .ham {
+        width: 2.5em;
+        cursor: pointer;
+        height: 1.3em;
+        z-index: 420;
+        position: absolute;
+        right: .45em;
+        top: 1em;
+
+        span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+            position: absolute;
+            right: 30%;
+            top: 30%;
+
+            &:nth-child(2) {
+                width: 60%;
+                top: 63%;
+            }
+
+            &:nth-child(3) {
+                width: 50%;
+                top: 100%;
+            }
+        }
+    }
+
+    .choose {
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .choice {
+        width: 24em !important;
+    }
+
+    .popup {
+        .Btn {
+            font-size: 1.5em;
+        }
+    }
+
+    .cross {
+        svg {
+            right: 5% !important;
+        }
+    }
+
+    .container {
+        display: block;
+        height: 100% !important;
+
+        .content {
+            margin: 0 !important;
+            height: 50%;
+            text-align: center !important;
+            margin-top: 7em !important;
+        }
+    }
+
+    .girl {
+
+        img {
+            display: none !important;
+        }
+    }
+
+    .navCross {
+
+        z-index: 420;
+
+        span {
+            transition: all 300ms ease-in-out;
+            background-color: #FFF;
+
+            &:nth-child(1) {
+                transform: rotate(130deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                transform: rotate(40deg);
+            }
+        }
+    }
+
 }
