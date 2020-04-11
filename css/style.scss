@@ -43,7 +43,7 @@ $maxMob: 646px;
 
 
 $minMob2: 320px;
-$maxMob2: 568px;
+$maxMob2: 413px;
 
 
 @mixin mob2 {
@@ -539,9 +539,10 @@ body {
         background-color: #213b4a;
         right: 0;
         top: 0;
-        transform: translateX(100%);
+        transform: scaleX(0);
         opacity: 0;
         transition: all 200ms ease-in-out;
+        transform-origin: right;
 
         .navList {
             flex-direction: column;
@@ -573,7 +574,7 @@ body {
     }
 
     .listBlock {
-        transform: translateX(0%);
+        transform: scaleX(1);
         opacity: 1;
         transition: all 200ms ease-in-out;
     }

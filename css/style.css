@@ -501,11 +501,13 @@ body {
     background-color: #213b4a;
     right: 0;
     top: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     opacity: 0;
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
   .list .navList {
     -webkit-box-orient: vertical;
@@ -535,8 +537,8 @@ body {
     font-size: 1em !important;
   }
   .listBlock {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -638,7 +640,7 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 568px) {
+@media (min-width: 320px) and (max-width: 413px) {
   .btns {
     margin-top: 4em !important;
     right: 3% !important;
