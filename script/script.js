@@ -8,7 +8,9 @@ const close =  $$('.cross svg');
 const choices = $$('.Btn');
 const hamburger = $('.ham');
 const nav = $('.list');
-
+const popUpB = $$('.popup'); 
+const chooseB = $$('.choose');
+const header = $('.header');
 hamburger.addEventListener('click',toggleBurger);
 btns.forEach(btn => btn.addEventListener('click', (e) => popUp(e)));
 close.forEach(cross => cross.addEventListener('click', (e) => hidePopup(e)));
@@ -32,7 +34,10 @@ function hide() {
 
 function toggleBurger() {
     hamburger.classList.toggle('navCross');
-    nav.classList.toggle('listBlock')
+    nav.classList.toggle('listBlock');
+    chooseB.forEach(e => e.classList.toggle('chooseB'));
+    popUpB.forEach(pop => pop.classList.toggle('popupB'));
+    header.classList.toggle('index');
 }
 
 

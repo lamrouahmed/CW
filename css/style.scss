@@ -17,7 +17,7 @@ $maxTablet: 1200px;
 
 /*-------- Mobile Media Queries ---------*/
 
-$minMobile: 414px;
+$minMobile: 300px;
 $maxMobile: 736px;
 
 
@@ -271,7 +271,7 @@ body {
     background-color: #FFF;
     position: fixed;
     right: 0;
-    top: -90%;
+    top: -100%;
     z-index: 2;
     transition: opacity 1000ms ease-in-out;
     opacity: 0;
@@ -468,6 +468,11 @@ body {
 
 @include mobile {
 
+// .popup {
+//     top: -100%;
+
+// }
+
     .logo {
         position: absolute;
         left: 0;
@@ -483,7 +488,9 @@ body {
         }
     }
 
-
+    .index {
+        z-index: 0 !important;
+    }
     .navBar {
         position: relative;
 
@@ -551,9 +558,15 @@ body {
         transition: all 200ms ease-in-out;
     }
 
-    .popup {
-        z-index: 69 !important;
+    .popupB {
+        z-index: 70;
     }
+
+    .chooseB{
+        z-index: 0 !important;
+    }
+
+
 
     .ham {
         width: 2.5em;
