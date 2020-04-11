@@ -637,4 +637,28 @@ body {
     padding: 1em !important;
   }
 }
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .btns {
+    margin-top: 4em !important;
+    right: 3% !important;
+  }
+  .navList {
+    right: 14% !important;
+  }
+  .text h1 {
+    font-size: 1.4em !important;
+  }
+  .content {
+    margin-top: 0px;
+    height: 55%;
+    margin-top: 6em !important;
+  }
+  .choice {
+    width: 18em !important;
+  }
+  .popup .Btn {
+    font-size: 1.2em;
+  }
+}
 /*# sourceMappingURL=style.css.map */

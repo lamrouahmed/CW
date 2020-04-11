@@ -42,6 +42,17 @@ $maxMob: 646px;
 
 
 
+$minMob2: 320px;
+$maxMob2: 568px;
+
+
+@mixin mob2 {
+    @media (min-width: #{$minMob2}) and (max-width: #{$maxMob2}) {
+        @content;
+    }
+}
+
+
 
 
 
@@ -686,5 +697,36 @@ body {
     }
     .text {
         padding: 1em !important;
+    }
+}
+
+
+@include mob2 {
+    .btns {
+        margin-top: 4em !important;
+        right: 3% !important;
+    }
+
+    .navList {
+        right: 14% !important;
+    }
+
+    .text h1 {
+        font-size: 1.4em !important;
+    }
+
+
+    .content {
+        margin-top: 0px;
+        height: 55%;
+        margin-top: 6em !important;
+    }
+
+    .choice {
+        width: 18em !important;
+    }
+
+    .popup .Btn {
+        font-size: 1.2em;
     }
 }
