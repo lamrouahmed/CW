@@ -51,7 +51,7 @@
                 </form>
             </div>
             <div class="notMem">
-                <h2>Not a member ? <span><a href="../signup/signup.html">SignUp now!</a></span></h2>
+                <h2>Not a member ? <span><a href="../signup/signup.php">SignUp now!</a></span></h2>
             </div>
         </div>
         <!-- <div id="google_translate_element"></div> -->

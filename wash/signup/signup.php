@@ -90,7 +90,7 @@
         </form>  
 
         <div class="alreadyMember">
-            <h2>Already a member ? <span><a href="../login/login.html">Log in!</a></span></h2>
+            <h2>Already a member ? <span><a href="../login/login.php">Log in!</a></span></h2>
         </div> 
 
     </div>

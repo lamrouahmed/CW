@@ -58,7 +58,7 @@
                 </div>
                 <div class="start">
                     <div class="startBtn">
-                        <a href="./user/signup/signup.html">GET STARTED</a>
+                        <a href="./user/signup/signup.php">GET STARTED</a>
                     </div>
                 </div>
             </div>
@@ -82,10 +82,10 @@
             </div>
             <div class="choose">
                 <div class="userSignup choice">
-                    <a href="./user/signup/signup.html" class="Btn">Sign up as a user</a>
+                    <a href="./user/signup/signup.php" class="Btn">Sign up as a user</a>
                 </div>
                 <div class="washSignup choice">
-                    <a href="./wash/signup/signup.html" class="Btn">Sign up as a car washer</a>
+                    <a href="./wash/signup/signup.php" class="Btn">Sign up as a car washer</a>
                 </div>
             </div>
         </div>
@@ -105,10 +105,10 @@
             </div>
             <div class="choose">
                 <div class="userLogin choice">
-                    <a href="./user/login/login.html" class="Btn">Log in as a user</a>
+                    <a href="./user/login/login.php" class="Btn">Log in as a user</a>
                 </div>
                 <div class="washLogin choice">
-                    <a href="./wash/login/login.html" class="Btn">Log in as a car washer</a>
+                    <a href="./wash/login/login.php" class="Btn">Log in as a car washer</a>
                 </div>
             </div>
 
