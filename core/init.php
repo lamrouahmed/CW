@@ -18,7 +18,7 @@ $GLOBALS['config'] = array(
 );
 
 
-
+date_default_timezone_set("Europe/London");
 
 spl_autoload_register(function ($class) {
     require_once("/wamp64/www/PFE/modules/$class.php");
