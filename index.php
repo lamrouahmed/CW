@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-
 <body>
     <div class="imgTop">
         <header class="header">

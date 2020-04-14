@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,12 +40,12 @@
             <div class="form">
                 <form method="POST" action="login.inc.php">
                     <label class="sLabel">
-                        <input class="input" type="text" name="username" placeholder="Username">
+                        <input class="input" type="text" name="u_username" placeholder="Username">
                         <span class="border"></span>
 
                     </label>
                     <label class="sLabel">
-                        <input class="input" type="text" name="password" placeholder="Password">
+                        <input class="input" type="text" name="u_password" placeholder="Password">
                         <span class="border"></span>
                     </label>
 
