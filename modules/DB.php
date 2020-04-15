@@ -67,7 +67,7 @@ class DB {
                     $index++;
                 }
             }
-            if($this->query->execute() &&($query == 'SELECT')) {
+            if($this->query->execute() && ($query === 'SELECT')) {
                 $this->results = $this->query->fetchAll(); // we already set the default to FETCH_OBJ while instantiating so there is no need to pass it as a parameter
                 $this->count = $this->query->rowCount();
 
@@ -85,26 +85,26 @@ class DB {
      */
 
     public function getAll(string $table) {
-        return $this->query("SELECT * FROM {$table}");
+        return $this->query("SELECT * FROM {$table}", [], "SELECT");
     }
 
 
     /**
      * @param $PK
-     * @param int $id
+     * @param  $id
      * @param string $table
      * @return DB
      * @example  DB::connect->getOne("uid", 1, "user");
      *
      */
 
-    public function getOne($PK, int $id, string $table) 
+    public function getOne($PK,  $id, string $table)
     {
-        return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id}");
+        return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id}", [], "SELECT");
     }
 
 
-    public function delete($PK ,int $id, string $table):void 
+    public function delete($PK , $id, string $table):void
     {
     $this->query("DELETE FROM {$table} WHERE {$PK} = {$id}",[] ,'DELETE');
     }
@@ -125,7 +125,7 @@ class DB {
         $this->query($sql, $value, 'INSERT');
     }
 
-    public function update($PK, int $id, string $table, $params = []) {
+    public function update($PK,  $id, string $table, $params = []) {
         $this->error = false;
         //$value = array_values($params);
         $set = "";

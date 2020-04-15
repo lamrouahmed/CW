@@ -37,7 +37,7 @@ $users->update("u_id", 44, "user",[
 
 
 */
-$users->delete("u_id", 44, "user");
+//$users->delete("u_id", 44, "user");
 
 
 
@@ -49,4 +49,22 @@ $users->delete("u_id", 44, "user");
   //  }
 //} else {
   //  echo "no users";
-//}
+
+if(Input::exists()) {
+    $validate = new Validate();
+    $validate->check('post', [
+        "u_last_name" => ["min" => 2, "max" => 15, "name" => "last name"],
+        "u_first_name" => ["min" => 2, "max" => 15, "name" => "first name"],
+        "u_username" => ["min" => 2, "max" => 20,"unique" => "user", "name" => "username"],
+        "u_phone" => ["regexp" => "/^0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", "name" => "phone"],
+        "u_mail" => ["mail" => true, "name" => "mail"],
+        "u_pwd" => ["min" => 8, "name" => "password"],
+        "u_pwd_rep" => ["match" => Input::get('u_pwd'), "name" => "confirm password"]
+    ]);
+
+    if($validate->isValid()) {
+        echo "ok";
+    } else {
+        print_r($validate->getErrors());
+    }
+}

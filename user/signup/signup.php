@@ -1,3 +1,7 @@
+<?php
+require_once '/wamp64/www/PFE/core/init.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,30 +22,30 @@
         <form method="POST" action="signup.inc.php" class="form">
             <div class="fullName">
                 <label class="label">
-                    <input class="input" type="text" name="u_last_name" placeholder="Last Name">
+                    <input class="input" type="text" name="u_last_name" placeholder="Last Name" value=<?php Input::get('u_last_name')?>>
                     <span class="border"></span>
                 </label>
                 <label class="label">
-                    <input class="input" type="text" name="u_first_name" placeholder="First Name">
+                    <input class="input" type="text" name="u_first_name" placeholder="First Name" value=<?php Input::get('u_first_name')?>>
                     <span class="border"></span>
                 </label>
             </div>
             <div class="username">
                 <label class="label">
-                    <input class="input" type="text" name="u_username" placeholder="Username">
+                    <input class="input" type="text" name="u_username" placeholder="Username" value=<?php Input::get('u_username')?>>
                     <span class="border"></span>
                 </label>
             </div>
 
             <div class="phone">
                 <label class="label">
-                    <input class="input" type="tel" name="u_phone" placeholder="Phone (xx-xx-xx-xx-xx)" pattern="/^0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/">
+                    <input class="input" type="tel" name="u_phone" placeholder="Phone (xx-xx-xx-xx-xx)" pattern="0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" value=<?php Input::get('u_phone')?>>
                     <span class="border"></span>
                 </label>
             </div>
             <div class="mail">
                 <label class="label">
-                    <input class="input" type="text" name="u_mail" placeholder="Email">
+                    <input class="input" type="text" name="u_mail" placeholder="Email" value=<?php Input::get('u_mail')?>>
                     <span class="border"></span>
                 </label>
             </div>
