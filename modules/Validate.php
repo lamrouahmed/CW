@@ -30,7 +30,7 @@
                                 break;
 
                             case "mail":
-                                if(!filter_var($rule, FILTER_VALIDATE_EMAIL)) $this->setError("please enter a valid {$rules["name"]}");
+                                if(!filter_var($value, FILTER_VALIDATE_EMAIL)) $this->setError("please enter a valid {$rules["name"]}");
                                 break;
 
                             case "match":
@@ -38,7 +38,9 @@
                                 break;
 
                             case "regexp":
-                                if(!preg_match("/^[a-zA-Z0-9]*$/", $value)) {}
+                                if(!preg_match($rules[$ruleName], $value)) {
+                                    $this->setError("invalid {$rules["name"]}");
+                                }
 
                             case "unique":
                                 if($this->db->getOne("username", "'".$value."'", "user")->count() && preg_match("/^[a-zA-Z0-9]*$/", $value))
