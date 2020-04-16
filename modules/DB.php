@@ -62,7 +62,7 @@ class DB {
         if($this->query = $this->pdo->prepare($stmt)) {
             if(count($params)) {
                 $index = 1;
-                foreach ($params as $key => $param) {
+                foreach ($params as $param) {
                     $this->query->bindValue($index, $param);
                     $index++;
                 }

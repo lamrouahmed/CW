@@ -1,7 +1,7 @@
 <?php
     class Validate
     {
-        private $errors,
+        private $errors = [],
                 $db,
                 $valid = false;
 
@@ -17,42 +17,42 @@
                 foreach ($rules as $ruleName => $rule) {
                     $value =  escape(Input::get($field));
                     if(empty($value) && $ruleName === "name") {
-                        $this->setError("{$rules["name"]} is required");
+                        $this->setError("{$rules["name"]} is required", $field);
                     } else if(!empty($value)) {
                         switch ($ruleName) {
 
                             case "min":
-                                if(strlen($value) < $rule) $this->setError("{$rules["name"]} must have at least {$rule} characters");
+                                if(strlen($value) < $rule) $this->setError("{$rules["name"]} must have at least {$rule} characters", $field);
                                 break;
 
                             case "max":
-                                if(strlen($value) > $rule) $this->setError("{$rules["name"]} must be less than {$rule} characters");
+                                if(strlen($value) > $rule) $this->setError("{$rules["name"]} must be less than {$rule} characters", $field);
                                 break;
 
                             case "mail":
-                                if(!filter_var($value, FILTER_VALIDATE_EMAIL)) $this->setError("please enter a valid {$rules["name"]}");
+                                if(!filter_var($value, FILTER_VALIDATE_EMAIL)) $this->setError("please enter a valid {$rules["name"]}", $field);
                                 break;
 
                             case "match":
-                                if($ruleName !== $rule) $this->setError("the {$rules["name"]} must match");
+                                if(Input::get($field) !== $value) $this->setError("the {$rules["name"]} must match", $field);
                                 break;
 
                             case "regexp":
                                 if(!preg_match($rules[$ruleName], $value)) {
-                                    $this->setError("invalid {$rules["name"]}");
+                                    $this->setError("invalid {$rules["name"]}", $field);
                                 }
 
                             case "unique":
                                 if($this->db->getOne("username", "'".$value."'", "user")->count() && preg_match("/^[a-zA-Z0-9]*$/", $value))
                                 {
-                                    $this->setError("{$rules["name"]} is already taken");
+                                    $this->setError("{$rules["name"]} is already taken", $field);
                                 }
                                 break;
                         }
                     }
                 }
             }
-            if(empty($this->errors)) $valid = true;
+            if(empty($this->errors)) $this->valid = true;
             return $this;
         }
 
@@ -62,9 +62,9 @@
             return $this->valid;
         }
 
-        private function setError($error)
+        private function setError($error, $errorName)
         {
-            $this->errors[] = $error;
+            $this->errors +=  [$errorName => $error];
         }
         public function getErrors()
         {

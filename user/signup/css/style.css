@@ -154,6 +154,16 @@ body {
           transform: scale(0.98);
 }
 
+.form .error {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: .7em;
+  color: #ff0000b3;
+  width: 100%;
+}
+
 .alreadyMember {
   margin-top: 2em;
   display: -webkit-box;

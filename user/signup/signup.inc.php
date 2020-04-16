@@ -9,17 +9,21 @@ require_once '/wamp64/www/PFE/core/init.php';
 
 $users = DB::connect();
 
-/*$users->insert('user', [
-    'last_name' => 'lamrouah',
-    'first_name' => 'mohamed',
-    'username' => 'zedzazedzeddsf',
-    'phone' => '0677051944',
-    'mail' => 'lamrouahmed@gmail.com',
-    'password' => 'pwd',
-    'location' => 'USA, NYC',
-    'created' => $users->getDate()
-]);
 
+
+/*
+
+
+$users->insert('user', [
+  'last_name' => 'lamrouah',
+  'first_name' => 'mohamed',
+  'username' => 'FFFF',
+  'phone' => '0677051944',
+  'mail' => 'lamrouahmed@gmail.com',
+  'password' => 'pwd',
+  'location' => 'USA, NYC',
+  'created' => $users->getDate()
+]);
 
 
 $users->update("u_id", 44, "user",[
@@ -59,12 +63,32 @@ if(Input::exists()) {
         "u_phone" => ["regexp" => "/^0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", "name" => "phone number"],
         "u_mail" => ["mail" => true, "name" => "mail"],
         "u_pwd" => ["min" => 8, "name" => "password"],
-        "u_pwd_rep" => ["match" => Input::get('u_pwd'), "name" => "confirm password"]
+        "u_pwd_rep" => ["match" => "password", "name" => "confirm password"]
     ]);
 
     if($validate->isValid()) {
-        echo "ok";
+        $user = new User();
+      /** 
+       * 
+       * 
+       *                  $user->create("user", ["last_name" => Input::get("u_last_name"),
+                               "first_name" => Input::get("u_first_name"),
+                               "username" => Input::get("u_username"),
+                               "phone" => Input::get("u_phone"),
+                               "mail" => Input::get("u_mail"),
+                               "password" => Hash::make(Input::get("u_pwd")),
+                               "location" => "googlemaps.com",
+                               "created" => $users->getDate()
+
+        ]);
+       * 
+       * 
+      */
+
+  
     } else {
-        print_r($validate->getErrors());
+      
+        $errors = $validate->getErrors();
+        
     }
 }
