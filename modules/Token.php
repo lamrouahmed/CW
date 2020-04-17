@@ -21,7 +21,7 @@
         public static function check($token) {
             $tokenName = Config::get('session/token_name');
 
-            if(Session::exists($tokenName) && $token === $tokenName) {
+            if(Session::exists($tokenName) && $token === Session::get($tokenName)) {
                 Session::delete($tokenName);
                 return true;
             }

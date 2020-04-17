@@ -57,7 +57,7 @@ $users->update("u_id", 44, "user",[
 
 if(Input::exists()) {
 
-  if(!Session::exists(Input::get('token'))) {
+  if(Token::check(Input::get('token'))) {
 
     $validate = new Validate();
     $validate->check('post', [

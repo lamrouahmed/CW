@@ -20,7 +20,7 @@
 
         public static function delete($name):void 
         {
-            if (self::exists($name))  session_unset($name);
+            if (self::exists($name)) unset($_SESSION[$name]);
         }
     
     }
