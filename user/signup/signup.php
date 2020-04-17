@@ -73,7 +73,7 @@ require_once '/wamp64/www/PFE/user/signup/signup.inc.php';
 
                 </label>
                 <input type="hidden" name="position" value="">
-                <input type="hidden" name="token" value=<?php echo Token::get(64); ?>>
+                <input type="hidden" name="token" value=<?php echo Token::generate(64); ?>>
             </div>
             <button class="sign" name="u_signup">SIGN UP</button>
         </form>  

@@ -2,7 +2,7 @@
     
     class Token {
 
-        public static function get($length) {
+        public static function generate($length) {
                 $token = "";
                 $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                 $codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
@@ -13,7 +13,18 @@
                    $token .= $codeAlphabet[random_int(0, $max-1)];
                }
            
-               return $token;
+               return Session::put(Config::get('session/token_name') ,$token);
            
+        }
+
+
+        public static function check($token) {
+            $tokenName = Config::get('session/token_name');
+
+            if(Session::exists($tokenName) && $token === $tokenName) {
+                Session::delete($tokenName);
+                return true;
+            }
+            return false;
         }
     }

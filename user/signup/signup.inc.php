@@ -54,7 +54,11 @@ $users->update("u_id", 44, "user",[
 //} else {
   //  echo "no users";
 
+
 if(Input::exists()) {
+
+  if(!Session::exists(Input::get('token'))) {
+
     $validate = new Validate();
     $validate->check('post', [
         "u_last_name" => ["min" => 2, "max" => 15, "name" => "last name"],
@@ -65,13 +69,11 @@ if(Input::exists()) {
         "u_pwd" => ["min" => 8, "name" => "password"],
         "u_pwd_rep" => ["match" => "password", "name" => "confirm password"]
     ]);
-
+  
     if($validate->isValid()) {
         $user = new User();
-      /** 
-       * 
-       * 
-       *                  $user->create("user", ["last_name" => Input::get("u_last_name"),
+   
+                      $user->create("user", ["last_name" => Input::get("u_last_name"),
                                "first_name" => Input::get("u_first_name"),
                                "username" => Input::get("u_username"),
                                "phone" => Input::get("u_phone"),
@@ -79,16 +81,15 @@ if(Input::exists()) {
                                "password" => Hash::make(Input::get("u_pwd")),
                                "location" => "googlemaps.com",
                                "created" => $users->getDate()
-
+  
         ]);
-       * 
-       * 
-      */
-
+       
+  
   
     } else {
       
         $errors = $validate->getErrors();
         
     }
+  }
 }
