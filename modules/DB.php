@@ -7,14 +7,8 @@ class DB {
     private $count = 0;
     private $results;
     private  $pdo;
-    private $date;
 
 
-    public function getDate()
-    {
-        $this->date = date('Y-m-d H:i:s');
-        return $this->date;
-    }
 
 
 

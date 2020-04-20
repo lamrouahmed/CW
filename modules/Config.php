@@ -9,6 +9,19 @@
             }
             return false;
         }
+
+
+        public static function getDate() {
+            return date('Y-m-d H:i:s');
+        }
+
+
+        
+    // public function getDate()
+    // {
+    //     $this->date = 
+    //     return $this->date;
+    // }
     }
 
 

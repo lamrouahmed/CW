@@ -1,3 +1,7 @@
+<?php
+require_once '/wamp64/www/PFE/core/init.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +12,14 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+
+        if(Session::exists("success")){
+            echo Session::flash('success');
+            //echo Session::get("success");
+            //Session::delete("success");
+        }
+    ?>
     <div class="imgTop">
         <header class="header">
             <nav class="navBar">

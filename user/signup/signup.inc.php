@@ -7,7 +7,7 @@ require_once '/wamp64/www/PFE/core/init.php';
   //  'u_phone'        =>  FILTER_SANITIZE_NUMBER_INT,
 //);
 
-$users = DB::connect();
+//$users = DB::connect();
 
 
 
@@ -80,9 +80,12 @@ if(Input::exists()) {
                                "mail" => Input::get("u_mail"),
                                "password" => Hash::make(Input::get("u_pwd")),
                                "location" => "googlemaps.com",
-                               "created" => $users->getDate()
+                               "created" => Config::getDate()
   
         ]);
+
+        Session::flash('success', 'account created succesfully');
+        Redirect::to("../../");
        
   
   
