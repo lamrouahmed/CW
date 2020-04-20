@@ -54,14 +54,16 @@ body {
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
             margin: 0;
-            font-size: 2em;
+            font-size: 2.9em;
+        }
+        span {
+            color: #FFF;
         }
     
         h1 {
-            font-size: 10em;
+            font-size: 14em;
             color: #FFF;
             font-weight: 200;
-            text-shadow: 1px 1px 1px #000;
 
     
         }
@@ -76,6 +78,7 @@ body {
             margin-top: 3em;
             transition: all 200ms ease-in-out;
             transform: scale(1);
+            cursor: pointer;
             
             
             &:hover {
@@ -93,6 +96,13 @@ body {
 
 @include tablet {
 
+    h2 {
+        color: #FFF !important;
+    }
+
+    h1 {
+        font-size: 11em !important;
+    }
     .link {
         text-decoration: none;
         color: #ffffff !important;
@@ -100,7 +110,7 @@ body {
         border: 2px solid #ffffff !important;
         padding: 1em 2em;
         font-weight: 600;
-        margin-top: 3em;
+        margin-top: 2em !important;
         transition: all 200ms ease-in-out;
         transform: scale(1);
         
@@ -109,7 +119,8 @@ body {
             transition: all 200ms ease-in-out;
             transform: scale(.97);
             background-color: #FFF !important;
-            color: #244571 !important;
+            color: #1b3760 !important;
+            
         }
     }
 
