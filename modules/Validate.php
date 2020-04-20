@@ -48,6 +48,7 @@
                                     $this->setError("{$rules["name"]} is already taken", $field);
                                 }
                                 break;
+
                         }
                     }
                 }
@@ -62,7 +63,7 @@
             return $this->valid;
         }
 
-        private function setError($error, $errorName)
+        public function setError($error, $errorName)
         {
             $this->errors +=  [$errorName => $error];
         }
@@ -71,3 +72,11 @@
             return $this->errors;
         }
     }
+
+
+
+                                  
+    
+    /*
+        !password_verify(Input::get($field),$this->db->getOne("username", "'".$value."'", "user")->results()[0]->password)
+*/

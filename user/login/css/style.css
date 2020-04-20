@@ -14,6 +14,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -78,7 +79,7 @@ body {
   width: 100%;
   height: 4%;
   background-color: #3d7b7d;
-  bottom: -1%;
+  bottom: 0%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: center;
@@ -94,7 +95,7 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-.wrapper .form form input[type=text] {
+.wrapper .form form input[type=text], .wrapper .form form input[type=password] {
   border: none;
   border-bottom: 1px solid #a8a2a2;
   width: 100%;
@@ -103,27 +104,27 @@ body {
   font-weight: 500;
 }
 
-.wrapper .form form input[type=text]::-webkit-input-placeholder {
+.wrapper .form form input[type=text]::-webkit-input-placeholder, .wrapper .form form input[type=password]::-webkit-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.wrapper .form form input[type=text]:-ms-input-placeholder {
+.wrapper .form form input[type=text]:-ms-input-placeholder, .wrapper .form form input[type=password]:-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.wrapper .form form input[type=text]::-ms-input-placeholder {
+.wrapper .form form input[type=text]::-ms-input-placeholder, .wrapper .form form input[type=password]::-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.wrapper .form form input[type=text]::placeholder {
+.wrapper .form form input[type=text]::placeholder, .wrapper .form form input[type=password]::placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.wrapper .form form input[type=text]:focus {
+.wrapper .form form input[type=text]:focus, .wrapper .form form input[type=password]:focus {
   outline: none;
 }
 
@@ -186,6 +187,27 @@ body {
 
 .mobileNav {
   display: none;
+}
+
+.error {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: .7em;
+  color: #ff0000b3;
+  width: 100%;
+  margin-top: .5em;
+}
+
+.errorB {
+  font-weight: 600;
+  font-size: .8em;
+  margin-top: 1em;
+}
+
+.errorTrue {
+  border-bottom: 2px solid #eb5151 !important;
 }
 
 /*---------------------------------------------------  Desktop  --------------------------------------------------------- */

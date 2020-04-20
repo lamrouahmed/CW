@@ -5,7 +5,7 @@ const spans = $$('.border');
 const hamburger = $('.hamburger');
 const nav = $('.nav');
 const inputs = $$('.input');
-
+const errors = $$('.error')
 labels.forEach((label, index) => label.addEventListener('click', () => addBorder(index)))
 inputs.forEach((input, index) => input.addEventListener('focus', () => addBorder(index)))
 
@@ -22,3 +22,17 @@ function addBorder(index) {
     spans[index].classList.add('clicked');
 
 }
+
+
+function errorDisplay(errors, className, inputs) {
+    errors.forEach((error, index) => {
+        if(error.textContent.length !== 0) {
+            index <= inputs.length && inputs[index].classList.add(className)
+        } else {
+            index <= inputs.length && inputs[index].classList.remove(className)
+        }
+    })
+    
+}
+
+errorDisplay(errors, "errorTrue", inputs);

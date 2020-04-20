@@ -21,8 +21,9 @@
 
         public static function get($inputName):string
         {
-            if (isset($_POST[$inputName])) return $_POST[$inputName];
-            else if(isset($_GET[$inputName])) return $_GET[$inputName];
+            
+            if (isset($_POST[$inputName])) return escape($_POST[$inputName]);
+            else if(isset($_GET[$inputName])) return escape($_GET[$inputName]);
             return '';
         }
     }

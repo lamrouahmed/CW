@@ -97,7 +97,7 @@ class DB {
         return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id}", [], "SELECT");
     }
 
-
+    
     public function delete($PK , $id, string $table):void
     {
     $this->query("DELETE FROM {$table} WHERE {$PK} = {$id}",[] ,'DELETE');
