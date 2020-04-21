@@ -34,7 +34,7 @@
                                 break;
 
                             case "match":
-                                if(Input::get($field) !== $value) $this->setError("the {$rules["name"]} must match", $field);
+                                if(Input::get($field) !== Input::get($rule)) $this->setError("the password must match", $field);
                                 break;
 
                             case "regexp":

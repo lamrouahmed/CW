@@ -66,8 +66,8 @@ if(Input::exists()) {
         "u_username" => ["min" => 2, "max" => 20,"unique" => "user", "name" => "username"],
         "u_phone" => ["regexp" => "/^0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", "name" => "phone number"],
         "u_mail" => ["mail" => true, "name" => "mail"],
-        "u_pwd" => ["min" => 8, "name" => "password"],
-        "u_pwd_rep" => ["match" => "password", "name" => "confirm password"]
+        "u_pwd" => ["min" => 8, "match" => "u_pwd_rep", "name" => "password"],
+        "u_pwd_rep" => ["match" => "u_pwd", "name" => "confirm password"]
     ]);
   
     if($validate->isValid()) {

@@ -69,7 +69,7 @@ require_once '/wamp64/www/PFE/user/signup/signup.inc.php';
                 <label class="label">
                     <input class="input" type="password" name="u_pwd_rep" placeholder="Confirm">
                     <span class="border"></span>
-                    <span class="error"><?php if(isset($errors["u_pwd_rep"])) echo $errors["u_pwd"] ?></span>
+                    <span class="error"><?php if(isset($errors["u_pwd_rep"])) echo $errors["u_pwd_rep"] ?></span>
 
                 </label>
                 <input type="hidden" name="position" value="">
