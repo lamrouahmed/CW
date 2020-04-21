@@ -219,6 +219,15 @@ body {
         .signup a {
             padding: .9em 2em;
         }
+        .logout {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                height: 42%;
+            }
+        }
     }
 }
 

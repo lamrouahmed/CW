@@ -39,7 +39,10 @@ require_once '/wamp64/www/PFE/core/init.php';
                         <li class="navItem"><a href="#">Support</a></li>
                     </ul>
 
-                    <div class="btns">
+                <?php
+                    $user = new User();
+                    if(!$user->isLoggedIn()){ ?>
+                                        <div class="btns">
                         <div class="login btn">
                             <a data-key="log">Log in</a>
                         </div>
@@ -48,6 +51,15 @@ require_once '/wamp64/www/PFE/core/init.php';
                         </div>
     
                     </div>
+                    <?php
+                    } else {  ?>
+                        <div class="btn logout">
+                            <a href="./user/logout.inc.php">Log out</a>
+                        </div>
+
+                        <?php
+                    }
+                ?>
                 </div>
 
                 <div class="ham">
