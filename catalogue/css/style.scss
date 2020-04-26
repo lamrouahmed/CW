@@ -71,7 +71,7 @@ body {
         box-shadow: 0px 1px 6px 0px #e3e0e0;
         border-radius: 15px;
         transition: all 200ms ease-in-out;
-
+        
         &:hover {
             transition: all 200ms ease-in-out;
             box-shadow: 0px 1px 10px 0px #e3e0e0;
@@ -88,7 +88,7 @@ body {
 
             .top {
                 svg {
-                    fill: #227eb5 !important;
+                    fill: #1f65a2 !important;
                 }
 
                 .price,
@@ -100,17 +100,9 @@ body {
             }
 
             .request a {
-                background-color: darken(#227eb5, 10%);
+                background-color: #1a5385;
                 color: #FFF;
-                border-top-left-radius: 35px;
-                border-bottom-right-radius: 35px;
-                border: 2px solid darken(#227eb5, 10%);
-
-                &:hover {
-                    transform: scale(.95);
-                    background-color: darken(#227eb5, 10%) ;
-                    border: 2px solid darken(#227eb5, 10%) ;
-                }
+                border: 1px solid #1a5385;
             }
 
         }
@@ -128,16 +120,16 @@ body {
             svg {
                 position: absolute;
                 z-index: -1;
-                fill: #f0f3fb  !important;
+                fill: #f5f8ff !important;
 
             }
 
 
         }
 
-        // .services {
-        //     margin-bottom: 2em;
-        // }
+        .services {
+            margin-bottom: 2em;
+        }
 
         .top {
             margin-bottom: 3em;
@@ -153,7 +145,6 @@ body {
                 margin: 2em;
             }
         }
-
         .request {
             margin-bottom: 2em;
         }
@@ -167,7 +158,6 @@ body {
         .price {
             margin-bottom: 2em;
         }
-
         .price span {
             font-size: 2em;
             font-weight: 600;
@@ -188,19 +178,6 @@ body {
 
             .item {
                 margin: 1em;
-
-
-            }
-
-            .svgWrap {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                svg {
-                    width: 1rem;
-                    height: 1rem;
-                }
             }
 
             padding: 0;
@@ -210,14 +187,12 @@ body {
         }
 
         .request a {
-            border-radius: 5px;
-            border-top-left-radius: 35px;
-            border-bottom-right-radius: 35px;
             text-decoration: none;
             color: rgb(9, 39, 75);
             background-color: #ffffff;
             padding: 1em 1.5em;
-            border: 2px solid rgb(9, 39, 75);
+            border: 2px solid rgb(7, 45, 88);
+            border-radius: 5px;
             transition: all 200ms ease-in-out;
             transform: scale(1);
             display: flex;
@@ -230,10 +205,8 @@ body {
 
             &:hover {
                 transform: scale(.97);
-                transition: transform 200ms ease-in-out;
-                background-color: #1a608a;
-                border: 2px solid #1a608a;
-
+                transition: all 200ms ease-in-out;
+                background-color: rgb(7, 45, 88);
                 color: #FFF;
             }
         }
@@ -307,9 +280,13 @@ body {
         }
 
 
+        .item {
+            margin: 1.3em !important;
+
+        }
 
         .services {
-            margin-top: 3.5em !important;
+            margin-top: 5.5em !important;
         }
 
         .request {

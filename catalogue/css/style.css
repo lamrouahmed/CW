@@ -64,7 +64,7 @@ body {
 }
 
 .wrapper .catalogue:nth-child(2) .top svg {
-  fill: #227eb5 !important;
+  fill: #1f65a2 !important;
 }
 
 .wrapper .catalogue:nth-child(2) .top .price span,
@@ -73,18 +73,9 @@ body {
 }
 
 .wrapper .catalogue:nth-child(2) .request a {
-  background-color: #1a608a;
+  background-color: #1a5385;
   color: #FFF;
-  border-top-left-radius: 35px;
-  border-bottom-right-radius: 35px;
-  border: 2px solid #1a608a;
-}
-
-.wrapper .catalogue:nth-child(2) .request a:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  background-color: #1a608a;
-  border: 2px solid #1a608a;
+  border: 1px solid #1a5385;
 }
 
 .wrapper .catalogue .top {
@@ -99,7 +90,11 @@ body {
 .wrapper .catalogue .top svg {
   position: absolute;
   z-index: -1;
-  fill: #f0f3fb  !important;
+  fill: #f5f8ff !important;
+}
+
+.wrapper .catalogue .services {
+  margin-bottom: 2em;
 }
 
 .wrapper .catalogue .top {
@@ -164,32 +159,13 @@ body {
   margin: 1em;
 }
 
-.wrapper .catalogue .items .svgWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrapper .catalogue .items .svgWrap svg {
-  width: 1rem;
-  height: 1rem;
-}
-
 .wrapper .catalogue .request a {
-  border-radius: 5px;
-  border-top-left-radius: 35px;
-  border-bottom-right-radius: 35px;
   text-decoration: none;
   color: #09274b;
   background-color: #ffffff;
   padding: 1em 1.5em;
-  border: 2px solid #09274b;
+  border: 2px solid #072d58;
+  border-radius: 5px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(1);
@@ -211,12 +187,9 @@ body {
 .wrapper .catalogue .request a:hover {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-  background-color: #1a608a;
-  border: 2px solid #1a608a;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-color: #072d58;
   color: #FFF;
 }
 
@@ -270,8 +243,11 @@ body {
   .catalogue:nth-child(2) .top .title span {
     color: white !important;
   }
+  .catalogue .item {
+    margin: 1.3em !important;
+  }
   .catalogue .services {
-    margin-top: 3.5em !important;
+    margin-top: 5.5em !important;
   }
   .catalogue .request {
     margin-top: 1em;

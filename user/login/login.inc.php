@@ -11,7 +11,7 @@ if(Input::exists()) {
         $user = new User();
         if($user->isLoggedIn()) echo "logged";
         if($validate->isValid() && $user->login(Input::get("u_username"), Input::get("u_password"))) {
-            Redirect::to('../');
+            Redirect::to('../../');
         } else {
             if($validate->isValid()) {
                 $validate->setError("incorrect username or password", "u_error");
