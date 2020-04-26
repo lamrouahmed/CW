@@ -86,7 +86,7 @@ if(Input::exists()) {
 
         Session::flash('success', 'account created succesfully');
         $user->register(Input::get("u_username"));
-        Redirect::to("../../");
+        Redirect::to("../");
        
   
   

@@ -1,6 +1,6 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
-require_once '/wamp64/www/PFE/user/login/login.inc.php';
+require_once '/wamp64/www/PFE/login/login.inc.php';
 
 ?>
 

@@ -54,7 +54,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                     <?php
                     } else {  ?>
                         <div class="btn logout">
-                            <a href="./user/logout.inc.php">Log out</a>
+                            <a href="./logout.inc.php">Log out</a>
                         </div>
 
                         <?php
@@ -81,7 +81,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </div>
                 <div class="start">
                     <div class="startBtn">
-                        <a href="./user/signup/signup.php">GET STARTED</a>
+                        <a href="./signup/signup.php">GET STARTED</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ require_once '/wamp64/www/PFE/core/init.php';
             </div>
             <div class="choose">
                 <div class="userSignup choice">
-                    <a href="./user/signup/signup.php" class="Btn">Sign up as a user</a>
+                    <a href="./signup/signup.php" class="Btn">Sign up as a user</a>
                 </div>
                 <div class="washSignup choice">
                     <a href="./wash/signup/signup.php" class="Btn">Sign up as a car washer</a>
@@ -128,7 +128,7 @@ require_once '/wamp64/www/PFE/core/init.php';
             </div>
             <div class="choose">
                 <div class="userLogin choice">
-                    <a href="./user/login/login.php" class="Btn">Log in as a user</a>
+                    <a href="./login/login.php" class="Btn">Log in as a user</a>
                 </div>
                 <div class="washLogin choice">
                     <a href="./wash/login/login.php" class="Btn">Log in as a car washer</a>

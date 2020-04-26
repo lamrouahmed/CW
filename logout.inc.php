@@ -6,5 +6,5 @@ $user = new User();
 
 if($user->isLoggedIn()) {
     $user->logout();
-    Redirect::to('../');
+    Redirect::to('./');
 }
