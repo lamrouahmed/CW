@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$colors: (
+    primary: #2c3d50,
+    primary-light: lighten(#2c3d50, 10%),
+    primary-dark: darken(#2c3d50, 5%),
+    accent: #7f92b7,
+    accent-light: lighten(#7f92b7, 80%),
+    accent-dark: darken(#7f92b7, 10%)
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+
+$minTablet: 200px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+
+*,
+*::after,
+*::before {
+    box-sizing: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sideWrapper {
+
+    height: 100%;
+    position: fixed;
+    background-color: color(primary);
+    width: 7em;
+    bottom: 0;
+    transition: width 200ms ease-in-out;
+
+    .sideBar {
+        height: 100%;
+    
+    }
+
+    .navList {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+
+
+        svg {
+
+            width: 2em;
+            height: 2em;
+            margin-bottom: .6em;
+        }
+
+        .navItem {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                color: color(accent);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                    background-color: color(primary-light);
+
+                    span {
+                        color: color(accent-light);
+                    }
+
+                    svg path {
+                        fill: color(accent-light);
+                    }
+                }
+                &:visited {
+                    background-color: red;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: .9em;
+                }
+
+            }
+
+            .active {
+                background-color: #42b993;
+
+                span {
+                    color: color(accent-light);
+                }
+
+                svg path {
+                    fill: color(accent-light);
+                }
+
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    left: 95%;
+                    width: .8rem;
+                    height: .8rem;
+                    background-color: rgb(255, 255, 255);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+@include tablet {
+    .sideWrapper {
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+
+        .navList {
+            flex-direction: row;
+        }
+        .link {
+            height: 100%;
+            width: 20%;
+
+            .active {
+                &::after {
+                    content: '';
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
