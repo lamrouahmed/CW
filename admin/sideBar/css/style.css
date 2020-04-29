@@ -22,8 +22,8 @@ body {
   background-color: #2c3d50;
   width: 7em;
   bottom: 0;
-  -webkit-transition: width 200ms ease-in-out;
-  transition: width 200ms ease-in-out;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
 }
 
 .sideWrapper .sideBar {
@@ -149,6 +149,8 @@ body {
 
 @media (min-width: 200px) and (max-width: 1200px) {
   .sideWrapper {
+    -webkit-transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out;
     bottom: 0;
     width: 100%;
     height: 10%;

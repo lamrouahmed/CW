@@ -48,10 +48,11 @@ body {
     background-color: color(primary);
     width: 7em;
     bottom: 0;
-    transition: width 200ms ease-in-out;
+    transition: height 200ms ease-in-out;
 
     .sideBar {
         height: 100%;
+
     
     }
 
@@ -149,6 +150,8 @@ body {
 
 @include tablet {
     .sideWrapper {
+        transition: width 200ms ease-in-out;
+
         bottom: 0;
         width: 100%;
         height: 10%;
