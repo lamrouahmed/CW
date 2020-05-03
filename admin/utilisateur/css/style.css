@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  margin-left: 7em;
+  background-color: #f0f4f7;
+  position: relative;
+}
+
+.wrapper .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: 500;
+  height: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.wrapper .top div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: .1em;
+      -ms-flex: .1em;
+          flex: .1em;
+}
+
+.wrapper .mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #FFF;
+  height: 3.6em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .15em auto;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.wrapper .mid:hover {
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.wrapper .mid:hover .action a .delete {
+  fill: #ff0c00c4;
+}
+
+.wrapper .mid:hover .action a .update {
+  fill: #088070;
+}
+
+.wrapper .mid div {
+  font-size: .85em;
+  color: #828181;
+  font-weight: 500;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: .1em;
+      -ms-flex: .1em;
+          flex: .1em;
+}
+
+.wrapper .mid .p_uid {
+  color: #a8afb4;
+  font-weight: 500;
+}
+
+.wrapper .mid .p_id {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.wrapper .mid .action a {
+  width: 1.9em;
+  height: 1.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5em;
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+}
+
+.wrapper .mid .action a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 150%;
+  height: 150%;
+  border-radius: 100%;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper .mid .action a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-color: rgba(145, 206, 198, 0.473);
+}
+
+.wrapper .mid .action a svg {
+  height: 1.2em;
+  width: 1.2em;
+  opacity: .9;
+}
+
+.wrapper .mid .action a:first-child:hover::after {
+  background-color: rgba(236, 147, 95, 0.473) !important;
+}
+/*# sourceMappingURL=style.css.map */
