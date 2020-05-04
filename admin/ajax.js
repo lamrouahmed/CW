@@ -9,7 +9,7 @@ del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
   user.classList.add('deleted');
   setTimeout(() => user.remove(), 1000)
-  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
+  //post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
 }));
 upd.forEach(btn => btn.addEventListener('click', e => {
   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);

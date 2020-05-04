@@ -21,6 +21,7 @@ body {
     margin-left: 7em;
     background-color: #f0f4f7;
     position: relative;
+    height: 100vh;
 
     .top {
         display: flex;
@@ -144,27 +145,25 @@ body {
     }
 
 
-    // .deleted {
-    //     // transition: all 400ms ease-in-out;
-    //     // transform: translateX(100%);
-    //     // opacity: .5;
-    //     //animation: delete 300ms ease-in-out ;
-    //     animation-duration: 1s;
-    //     animation-name: delete;
-    //     //animation-iteration-count: 3;
-    //     // animation-direction: forwars;
-    //     //opacity: .8;
+    .deleted {
+        animation: delete 500ms ease-in-out forwards;
+        
+        
 
-    // }
+    }
 }
 
 
-@keyframes detele {
-    from {
+@keyframes delete {
+    0% {
         opacity: 1;
         transform: translateX(0);
     }
-    to {
+    50% {
+        opacity: 0.5;
+        transform: translateX(-20%);
+    }
+    100% {
         opacity: 0;
         transform: translateX(100%);
     }

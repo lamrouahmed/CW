@@ -20,6 +20,7 @@ body {
   margin-left: 7em;
   background-color: #f0f4f7;
   position: relative;
+  height: 100vh;
 }
 
 .wrapper .top {
@@ -173,26 +174,41 @@ body {
   background-color: rgba(236, 147, 95, 0.473) !important;
 }
 
-@-webkit-keyframes detele {
-  from {
+.wrapper .deleted {
+  -webkit-animation: delete 500ms ease-in-out forwards;
+          animation: delete 500ms ease-in-out forwards;
+}
+
+@-webkit-keyframes delete {
+  0% {
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  to {
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
 }
 
-@keyframes detele {
-  from {
+@keyframes delete {
+  0% {
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  to {
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
