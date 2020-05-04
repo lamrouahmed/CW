@@ -72,6 +72,7 @@ body {
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
+  opacity: 1;
 }
 
 .wrapper .mid:hover {
@@ -79,8 +80,8 @@ body {
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 .wrapper .mid:hover .action a .delete {
@@ -137,6 +138,7 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   position: relative;
+  cursor: pointer;
 }
 
 .wrapper .mid .action a::after {
@@ -169,5 +171,31 @@ body {
 
 .wrapper .mid .action a:first-child:hover::after {
   background-color: rgba(236, 147, 95, 0.473) !important;
+}
+
+@-webkit-keyframes detele {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes detele {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

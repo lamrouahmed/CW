@@ -5,6 +5,17 @@ require_once '/wamp64/www/PFE/admin/sideBar/sideBar.html';
 $DB = DB::connect();
 $results = $DB->getAll("user")->results();
 
+if(Input::exists()) {
+    $id = Input::get('id');
+$action = Input::get('action');
+
+if($action === "delete") {
+    echo "deleted";
+    $DB->delete("u_id", $id, "user");
+}
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +44,7 @@ $results = $DB->getAll("user")->results();
             <?php foreach($results as $result) {
 
             ?>
-            <div class="mid">
+            <div class="mid" data-key="<?php echo $result->u_id; ?>" >
                 <div class="p_id"><?php echo $result->u_id; ?></div>
                 <div class="p_uid"><?php echo $result->username ?></div>
                 <div class="p_name"><?php echo $result->last_name. " " . $result->first_name ?></div>
@@ -41,8 +52,8 @@ $results = $DB->getAll("user")->results();
                 <div class="p_mail"><?php echo $result->mail?></div>
                 <div class="p_joined"><?php echo $result->created?></div>
                 <div class="action">
-                    <a href="#" >
-                        <svg class="delete" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    <a>
+                        <svg class="delete" data-action="delete" data-id="<?php echo $result->u_id ;?>" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384"
                                 style="enable-background:new 0 0 384 384;" xml:space="preserve">
 
@@ -51,8 +62,8 @@ $results = $DB->getAll("user")->results();
                                 <polygon
                                     points="266.667,21.333 245.333,0 138.667,0 117.333,21.333 42.667,21.333 42.667,64 341.333,64 341.333,21.333 			" />
                         </a>
-                        <a href="#" >
-                            <svg class="update" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        <a>
+                            <svg class="update" data-action="update" data-id="<?php echo $result->u_id ;?>" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 383.947 383.947"
                                 style="enable-background:new 0 0 383.947 383.947;" xml:space="preserve">
                                 <polygon points="0,303.947 0,383.947 80,383.947 316.053,147.893 236.053,67.893 			" />
@@ -68,6 +79,7 @@ $results = $DB->getAll("user")->results();
 
         </div>
     </div>
+    <script src="/PFE/admin/ajax.js"></script>
 </body>
 
 </html>
