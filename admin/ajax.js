@@ -31,3 +31,11 @@ function post(action, id, url) {
       console.log(body);
     });
 }
+
+
+
+
+
+
+const string = $(`[data-key='74']`);
+console.log(string);
