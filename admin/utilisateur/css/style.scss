@@ -23,6 +23,11 @@ body {
     position: relative;
     height: 100vh;
 
+    .content {
+        flex-direction: column;
+        display: flex;
+    }
+
     .top {
         display: flex;
         width: 80%;
@@ -49,7 +54,7 @@ body {
         background-color: #FFF;
         height: 3.6em;
         align-items: center;
-        margin: .15em auto;
+        margin: .1em auto;
         transition: all 200ms ease-in-out;
         transform: scale(1);
         opacity: 1;
@@ -62,6 +67,7 @@ body {
                 .delete {
                     fill: #ff0c00c4;
                 }
+
                 .update {
                     fill: rgb(8, 128, 112);
                 }
@@ -103,6 +109,7 @@ body {
                 box-shadow: none;
                 position: relative;
                 cursor: pointer;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -114,6 +121,7 @@ body {
                     transform: scale(0);
                     transition: all 200ms ease-in-out;
                 }
+
                 &:hover {
                     &::after {
                         transform: scale(1);
@@ -121,7 +129,7 @@ body {
                         background-color: rgba(145, 206, 198, 0.473);
                     }
                 }
-               
+
 
                 svg {
                     height: 1.2em;
@@ -133,7 +141,7 @@ body {
                 &:first-child {
                     &:hover {
                         &::after {
-    
+
                             background-color: rgba(236, 147, 95, 0.473) !important;
                         }
                     }
@@ -167,15 +175,17 @@ body {
             padding-left: 2.5em;
             font-weight: 500;
             color: rgb(32, 105, 128);
-    
+
             &::placeholder {
                 font-weight: 400;
             }
         }
+
         .label {
             position: relative;
         }
-        svg  {
+
+        svg {
             fill: #257c8b;
             height: 1.3em;
             width: 1.3em;
@@ -193,10 +203,12 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+
     50% {
         opacity: 0.5;
         transform: translateX(-20%);
     }
+
     100% {
         opacity: 0;
         transform: translateX(100%);

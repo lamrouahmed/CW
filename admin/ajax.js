@@ -6,6 +6,17 @@ const url = '/PFE/admin/utilisateur/index.php';
 const inputSearch = $('.searchInput');
 const users = $$('.mid')
 
+const sortOptions = {
+  id: 0,
+  username: 1,
+  lastName: 2,
+  firstName: 3,
+  phone: 4,
+  mail: 5,
+  date: 6,
+  hours: 7
+}
+
 del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
   user.classList.add('deleted');
@@ -37,9 +48,8 @@ function post(action, id, url) {
 inputSearch.addEventListener('keyup', e => search(e, users))
 
 function search(e, nodes) {
-  console.log(e.target.value)
   nodes.forEach((node, index) => {
-    if (!node.dataset.search.includes(e.target.value.toLowerCase())) {
+    if (!node.dataset.search.trim().includes(e.target.value.toLowerCase())) {
       node.classList.add('filter');
       if (index - 1 >= 0) {
         nodes[index - 1].style.marginBottom = "0"
@@ -49,3 +59,32 @@ function search(e, nodes) {
     }
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sort(nodes, sortBy, orderBy) {
+  const array = Array.isArray(nodes) ? nodes : Array.from(nodes)
+  array.sort((nodeA, nodeB) => {
+    const a = nodeA.dataset.search.split(' ')[sortBy]
+    const b = nodeB.dataset.search.split(' ')[sortBy]
+    return orderBy > 0 ? a > b : a < b;
+  }).forEach((e, i) => {
+    e.style.order = `${i}`
+  })
+}
+
+
+
