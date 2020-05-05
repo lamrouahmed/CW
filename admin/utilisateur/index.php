@@ -12,6 +12,7 @@ $action = Input::get('action');
 if($action === "delete") {
     echo "deleted";
     $DB->delete("u_id", $id, "user");
+    Session::delete(Config::get("session/session_name"));
 }
 }
 
