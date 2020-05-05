@@ -36,10 +36,14 @@ if($action === "delete") {
             <div class="sort">
                 <span>Sort By</span>
                 <div class="sortOptions">
-                    <div class="option">username</div>
-                    <div class="option">date joined</div>
-                    <div class="option">last name</div>
-                    <div class="option">first name</div>
+                    <div class="option" data-sort="0">id</div>
+                    <div class="option" data-sort="1">username</div>
+                    <div class="option" data-sort="2">last name</div>
+                    <div class="option" data-sort="3">first name</div>
+                    <div class="option" data-sort="4">phone</div>
+                    <div class="option" data-sort="5">mail</div>
+                    <div class="option" data-sort="6">date joined</div>
+                    <div class="option" data-sort="7">hour joinde</div>
                 </div>
             </div>
             <div class="search">

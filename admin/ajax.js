@@ -5,6 +5,7 @@ const upd = $$('.update');
 const url = '/PFE/admin/utilisateur/index.php';
 const inputSearch = $('.searchInput');
 const users = $$('.mid')
+const options = $$('.option')
 
 const sortOptions = {
   id: 0,
@@ -75,6 +76,8 @@ function search(e, nodes) {
 
 
 
+
+
 function sort(nodes, sortBy, orderBy) {
   const array = Array.isArray(nodes) ? nodes : Array.from(nodes)
   array.sort((nodeA, nodeB) => {
@@ -87,4 +90,5 @@ function sort(nodes, sortBy, orderBy) {
 }
 
 
+options.forEach(option => option.addEventListener('click', e => sort(users, e.currentTarget.dataset.sort, 1)));
 
