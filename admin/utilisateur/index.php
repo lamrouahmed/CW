@@ -34,6 +34,7 @@ if($action === "delete") {
 
         <div class="options">
             <div class="sort">
+                <span>Sort By</span>
                 <div class="sortOptions">
                     <div class="option">username</div>
                     <div class="option">date joined</div>

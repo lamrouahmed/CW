@@ -73,8 +73,8 @@ if(Input::exists()) {
     if($validate->isValid()) {
         $user = new User();
    
-                      $user->create("user", ["last_name" => Input::get("u_last_name"),
-                               "first_name" => Input::get("u_first_name"),
+                      $user->create("user", ["last_name" => ucfirst(Input::get("u_last_name")),
+                               "first_name" => ucfirst(Input::get("u_first_name")),
                                "username" => Input::get("u_username"),
                                "phone" => Input::get("u_phone"),
                                "mail" => Input::get("u_mail"),

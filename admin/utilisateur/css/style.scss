@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 *,
@@ -166,35 +166,108 @@ body {
 
     }
 
-    .search {
-        .searchInput {
-            border: 1px solid rgb(196, 194, 194);
-            border-radius: 30px;
-            height: 2.5em;
-            width: 11em;
-            padding-left: 2.5em;
-            font-weight: 500;
-            color: rgb(32, 105, 128);
+    .options {
+        background-color: #FFF;
+        display: flex;
 
-            &::placeholder {
-                font-weight: 400;
+        .sort {
+            border-radius: 10px;
+            height: 2.2rem;
+            border: 1px solid rgb(196, 194, 194);
+            width: 6rem;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            position: relative;
+
+            span {
+                font-weight: 500;
+                font-size: .8em;
+                color: rgb(163, 163, 163);
+                margin-left: .5em;
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: .7em;
+                    height: .7em;
+                    border-top: 2px solid rgb(32, 105, 128);
+                    border-right: 2px solid rgb(32, 105, 128);
+                    right: 15%;
+                    transform: rotate(135deg);
+                    transition: all 100ms ease-in-out;
+                    top: 33%;
+                }
+                
+                // &:hover {
+                //     &::after {
+                //         transform: rotate(-45deg);
+                //         transition: all 100ms ease-in-out;
+                //         top: 45%;
+                //     }
+                // }
+            }
+
+            .sortOptions {
+                position: absolute;
+                top: 105%;
+                width: 100%;
+
+                .option {
+                    width: 100%;
+                    white-space: nowrap;
+                    color: rgb(161, 168, 170);
+                    font-size: .9em;
+                    background-color: #FFF;
+                    border-bottom: 1px solid rgb(231, 226, 226);
+                    padding: .9em .9em .9em .2em;
+                    cursor: pointer;
+                }
             }
         }
 
-        .label {
-            position: relative;
-        }
+        .search {
+            .searchInput {
+                border: 1px solid rgb(196, 194, 194);
+                border-radius: 10px;
+                height: 2.2rem;
+                width: 11em;
+                padding-left: 2.5em;
+                font-weight: 500;
+                color: rgb(32, 105, 128);
 
-        svg {
-            fill: #257c8b;
-            height: 1.3em;
-            width: 1.3em;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 5%;
+                &::placeholder {
+                    font-weight: 400;
+                }
+            }
+
+            .label {
+                position: relative;
+            }
+
+            svg {
+                fill: #257c8b;
+                height: 1.3em;
+                width: 1.3em;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 5%;
+            }
         }
     }
+
+
+
+
 }
 
 

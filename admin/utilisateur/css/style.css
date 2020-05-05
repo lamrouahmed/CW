@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
@@ -196,37 +195,112 @@ body {
   margin-bottom: 0;
 }
 
-.wrapper .search .searchInput {
+.wrapper .options {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .options .sort {
+  border-radius: 10px;
+  height: 2.2rem;
   border: 1px solid #c4c2c2;
-  border-radius: 30px;
-  height: 2.5em;
+  width: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.wrapper .options .sort span {
+  font-weight: 500;
+  font-size: .8em;
+  color: #a3a3a3;
+  margin-left: .5em;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.wrapper .options .sort span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: .7em;
+  height: .7em;
+  border-top: 2px solid #206980;
+  border-right: 2px solid #206980;
+  right: 15%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  top: 33%;
+}
+
+.wrapper .options .sort .sortOptions {
+  position: absolute;
+  top: 105%;
+  width: 100%;
+}
+
+.wrapper .options .sort .sortOptions .option {
+  width: 100%;
+  white-space: nowrap;
+  color: #a1a8aa;
+  font-size: .9em;
+  background-color: #FFF;
+  border-bottom: 1px solid #e7e2e2;
+  padding: .9em .9em .9em .2em;
+  cursor: pointer;
+}
+
+.wrapper .options .search .searchInput {
+  border: 1px solid #c4c2c2;
+  border-radius: 10px;
+  height: 2.2rem;
   width: 11em;
   padding-left: 2.5em;
   font-weight: 500;
   color: #206980;
 }
 
-.wrapper .search .searchInput::-webkit-input-placeholder {
+.wrapper .options .search .searchInput::-webkit-input-placeholder {
   font-weight: 400;
 }
 
-.wrapper .search .searchInput:-ms-input-placeholder {
+.wrapper .options .search .searchInput:-ms-input-placeholder {
   font-weight: 400;
 }
 
-.wrapper .search .searchInput::-ms-input-placeholder {
+.wrapper .options .search .searchInput::-ms-input-placeholder {
   font-weight: 400;
 }
 
-.wrapper .search .searchInput::placeholder {
+.wrapper .options .search .searchInput::placeholder {
   font-weight: 400;
 }
 
-.wrapper .search .label {
+.wrapper .options .search .label {
   position: relative;
 }
 
-.wrapper .search svg {
+.wrapper .options .search svg {
   fill: #257c8b;
   height: 1.3em;
   width: 1.3em;
