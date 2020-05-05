@@ -1,5 +1,4 @@
-
-const links = $$('.navItem a');
+const links = document.querySelectorAll('.navItem a');
 const loc = window.location.pathname;
 
 

@@ -3,7 +3,8 @@ const $$ = e => document.querySelectorAll(e);
 const del = $$('.delete');
 const upd = $$('.update');
 const url = '/PFE/admin/utilisateur/index.php';
-
+const inputSearch = $('.searchInput');
+const users = $$('.mid')
 
 del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
@@ -33,9 +34,18 @@ function post(action, id, url) {
 }
 
 
+inputSearch.addEventListener('keyup', e => search(e, users))
+
+function search(e, nodes) {
+  nodes.forEach((node, index) => {
+    if(!node.dataset.search.includes(e.target.value)) {
+      nodes[index-1].style.marginBottom="0";
+
+      node.classList.add('filter');
+    } else {
+      node.classList.remove('filter');
+    }
+  })
+}
 
 
-
-
-const string = $(`[data-key='74']`);
-console.log(string);

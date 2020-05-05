@@ -67,10 +67,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: .15em auto;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
@@ -177,6 +175,56 @@ body {
 .wrapper .deleted {
   -webkit-animation: delete 500ms ease-in-out forwards;
           animation: delete 500ms ease-in-out forwards;
+}
+
+.wrapper .filter {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wrapper .search .searchInput {
+  border: 1px solid #c4c2c2;
+  border-radius: 30px;
+  height: 2.5em;
+  width: 11em;
+  padding-left: 2.5em;
+  font-weight: 500;
+  color: #206980;
+}
+
+.wrapper .search .searchInput::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+.wrapper .search .searchInput:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+.wrapper .search .searchInput::-ms-input-placeholder {
+  font-weight: 400;
+}
+
+.wrapper .search .searchInput::placeholder {
+  font-weight: 400;
+}
+
+.wrapper .search .label {
+  position: relative;
+}
+
+.wrapper .search svg {
+  fill: #257c8b;
+  height: 1.3em;
+  width: 1.3em;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5%;
 }
 
 @-webkit-keyframes delete {

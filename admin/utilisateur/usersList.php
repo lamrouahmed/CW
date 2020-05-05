@@ -10,7 +10,7 @@ $results = $DB->getAll("user")->results();
 <?php foreach($results as $result) {
 
 ?>
-<div class="mid" data-key="<?php echo $result->u_id; ?>" data-search="<?php echo "$result->u_id$result->username$result->username$result->last_name$result->first_name$result->phone$result->mail"?>" >
+<div class="mid" data-key="<?php echo $result->u_id; ?>" data-search="<?php echo "$result->u_id$result->username$result->username$result->last_name$result->first_name$result->phone$result->mail$result->created"?>" >
     <div class="p_id"><?php echo $result->u_id; ?></div>
     <div class="p_uid"><?php echo $result->username ?></div>
     <div class="p_name"><?php echo $result->last_name. " " . $result->first_name ?></div>
