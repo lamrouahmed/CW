@@ -130,14 +130,29 @@ body {
                 position: relative;
 
                 &::after {
+                    // content: '';
+                    // position: absolute;
+                    // display: block;
+                    // left: 95%;
+                    // // width: .8rem;
+                    // // height: .8rem;
+                    // // background-color: #f0f4f7;
+                    // // transform: rotate(45deg);
+                    
+                    // border: solid 1rem;
+                    // border-color:  transparent #f0f4f7 transparent transparent ;
                     content: '';
                     position: absolute;
                     display: block;
-                    left: 95%;
-                    width: .8rem;
-                    height: .8rem;
-                    background-color: #f0f4f7;
-                    transform: rotate(45deg);
+                    left: 80%;
+                    border: solid .7em;
+                        border-top-color: currentcolor;
+                        border-right-color: currentcolor;
+                        border-bottom-color: currentcolor;
+                        border-left-color: currentcolor;
+                    border-color: transparent #ffffff transparent transparent;
+                
+                
                 }
             }
         }
