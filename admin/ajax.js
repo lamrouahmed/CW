@@ -6,6 +6,30 @@ const url = '/PFE/admin/utilisateur/index.php';
 const inputSearch = $('.searchInput');
 const users = $$('.mid')
 const options = $$('.option')
+const span = $('.border');
+const label = $('.label');
+
+window.addEventListener('click', e => removeBorder(e,'INPUT'))
+
+
+function removeBorder(e, node) {
+    if (e.target.nodeName != node) {
+        span.classList.remove('clicked')
+    } 
+}
+
+
+inputSearch.addEventListener('focus', addBorder);
+label.addEventListener('click', addBorder)
+
+
+
+function addBorder() {
+  span.classList.add('clicked');
+}
+
+
+
 
 const sortOptions = {
   id: 0,

@@ -203,9 +203,7 @@ body {
 }
 
 .wrapper .options .sort {
-  border-radius: 10px;
   height: 2.2rem;
-  border: 1px solid #c4c2c2;
   width: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,6 +215,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  border-bottom: 2px solid #0c356b;
 }
 
 .wrapper .options .sort span {
@@ -271,13 +270,18 @@ body {
 }
 
 .wrapper .options .search .searchInput {
-  border: 1px solid #c4c2c2;
-  border-radius: 10px;
-  height: 2.2rem;
-  width: 11em;
-  padding-left: 2.5em;
+  border: none;
+  border-bottom: 1px solid #0c356b;
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  color: #3b4244;
+  height: 100%;
+  padding-left: 2em;
+}
+
+.wrapper .options .search .searchInput:focus {
+  outline: none;
 }
 
 .wrapper .options .search .searchInput::-webkit-input-placeholder {
@@ -298,6 +302,31 @@ body {
 
 .wrapper .options .search .label {
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wrapper .options .search .label .border {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: .1em;
+  background-color: #0c356b;
+  bottom: 1%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper .options .search .label .clicked {
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .wrapper .options .search svg {
@@ -308,7 +337,7 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 5%;
+  left: 0%;
 }
 
 @-webkit-keyframes delete {

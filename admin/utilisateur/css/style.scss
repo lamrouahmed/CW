@@ -171,14 +171,14 @@ body {
         display: flex;
 
         .sort {
-            border-radius: 10px;
             height: 2.2rem;
-            border: 1px solid rgb(196, 194, 194);
             width: 6rem;
             display: flex;
             justify-content: left;
             align-items: center;
             position: relative;
+            border-bottom: 2px solid rgb(12, 53, 107);
+
 
             span {
                 font-weight: 500;
@@ -206,7 +206,7 @@ body {
                     transition: all 100ms ease-in-out;
                     top: 33%;
                 }
-                
+
                 // &:hover {
                 //     &::after {
                 //         transform: rotate(-45deg);
@@ -236,13 +236,38 @@ body {
 
         .search {
             .searchInput {
-                border: 1px solid rgb(196, 194, 194);
-                border-radius: 10px;
-                height: 2.2rem;
-                width: 11em;
-                padding-left: 2.5em;
+                // border: 1px solid rgb(196, 194, 194);
+                // border-radius: 10px;
+                // height: 2.2rem;
+                // width: 11em;
+                // font-weight: 500;
+                // color: rgb(59, 66, 68);
+
+
+
+
+                border: none;
+                border-bottom: 1px solid rgb(12, 53, 107);
+                width: 100%;
+                background-color: transparent;
+                font-family: 'Montserrat', sans-serif;
                 font-weight: 500;
-                color: rgb(59, 66, 68);
+                height: 100%;
+                padding-left: 2em;
+
+
+
+
+
+
+
+
+
+
+
+                &:focus {
+                    outline: none;
+                }
 
                 &::placeholder {
                     font-weight: 400;
@@ -251,6 +276,29 @@ body {
 
             .label {
                 position: relative;
+                width: 100%;
+                height: 100%;
+                display: block;
+
+
+                .border {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: .1em;
+                    background-color: rgb(12, 53, 107);
+                    bottom: 1%;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: all 200ms ease-in-out;
+
+                }
+
+
+                .clicked {
+                    transform: scaleX(1) !important;
+                    transition: all 200ms ease-in-out;
+                }
             }
 
             svg {
@@ -260,7 +308,7 @@ body {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                left: 5%;
+                left: 0%;
             }
         }
     }
@@ -269,6 +317,24 @@ body {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes delete {
