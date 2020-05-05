@@ -37,15 +37,15 @@ function post(action, id, url) {
 inputSearch.addEventListener('keyup', e => search(e, users))
 
 function search(e, nodes) {
+  console.log(e.target.value)
   nodes.forEach((node, index) => {
-    if(!node.dataset.search.includes(e.target.value)) {
-      nodes[index-1].style.marginBottom="0";
-
+    if (!node.dataset.search.includes(e.target.value)) {
       node.classList.add('filter');
+      if (index - 1 >= 0) {
+        nodes[index - 1].style.marginBottom = "0"
+      };
     } else {
       node.classList.remove('filter');
     }
   })
 }
-
-

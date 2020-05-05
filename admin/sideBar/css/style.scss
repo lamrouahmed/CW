@@ -45,6 +45,7 @@ body {
 
     height: 100%;
     position: fixed;
+    z-index: 69;
     background-color: color(primary);
     width: 7em;
     bottom: 0;
@@ -135,7 +136,7 @@ body {
                     left: 95%;
                     width: .8rem;
                     height: .8rem;
-                    background-color: rgb(255, 255, 255);
+                    background-color: #f0f4f7;
                     transform: rotate(45deg);
                 }
             }
