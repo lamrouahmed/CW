@@ -41,5 +41,6 @@ $results = $DB->getAll("user")->results();
     </div>
 </div>
 <?php } ?>
+
 </body>
 </html>

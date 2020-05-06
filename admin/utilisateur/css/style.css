@@ -33,16 +33,6 @@ body {
   display: flex;
 }
 
-.wrapper .content > div:nth-child(2n) {
-  -webkit-animation: startup 400ms ease-in-out forwards;
-          animation: startup 400ms ease-in-out forwards;
-}
-
-.wrapper .content > div:nth-child(2n+1) {
-  -webkit-animation: startup 700ms ease-in-out forwards;
-          animation: startup 700ms ease-in-out forwards;
-}
-
 .wrapper .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +84,13 @@ body {
   opacity: 1;
 }
 
+.wrapper .mid:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 .wrapper .mid:hover .action a .delete {
   fill: #ff0c00c4;
 }
@@ -132,8 +129,8 @@ body {
 }
 
 .wrapper .mid .action a {
-  width: 1.9em;
-  height: 1.9em;
+  width: 1.2em;
+  height: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,8 +152,8 @@ body {
   content: '';
   position: absolute;
   display: block;
-  width: 150%;
-  height: 150%;
+  width: 200%;
+  height: 200%;
   border-radius: 100%;
   z-index: -1;
   -webkit-transform: scale(0);
@@ -174,8 +171,8 @@ body {
 }
 
 .wrapper .mid .action a svg {
-  height: 1.2em;
-  width: 1.2em;
+  height: 100%;
+  width: 100%;
   opacity: .9;
 }
 

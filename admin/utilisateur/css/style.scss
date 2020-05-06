@@ -29,12 +29,12 @@ body {
         display: flex;
 
 
-        & > div:nth-child(2n){
-            animation: startup 400ms ease-in-out forwards;
-        }
-        & > div:nth-child(2n+1) {
-            animation: startup 700ms ease-in-out forwards;
-        }
+        // & > div:nth-child(2n){
+        //     animation: startup 400ms ease-in-out forwards;
+        // }
+        // & > div:nth-child(2n+1) {
+        //     animation: startup 700ms ease-in-out forwards;
+        // }
   
  
         
@@ -73,6 +73,8 @@ body {
 
 
         &:hover {
+            transform: scale(1.03);
+            transition: all 200ms ease-in-out;
 
             .action a {
                 .delete {
@@ -110,8 +112,8 @@ body {
 
         .action {
             a {
-                width: 1.9em;
-                height: 1.9em;
+                width: 1.2em;
+                height: 1.2em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -125,8 +127,8 @@ body {
                     content: '';
                     position: absolute;
                     display: block;
-                    width: 150%;
-                    height: 150%;
+                    width: 200%;
+                    height: 200%;
                     border-radius: 100%;
                     z-index: -1;
                     transform: scale(0);
@@ -143,8 +145,8 @@ body {
 
 
                 svg {
-                    height: 1.2em;
-                    width: 1.2em;
+                    height: 100%;
+                    width: 100%;
                     opacity: .9;
 
                 }

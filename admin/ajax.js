@@ -17,10 +17,10 @@ const span = $('.border');
 const label = $('.label');
 const option = $('.sort');
 const optionToggle = $('.sortOptions');
-const refresh = $('.refresh');
+                         //const refresh = $('.refresh');
 
 
-refresh.addEventListener('click', e => post(e.currentTarget.dataset.action, -1 ,urls[1],$('.content')))
+                          //refresh.addEventListener('click', e => post(e.currentTarget.dataset.action, -1 ,urls[1],$('.content')))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
 option.addEventListener('click', () => {
@@ -33,10 +33,10 @@ function removeBorder(e, node) {
     } 
 }
 
-users.forEach((user, index) => {
-  user.style.animation = `startup ${index+2}00ms ease-in-out forwards`
+// users.forEach((user, index) => {
+//   user.style.animation = `startup ${index+2}00ms ease-in-out forwards`
 
-})
+// })
 
 inputSearch.addEventListener('focus', addBorder);
 label.addEventListener('click', addBorder)
@@ -60,11 +60,13 @@ const sortOptions = {
   date: 6,
   hours: 7
 }
+console.log('ajax');
 
 del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
   user.style.animation = "delete 500ms ease-in-out forwards"
   setTimeout(() => user.remove(), 500)
+  
   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
 }));
 // upd.forEach(btn => btn.addEventListener('click', e => {
