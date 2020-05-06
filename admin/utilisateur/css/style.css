@@ -93,15 +93,6 @@ body {
   opacity: 1;
 }
 
-.wrapper .mid:hover {
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
-}
-
 .wrapper .mid:hover .action a .delete {
   fill: #ff0c00c4;
 }
@@ -189,11 +180,6 @@ body {
 
 .wrapper .mid .action a:first-child:hover::after {
   background-color: rgba(236, 147, 95, 0.473) !important;
-}
-
-.wrapper .deleted {
-  -webkit-animation: delete 500ms ease-in-out forwards;
-          animation: delete 500ms ease-in-out forwards;
 }
 
 .wrapper .filter {

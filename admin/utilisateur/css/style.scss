@@ -70,9 +70,8 @@ body {
         transform: scale(1);
         opacity: 1;
 
+
         &:hover {
-            transition: transform 200ms ease-in-out;
-            transform: scale(1.025);
 
             .action a {
                 .delete {
@@ -164,9 +163,7 @@ body {
     }
 
 
-    .deleted {
-        animation: delete 500ms ease-in-out forwards;
-    }
+
 
     .filter {
         transition: all 200ms ease-in-out;

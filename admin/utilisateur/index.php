@@ -6,7 +6,7 @@ $DB = DB::connect();
 
 
 if(Input::exists()) {
-    $id = Input::get('id');
+$id = Input::get('id');
 $action = Input::get('action');
 
 if($action === "delete") {

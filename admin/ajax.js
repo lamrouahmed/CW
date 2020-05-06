@@ -35,6 +35,7 @@ function removeBorder(e, node) {
 
 users.forEach((user, index) => {
   user.style.animation = `startup ${index+2}00ms ease-in-out forwards`
+
 })
 
 inputSearch.addEventListener('focus', addBorder);
@@ -62,7 +63,7 @@ const sortOptions = {
 
 del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
-  user.classList.add('deleted');
+  user.style.animation = "delete 500ms ease-in-out forwards"
   setTimeout(() => user.remove(), 500)
   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
 }));
