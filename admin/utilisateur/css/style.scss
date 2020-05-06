@@ -169,6 +169,8 @@ body {
     .options {
         background-color: #FFF;
         display: flex;
+        align-items: center;
+        height: 10%;
 
         .sort {
             height: 2.2rem;
@@ -177,7 +179,7 @@ body {
             justify-content: left;
             align-items: center;
             position: relative;
-            border-bottom: 2px solid rgb(12, 53, 107);
+            border-bottom: 1px solid rgb(12, 53, 107);
 
 
             span {
@@ -218,8 +220,16 @@ body {
 
             .sortOptions {
                 position: absolute;
-                top: 105%;
+                //top: -20em;
                 width: 100%;
+                //opacity: 0;
+                //transform: scaleY(0);
+                transition: all 200ms ease-in-out;
+                display: flex;
+                flex-direction: column;
+                transform: scaleY(0) ;
+                top: 100%;
+                transform-origin: top;
 
                 .option {
                     width: 100%;
@@ -230,11 +240,20 @@ body {
                     border-bottom: 1px solid rgb(231, 226, 226);
                     padding: .9em .9em .9em .2em;
                     cursor: pointer;
+                    height: 0%;
                 }
+            }
+
+            .sortOptionsVisible {
+                //opacity: 1;
+                //transform: scaleY(1);
+                transition: transform 200ms ease-in-out;
+                transform: scaleY(1);
             }
         }
 
         .search {
+            height: 46%;
             .searchInput {
                 // border: 1px solid rgb(196, 194, 194);
                 // border-radius: 10px;
@@ -248,7 +267,7 @@ body {
 
                 border: none;
                 border-bottom: 1px solid rgb(12, 53, 107);
-                width: 100%;
+                width: 70%;
                 background-color: transparent;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 500;
@@ -284,7 +303,7 @@ body {
                 .border {
                     display: block;
                     position: absolute;
-                    width: 100%;
+                    width: 70%;
                     height: .1em;
                     background-color: rgb(12, 53, 107);
                     bottom: 1%;
@@ -309,6 +328,25 @@ body {
                 top: 50%;
                 transform: translateY(-50%);
                 left: 0%;
+            }
+        }
+
+        .refresh {
+            svg {
+                height: 2em;
+                width: 2em;
+                cursor: pointer;
+                transform:  scale(1);
+                transition: all 200ms ease-in-out;
+                
+                path {
+                    fill: rgb(18, 83, 168);
+                }
+                
+                &:hover {
+                    transform: scale(1.1);
+                    transition: all 200ms ease-in-out;
+                }
             }
         }
     }

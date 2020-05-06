@@ -8,9 +8,17 @@ const users = $$('.mid')
 const options = $$('.option')
 const span = $('.border');
 const label = $('.label');
+const option = $('.sort');
+const optionToggle = $('.sortOptions');
+const refresh = $('.refresh');
+
+
+refresh.addEventListener('click', e => console.log(e.target))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
-
+option.addEventListener('click', () => {
+  optionToggle.classList.toggle('sortOptionsVisible')
+})
 
 function removeBorder(e, node) {
     if (e.target.nodeName != node) {
@@ -48,9 +56,9 @@ del.forEach(btn => btn.addEventListener('click', e => {
   setTimeout(() => user.remove(), 500)
   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
 }));
-upd.forEach(btn => btn.addEventListener('click', e => {
-  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
-}));
+// upd.forEach(btn => btn.addEventListener('click', e => {
+//   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
+// }));
 
 
 function post(action, id, url) {

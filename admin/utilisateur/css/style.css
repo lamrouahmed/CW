@@ -200,6 +200,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
 }
 
 .wrapper .options .sort {
@@ -215,7 +219,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  border-bottom: 2px solid #0c356b;
+  border-bottom: 1px solid #0c356b;
 }
 
 .wrapper .options .sort span {
@@ -254,8 +258,21 @@ body {
 
 .wrapper .options .sort .sortOptions {
   position: absolute;
-  top: 105%;
   width: 100%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  top: 100%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .wrapper .options .sort .sortOptions .option {
@@ -267,12 +284,26 @@ body {
   border-bottom: 1px solid #e7e2e2;
   padding: .9em .9em .9em .2em;
   cursor: pointer;
+  height: 0%;
+}
+
+.wrapper .options .sort .sortOptionsVisible {
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.wrapper .options .search {
+  height: 46%;
 }
 
 .wrapper .options .search .searchInput {
   border: none;
   border-bottom: 1px solid #0c356b;
-  width: 100%;
+  width: 70%;
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -310,7 +341,7 @@ body {
 .wrapper .options .search .label .border {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 70%;
   height: .1em;
   background-color: #0c356b;
   bottom: 1%;
@@ -338,6 +369,27 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0%;
+}
+
+.wrapper .options .refresh svg {
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper .options .refresh svg path {
+  fill: #1253a8;
+}
+
+.wrapper .options .refresh svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 @-webkit-keyframes delete {
