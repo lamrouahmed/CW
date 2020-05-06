@@ -26,6 +26,17 @@ body {
     .content {
         flex-direction: column;
         display: flex;
+
+
+        & > div:nth-child(2n){
+            animation: startup 400ms ease-in-out forwards;
+        }
+        & > div:nth-child(2n+1) {
+            animation: startup 700ms ease-in-out forwards;
+        }
+  
+ 
+        
     }
 
     .top {
@@ -389,5 +400,17 @@ body {
     100% {
         opacity: 0;
         transform: translateX(100%);
+    }
+}
+
+@keyframes startup {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }

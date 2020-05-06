@@ -32,6 +32,16 @@ body {
   display: flex;
 }
 
+.wrapper .content > div:nth-child(2n) {
+  -webkit-animation: startup 400ms ease-in-out forwards;
+          animation: startup 400ms ease-in-out forwards;
+}
+
+.wrapper .content > div:nth-child(2n+1) {
+  -webkit-animation: startup 700ms ease-in-out forwards;
+          animation: startup 700ms ease-in-out forwards;
+}
+
 .wrapper .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,6 +435,32 @@ body {
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes startup {
+  from {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes startup {
+  from {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

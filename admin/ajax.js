@@ -2,7 +2,14 @@ const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
 const del = $$('.delete');
 const upd = $$('.update');
-const url = '/PFE/admin/utilisateur/index.php';
+// const url = '/PFE/admin/utilisateur/index.php';
+// const url2 = '/PFE/admin/utilisateur/usersList.php'
+
+
+const urls = [
+  '/PFE/admin/utilisateur/index.php',
+  '/PFE/admin/utilisateur/usersList.php'
+]
 const inputSearch = $('.searchInput');
 const users = $$('.mid')
 const options = $$('.option')
@@ -13,7 +20,7 @@ const optionToggle = $('.sortOptions');
 const refresh = $('.refresh');
 
 
-refresh.addEventListener('click', e => console.log(e.target))
+refresh.addEventListener('click', e => post(e.currentTarget.dataset.action, -1 ,urls[1],$('.content')))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
 option.addEventListener('click', () => {
@@ -26,6 +33,9 @@ function removeBorder(e, node) {
     } 
 }
 
+users.forEach((user, index) => {
+  user.style.animation = `startup ${index+2}00ms ease-in-out forwards`
+})
 
 inputSearch.addEventListener('focus', addBorder);
 label.addEventListener('click', addBorder)
@@ -54,14 +64,14 @@ del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
   user.classList.add('deleted');
   setTimeout(() => user.remove(), 500)
-  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
+  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
 }));
 // upd.forEach(btn => btn.addEventListener('click', e => {
 //   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
 // }));
 
 
-function post(action, id, url) {
+function post(action, id, url, render = false) {
   let formData = new FormData();
   formData.append("action", action);
   formData.append("id", id)
@@ -73,7 +83,8 @@ function post(action, id, url) {
       return response.text();
     })
     .then(function (body) {
-      console.log(body);
+      render ? render.innerHTML = body : console.log(body);
+ 
     });
 }
 

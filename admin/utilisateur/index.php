@@ -10,10 +10,9 @@ if(Input::exists()) {
 $action = Input::get('action');
 
 if($action === "delete") {
-    echo "deleted";
     $DB->delete("u_id", $id, "user");
     Session::delete(Config::get("session/session_name"));
-}
+} 
 }
 
 
@@ -67,7 +66,7 @@ if($action === "delete") {
             </label>
             </div>
 
-            <div class="refresh">
+            <div class="refresh" data-action="refresh">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 
