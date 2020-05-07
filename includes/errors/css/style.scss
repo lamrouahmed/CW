@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 300px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/Layer\ 2.svg") no-repeat;
+    background-size: cover;
+
+}
+
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        
+        h1,h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            font-size: 2.9em;
+        }
+        span {
+            color: #FFF;
+        }
+    
+        h1 {
+            font-size: 14em;
+            color: #FFF;
+            font-weight: 200;
+
+    
+        }
+
+        .link {
+            text-decoration: none;
+            color: #104a66;
+            font-family: 'Montserrat', sans-serif;
+            border: 2px solid #244571;
+            padding: 1em 2em;
+            font-weight: 600;
+            margin-top: 3em;
+            transition: all 200ms ease-in-out;
+            transform: scale(1);
+            cursor: pointer;
+            
+            
+            &:hover {
+                transition: all 200ms ease-in-out;
+                transform: scale(.97);
+                background-color: #244571;
+                color: #FFF;
+            }
+        }
+    }
+  
+}
+
+
+
+@include tablet {
+
+    h2 {
+        color: #FFF !important;
+    }
+
+    h1 {
+        font-size: 11em !important;
+    }
+    .link {
+        text-decoration: none;
+        color: #ffffff !important;
+        font-family: 'Montserrat', sans-serif;
+        border: 2px solid #ffffff !important;
+        padding: 1em 2em;
+        font-weight: 600;
+        margin-top: 2em !important;
+        transition: all 200ms ease-in-out;
+        transform: scale(1);
+        
+        
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: scale(.97);
+            background-color: #FFF !important;
+            color: #1b3760 !important;
+            
+        }
+    }
+
+}
