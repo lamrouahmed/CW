@@ -1,6 +1,9 @@
+let loaded = false;
+
+
 const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
-const del = $$('.delete');
+let del = $$('.delete');
 const upd = $$('.update');
 // const url = '/PFE/admin/utilisateur/index.php';
 // const url2 = '/PFE/admin/utilisateur/usersList.php'
@@ -11,16 +14,15 @@ const urls = [
   '/PFE/admin/utilisateur/usersList.php'
 ]
 const inputSearch = $('.searchInput');
-const users = $$('.mid')
+let users = $$('.mid')
 const options = $$('.option')
 const span = $('.border');
 const label = $('.label');
 const option = $('.sort');
 const optionToggle = $('.sortOptions');
-                         //const refresh = $('.refresh');
+                         const refresh = $('.refresh');
 
 
-                          //refresh.addEventListener('click', e => post(e.currentTarget.dataset.action, -1 ,urls[1],$('.content')))
 
 window.addEventListener('click', e => removeBorder(e,'INPUT'))
 option.addEventListener('click', () => {
@@ -61,13 +63,15 @@ const sortOptions = {
   hours: 7
 }
 
-del.forEach(btn => btn.addEventListener('click', e => {
-  const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
-  user.style.animation = "delete 500ms ease-in-out forwards"
-  setTimeout(() => user.remove(), 500)
+
+
   
-  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
-}));
+
+
+
+
+
+
 // upd.forEach(btn => btn.addEventListener('click', e => {
 //   post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, url);
 // }));
@@ -89,6 +93,46 @@ function post(action, id, url, render = false) {
  
     });
 }
+
+
+
+
+
+
+refresh.addEventListener('click', () => {
+  get(urls[1],$('.content'))
+})
+
+
+
+
+
+//06-76-76-56-98
+
+
+function get(url, render) {
+  fetch(url, {
+    method: 'post'  
+  })
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (body) {
+    render.innerHTML = body;
+  }).then(() => {
+      users = $$('.mid');
+      del = $$('.delete')
+
+      del.forEach(btn => btn.addEventListener('click', e => {
+        const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
+        user.style.animation = "delete 500ms ease-in-out forwards"
+        setTimeout(() => user.remove(), 500)
+        
+        post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
+      }));
+    });
+}
+
 
 
 inputSearch.addEventListener('keyup', e => search(e, users))
