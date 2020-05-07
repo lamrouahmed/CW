@@ -19,6 +19,7 @@ require_once '/wamp64/www/PFE/core/init.php';
             //echo Session::get("success");
             //Session::delete("success");
         }
+
     ?>
     <div class="imgTop">
         <header class="header">
