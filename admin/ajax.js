@@ -122,18 +122,21 @@ function get(url, render) {
   }).then(() => {
       users = $$('.mid');
       del = $$('.delete');
+      del.forEach(btn => btn.addEventListener('click', e => remove(e)));
 
-      del.forEach(btn => btn.addEventListener('click', e => {
-        const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
-        user.style.animation = "delete 500ms ease-in-out forwards"
-        setTimeout(() => user.remove(), 500)
-        
-        post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
-      }));
     });
 }
 
+del.forEach(btn => btn.addEventListener('click', e => remove(e)));
 
+
+function remove(e) {
+  const user = $(`[data-key='${e.currentTarget.dataset.id}']`);
+  user.style.animation = "delete 500ms ease-in-out forwards"
+  setTimeout(() => user.remove(), 500)
+  
+  post(e.currentTarget.dataset.action, e.currentTarget.dataset.id, urls[0]);
+}
 
 inputSearch.addEventListener('keyup', e => search(e, users))
 
