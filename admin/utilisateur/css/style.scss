@@ -170,10 +170,11 @@ body {
 
     .filter {
         transition: all 200ms ease-in-out;
-        height: 0;
+        height: 0 !important;
         opacity: 0 !important;
         margin-top: 0;
         margin-bottom: 0;
+        animation: none !important;
 
     }
 

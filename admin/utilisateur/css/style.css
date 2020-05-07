@@ -193,10 +193,12 @@ body {
 .wrapper .filter {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  height: 0;
+  height: 0 !important;
   opacity: 0 !important;
   margin-top: 0;
   margin-bottom: 0;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 
 .wrapper .options {
