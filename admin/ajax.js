@@ -121,7 +121,7 @@ function get(url, render) {
     render.innerHTML = body;
   }).then(() => {
       users = $$('.mid');
-      del = $$('.delete')
+      del = $$('.delete');
 
       del.forEach(btn => btn.addEventListener('click', e => {
         const user = $(`[data-key='${e.currentTarget.dataset.id}']`);

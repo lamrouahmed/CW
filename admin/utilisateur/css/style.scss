@@ -29,12 +29,12 @@ body {
         display: flex;
 
 
-        // & > div:nth-child(2n){
-        //     animation: startup 400ms ease-in-out forwards;
-        // }
-        // & > div:nth-child(2n+1) {
-        //     animation: startup 700ms ease-in-out forwards;
-        // }
+        & > div:nth-child(2n){
+            animation: startup 400ms ease-in-out forwards;
+        }
+        & > div:nth-child(2n+1) {
+            animation: startup 700ms ease-in-out forwards;
+        }
   
  
         

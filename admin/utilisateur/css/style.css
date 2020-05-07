@@ -33,6 +33,16 @@ body {
   display: flex;
 }
 
+.wrapper .content > div:nth-child(2n) {
+  -webkit-animation: startup 400ms ease-in-out forwards;
+          animation: startup 400ms ease-in-out forwards;
+}
+
+.wrapper .content > div:nth-child(2n+1) {
+  -webkit-animation: startup 700ms ease-in-out forwards;
+          animation: startup 700ms ease-in-out forwards;
+}
+
 .wrapper .top {
   display: -webkit-box;
   display: -ms-flexbox;
