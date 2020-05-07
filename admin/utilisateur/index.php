@@ -11,7 +11,9 @@ $action = Input::get('action');
 
 if($action === "delete") {
     $DB->delete("u_id", $id, "user");
-    Session::delete(Config::get("session/session_name"));
+    if($_SESSION['user'] === $id) {
+        Session::delete(Config::get("session/session_name"));
+    }
 } 
 }
 

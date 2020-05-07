@@ -60,7 +60,6 @@ const sortOptions = {
   date: 6,
   hours: 7
 }
-console.log('ajax');
 
 del.forEach(btn => btn.addEventListener('click', e => {
   const user = $(`[data-key='${e.currentTarget.dataset.id}']`);

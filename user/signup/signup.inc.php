@@ -83,10 +83,11 @@ if(Input::exists()) {
                                "created" => Config::getDate()
   
         ]);
-
+        
         Session::flash('success', 'account created succesfully');
         $user->register(Input::get("u_username"));
         Redirect::to("../../");
+        
        
   
   
