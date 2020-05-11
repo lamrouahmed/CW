@@ -62,8 +62,16 @@ header section div:first-child {
 
 .header_1 .userInfo .disconnect .username {
   margin-left: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-size: .9em;
+}
+
+.header_1 .userInfo .disconnect .username span {
+  font-weight: 500;
+  font-size: .85em;
+  color: #e9e5e5;
+  display: inline-block;
+  margin-right: .5em;
 }
 
 .header_1 .userInfo .disconnect .triangle {
@@ -75,8 +83,8 @@ header section div:first-child {
 }
 
 .header_1 .userInfo .disconnect .triangle svg {
-  width: 1em;
-  height: 1em;
+  width: .8em;
+  height: .8em;
 }
 
 .header_1 .userInfo .disconnect .triangle svg path {
@@ -88,6 +96,10 @@ header section div:first-child {
   top: 80%;
   right: 0;
   display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header_1 .userInfo .disconnect .logout a {
@@ -100,6 +112,32 @@ header section div:first-child {
 
 .header_1 .userInfo .disconnect .displayLog {
   display: block;
+}
+
+.header_1 .userInfo .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: navajowhite;
+  border-radius: 100%;
+  margin-left: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header_1 .userInfo .img img {
+  display: block;
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 100%;
 }
 
 .header_1 .notifications {
@@ -137,5 +175,128 @@ header section div:first-child {
 .header_2 .right div {
   margin-left: 1em;
   opacity: .7;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9em;
+  height: 9em;
+  margin: 0 auto;
+  background-color: wheat;
+  border-radius: 100%;
+}
+
+.wrapper .imgContainer img {
+  width: 9em;
+  height: 9em;
+  border-radius: 100%;
+}
+
+.formContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.formContainer .form {
+  width: 100%;
+}
+
+.formContainer .form .input {
+  border: none;
+  border-bottom: 1px solid #dfdcdc;
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  height: 4em;
+  padding-top: 2em;
+}
+
+.formContainer .form .input:focus {
+  outline: none;
+}
+
+.formContainer .form .label {
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  display: block;
+}
+
+.formContainer .form .label .border {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4%;
+  background-color: #3d7b7d;
+  bottom: -1%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formContainer .form .label .text {
+  font-weight: 500;
+  color: #b4b3b3;
+  font-size: .8em;
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formContainer .form .label .focus {
+  top: 20%;
+  font-size: .7em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formContainer .form .label .clicked {
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formContainer .form .fullName,
+.formContainer .form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formContainer .form .password .label:first-child, .formContainer .form .fullName .label:first-child {
+  margin-right: 2em;
+}
+
+.formContainer .form .error {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: .7em;
+  color: #ff0000b3;
+  width: 100%;
+}
+
+.formContainer .form .errorTrue {
+  border-bottom: 2px solid #eb5151 !important;
 }
 /*# sourceMappingURL=style.css.map */
