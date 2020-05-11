@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -14,52 +15,127 @@ body {
   height: 100vh;
 }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
+header {
+  width: 100vw;
 }
 
-.wrapper .point {
+header section {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #17364b;
+  color: #FFF;
 }
 
-.wrapper .point .image {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
-  padding: .6em;
+header section div {
+  height: 100%;
+}
+
+header section div:first-child {
+  margin-left: 1em;
+}
+
+.header_1 .userInfo {
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1em;
 }
 
-.wrapper .point .image img {
-  border-radius: 100%;
-  height: 6em;
-  width: 6em;
+.header_1 .userInfo .disconnect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
-.wrapper .point .fullName {
-  font-weight: 600;
+.header_1 .userInfo .disconnect .username {
+  margin-left: 1em;
+  font-weight: 500;
+  font-size: .9em;
 }
 
-.wrapper .point .mail {
-  font-size: .7em;
-  color: #a7a6a6;
+.header_1 .userInfo .disconnect .triangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: .3em;
+  cursor: pointer;
+}
+
+.header_1 .userInfo .disconnect .triangle svg {
+  width: 1em;
+  height: 1em;
+}
+
+.header_1 .userInfo .disconnect .triangle svg path {
+  fill: #FFF;
+}
+
+.header_1 .userInfo .disconnect .logout {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  display: none;
+}
+
+.header_1 .userInfo .disconnect .logout a {
+  color: #17364b;
+  font-weight: 500;
+  background-color: #FFF;
+  padding: .4em .5em;
+  display: block;
+}
+
+.header_1 .userInfo .disconnect .displayLog {
+  display: block;
+}
+
+.header_1 .notifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.header_1 .notifications svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.header_1 .notifications svg path {
+  fill: #FFF;
+}
+
+.header_2 .title {
+  font-weight: 500;
+}
+
+.header_2 .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-weight: 500;
+  margin-right: 1em;
+}
+
+.header_2 .right div {
+  margin-left: 1em;
+  opacity: .7;
 }
 /*# sourceMappingURL=style.css.map */

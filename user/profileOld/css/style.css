@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .point .image {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  padding: .6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .point .image img {
+  border-radius: 100%;
+  height: 6em;
+  width: 6em;
+}
+
+.wrapper .point .fullName {
+  font-weight: 600;
+}
+
+.wrapper .point .mail {
+  font-size: .7em;
+  color: #a7a6a6;
+}
+/*# sourceMappingURL=style.css.map */

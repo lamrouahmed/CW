@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 
 
@@ -7,6 +8,8 @@
 *::before {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -17,46 +20,209 @@ body {
 }
 
 
-.wrapper {
-    width: 100%;
-    height: 100%;
+header {
+    width: 100vw;
 
-    .point {
+
+    section {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
+        background-color: rgb(23, 54, 75);
+        color: #FFF;
+
+        div {
+
+            &:first-child {
+                margin-left: 1em;
+            }
+
+            height: 100%;
+        }
+    }
+}
+
+
+.header_1 {
+
+
+    .userInfo {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        margin-right: 1em;
 
 
 
-        .image {
-            width: 50%;
-            height: 50%;
-            margin: 0 auto;
-            padding: .6em;
+
+        .disconnect {
             display: flex;
-            justify-content: center;
-            img {
-                border-radius: 100%;
-                height: 6em;
-                width: 6em;
-    
+            align-items: center;
+            position: relative;
+
+            .username {
+                margin-left: 1em;
+                font-weight: 500;
+                font-size: .9em;
+
+            }
+
+            .triangle {
+
+                display: flex;
+                margin-left: .3em;
+                cursor: pointer;
+
+                
+         
+
+
+                
+
+
+                svg {
+                    width: 1em;
+                    height: 1em;
+
+
+                    path {
+                        fill: #FFF;
+                    }
+                }
+
+            }
+            .logout {
+                position: absolute;
+                top: 80%;
+                right: 0;
+                display: none;
+                a {
+                    color: rgb(23, 54, 75);
+                    font-weight: 500;
+                    background-color: #FFF;
+                    padding: .4em .5em;
+                    display: block;
+
+                    // &::after {
+                    //     content: url("../img/triangle.svg");
+                    //     display: block;
+                    //     // transform: rotate(180deg);
+                    //     position: absolute;
+                    //     bottom: 100%;
+                    //     width: 1.5em;
+                    //     height: 1.5em;
+                    // }
+                }
+            }
+            .displayLog {
+                display: block;
             }
         }
-    
-        .fullName {
-            font-weight: 600;
-        }
-    
-        .mail {
-            font-size: .7em;
-            color: rgb(167, 166, 166);
-        }
+
     }
 
 
-    .mid {
-        
-    }
+    .notifications {
+        display: flex;
+        cursor: pointer;
 
+
+        svg {
+            height: 1rem;
+            width: 1rem;
+            path {
+                fill: #FFF;
+            }
+
+        }
+
+    }
 }
+
+.header_2 {
+
+    .title {
+        font-weight: 500;
+
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-weight: 500;
+        margin-right: 1em;
+
+        div {
+            margin-left: 1em;
+            opacity: .7;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .wrapper {
+//     width: 100%;
+//     height: 100%;
+
+//     .point {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+
+
+
+//         .image {
+//             width: 50%;
+//             height: 50%;
+//             margin: 0 auto;
+//             padding: .6em;
+//             display: flex;
+//             justify-content: center;
+//             img {
+//                 border-radius: 100%;
+//                 height: 6em;
+//                 width: 6em;
+
+//             }
+//         }
+
+//         .fullName {
+//             font-weight: 600;
+//         }
+
+//         .mail {
+//             font-size: .7em;
+//             color: rgb(167, 166, 166);
+//         }
+//     }
+
+
+//     .mid {
+
+//     }
+
+// }
