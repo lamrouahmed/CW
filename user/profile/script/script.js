@@ -5,6 +5,12 @@ const $$ = e => document.querySelectorAll(e)
 const triangle = $('.triangle');
 const inputs = $$('.input');
 const show = $('.show')
+let results = "";
+
+
+const urls = [
+    '/PFE/user/profile/ajax.php'
+  ]
 
 triangle.addEventListener('click', () => {
     $('.triangle svg').classList.toggle('svgClicked')
@@ -35,3 +41,40 @@ show.addEventListener('click', e => {
     e.currentTarget.classList.toggle('hide')
     e.currentTarget.classList.contains('hide') ? $('.pwd').setAttribute('type', 'text') : $('.pwd').setAttribute('type', 'password')
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function post(url, form) {
+    let formData = new FormData(form);
+
+    fetch(url, {
+        method: 'post',
+        body: formData
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (body) {
+        results = body;
+      });
+  }
+
+
+setInterval(  () =>  {
+    post(urls[0], $('.form'))
+     console.log(results) 
+}
+,3000)
