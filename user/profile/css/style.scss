@@ -232,7 +232,7 @@ header {
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             padding-top: 2em;
-    
+            cursor: pointer;
             
     
             &:focus {
@@ -261,6 +261,63 @@ header {
             margin-bottom: 1em;
             position: relative;
             display: block;
+            
+
+            &::after {
+                content: url('../img/update.svg');
+                position: absolute;
+                display: block;
+                width: .8rem;
+                height: .8rem;
+                right: 0;
+                top: 50%;
+                opacity: .2;
+                
+            }
+
+             &:hover{
+                &::after {
+                    opacity: 1;
+                }
+
+                .show {
+                    &::after {
+                        display: flex;
+                    }
+                }
+        
+            }
+
+            
+
+            .show {
+                position: relative;
+      
+
+                &::after {
+                    content: url("../img/show.svg");
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 2.5rem;
+                    right: 1.5rem;
+                    bottom: -.1rem;
+                    opacity: .7;
+                    cursor: pointer;
+                    z-index: 69;
+                    display: none;
+                    align-items: center;
+                }
+            }
+
+            .hide {
+      
+
+                &::after {
+                    content: url('../img/hide.svg') !important;
+   
+                }
+            }
+      
     
             .border {
                 display: block;
@@ -280,7 +337,7 @@ header {
                 color: rgb(180, 179, 179);
                 font-size: .8em;
                 position: absolute;
-                top: 1.5rem;
+                top: 1.7rem;
                 pointer-events: none;
                 transition: all 200ms ease-in-out;
             }

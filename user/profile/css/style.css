@@ -225,6 +225,7 @@ header section div:first-child {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding-top: 2em;
+  cursor: pointer;
 }
 
 .formContainer .form .input:focus {
@@ -252,6 +253,51 @@ header section div:first-child {
   display: block;
 }
 
+.formContainer .form .label::after {
+  content: url("../img/update.svg");
+  position: absolute;
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  right: 0;
+  top: 50%;
+  opacity: .2;
+}
+
+.formContainer .form .label:hover::after {
+  opacity: 1;
+}
+
+.formContainer .form .label:hover .show::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formContainer .form .label .show {
+  position: relative;
+}
+
+.formContainer .form .label .show::after {
+  content: url("../img/show.svg");
+  position: absolute;
+  width: 1.5rem;
+  height: 2.5rem;
+  right: 1.5rem;
+  bottom: -.1rem;
+  opacity: .7;
+  cursor: pointer;
+  z-index: 69;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formContainer .form .label .hide::after {
+  content: url("../img/hide.svg") !important;
+}
+
 .formContainer .form .label .border {
   display: block;
   position: absolute;
@@ -272,7 +318,7 @@ header section div:first-child {
   color: #b4b3b3;
   font-size: .8em;
   position: absolute;
-  top: 1.5rem;
+  top: 1.7rem;
   pointer-events: none;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
