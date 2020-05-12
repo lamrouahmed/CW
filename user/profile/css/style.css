@@ -213,6 +213,10 @@ header section div:first-child {
   width: 100%;
 }
 
+.formContainer .form div label:first-child {
+  margin-right: 2em;
+}
+
 .formContainer .form .input {
   border: none;
   border-bottom: 1px solid #dfdcdc;
@@ -220,12 +224,25 @@ header section div:first-child {
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  height: 4em;
   padding-top: 2em;
 }
 
 .formContainer .form .input:focus {
   outline: none;
+}
+
+.formContainer .form input[type=text],
+.formContainer .form input[type=password],
+.formContainer .form input[type=tel] {
+  height: 4em;
+}
+
+.formContainer .form .textarea {
+  overflow: hidden;
+  resize: none;
+  padding: 0;
+  margin-top: 2em;
+  font-size: .9em;
 }
 
 .formContainer .form .label {
@@ -239,9 +256,9 @@ header section div:first-child {
   display: block;
   position: absolute;
   width: 100%;
-  height: 4%;
+  height: 2px;
   background-color: #3d7b7d;
-  bottom: -1%;
+  bottom: 0%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: center;
@@ -255,14 +272,14 @@ header section div:first-child {
   color: #b4b3b3;
   font-size: .8em;
   position: absolute;
-  top: 50%;
+  top: 1.5rem;
   pointer-events: none;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .formContainer .form .label .focus {
-  top: 20%;
+  top: .6rem;
   font-size: .7em;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -275,15 +292,23 @@ header section div:first-child {
   transition: all 200ms ease-in-out;
 }
 
-.formContainer .form .fullName,
-.formContainer .form .password {
+.formContainer .form .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.formContainer .form .password .label:first-child, .formContainer .form .fullName .label:first-child {
-  margin-right: 2em;
+.formContainer .form .info div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.formContainer .form .fullName,
+.formContainer .form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .formContainer .form .error {

@@ -10,9 +10,12 @@ triangle.addEventListener('click', () => {
     $('.logout').classList.toggle('displayLog')
 })
 
-inputs.forEach((input, index) => input.addEventListener('focus', () => {
+inputs.forEach((input, index) => input.addEventListener('focus', e => {
     $$('.text')[index].classList.add('focus');
     $$('.border')[index].classList.add('clicked')
+    if(e.currentTarget.classList.contains('textarea') && e.currentTarget.value.trim() === "") {
+        e.currentTarget.setSelectionRange(0,0); 
+    }
 }))
 
 inputs.forEach((input, index) => input.addEventListener('blur', e => {
