@@ -219,6 +219,17 @@ header section div:first-child {
   display: flex;
 }
 
+.wrapper .imgContainer #file {
+  display: none;
+}
+
+.wrapper .imgContainer .file_label {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: relative;
+}
+
 .wrapper .imgContainer .modify {
   height: 100%;
   width: 100%;

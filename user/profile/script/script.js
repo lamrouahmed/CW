@@ -14,7 +14,7 @@ triangle.addEventListener('click', () => {
 inputs.forEach((input, index) => input.addEventListener('focus', e => {
     $$('.text')[index].classList.add('focus');
     $$('.border')[index].classList.add('clicked')
-    e.currentTarget.setSelectionRange(0,e.currentTarget.value.length); 
+    e.currentTarget.type !== "password" && e.currentTarget.setSelectionRange(0,e.currentTarget.value.length); 
     if(e.currentTarget.classList.contains('textarea') && e.currentTarget.value.trim() === "") {
         e.currentTarget.setSelectionRange(0,0); 
     }
