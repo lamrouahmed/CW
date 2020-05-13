@@ -73,7 +73,8 @@ function post(url, form) {
         body: formData
       })
       .then(function (response) {
-        return response.json();
+
+        return  response.json();
       })
       .then(function (body) {
         $$('.error').forEach((error, index) => {
