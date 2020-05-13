@@ -69,6 +69,10 @@ if(Session::exists("user")) {
             $location = "/wamp64/www/PFE/uploads/$name";
             if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
                 $msg += ["success" => "your profil picture has been updated"];
+                $msg += ["location" => "/PFE/uploads/$name"];
+                $user->update("u_id", Session::get("user"), "user", [
+                    'img' => $name
+                ]);
 
             } else {
                 $msg += ["other" => "an erreur has occured while uploading"];

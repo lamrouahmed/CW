@@ -59,7 +59,7 @@
 
                     </div>
                     <div class="img">
-                        <img src="./img/user.svg" alt="img">
+                        <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload">
                     </div>
                     <div class="logout">
                         <a href="#">Log out</a>
@@ -89,8 +89,9 @@
 
 
     <div class="wrapper">
+    
         <div class="imgContainer">
-            <img src="./img/user.svg" alt="img">
+            <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload">
             <label class="file_label" >
                 <div class="modify">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
