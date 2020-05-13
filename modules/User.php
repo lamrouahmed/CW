@@ -44,7 +44,7 @@
         {
             $data = $this->db->getOne("username", "'".$username."'", "user");
             if($data->count()) {
-                if(password_verify($pwd,$data->results()[0]->password)) {
+                if(password_verify($pwd,$data->results()[0]->hash)) {
                     $this->data = $data->results()[0];
                     Session::put($this->sessionName, $data->results()[0]->u_id);
                     return true;
@@ -70,7 +70,7 @@
         public function register($username) {
             $data = $this->db->getOne("username", "'".$username."'", "user");
             
-            Session::put($this->sessionName, $data->results()->u_id);
+            Session::put($this->sessionName, $data->results()[0]->u_id);
         }
 
 

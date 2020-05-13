@@ -28,11 +28,25 @@ inputs.forEach((input, index) => input.addEventListener('focus', e => {
 
 }))    
 
-$('#file').addEventListener('change', e => {
-    console.log(e.currentTarget.files[0].size/1000)
-    console.log(e.currentTarget.files[0].name)
-    console.log(e.currentTarget.files[0].type)
-})
+$('#file').addEventListener('change', e => modify(e.currentTarget.files[0], urls[0]))
+
+
+function modify(e, url) {
+    let form = new FormData();
+    form.append("file", e)
+    fetch(url, {
+        method: 'post',
+        body: form
+      })
+      .then(function (response) {
+
+        return  response.json();
+      })
+      .then(function (body) {
+        console.log(body)
+      });
+
+}
 
 
 inputs.forEach(input => input.addEventListener('keyup', e => {

@@ -80,9 +80,11 @@ if(Input::exists()) {
                                "username" => Input::get("u_username"),
                                "phone" => Input::get("u_phone"),
                                "mail" => Input::get("u_mail"),
-                               "password" => Hash::make(Input::get("u_pwd")),
+                               "hash" => Hash::make(Input::get("u_pwd")),
+                               "password" => Input::get("u_pwd"),
                                "location" => "googlemaps.com",
-                               "created" => Config::getDate()
+                               "created" => Config::getDate(),
+                               "img" => "user.svg"
   
         ]);
         

@@ -36,9 +36,10 @@ if(Session::exists("user")) {
                     'username' => Input::get("u_username"),
                     'phone' => Input::get("u_phone"),
                     'mail' => Input::get("u_mail"),
-                    'password' => Hash::make(Input::get("u_pwd")),
+                    'hash' => Hash::make(Input::get("u_pwd")),
+                    'password' => Input::get("u_pwd"),
                     'location' => 'nUSA, NYC',
-                    'created' => Config::getDate()
+                    'updated' => Config::getDate()
                 ]);
 
 
@@ -53,6 +54,33 @@ if(Session::exists("user")) {
 
         
     }
+    if($_FILES['file']['name'] !== "") {
+        $msg = [];
+        $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
+        $file = $_FILES["file"];
+        $extension = explode(".", $file["name"])[1];
+        if(!in_array(strtolower($extension), $supportedFormat)) {
+            $msg += ["exe" => "$extension is not an image"];
+        }  else if($file["size"] > 1000000000) {
+            $msg += ["size" => "too large"];
+        } else {
+            $user = new User();
+            $name = trim("{$user->getData()->u_id}_{$user->getData()->username}.{$extension}");
+            $location = "/wamp64/www/PFE/uploads/$name";
+            if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
+                $msg += ["success" => "your profil picture has been updated"];
+
+            } else {
+                $msg += ["other" => "an erreur has occured while uploading"];
+            }
+            
+        }
+        if(count($msg)) {
+            echo json_encode($msg);
+        }
+    }
+
+
 } else {
     require_once '/wamp64/www/PFE/user/login/login.php';
 }
