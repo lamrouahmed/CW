@@ -55,6 +55,8 @@ $users->update("u_id", 44, "user",[
   //  echo "no users";
 
 
+if(!Session::exists("user")) {
+  
 if(Input::exists()) {
 
   if(Token::check(Input::get('token'))) {
@@ -84,9 +86,9 @@ if(Input::exists()) {
   
         ]);
         
-        Session::flash('success', 'account created succesfully');
+        // Session::flash('success', 'account created succesfully');
         $user->register(Input::get("u_username"));
-        Redirect::to("../../");
+        Redirect::to('/PFE/user/profile/profile.php');
         
        
   
@@ -97,4 +99,7 @@ if(Input::exists()) {
         
     }
   }
+}
+} else {
+  Redirect::to('/PFE/user/profile/profile.php');
 }

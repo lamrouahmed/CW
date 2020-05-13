@@ -5,7 +5,7 @@
         private $db;
         private $sessionName;
         private $isLoggedIn;
-
+        private $data;
         public function __construct($user = null)
         {
             $this->db = DB::connect();
@@ -17,10 +17,13 @@
                     $data = $this->db->getOne("u_id", "'".$user."'", "user");
                     if($data->count()) {
                         $this->isLoggedIn = true;
+                        $this->data = $data->results()[0];
                     }
                 }
             }
         }
+
+
 
 
         public function create($table, $fields) 
@@ -42,6 +45,7 @@
             $data = $this->db->getOne("username", "'".$username."'", "user");
             if($data->count()) {
                 if(password_verify($pwd,$data->results()[0]->password)) {
+                    $this->data = $data->results()[0];
                     Session::put($this->sessionName, $data->results()[0]->u_id);
                     return true;
                 }
@@ -50,6 +54,9 @@
             }
         } 
 
+        public function update($PK,  $id, string $table, $params = []) {
+            $this->db->update($PK, $id, $table, $params);
+        }
 
         public function isLoggedIn() 
         {
@@ -62,7 +69,13 @@
 
         public function register($username) {
             $data = $this->db->getOne("username", "'".$username."'", "user");
-            Session::put($this->sessionName, $data->results()[0]->u_id);
+            
+            Session::put($this->sessionName, $data->results()->u_id);
+        }
+
+
+        public function getData() {
+            return $this->data;
         }
 
 

@@ -293,6 +293,10 @@ header section div:first-child {
   font-size: .9em;
 }
 
+.formContainer .form input[type=password] {
+  opacity: .6;
+}
+
 .formContainer .form .label {
   width: 100%;
   margin-bottom: 1em;
@@ -332,7 +336,7 @@ header section div:first-child {
   height: 2.5rem;
   right: 1.5rem;
   bottom: -.1rem;
-  opacity: .7;
+  opacity: 1;
   cursor: pointer;
   z-index: 69;
   display: none;

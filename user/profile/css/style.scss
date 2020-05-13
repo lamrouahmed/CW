@@ -291,6 +291,9 @@ header {
 
             
         }
+        input[type=password] {
+            opacity: .6;
+        }
 
         .label {
             width: 100%;
@@ -337,7 +340,7 @@ header {
                     height: 2.5rem;
                     right: 1.5rem;
                     bottom: -.1rem;
-                    opacity: .7;
+                    opacity: 1;
                     cursor: pointer;
                     z-index: 69;
                     display: none;

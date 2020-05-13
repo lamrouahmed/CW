@@ -6,7 +6,7 @@ const triangle = $('.triangle');
 const inputs = $$('.input');
 const show = $('.show')
 let results = "";
-
+const upload = $('.modify');
 
 const urls = [
     '/PFE/user/profile/ajax.php'
@@ -27,6 +27,12 @@ inputs.forEach((input, index) => input.addEventListener('focus', e => {
 
 
 }))    
+
+$('#file').addEventListener('change', e => {
+    console.log(e.currentTarget.files[0].size/1000)
+    console.log(e.currentTarget.files[0].name)
+    console.log(e.currentTarget.files[0].type)
+})
 
 
 inputs.forEach(input => input.addEventListener('keyup', e => {
@@ -91,5 +97,6 @@ function post(url, form) {
         })
       });
   }
+
 
 

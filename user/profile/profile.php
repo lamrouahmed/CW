@@ -1,3 +1,14 @@
+<?php
+    require_once '/wamp64/www/PFE/core/init.php';
+
+
+
+
+    if(Session::exists("user")) { 
+        $user = new User();
+
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +42,7 @@
                     </svg>
                 </div>
                 <div class="disconnect">
-                    <p class="username"><span>Welcome, </span>Mohamed</p>
+                    <p class="username"><span>Welcome, </span><?php echo $user->getData()->last_name; ?></p>
                     <div class="triangle">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 491.996 491.996"
@@ -97,13 +108,13 @@
             <form class="form">
                 <div class="fullName">
                     <label class="label">
-                        <input class="input" type="text" name="u_last_name">
+                        <input class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name;?>">
                         <span class="border"></span>
                         <span class="text">Last Name</span>
                         <span class="error" data-error="u_last_name"></span>
                     </label>
                     <label class="label">
-                        <input class="input" type="text" name="u_first_name">
+                        <input class="input" type="text" name="u_first_name" value="<?php echo $user->getData()->first_name;?>">
                         <span class="border"></span>
                         <span class="text">First Name</span>
                         <span class="error" data-error="u_first_name"></span>
@@ -112,7 +123,7 @@
                 </div>
                 <div class="info">
                     <label class="label">
-                        <input class="input" type="text" name="u_username">
+                        <input class="input" type="text" name="u_username" value="<?php echo $user->getData()->username;?>">
                         <span class="border"></span>
                         <span class="text">Username</span>
                         <span class="error" data-error="u_username"></span>
@@ -121,7 +132,7 @@
 
 
                     <label class="label">
-                        <input class="input" type="tel" name="u_phone">
+                        <input class="input" type="tel" name="u_phone" value="<?php echo $user->getData()->phone;?>">
                         <span class="border"></span>
                         <span class="text">Phone</span>
                         <span class="error" data-error="u_phone"></span>
@@ -131,7 +142,7 @@
                 </div>
                 <div class="info">
                     <label class="label">
-                        <input class="input" type="text" name="u_mail">
+                        <input class="input" type="text" name="u_mail" value="<?php echo $user->getData()->mail;?>">
                         <span class="border"></span>
                         <span class="text">Email</span>
                         <span class="error" data-error="u_mail"></span>
@@ -140,7 +151,10 @@
                     </label>
 
                     <label class="label ">
-                        <input class="input pwd" type="password" name="u_pwd">
+                        <input class="input pwd" type="password" name="u_pwd" value="<?php 
+                        echo $user->getData()->password;
+                        
+                        ?>">
                         <span class="border"></span>
                         <span class="text">Password</span>
                         <div class="show"></div>
@@ -194,3 +208,8 @@
 </body>
 
 </html>
+    <?php } else {
+        Redirect::to("/PFE/user/login/login.php");
+    }
+?>
+
