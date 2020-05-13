@@ -46,6 +46,12 @@ function modify(e, url) {
         
         if(body.success) {
             $$('.upload').forEach(upload => upload.setAttribute('src', body.location));
+            $('.alerts').textContent = body.success;
+        } else {
+            if(body.exe)  $('.alerts').textContent = body.exe;
+            else if(body.size) $('.alerts').textContent = body.size;
+            else $('.alerts').textContent = body.other;
+
         }
       });
 
@@ -112,6 +118,8 @@ function post(url, form) {
 
             }
         })
+
+        body.ok && ($('.alerts').textContent = body.ok);
       });
   }
 

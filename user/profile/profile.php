@@ -204,6 +204,7 @@
         </div>
     </div> -->
 
+    <div class="alerts"></div>
 
     <script src="./script/script.js"></script>
 </body>

@@ -51,38 +51,38 @@ if(Session::exists("user")) {
 
             echo json_encode($errors);
             
-
+            if(isset($_FILES['file'])) {
+                $msg = [];
+                $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
+                $file = $_FILES["file"];
+                $extension = end(explode(".", $file["name"]));
+                if(!in_array(strtolower($extension), $supportedFormat)) {
+                    $msg += ["exe" => "selected file is not an image"];
+                }  else if($file["size"] > 655360) {
+                    $msg += ["size" => "file size must be < 5MB"];
+                } else {
+                    $user = new User();
+                    $name = trim("{$user->getData()->u_id}_{$user->getData()->username}.{$extension}");
+                    $location = "/wamp64/www/PFE/uploads/$name";
+                    if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
+                        $msg += ["success" => "your profil picture has been updated"];
+                        $msg += ["location" => "/PFE/uploads/$name"];
+                        $user->update("u_id", Session::get("user"), "user", [
+                            'img' => $name
+                        ]);
+        
+                    } else {
+                        $msg += ["other" => "an error has occured while uploading"];
+                    }
+                    
+                }
+                if(count($msg)) {
+                    echo json_encode($msg);
+                }
+            }
         
     }
-    if($_FILES['file']['name'] !== "") {
-        $msg = [];
-        $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
-        $file = $_FILES["file"];
-        $extension = explode(".", $file["name"])[1];
-        if(!in_array(strtolower($extension), $supportedFormat)) {
-            $msg += ["exe" => "$extension is not an image"];
-        }  else if($file["size"] > 1000000000) {
-            $msg += ["size" => "too large"];
-        } else {
-            $user = new User();
-            $name = trim("{$user->getData()->u_id}_{$user->getData()->username}.{$extension}");
-            $location = "/wamp64/www/PFE/uploads/$name";
-            if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
-                $msg += ["success" => "your profil picture has been updated"];
-                $msg += ["location" => "/PFE/uploads/$name"];
-                $user->update("u_id", Session::get("user"), "user", [
-                    'img' => $name
-                ]);
 
-            } else {
-                $msg += ["other" => "an erreur has occured while uploading"];
-            }
-            
-        }
-        if(count($msg)) {
-            echo json_encode($msg);
-        }
-    }
 
 
 } else {
