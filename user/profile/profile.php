@@ -1,6 +1,6 @@
 <?php
     require_once '/wamp64/www/PFE/core/init.php';
-
+error_reporting(0);
 
 
 
@@ -91,7 +91,7 @@
     <div class="wrapper">
     
         <div class="imgContainer">
-            <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload">
+            <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload" onerror="this.src='/PFE/uploads/user.svg'">
             <label class="file_label" >
                 <div class="modify">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
