@@ -24,6 +24,14 @@ inputs.forEach((input, index) => input.addEventListener('focus', e => {
     if(e.currentTarget.classList.contains('textarea') && e.currentTarget.value.trim() === "") {
         e.currentTarget.setSelectionRange(0,0); 
     }
+
+
+}))    
+
+
+inputs.forEach(input => input.addEventListener('keyup', e => {
+    post(urls[0], $('.form'))
+    
 }))
 
 inputs.forEach((input, index) => input.addEventListener('blur', e => {
@@ -68,13 +76,19 @@ function post(url, form) {
         return response.json();
       })
       .then(function (body) {
-        results = body;
+        $$('.error').forEach((error, index) => {
+             
+
+            if(body[error.dataset.error]) {
+                $$('.input')[index].classList.add('errorTrue')
+                error.textContent = `${body[error.dataset.error]}`
+            } else {
+                error.textContent = ""
+                $$('.input')[index].classList.remove('errorTrue')
+
+            }
+        })
       });
   }
 
 
-setInterval(  () =>  {
-    post(urls[0], $('.form'))
-     console.log(results) 
-}
-,3000)
