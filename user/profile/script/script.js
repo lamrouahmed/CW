@@ -120,6 +120,7 @@ function post(url, form) {
         })
 
         body.ok && ($('.alerts').textContent = body.ok);
+        body.username && ($('.username').childNodes[1].textContent = body.username)
       });
   }
 

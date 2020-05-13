@@ -42,7 +42,7 @@
                     </svg>
                 </div>
                 <div class="disconnect">
-                    <p class="username"><span>Welcome, </span><?php echo $user->getData()->last_name; ?></p>
+                    <p class="username"><span>Welcome, </span><?php echo $user->getData()->username; ?></p>
                     <div class="triangle">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 491.996 491.996"

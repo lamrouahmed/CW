@@ -19,6 +19,8 @@ if(Session::exists("user")) {
                 $errors = $validate->getErrors();
             } else {
                 $errors = ["ok" => "les info on ete mis a jour"];
+                $errors += ["username" => $user->getData()->username];
+
                 // $DB->update("u_id", Session::get("user"), "user", [
                 //     'last_name' => ucfirst(Input::get("u_last_name")),
                 //     'first_name' => ucfirst(Input::get("u_first_name")),
