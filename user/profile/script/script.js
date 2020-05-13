@@ -43,7 +43,7 @@ function modify(e, url) {
         return  response.json();
       })
       .then(function (body) {
-        
+        console.log(body);
         if(body.success) {
             $$('.upload').forEach(upload => upload.setAttribute('src', body.location));
             $('.alerts').textContent = body.success;

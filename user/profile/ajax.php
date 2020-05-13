@@ -1,15 +1,16 @@
 <?php
     require_once '/wamp64/www/PFE/core/init.php';
-
+//error_reporting(0);
 //$DB = DB::connect();
 if(Session::exists("user")) {
         if(Input::exists()) {
-        
+            $user = new User();
+
         $validate = new Validate();
         $validate->check('post', [
             "u_last_name" => ["min" => 2, "max" => 15, "name" => "last name"],
             "u_first_name" => ["min" => 2, "max" => 15, "name" => "first name"],
-            "u_username" => ["min" => 2, "max" => 20,"unique" => "user", "name" => "username"],
+            "u_username" => ["min" => 2, "max" => 20,"update" => $user->getData()->u_id, "name" => "username"],
             "u_phone" => ["regexp" => "/^0(6|7)-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", "name" => "phone number"],
             "u_mail" => ["mail" => true, "name" => "mail"],
             "u_pwd" => ["min" => 8, "name" => "password"]
@@ -28,7 +29,6 @@ if(Session::exists("user")) {
                 //     'location' => 'nUSA, NYC',
                 //     'created' => Config::getDate()
                 // ]);
-                $user = new User();
 
                 $user->update("u_id", Session::get("user"), "user", [
                     'last_name' => ucfirst(Input::get("u_last_name")),
@@ -49,40 +49,47 @@ if(Session::exists("user")) {
                 
             }
 
+                        
+
             echo json_encode($errors);
-            
-            if(isset($_FILES['file'])) {
-                $msg = [];
-                $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
-                $file = $_FILES["file"];
-                $extension = end(explode(".", $file["name"]));
-                if(!in_array(strtolower($extension), $supportedFormat)) {
-                    $msg += ["exe" => "selected file is not an image"];
-                }  else if($file["size"] > 655360) {
-                    $msg += ["size" => "file size must be < 5MB"];
-                } else {
-                    $user = new User();
-                    $name = trim("{$user->getData()->u_id}_{$user->getData()->username}.{$extension}");
-                    $location = "/wamp64/www/PFE/uploads/$name";
-                    if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
-                        $msg += ["success" => "your profil picture has been updated"];
-                        $msg += ["location" => "/PFE/uploads/$name"];
-                        $user->update("u_id", Session::get("user"), "user", [
-                            'img' => $name
-                        ]);
-        
-                    } else {
-                        $msg += ["other" => "an error has occured while uploading"];
-                    }
-                    
-                }
-                if(count($msg)) {
-                    echo json_encode($msg);
-                }
-            }
+
         
     }
 
+
+    if(isset($_FILES['file'])) {
+        if($_FILES['file']['name'] != "") {
+            $msg = [];
+            $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
+            $file = $_FILES["file"];
+            $test = explode(".", $file["name"]);
+            $extension = end($test);
+            if(!in_array(strtolower($extension), $supportedFormat)) {
+                $msg += ["exe" => "selected file is not an image"];
+            }  else if($file["size"] > 655360) {
+                $msg += ["size" => "file size must be < 5MB"];
+            } else {
+                $user = new User(); 
+                $id = uniqid();
+                $name = trim("{$user->getData()->username}_{$id}.{$extension}");
+                $location = "/wamp64/www/PFE/uploads/$name";
+                if(move_uploaded_file(escape($_FILES['file']['tmp_name']), $location)) {
+                    $msg += ["success" => "your profil picture has been updated"];
+                    $msg += ["location" => "/PFE/uploads/$name"];
+                    $user->update("u_id", Session::get("user"), "user", [
+                        'img' => $name
+                    ]);
+    
+                } else {
+                    $msg += ["other" => "an error has occured while uploading"];
+                }
+                
+            }
+            if(count($msg)) {
+                echo json_encode($msg);
+            }
+        }
+    }
 
 
 } else {

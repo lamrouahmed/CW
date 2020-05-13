@@ -41,13 +41,19 @@
                                 if(!preg_match($rules[$ruleName], $value)) {
                                     $this->setError("invalid {$rules["name"]}", $field);
                                 }
-
+                                break;  
                             case "unique":
                                 if($this->db->getOne("username", "'".$value."'", "user")->count() && preg_match("/^[a-zA-Z0-9]*$/", $value))
                                 {
                                     $this->setError("{$rules["name"]} is already taken", $field);
                                 }
                                 break;
+                            case "update":
+                                if($this->db->getOne("username", "'".$value."'", "user")->count() && preg_match("/^[a-zA-Z0-9]*$/", $value) && $rule !== $this->db->getOne("username", "'".$value."'", "user")->results()[0]->u_id)
+                                {
+                                    $this->setError("{$rules["name"]} is already taken", $field);
+                                }
+                            break;
 
                         }
                     }
