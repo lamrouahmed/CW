@@ -109,13 +109,13 @@
             <form class="form">
                 <div class="fullName">
                     <label class="label">
-                        <input class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name;?>">
+                        <input data-check="u_last_name" class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name;?>">
                         <span class="border"></span>
                         <span class="text">Last Name</span>
                         <span class="error" data-error="u_last_name"></span>
                     </label>
                     <label class="label">
-                        <input class="input" type="text" name="u_first_name" value="<?php echo $user->getData()->first_name;?>">
+                        <input data-check="u_first_name" class="input" type="text" name="u_first_name" value="<?php echo $user->getData()->first_name;?>">
                         <span class="border"></span>
                         <span class="text">First Name</span>
                         <span class="error" data-error="u_first_name"></span>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="info">
                     <label class="label">
-                        <input class="input" type="text" name="u_username" value="<?php echo $user->getData()->username;?>">
+                        <input data-check="u_username" class="input" type="text" name="u_username" value="<?php echo $user->getData()->username;?>">
                         <span class="border"></span>
                         <span class="text">Username</span>
                         <span class="error" data-error="u_username"></span>
@@ -133,7 +133,7 @@
 
 
                     <label class="label">
-                        <input class="input" type="tel" name="u_phone" value="<?php echo $user->getData()->phone;?>">
+                        <input data-check="u_phone" class="input" type="tel" name="u_phone" value="<?php echo $user->getData()->phone;?>">
                         <span class="border"></span>
                         <span class="text">Phone</span>
                         <span class="error" data-error="u_phone"></span>
@@ -143,7 +143,7 @@
                 </div>
                 <div class="info">
                     <label class="label">
-                        <input class="input" type="text" name="u_mail" value="<?php echo $user->getData()->mail;?>">
+                        <input data-check="u_mail" class="input" type="text" name="u_mail" value="<?php echo $user->getData()->mail;?>">
                         <span class="border"></span>
                         <span class="text">Email</span>
                         <span class="error" data-error="u_mail"></span>
@@ -152,7 +152,7 @@
                     </label>
 
                     <label class="label ">
-                        <input class="input pwd" type="password" name="u_pwd" value="<?php 
+                        <input data-check="u_pwd" class="input pwd" type="password" name="u_pwd" value="<?php 
                         echo $user->getData()->password;
                         
                         ?>">
