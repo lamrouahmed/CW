@@ -471,6 +471,8 @@ header {
     width: 100%;
     position: fixed;
     bottom: -1%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 

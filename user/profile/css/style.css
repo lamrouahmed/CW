@@ -456,6 +456,8 @@ header section div:first-child {
   width: 100%;
   position: fixed;
   bottom: -1%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 @media (min-width: 300px) and (max-width: 736px) {
