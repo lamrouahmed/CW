@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -37,6 +39,34 @@ header section div {
 
 header section div:first-child {
   margin-left: 1em;
+}
+
+.header_1 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_1 .logo h1 {
+  font-weight: 500;
+}
+
+.header_1 .logo h1 span {
+  font-weight: 300;
+}
+
+.header_1 .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_1 .logoImg svg {
+  height: 3em;
+  width: 4em;
 }
 
 .header_1 .userInfo {
@@ -420,5 +450,28 @@ header section div:first-child {
 
 .formContainer .form .errorTrue {
   border-bottom: 2px solid #eb5151 !important;
+}
+
+.svg {
+  width: 100%;
+  position: fixed;
+  bottom: -1%;
+}
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .imgContainer {
+    width: 8rem !important;
+    height: 8rem !important;
+    margin: 2rem auto !important;
+  }
+  .formContainer {
+    width: 90% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

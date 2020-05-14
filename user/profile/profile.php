@@ -23,7 +23,8 @@ error_reporting(0);
     <header>
         <section class="header_1">
             <div class="logo">
-                <h2>Car<b>Wash</b></h2>
+                
+                <h1><span>Car</span>Wash</h1>
             </div>
             <div class="userInfo">
                 <div class="notifications">
@@ -59,7 +60,7 @@ error_reporting(0);
 
                     </div>
                     <div class="img">
-                        <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload">
+                        <img src="/PFE/uploads/<?php echo $user->getData()->img?>" alt="img" class="upload" onerror="this.src='/PFE/uploads/user.svg'">
                     </div>
                     <div class="logout">
                         <a href="#">Log out</a>
@@ -179,6 +180,10 @@ error_reporting(0);
                 </div>
             </form>
         </div>
+    </div>
+    <div class="svg">
+        
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,224L48,224C96,224,192,224,288,240C384,256,480,288,576,304C672,320,768,320,864,309.3C960,299,1056,277,1152,250.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </div>
 
 
