@@ -12,7 +12,10 @@ $results = $DB->getAll("user")->results();
 
 ?>
 <div class="mid" data-key="<?php echo $result->u_id; ?>" data-search="<?php echo "$result->u_id $result->username $result->last_name $result->first_name $result->phone $result->mail $result->created"?>" >
-    <div class="p_img"><img src="/PFE/uploads/<?php echo $result->img?>" onerror="this.src='/PFE/uploads/user.svg'"></div>
+    <div class="p_img">
+    <img src="/PFE/uploads/<?php echo $result->img?>" onerror="this.src='/PFE/uploads/user.svg'">
+    <div class="<?php echo $result->status?> status"></div>
+    </div>
     <div class="p_id"><?php echo $result->u_id; ?></div>
     <div class="p_uid"><?php echo $result->username ?></div>
     <div class="p_name"><?php echo $result->last_name. " " . $result->first_name ?></div>

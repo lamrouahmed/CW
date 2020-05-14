@@ -166,6 +166,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+  position: relative;
 }
 
 .wrapper .mid .p_img img {
@@ -173,6 +174,24 @@ body {
   height: 3rem;
   background-color: wheat;
   border-radius: 100%;
+}
+
+.wrapper .mid .p_img .status {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+  bottom: 3px;
+  right: 9px;
+}
+
+.wrapper .mid .p_img .offline {
+  background-color: #f52e0b;
+}
+
+.wrapper .mid .p_img .online {
+  background-color: #49c466;
 }
 
 .wrapper .mid .action a {
