@@ -84,7 +84,9 @@ if(Input::exists()) {
                                "password" => Input::get("u_pwd"),
                                "location" => "googlemaps.com",
                                "created" => Config::getDate(),
-                               "img" => "user.svg"
+                               "updated" => Config::getDate(),
+                               "img" => "user.svg",
+                               "status" => "online"
   
         ]);
         

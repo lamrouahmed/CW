@@ -47,6 +47,9 @@
                 if(password_verify($pwd,$data->results()[0]->hash)) {
                     $this->data = $data->results()[0];
                     Session::put($this->sessionName, $data->results()[0]->u_id);
+                    $this->update("u_id", $data->results()[0]->u_id, "user", [
+                        'status' => "online"
+                    ]);
                     return true;
                 }
             } else {
@@ -64,6 +67,9 @@
         }
 
         public function logout() {
+            $this->update("u_id", Session::get($this->sessionName), "user", [
+                'status' => "offline"
+            ]);
             Session::delete($this->sessionName);
         }
 
