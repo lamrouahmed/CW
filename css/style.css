@@ -54,6 +54,17 @@ body {
   font-weight: 300;
 }
 
+.header .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .logoImg svg {
+  height: 3em;
+  width: 4em;
+}
+
 .header .navBar {
   display: -webkit-box;
   display: -ms-flexbox;

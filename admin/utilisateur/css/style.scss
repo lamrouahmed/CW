@@ -29,15 +29,16 @@ body {
         display: flex;
 
 
-        & > div:nth-child(2n){
+        &>div:nth-child(2n) {
             animation: startup 400ms ease-in-out forwards;
         }
-        & > div:nth-child(2n+1) {
+
+        &>div:nth-child(2n+1) {
             animation: startup 700ms ease-in-out forwards;
         }
-  
- 
-        
+
+
+
     }
 
     .top {
@@ -56,6 +57,11 @@ body {
             justify-content: center;
             align-items: center;
             flex: .1em;
+        }
+        .void {
+            flex-shrink: 0;
+            flex-grow: 0;
+            flex-basis: 4%;
         }
     }
 
@@ -95,7 +101,10 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: .1em;
+            min-width: 0;
+            flex: 1;
+            flex-shrink: 0;
+
         }
 
 
@@ -108,6 +117,27 @@ body {
         .p_id {
             font-weight: 600;
             font-size: 1em;
+        }
+
+        .p_mail {
+            flex-grow: 0;
+            flex-basis: 16%;
+
+        }
+
+
+
+        .p_img {
+            border-radius: 100%;
+            flex-basis: 5%;
+            flex-grow: 0;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                background-color: wheat;
+                border-radius: 100%;
+            }
         }
 
         .action {
@@ -239,7 +269,7 @@ body {
                 transition: all 200ms ease-in-out;
                 display: flex;
                 flex-direction: column;
-                transform: scaleY(0) ;
+                transform: scaleY(0);
                 top: 100%;
                 transform-origin: top;
 
@@ -266,6 +296,7 @@ body {
 
         .search {
             height: 46%;
+
             .searchInput {
                 // border: 1px solid rgb(196, 194, 194);
                 // border-radius: 10px;
@@ -348,13 +379,13 @@ body {
                 height: 2em;
                 width: 2em;
                 cursor: pointer;
-                transform:  scale(1);
+                transform: scale(1);
                 transition: all 200ms ease-in-out;
-                
+
                 path {
                     fill: rgb(18, 83, 168);
                 }
-                
+
                 &:hover {
                     transform: scale(1.1);
                     transition: all 200ms ease-in-out;
@@ -409,7 +440,7 @@ body {
         transform: translateX(-10%);
         opacity: 0;
     }
-    
+
     to {
         transform: translateX(0%);
         opacity: 1;

@@ -84,6 +84,7 @@ if($action === "delete") {
         </div>
 
         <div class="top">
+            <div class="void"></div>
             <div class="id">#</div>
             <div class="uid">username</div>
             <div class="id">Full Name</div>

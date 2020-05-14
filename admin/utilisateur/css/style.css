@@ -74,6 +74,16 @@ body {
           flex: .1em;
 }
 
+.wrapper .top .void {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 4%;
+      flex-basis: 4%;
+}
+
 .wrapper .mid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,9 +133,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: .1em;
-      -ms-flex: .1em;
-          flex: .1em;
+  min-width: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .wrapper .mid .p_uid {
@@ -136,6 +149,30 @@ body {
 .wrapper .mid .p_id {
   font-weight: 600;
   font-size: 1em;
+}
+
+.wrapper .mid .p_mail {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 16%;
+      flex-basis: 16%;
+}
+
+.wrapper .mid .p_img {
+  border-radius: 100%;
+  -ms-flex-preferred-size: 5%;
+      flex-basis: 5%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.wrapper .mid .p_img img {
+  width: 3rem;
+  height: 3rem;
+  background-color: wheat;
+  border-radius: 100%;
 }
 
 .wrapper .mid .action a {
