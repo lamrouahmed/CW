@@ -115,12 +115,13 @@ function post(url, form) {
             } else {
                 error.textContent = ""
                 $$('.input')[index].classList.remove('errorTrue')
+                body.username && ($('.username').childNodes[1].textContent = body.username)
+                body.ok && ($('.alerts').textContent = body.ok);
+
 
             }
         })
 
-        body.ok && ($('.alerts').textContent = body.ok);
-        body.username && ($('.username').childNodes[1].textContent = body.username)
       });
   }
 
