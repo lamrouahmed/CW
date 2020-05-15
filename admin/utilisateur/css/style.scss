@@ -163,9 +163,11 @@ body {
                 bottom: 3px;
                 right: 9px;
             }
+
             .offline {
                 background-color: rgb(245, 46, 11);
             }
+
             .online {
                 background-color: #49c466;
             }
@@ -458,6 +460,11 @@ body {
 
             .p_img {
                 margin-top: 1em;
+
+                .status {
+                    bottom: -2px !important;
+                    right: 1px !important;
+                }
             }
         }
     }

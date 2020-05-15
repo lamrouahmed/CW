@@ -475,6 +475,10 @@ body {
   .wrapper .mid .p_img {
     margin-top: 1em;
   }
+  .wrapper .mid .p_img .status {
+    bottom: -2px !important;
+    right: 1px !important;
+  }
 }
 
 @-webkit-keyframes delete {
