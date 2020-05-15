@@ -1,3 +1,4 @@
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -165,6 +166,16 @@ body {
   .sideWrapper .link .active::after {
     content: '';
     display: none !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .navItem a span {
+    font-size: .7em !important;
+  }
+  .navItem a svg {
+    width: 1.5em !important;
+    height: 1.5em !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,6 +25,21 @@ $maxTablet: 1200px;
 
 
 
+
+/*-------- Mobile Media Queries ---------*/
+
+$minMobile: 300px;
+$maxMobile: 736px;
+
+
+@mixin mobile {
+    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+        @content;
+    }
+}
+
+
+
 *,
 *::after,
 *::before {
@@ -181,6 +196,26 @@ body {
                     content: '';
                     display: none !important;
                 }
+            }
+        }
+    }
+}
+
+
+
+@include mobile {
+    .sideWrapper {
+    }
+
+    .navItem {
+        a {
+            span {
+                font-size: .7em !important;
+            }
+
+            svg {
+                width: 1.5em !important;
+                height: 1.5em !important;
             }
         }
     }

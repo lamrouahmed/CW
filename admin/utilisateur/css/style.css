@@ -1,3 +1,4 @@
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -20,7 +21,7 @@ body {
   margin-left: 7em;
   background-color: #f0f4f7;
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .wrapper .content {
@@ -452,6 +453,27 @@ body {
           transform: scale(1.1);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .wrapper {
+    margin: 0 !important;
+    height: auto;
+  }
+  .wrapper .top {
+    display: none;
+  }
+  .wrapper .mid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 23rem;
+    margin-top: 1em;
+  }
+  .wrapper .mid .p_img {
+    margin-top: 1em;
+  }
 }
 
 @-webkit-keyframes delete {

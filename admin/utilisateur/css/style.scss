@@ -1,5 +1,17 @@
 //@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*-------- Mobile Media Queries ---------*/
+
+$minMobile: 300px;
+$maxMobile: 736px;
+
+
+@mixin mobile {
+    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+        @content;
+    }
+}
+
 
 *,
 *::after,
@@ -22,7 +34,7 @@ body {
     margin-left: 7em;
     background-color: #f0f4f7;
     position: relative;
-    height: 100vh;
+    height: 100%;
 
     .content {
         flex-direction: column;
@@ -425,6 +437,31 @@ body {
 
 
 
+
+
+
+
+
+@include mobile {
+    .wrapper {
+        margin: 0 !important;
+        height: auto;
+
+        .top {
+            display: none;
+        }
+
+        .mid {
+            flex-direction: column;
+            height: 23rem;
+            margin-top: 1em;
+
+            .p_img {
+                margin-top: 1em;
+            }
+        }
+    }
+}
 
 
 
