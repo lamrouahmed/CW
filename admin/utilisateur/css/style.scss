@@ -28,6 +28,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ body {
     .content {
         flex-direction: column;
         display: flex;
-
+        background-color: #f0f4f7;
 
         &>div:nth-child(2n) {
             animation: startup 400ms ease-in-out forwards;
@@ -445,7 +446,6 @@ body {
 @include mobile {
     .wrapper {
         margin: 0 !important;
-        height: auto;
 
         .top {
             display: none;
