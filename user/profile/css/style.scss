@@ -142,6 +142,7 @@ header {
                 height: 10rem;
                 background-color: #FFF;
                 width: 12rem;
+                z-index: 1;
 
                 &::after {
                     content: url("../img/triangle.svg");

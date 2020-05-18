@@ -132,6 +132,7 @@ header section div:first-child {
   height: 10rem;
   background-color: #FFF;
   width: 12rem;
+  z-index: 1;
 }
 
 .header_1 .userInfo .disconnect .logout::after {
