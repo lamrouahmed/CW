@@ -60,6 +60,10 @@ header {
     .logo {
         display: flex;
         align-items: center;
+        
+        a {
+            color: #FFF;
+        }
 
         h1 {
             font-weight: 500;
@@ -68,6 +72,8 @@ header {
                 font-weight: 300;
             }
         }
+
+
     }
 
     .logoImg {

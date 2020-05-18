@@ -50,6 +50,10 @@ header section div:first-child {
           align-items: center;
 }
 
+.header_1 .logo a {
+  color: #FFF;
+}
+
 .header_1 .logo h1 {
   font-weight: 500;
 }

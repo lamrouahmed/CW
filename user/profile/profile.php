@@ -24,7 +24,7 @@ error_reporting(0);
         <section class="header_1">
             <div class="logo">
                 
-                <h1><span>Car</span>Wash</h1>
+                <a href="/PFE/"><h1><span>Car</span>Wash</h1></a>
             </div>
             <div class="userInfo">
                 <div class="notifications">
