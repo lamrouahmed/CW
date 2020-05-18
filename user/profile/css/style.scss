@@ -2,7 +2,6 @@
 
 
 
-
 /*-------- Mobile Media Queries ---------*/
 
 $minMobile: 300px;
@@ -61,13 +60,16 @@ header {
     .logo {
         display: flex;
         align-items: center;
+
         h1 {
             font-weight: 500;
+
             span {
                 font-weight: 300;
             }
         }
     }
+
     .logoImg {
         display: flex;
 
@@ -77,6 +79,7 @@ header {
             width: 4em;
         }
     }
+
     .userInfo {
         margin-left: auto;
         display: flex;
@@ -110,7 +113,6 @@ header {
 
                 display: flex;
                 margin-left: .3em;
-                cursor: pointer;
 
 
 
@@ -133,27 +135,66 @@ header {
 
             .logout {
                 position: absolute;
-                top: 80%;
+                top: 124%;
                 right: 0;
                 display: none;
                 user-select: none;
+                height: 10rem;
+                background-color: #FFF;
+                width: 12rem;
+
+                &::after {
+                    content: url("../img/triangle.svg");
+                    display: block;
+                    position: absolute;
+                    height: 1rem;
+                    width: 1rem;
+                    bottom: 100%;
+                    left: 61%;
+                }
+
+
 
                 a {
-                    color: rgb(23, 54, 75);
+                    color: #FFF;
                     font-weight: 500;
-                    background-color: #FFF;
-                    padding: .4em .5em;
+                    background-color: #293137;
+                    padding: .7em .5em;
                     display: block;
+                    font-size: .8em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 200ms ease-in-out;
+                    font-weight: 500;
+                    transform: translateX(0%);
 
-                    // &::after {
-                    //     content: url("../img/triangle.svg");
-                    //     display: block;
-                    //     // transform: rotate(180deg);
-                    //     position: absolute;
-                    //     bottom: 100%;
-                    //     width: 1.5em;
-                    //     height: 1.5em;
+                    // &:last-child {
+                    //     border-bottom-left-radius: 15px;
+                    //     border-bottom-right-radius: 15px;
                     // }
+
+                    &:hover {
+                        transform: translateX(3%);
+                        transition: all 200ms ease-in-out;
+                        background-color: #22272b;
+                    }
+
+                    svg {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-left: auto;
+
+                        path {
+                            fill: #FFF;
+                            stroke: #FFF;
+                            stroke-width: 10;
+                        }
+                    }
+
+
+
+
                 }
             }
 
@@ -181,6 +222,12 @@ header {
 
     }
 
+    .popUp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
     .notifications {
         display: flex;
@@ -227,7 +274,7 @@ header {
     align-items: center;
     height: 90%;
 
-    .imgContainer{
+    .imgContainer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -237,26 +284,31 @@ header {
         background-color: wheat;
         border-radius: 100%;
         position: relative;
+
         img {
             width: 100%;
             height: 100%;
             border-radius: 100%;
             position: absolute;
         }
+
         &:hover {
             .modify {
                 display: flex;
             }
         }
+
         #file {
             display: none;
         }
+
         .file_label {
             width: 100%;
             height: 100%;
             border-radius: 100%;
             position: relative;
         }
+
         .modify {
             height: 100%;
             width: 100%;
@@ -271,22 +323,24 @@ header {
             svg {
                 height: 5rem;
                 width: 5rem;
-                
+
             }
         }
     }
 
 }
+
 .formContainer {
     width: 50%;
     margin: 0 auto;
+    margin-top: 1.5em;
 
 
     .form {
         width: 100%;
-        
+
         div label {
-            &:first-child{
+            &:first-child {
                 margin-right: 2em;
             }
         }
@@ -300,19 +354,21 @@ header {
             font-weight: 500;
             padding-top: 2em;
             cursor: pointer;
-            
-    
+
+
             &:focus {
                 outline: none;
 
 
             }
         }
+
         input[type=text],
         input[type=password],
         input[type=tel] {
             height: 4em;
         }
+
         .textarea {
             overflow: hidden;
             resize: none;
@@ -320,8 +376,9 @@ header {
             margin-top: 2em;
             font-size: .9em;
 
-            
+
         }
+
         input[type=password] {
             opacity: .6;
         }
@@ -331,7 +388,7 @@ header {
             margin-bottom: 1em;
             position: relative;
             display: block;
-            
+
 
             &::after {
                 content: url('../img/update.svg');
@@ -342,10 +399,10 @@ header {
                 right: 0;
                 top: 50%;
                 opacity: .2;
-                
+
             }
 
-             &:hover{
+            &:hover {
                 &::after {
                     opacity: 1;
                 }
@@ -355,14 +412,14 @@ header {
                         display: flex;
                     }
                 }
-        
+
             }
 
-            
+
 
             .show {
                 position: relative;
-      
+
 
                 &::after {
                     content: url("../img/show.svg");
@@ -380,15 +437,15 @@ header {
             }
 
             .hide {
-      
+
 
                 &::after {
                     content: url('../img/hide.svg') !important;
-   
+
                 }
             }
-      
-    
+
+
             .border {
                 display: block;
                 position: absolute;
@@ -399,9 +456,9 @@ header {
                 transform: scaleX(0);
                 transform-origin: center;
                 transition: all 200ms ease-in-out;
-    
+
             }
-            
+
             .text {
                 font-weight: 500;
                 color: rgb(180, 179, 179);
@@ -411,8 +468,8 @@ header {
                 pointer-events: none;
                 transition: all 200ms ease-in-out;
             }
-            
-            
+
+
 
             .focus {
                 top: .6rem;
@@ -424,9 +481,9 @@ header {
                 transform: scaleX(1) !important;
                 transition: all 200ms ease-in-out;
             }
-    
+
         }
-        
+
         .info {
             display: flex;
 
@@ -439,15 +496,15 @@ header {
                 // }
             }
         }
-    
+
         .fullName,
         .password {
             display: flex;
-    
+
         }
 
-    
-   
+
+
         .error {
             display: block;
             position: absolute;
@@ -456,14 +513,14 @@ header {
             font-size: .7em;
             color: #ff0000b3;
             width: 100%;
-  
+
         }
-    
+
         .errorTrue {
             border-bottom: 2px solid rgb(235, 81, 81) !important;
-        
-         }
-    
+
+        }
+
     }
 }
 
@@ -492,21 +549,14 @@ header {
         width: 8rem !important;
         height: 8rem !important;
         margin: 2rem auto !important;
+
+        .modify svg {
+            height: 3rem !important;
+            width: 3rem !important;
+        }
     }
 
     .formContainer {
         width: 90% !important;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

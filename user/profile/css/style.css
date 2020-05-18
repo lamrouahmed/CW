@@ -109,7 +109,6 @@ header section div:first-child {
   display: -ms-flexbox;
   display: flex;
   margin-left: .3em;
-  cursor: pointer;
 }
 
 .header_1 .userInfo .disconnect .triangle svg {
@@ -123,21 +122,69 @@ header section div:first-child {
 
 .header_1 .userInfo .disconnect .logout {
   position: absolute;
-  top: 80%;
+  top: 124%;
   right: 0;
   display: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  height: 10rem;
+  background-color: #FFF;
+  width: 12rem;
+}
+
+.header_1 .userInfo .disconnect .logout::after {
+  content: url("../img/triangle.svg");
+  display: block;
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  bottom: 100%;
+  left: 61%;
 }
 
 .header_1 .userInfo .disconnect .logout a {
-  color: #17364b;
+  color: #FFF;
   font-weight: 500;
-  background-color: #FFF;
-  padding: .4em .5em;
+  background-color: #293137;
+  padding: .7em .5em;
   display: block;
+  font-size: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  font-weight: 500;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.header_1 .userInfo .disconnect .logout a:hover {
+  -webkit-transform: translateX(3%);
+          transform: translateX(3%);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-color: #22272b;
+}
+
+.header_1 .userInfo .disconnect .logout a svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: auto;
+}
+
+.header_1 .userInfo .disconnect .logout a svg path {
+  fill: #FFF;
+  stroke: #FFF;
+  stroke-width: 10;
 }
 
 .header_1 .userInfo .disconnect .displayLog {
@@ -168,6 +215,19 @@ header section div:first-child {
   width: 2.4em;
   height: 2.4em;
   border-radius: 100%;
+}
+
+.header_1 .popUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
 .header_1 .notifications {
@@ -284,6 +344,7 @@ header section div:first-child {
 .formContainer {
   width: 50%;
   margin: 0 auto;
+  margin-top: 1.5em;
 }
 
 .formContainer .form {
@@ -471,6 +532,10 @@ header section div:first-child {
     width: 8rem !important;
     height: 8rem !important;
     margin: 2rem auto !important;
+  }
+  .imgContainer .modify svg {
+    height: 3rem !important;
+    width: 3rem !important;
   }
   .formContainer {
     width: 90% !important;

@@ -2,7 +2,7 @@ const $ = e => document.querySelector(e)
 const $$ = e => document.querySelectorAll(e)
 
 
-const triangle = $('.triangle');
+const popUp = $('.popUp');
 const inputs = $$('.input');
 const show = $('.show')
 let results = "";
@@ -12,7 +12,7 @@ const urls = [
     '/PFE/user/profile/ajax.php'
   ]
 
-triangle.addEventListener('click', () => {
+popUp.addEventListener('click', () => {
     $('.triangle svg').classList.toggle('svgClicked')
     $('.logout').classList.toggle('displayLog')
 })
