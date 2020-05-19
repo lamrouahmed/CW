@@ -61,13 +61,14 @@ if(Session::exists("user")) {
 
     if(isset($_FILES['file'])) {
         if($_FILES['file']['name'] != "") {
+            echo json_encode($_FILES['file']);
             $msg = [];
             $supportedFormat = ["jpg", "jpeg", "png", "gif", "svg"];
             $file = $_FILES["file"];
             $test = explode(".", $file["name"]);
             $extension = end($test);
             if(!in_array(strtolower($extension), $supportedFormat)) {
-                $msg += ["exe" => "selected file is not an image"];
+                $msg += ["exe" => "file format is not supported"];
             }  else if($file["size"] > 655360) {
                 $msg += ["size" => "file size must be < 5MB"];
             } else {

@@ -15,6 +15,7 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -48,10 +49,6 @@ header section div:first-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header_1 .logo a {
-  color: #FFF;
 }
 
 .header_1 .logo h1 {
@@ -124,35 +121,25 @@ header section div:first-child {
   fill: #FFF;
 }
 
+.header_1 .userInfo .disconnect .logout > a:nth-child(4) > span:nth-child(2) {
+  display: block;
+  margin-right: 1.5rem;
+}
+
 .header_1 .userInfo .disconnect .logout {
   position: absolute;
   top: 124%;
-  right: 0;
-  display: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  height: 10rem;
-  background-color: #FFF;
-  width: 12rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   z-index: 1;
 }
 
-.header_1 .userInfo .disconnect .logout::after {
-  content: url("../img/triangle.svg");
-  display: block;
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  bottom: 100%;
-  left: 61%;
-}
-
 .header_1 .userInfo .disconnect .logout a {
-  color: #FFF;
   font-weight: 500;
-  background-color: #293137;
   padding: .7em .5em;
   display: block;
   font-size: .8em;
@@ -165,35 +152,112 @@ header section div:first-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
   font-weight: 500;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  color: #000;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  left: 20rem;
 }
 
-.header_1 .userInfo .disconnect .logout a:hover {
-  -webkit-transform: translateX(3%);
-          transform: translateX(3%);
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  background-color: #22272b;
+.header_1 .userInfo .disconnect .logout a:nth-child(1) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
-.header_1 .userInfo .disconnect .logout a svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-left: auto;
+.header_1 .userInfo .disconnect .logout a:nth-child(2) {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
-.header_1 .userInfo .disconnect .logout a svg path {
+.header_1 .userInfo .disconnect .logout a:nth-child(3) {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:hover .sVg {
+  right: 150%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a:hover span {
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a span {
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #273036;
+  border-radius: 100%;
+  padding: .7rem;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg svg {
+  display: block;
+  height: 4rem !important;
+  width: 4rem !important;
+  margin: 0 !important;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg svg path {
   fill: #FFF;
   stroke: #FFF;
   stroke-width: 10;
 }
 
-.header_1 .userInfo .disconnect .displayLog {
-  display: block;
+.header_1 .userInfo .disconnect .displayLog a {
+  left: 12.5rem;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(1) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(2) {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(3) {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
 .header_1 .userInfo .img {
@@ -299,6 +363,7 @@ header section div:first-child {
   background-color: wheat;
   border-radius: 100%;
   position: relative;
+  margin-right: 2rem;
 }
 
 .wrapper .imgContainer img {
@@ -526,6 +591,65 @@ header section div:first-child {
   pointer-events: none;
 }
 
+.alerts {
+  position: relative;
+  bottom: 10%;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-weight: 600;
+  opacity: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  color: #0d1c37;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 52%;
+}
+
+.updated {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+}
+
+.updated::before {
+  content: url("../img/check.svg");
+  display: block;
+  -webkit-transform: scale(0.05);
+          transform: scale(0.05);
+  position: absolute;
+  right: 35%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrong {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+  color: #dd4949;
+}
+
+.wrong::before {
+  content: url("../img/close.svg");
+  display: block;
+  -webkit-transform: scale(0.05);
+          transform: scale(0.05);
+  position: absolute;
+  right: 38%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 @media (min-width: 300px) and (max-width: 736px) {
   .wrapper {
     -webkit-box-orient: vertical;
@@ -544,6 +668,28 @@ header section div:first-child {
   }
   .formContainer {
     width: 90% !important;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 /*# sourceMappingURL=style.css.map */

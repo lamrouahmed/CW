@@ -43,11 +43,16 @@ function modify(e, url) {
         return  response.json();
       })
       .then(function (body) {
-        console.log(body);
+          console.log(body);
         if(body.success) {
             $$('.upload').forEach(upload => upload.setAttribute('src', body.location));
+            $('.alerts').classList.add('updated');
+            setTimeout(() => $('.alerts').classList.remove('updated'), 2000);
             $('.alerts').textContent = body.success;
         } else {
+            $('.alerts').classList.add('wrong');
+            setTimeout(() => $('.alerts').classList.remove('wrong'), 2000);
+            $('.alerts').textContent = body.success;
             if(body.exe)  $('.alerts').textContent = body.exe;
             else if(body.size) $('.alerts').textContent = body.size;
             else $('.alerts').textContent = body.other;
@@ -116,8 +121,10 @@ function post(url, form) {
                 error.textContent = ""
                 $$('.input')[index].classList.remove('errorTrue')
                 body.username && ($('.username').childNodes[1].textContent = body.username)
-                body.ok && ($('.alerts').textContent = body.ok);
+                $('.alerts').classList.add('updated');
+                setTimeout(() => $('.alerts').classList.remove('updated'), 2000);
 
+                body.ok && ($('.alerts').textContent = body.ok);
 
             }
         })
