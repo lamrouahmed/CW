@@ -63,7 +63,7 @@ function modify(e, url) {
 }
 
 
-inputs.forEach(input => input.addEventListener('keydown', e => {
+inputs.forEach(input => input.addEventListener('blur', e => {
     const charCodes = [37, 38, 39, 40]
     if(!charCodes.includes(e.keyCode)) post(urls[0], $('.form'))    
 }))
@@ -107,7 +107,6 @@ function post(url, form) {
         body: formData
       })
       .then(function (response) {
-
         return  response.json();
       })
       .then(function (body) {
@@ -120,14 +119,15 @@ function post(url, form) {
             } else {
                 error.textContent = ""
                 $$('.input')[index].classList.remove('errorTrue')
-                body.username && ($('.username').childNodes[1].textContent = body.username)
                 $('.alerts').classList.add('updated');
                 setTimeout(() => $('.alerts').classList.remove('updated'), 2000);
-
                 body.ok && ($('.alerts').textContent = body.ok);
 
             }
         })
+        console.log(body.username);
+        body.username && ($('.username').childNodes[1].textContent = body.username)
+
 
       });
   }
