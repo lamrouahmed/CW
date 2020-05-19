@@ -109,16 +109,27 @@ header section div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: .3em;
+  margin-left: 1em;
 }
 
 .header_1 .userInfo .disconnect .triangle svg {
   width: .8em;
   height: .8em;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .header_1 .userInfo .disconnect .triangle svg path {
   fill: #FFF;
+}
+
+.header_1 .userInfo .disconnect .triangle .svgClicked {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .header_1 .userInfo .disconnect .logout > a:nth-child(4) > span:nth-child(2) {

@@ -114,7 +114,7 @@ header {
             .triangle {
 
                 display: flex;
-                margin-left: .3em;
+                margin-left: 1em;
 
 
 
@@ -126,11 +126,17 @@ header {
                 svg {
                     width: .8em;
                     height: .8em;
-
-
+                    transform: rotate(90deg);
+                    transition: all 400ms ease-in-out;
+                    
+                    
                     path {
                         fill: #FFF;
                     }
+                }
+                .svgClicked {
+                    transition: all 400ms ease-in-out;
+                    transform: rotate(-90deg);
                 }
 
             }

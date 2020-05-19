@@ -17,6 +17,8 @@ popUp.addEventListener('click', () => {
     $('.logout').classList.toggle('displayLog')
 })
 
+
+
 inputs.forEach((input, index) => input.addEventListener('focus', e => {
     $$('.text')[index].classList.add('focus');
     $$('.border')[index].classList.add('clicked')
