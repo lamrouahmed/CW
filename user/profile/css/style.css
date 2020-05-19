@@ -534,6 +534,7 @@ header section div:first-child {
   pointer-events: none;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  left: 0;
 }
 
 .formContainer .form .label .focus {

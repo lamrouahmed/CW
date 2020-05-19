@@ -106,13 +106,13 @@ if (Session::exists("user")) {
                             ]);
                         }
                     } else {
-                        $msg += ["size" => "file size must be < 5MB"];
+                        $msg += ["size" => "image size must be less than 5MB"];
                     }
                 } else {
                     $msg += ["other" => "an error has occured while uploading"];
                 }
             } else {
-                $msg += ["exe" => "file format is not supported"];
+                $msg += ["exe" => "image format is not supported"];
             }
 
             if (count($msg)) {
