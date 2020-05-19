@@ -46,8 +46,8 @@ function modify(e, url) {
           console.log(body);
         if(body.success) {
             $$('.upload').forEach(upload => upload.setAttribute('src', body.location));
-            $('.alerts').classList.add('updated');
-            setTimeout(() => $('.alerts').classList.remove('updated'), 2000);
+            $('.alerts').classList.add('success');
+            setTimeout(() => $('.alerts').classList.remove('success'), 2000);
             $('.alerts').textContent = body.success;
         } else {
             $('.alerts').classList.add('wrong');
@@ -63,9 +63,9 @@ function modify(e, url) {
 }
 
 
-inputs.forEach(input => input.addEventListener('keyup', e => {
-    post(urls[0], $('.form'))
-    
+inputs.forEach(input => input.addEventListener('keydown', e => {
+    const charCodes = [37, 38, 39, 40]
+    if(!charCodes.includes(e.keyCode)) post(urls[0], $('.form'))    
 }))
 
 inputs.forEach((input, index) => input.addEventListener('blur', e => {

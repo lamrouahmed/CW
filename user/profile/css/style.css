@@ -628,6 +628,23 @@ header section div:first-child {
   -webkit-transform: scale(0.05);
           transform: scale(0.05);
   position: absolute;
+  right: 30%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.success {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+}
+
+.success::before {
+  content: url("../img/check.svg");
+  display: block;
+  -webkit-transform: scale(0.05);
+          transform: scale(0.05);
+  position: absolute;
   right: 35%;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -646,7 +663,7 @@ header section div:first-child {
   -webkit-transform: scale(0.05);
           transform: scale(0.05);
   position: absolute;
-  right: 38%;
+  right: 40%;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
