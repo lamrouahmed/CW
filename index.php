@@ -34,6 +34,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </div>
                 <div class="list">
                     <ul class="navList">
+                        <li class="navItem"><a href="./catalogue/catalogue.php">Catalogue</a></li>
                         <li class="navItem"><a href="#">About</a></li>
                         <li class="navItem"><a href="#">Features</a></li>
                         <li class="navItem"><a href="#">Reviews</a></li>
@@ -140,6 +141,7 @@ require_once '/wamp64/www/PFE/core/init.php';
         </div>
     </div>
 
+   
 
 
 
