@@ -601,6 +601,118 @@ body {
   color: #FFF;
 }
 
+footer {
+  color: #FFF;
+  background-color: #1a1f22;
+  -webkit-transform: skewY(-1.667deg);
+          transform: skewY(-1.667deg);
+  width: 100%;
+  padding: 5rem;
+  position: relative;
+}
+
+footer section {
+  -webkit-transform: skewY(1.667deg);
+          transform: skewY(1.667deg);
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer section .topText h2 {
+  font-size: 3rem;
+}
+
+footer section .bottomText {
+  margin-top: 1rem;
+}
+
+footer section .bottomText h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+footer section .mid {
+  margin-top: 4rem;
+}
+
+footer section .mid .prt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+footer section .mid .prt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25rem;
+  cursor: pointer;
+}
+
+footer section .mid .prt div:last-child {
+  margin-left: 7rem;
+}
+
+footer section .mid .prt div:hover p {
+  opacity: 1;
+}
+
+footer section .mid .prt div p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: .6;
+  font-weight: 600;
+}
+
+footer section .mid .prt div p span {
+  font-weight: 700;
+}
+
+footer section .mid .prt div svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+footer section .mid .prt .phone svg {
+  fill: #ed5f0d;
+}
+
+footer section .mid .prt .mail svg {
+  fill: #00ef54;
+}
+
+footer section .mid .prt .location svg {
+  fill: #f0f;
+}
+
+footer section .mid .prt .facebook svg {
+  fill: #0074FF;
+}
+
+footer section .mid .prt .instagram svg {
+  fill: #d5664c;
+}
+
+footer section .mid .prt .twitter svg {
+  fill: #00d2ff;
+}
+
+footer .rest {
+  background-color: #1a1f22;
+  position: absolute;
+  width: 100%;
+  height: 3.2rem;
+  bottom: -6%;
+  -webkit-transform: skewY(1.667deg);
+          transform: skewY(1.667deg);
+  right: 0;
+}
+
 @-webkit-keyframes girl {
   from {
     opacity: 0;
