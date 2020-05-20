@@ -51,8 +51,8 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </div>
                 <div class="list">
                     <ul class="navList">
-                        <li class="navItem"><a href="#">About</a></li>
-                        <li class="navItem"><a href="#">Features</a></li>
+                        <li class="navItem"><a href="#about">About</a></li>
+                        <li class="navItem"><a href="#pricing">Pricing</a></li>
                         <li class="navItem"><a href="#">Reviews</a></li>
                         <li class="navItem"><a href="#">Support</a></li>
                     </ul>
@@ -163,7 +163,7 @@ require_once '/wamp64/www/PFE/core/init.php';
     <div class="head">
         <h2>Pricing Plans</h2>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" id="pricing">
         <div class="catalogue cat1">
             <div class="top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497 231.5">
@@ -463,7 +463,7 @@ require_once '/wamp64/www/PFE/core/init.php';
     
 
 
-    <div class="footerWrapper">
+    <div class="footerWrapper" id="about">
     <footer>
         <section>
             <div class="point">
