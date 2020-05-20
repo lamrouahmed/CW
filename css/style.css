@@ -10,11 +10,16 @@
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -608,7 +613,7 @@ footer {
           transform: skewY(-1.667deg);
   width: 100%;
   padding: 5rem;
-  position: relative;
+  position: absolute;
 }
 
 footer section {
@@ -658,14 +663,14 @@ footer section .mid .prt div:last-child {
 }
 
 footer section .mid .prt div:hover p {
-  opacity: 1;
+  color: #FFF;
 }
 
 footer section .mid .prt div p {
   font-size: 1.5rem;
   font-weight: 600;
-  opacity: .6;
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.555);
 }
 
 footer section .mid .prt div p span {
@@ -702,15 +707,20 @@ footer section .mid .prt .twitter svg {
   fill: #00d2ff;
 }
 
-footer .rest {
+.footerWrapper {
+  position: relative;
+  height: 30rem;
+}
+
+.footerWrapper::after {
+  content: '';
   background-color: #1a1f22;
   position: absolute;
   width: 100%;
-  height: 3.2rem;
-  bottom: -6%;
-  -webkit-transform: skewY(1.667deg);
-          transform: skewY(1.667deg);
+  height: 7.2rem;
+  bottom: -11%;
   right: 0;
+  z-index: -1;
 }
 
 @-webkit-keyframes girl {

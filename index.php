@@ -460,8 +460,10 @@ require_once '/wamp64/www/PFE/core/init.php';
             </div>
         </div>
     </div>
+    
 
 
+    <div class="footerWrapper">
     <footer>
         <section>
             <div class="point">
@@ -518,8 +520,8 @@ require_once '/wamp64/www/PFE/core/init.php';
             </div>
         </section>
 
-        <div class="rest"></div>
-    </footer>
+        <!-- <div class="rest"></div> -->
+    </footer></div>
 
     <script src="./script/script.js"></script>
     <script src="./geolocation/geolocation.js"></script>

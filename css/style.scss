@@ -80,12 +80,16 @@ $maxMob2: 413px;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
+    box-sizing: border-box;
 
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -648,7 +652,7 @@ footer {
     transform: skewY(-1.667deg);
     width: 100%;
     padding: 5rem;
-    position: relative;
+    position: absolute;
 
 
     section {
@@ -664,6 +668,7 @@ footer {
 
         .bottomText {
             margin-top: 1rem;
+
             h4 {
                 font-weight: 500;
                 font-size: 1.3rem;
@@ -672,85 +677,110 @@ footer {
 
         .mid {
             margin-top: 4rem;
+
             .prt {
                 display: flex;
                 margin-top: 2rem;
 
-               div {
-                display: flex;
-                align-items: center;
-                width: 25rem;
-                cursor: pointer;
-                
-                &:last-child {
-                    margin-left: 7rem;
-                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    width: 25rem;
+                    cursor: pointer;
 
-                &:hover {
+                    &:last-child {
+                        margin-left: 7rem;
+                    }
+
+                    &:hover {
+                        p {
+                            color: #FFF;
+                        }
+                    }
+
                     p {
-                        opacity: 1;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        font-weight: 600;
+                        color: rgba(255, 255, 255, 0.555);
+
+                        span {
+                            font-weight: 700;
+                        }
                     }
-                }
-                p {
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    opacity: .6;
-                    font-weight: 600;
 
-                    span {
-                        font-weight: 700;
+                    svg {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        margin-right: 1rem;
                     }
-                }
-                svg {
-                    height: 2.5rem;
-                    width: 2.5rem;
-                    margin-right: 1rem;
+
                 }
 
-               }
 
-               
 
-               .phone svg {
+                .phone svg {
                     fill: #ed5f0d;
                 }
-               .mail svg {
+
+                .mail svg {
                     fill: #00ef54;
                 }
- 
-               .location svg {
+
+                .location svg {
                     fill: #f0f;
                 }
-               .facebook svg {
+
+                .facebook svg {
                     fill: #0074FF;
                 }
-               .instagram svg {
+
+                .instagram svg {
                     fill: #d5664c;
                 }
-               .twitter svg {
+
+                .twitter svg {
                     fill: #00d2ff;
                 }
-       
-               
-             
+
+
+
             }
         }
 
     }
 
-    .rest {
-        background-color: #1a1f22;
-position: absolute;
-width: 100%;
-height: 3.2rem;
-bottom: -6%;
-transform: skewY(1.667deg);
-right: 0;
-    }
+    //     .rest {
+    //         background-color: #1a1f22;
+    // position: absolute;
+    // width: 100%;
+    // height: 3.2rem;
+    // bottom: -6%;
+    // transform: skewY(1.667deg);
+    // right: 0;
+    //     }
+
 
 
 }
 
+.footerWrapper {
+    position: relative;
+    height: 30rem;
+
+
+    &::after {
+        content: '';
+        background-color: #1a1f22;
+        position: absolute;
+        width: 100%;
+        height: 7.2rem;
+        bottom: -11%;
+        right: 0;
+        z-index: -1;
+    }
+
+}
 
 
 
