@@ -237,7 +237,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </ul>
             </div>
             <div class="request">
-                <a href="#">Demander</a>
+                <a href="/PFE/catalogue/normale/normale.php">Demander</a>
             </div>
         </div>
         <div class="catalogue cat2">
@@ -336,7 +336,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </ul>
             </div>
             <div class="request">
-                <a href="#">Demander</a>
+                <a href="/PFE/catalogue/pro/pro.php">Demander</a>
             </div>
         </div>
         <div class="catalogue cat3">
@@ -457,7 +457,7 @@ require_once '/wamp64/www/PFE/core/init.php';
                 </ul>
             </div>
             <div class="request">
-                <a href="#">Demander</a>
+                <a href="/PFE/catalogue/complet/complet.php">Demander</a>
             </div>
         </div>
     </div>
