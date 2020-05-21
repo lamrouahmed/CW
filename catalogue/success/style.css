@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #c7ddff;
+}
+
+.screen{
+  cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 330px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2 12px 0 rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.screen #topIcon{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.screen .border-top{
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 100%;
+    background-color: #1757B8;
+}
+
+.screen h3{
+    font-weight: 700;
+    font-size: 24px;
+    color: #606060;
+    letter-spacing: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.screen p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #616161;
+    letter-spacing: 0.18px;
+    position: absolute;
+    left: 50%;
+    top: 68%;
+    width: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+ button {
+    background-color: #1757B8;
+    border: 1px solid #2069D9;
+    box-shadow: 0 20px 40px -10px #186BD1;
+    border-radius: 100px;
+    letter-spacing: 1.5px;
+    font-weight: 520;
+    color: #FFF;
+    padding-top: 2px;
+    width: 186px;
+    height: 40px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    bottom: 0%;
+    font-size: 13px;
+   cursor: pointer;
+}
+
+
