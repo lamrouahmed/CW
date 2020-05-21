@@ -80,12 +80,12 @@ $maxMob2: 413px;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
-    box-sizing: border-box;
 
 }
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
