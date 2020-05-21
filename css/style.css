@@ -362,6 +362,10 @@ body {
   z-index: -1;
   fill: #273036 !important;
   border-radius: 15px 15px 0 0;
+  -webkit-transform: scaleY(1.12);
+          transform: scaleY(1.12);
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .wrapper .catalogue .top {
@@ -894,7 +898,7 @@ footer section .mid .prt .twitter svg {
     width: 1.7rem !important;
   }
   #about::after {
-    bottom: -30%;
+    bottom: -22%;
   }
 }
 
@@ -962,24 +966,10 @@ footer section .mid .prt .twitter svg {
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
   }
-  .catalogue .top svg {
-    fill: #f5f8ff !important;
-  }
-  .catalogue .top .price span,
-  .catalogue .top .title span {
-    color: #1757b8 !important;
-  }
   .catalogue:nth-child(2) {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     margin: 2em !important;
-  }
-  .catalogue:nth-child(2) .top svg {
-    fill: #1f65a2 !important;
-  }
-  .catalogue:nth-child(2) .top .price span,
-  .catalogue:nth-child(2) .top .title span {
-    color: white !important;
   }
   .catalogue .services {
     margin-top: 3.5em !important;

@@ -418,6 +418,8 @@ body {
                 z-index: -1;
                 fill: #273036 !important;
                 border-radius: 15px 15px 0 0;
+                transform: scaleY(1.12);
+                transform-origin: top;
 
 
             }
@@ -954,6 +956,7 @@ footer {
         section {
             width: 100% !important;
         }
+
         .point {
             .bottomText {
                 h4 {
@@ -961,16 +964,20 @@ footer {
                     line-height: 2rem;
                 }
             }
+
             margin-left: .8rem !important;
             margin-top: 1.5rem !important;
         }
+
         .mid {
             width: 100%;
             margin-top: 1.5rem !important;
             margin-left: .8rem !important;
+
             .prt {
                 flex-direction: column;
                 margin-top: 0 !important;
+
                 p {
                     font-size: 1.1rem !important;
                 }
@@ -979,6 +986,7 @@ footer {
                     &:last-child {
                         margin-left: 0 !important;
                     }
+
                     margin-top: .8rem;
 
                     svg {
@@ -989,10 +997,11 @@ footer {
             }
         }
     }
+
     #about {
         &::after {
-            bottom: -30%;
-         }
+            bottom: -22%;
+        }
     }
 
 }
@@ -1059,9 +1068,6 @@ footer {
 
         .top {
             margin: 0 !important;
-
-
-
         }
     }
 
@@ -1076,36 +1082,9 @@ footer {
 
 
 
-        .top {
-            svg {
-                fill: #f5f8ff !important;
-            }
-
-            .price,
-            .title {
-                span {
-                    color: rgb(23, 87, 184) !important;
-                }
-            }
-        }
-
         &:nth-child(2) {
             transform: scale(1.1);
             margin: 2em !important;
-
-            .top {
-                svg {
-                    fill: #1f65a2 !important;
-                }
-
-                .price,
-                .title {
-                    span {
-                        color: rgb(255, 255, 255) !important;
-                    }
-                }
-            }
-
         }
 
 
