@@ -21,18 +21,66 @@ body {
     height: 100%;
     background: url("./img/adminBg.svg") no-repeat;
     background-size: auto;
-background-size: cover;
-background-color: #f2f2f2;
+    background-size: cover;
+    background-color: #f2f2f2;
 
 }
+
 
 .wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
+
+.headerWrapper {
+    height: 5rem;
+    width: 100%;
+    background-color: #273036;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        h1 {
+            font-weight: 500;
+            color: #FFF;
+            font-family: 'Montserrat', sans-serif;
+            user-select: none;
+            display: block;
+            margin-left: .4em;
+        }
+
+        span {
+            font-weight: 300;
+
+        }
+
+
+
+
+    }
+
+    .logoImg {
+        display: flex;
+
+        svg {
+            height: 3em;
+            width: 4em;
+        }
+    }
+}
+
 .formWrapper {
 
     height: 28rem;
@@ -44,29 +92,37 @@ background-color: #f2f2f2;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     padding: 3em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px 1px #757373;
+    transition: all 200ms ease-in-out;
 
-    box-shadow: 0 0 1px 1px #eceaea;
+    &:hover {
+        transition: all 200ms ease-in-out;
+        box-shadow: -3px -3px 1px 1px #333232;
+    }
 
     .formHeader {
         width: 100%;
         margin-bottom: 1rem;
+
         .logo {
             display: flex;
             justify-content: center;
             margin-bottom: 1rem;
+
             svg {
                 height: 5rem;
                 width: 5rem;
                 margin-right: .6rem;
 
-                path {
-                    fill: rgb(85, 82, 82);
-                }
+
             }
         }
+
         .title {
             display: flex;
             justify-content: center;
+
             h1 {
                 text-align: center;
                 letter-spacing: 10px;
@@ -77,7 +133,7 @@ background-color: #f2f2f2;
 
     .form {
         width: 100%;
-     
+
 
         .input {
             border: none;
@@ -98,6 +154,7 @@ background-color: #f2f2f2;
 
             }
         }
+
         .login {
             width: 100%;
             display: flex;
@@ -115,7 +172,7 @@ background-color: #f2f2f2;
                 transition: all 100ms ease-in-out;
                 transform: scale(1);
                 font-size: .9rem;
-                
+
                 &:hover {
                     transition: all 100ms ease-in-out;
                     transform: scale(.98);
@@ -125,9 +182,9 @@ background-color: #f2f2f2;
             }
         }
 
-   
 
-    
+
+
 
 
 
@@ -246,7 +303,7 @@ background-color: #f2f2f2;
             }
         }
 
-      
+
 
 
 

@@ -34,6 +34,64 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headerWrapper {
+  height: 5rem;
+  width: 100%;
+  background-color: #273036;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerWrapper .headerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.headerWrapper .headerLogo h1 {
+  font-weight: 500;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  margin-left: .4em;
+}
+
+.headerWrapper .headerLogo span {
+  font-weight: 300;
+}
+
+.headerWrapper .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerWrapper .logoImg svg {
+  height: 3em;
+  width: 4em;
 }
 
 .formWrapper {
@@ -55,8 +113,18 @@ body {
           justify-content: center;
   background-color: white;
   padding: 3em;
-  -webkit-box-shadow: 0 0 1px 1px #eceaea;
-          box-shadow: 0 0 1px 1px #eceaea;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 1px 1px #757373;
+          box-shadow: 3px 3px 1px 1px #757373;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formWrapper:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: -3px -3px 1px 1px #333232;
+          box-shadow: -3px -3px 1px 1px #333232;
 }
 
 .formWrapper .formHeader {
@@ -78,10 +146,6 @@ body {
   height: 5rem;
   width: 5rem;
   margin-right: .6rem;
-}
-
-.formWrapper .formHeader .logo svg path {
-  fill: #555252;
 }
 
 .formWrapper .formHeader .title {
