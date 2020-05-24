@@ -29,6 +29,23 @@ body {
   background-color: #ea5d5d;
 }
 
+.bodyE .headerLogo .logoImg svg path {
+  fill: #FFF;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.bodyE .headerLogo h1 {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  color: #FFF !important;
+}
+
+.bodyE .formWrapper {
+  -webkit-animation: invalidFields 200ms 3 ease-in-out !important;
+          animation: invalidFields 200ms 3 ease-in-out !important;
+}
+
 .wrapper {
   height: 100%;
   display: -webkit-box;
@@ -82,6 +99,8 @@ body {
           user-select: none;
   display: block;
   margin-left: .4em;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .headerWrapper .headerLogo span {
@@ -101,6 +120,8 @@ body {
 
 .headerWrapper .logoImg svg path {
   fill: #273036;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .formWrapper {
@@ -343,5 +364,73 @@ body {
 
 .formWrapper .form .errorTrue {
   border-bottom: 2px solid #eb5151 !important;
+}
+
+.infoE {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.8rem;
+}
+
+.gene {
+  display: none;
+}
+
+.geneBlock {
+  color: #f14444;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: .8rem;
+}
+
+.geneBlock::after {
+  content: url("./img/close.svg");
+  display: block;
+  position: absolute;
+  left: 25px;
+  height: 1rem;
+  width: 1rem;
+  -webkit-transform: scale(0.04);
+          transform: scale(0.04);
+  height: 1rem;
+  width: 1rem;
+  top: -68%;
+}
+
+@-webkit-keyframes invalidFields {
+  0% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  50% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes invalidFields {
+  0% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  50% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -60,12 +60,14 @@ require_once '/wamp64/www/PFE/admin/login.inc.php';
                         <span class="error" data-error="a_pwd"></span>
                     </label>
                 </div>
+                <div class="info infoE">
+                <span class="gene"></span>
+</div>
                 <div class="info">
                     <div class="login">
                         <button type="submit" name="a_login" class="log">LOG IN</button>
                     </div>
                 </div>
-        <span class="gene"></span>
             </form>
         </div>
     </div>

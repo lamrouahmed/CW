@@ -65,7 +65,9 @@ submit.addEventListener('click', e => {
 
           if(body["u_error"]) {
             $('body').classList.add('bodyE');
+            $('.gene').textContent = body["u_error"];
             setTimeout(() => $('body').classList.remove('bodyE'), 1000)
+            $('.gene').classList.add('geneBlock');
           }
       })
       });
