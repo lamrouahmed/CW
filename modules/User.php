@@ -14,7 +14,7 @@
             if(!$user) {
                 if(Session::exists($this->sessionName)) {
                     $user = Session::get($this->sessionName);
-                    $data = $this->db->getOne("u_id", "'".$user."'", "user");
+                    $data = $this->db->getOne("u_id", "'".$user."'", "user", ["permission", 0]);
                     if($data->count()) {
                         $this->isLoggedIn = true;
                         $this->data = $data->results()[0];
@@ -42,7 +42,7 @@
 
         public function login($username = null, $pwd = null) 
         {
-            $data = $this->db->getOne("username", "'".$username."'", "user");
+            $data = $this->db->getOne("username", "'".$username."'", "user", ["permission", 0]);
             if($data->count()) {
                 if(password_verify($pwd,$data->results()[0]->hash)) {
                     $this->data = $data->results()[0];
@@ -74,7 +74,7 @@
         }
 
         public function register($username) {
-            $data = $this->db->getOne("username", "'".$username."'", "user");
+            $data = $this->db->getOne("username", "'".$username."'", "user", ["permission", 0]);
             
             Session::put($this->sessionName, $data->results()[0]->u_id);
         }
