@@ -10,7 +10,6 @@ if(!Session::exists("user")) {
                 "u_password" => ["name" => "password"]
             ]);
             $user = new User();
-            if($user->isLoggedIn()) echo "logged";
             if($validate->isValid() && $user->login(Input::get("u_username"), Input::get("u_password"))) {
                 Redirect::to('/PFE/user/profile/profile.php');
             } else {

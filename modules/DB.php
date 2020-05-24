@@ -78,8 +78,9 @@ class DB {
      * @return DB
      */
 
-    public function getAll(string $table) {
-        return $this->query("SELECT * FROM {$table}", [], "SELECT");
+    public function getAll(string $table, array $condition = []) {
+    if(count($condition)) return $this->query("SELECT * FROM {$table} WHERE {$condition[0]} = {$condition[1]}", [], "SELECT");
+        else return $this->query("SELECT * FROM {$table}", [], "SELECT");
     }
 
 

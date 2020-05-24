@@ -1,3 +1,9 @@
+<?php
+require_once '/wamp64/www/PFE/core/init.php';
+require_once '/wamp64/www/PFE/admin/login.inc.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +42,7 @@
                     <h1>LOGIN</h1>
                 </div>
             </div>
-            <form class="form">
+            <form class="form" method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?> >
                 <div class="fullName">
                     <label class="label">
                         <input data-check="a_username" class="input" type="text" name="a_username" value="">

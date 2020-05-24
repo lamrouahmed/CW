@@ -2,7 +2,7 @@
 require_once '/wamp64/www/PFE/core/init.php';
 
 $DB = DB::connect();
-$results = $DB->getAll("user")->results();
+$results = $DB->getAll("user", ["permission", 0])->results();
 ?>
 
 <!DOCTYPE html>

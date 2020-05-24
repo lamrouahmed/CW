@@ -1,6 +1,7 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
-require_once '/wamp64/www/PFE/admin/sideBar/sideBar.html';
+if(Session::exists("admin")) {
+    require_once '/wamp64/www/PFE/admin/sideBar/sideBar.html';
 $DB = DB::connect();
 
 
@@ -106,3 +107,8 @@ if($action === "delete") {
 </body>
 
 </html>
+<?php
+} else {
+    Redirect::to("/PFE/admin/login.php");
+}
+?>
