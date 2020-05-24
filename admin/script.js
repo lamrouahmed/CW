@@ -2,7 +2,7 @@ const $ = e => document.querySelector(e)
 const $$ = e => document.querySelectorAll(e)
 
 const inputs = $$('.input');
-
+const submit = $('.log');
 
 
 inputs.forEach((input, index) => input.addEventListener('focus', e => {
@@ -25,3 +25,33 @@ inputs.forEach((input, index) => input.addEventListener('blur', e => {
 inputs.forEach((input, index) => {
     input.value.trim() === '' ?  $$('.text')[index].classList.remove('focus') : $$('.text')[index].classList.add('focus');
 })
+
+submit.addEventListener('click', e => {
+    e.preventDefault();
+    post('/PFE/admin/login.inc.php', $('.form'), '/PFE/admin');
+})
+
+
+
+
+
+
+
+
+
+  function post(url, form, redirect) {
+    let formData = new FormData(form);
+    fetch(url, {
+        method: 'post',
+        body: formData
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (body) {
+        body.ok && (window.location = redirect);
+      });
+  }
+
+
+

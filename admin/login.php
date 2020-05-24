@@ -62,7 +62,7 @@ require_once '/wamp64/www/PFE/admin/login.inc.php';
                 </div>
                 <div class="info">
                     <div class="login">
-                        <button type="submit" name="a_login">LOG IN</button>
+                        <button type="submit" name="a_login" class="log">LOG IN</button>
                     </div>
                 </div>
 

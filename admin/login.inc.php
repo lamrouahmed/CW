@@ -1,6 +1,7 @@
 <?php
     require_once '/wamp64/www/PFE/core/init.php';
 
+$alerts = [];
 
 if(!Session::exists("admin")) {
     if(Input::exists()) {
@@ -11,15 +12,22 @@ if(!Session::exists("admin")) {
         ]);
         $admin = new Admin();
         if($validate->isValid() && $admin->login(Input::get("a_username"), Input::get("a_pwd"))) {
-            Redirect::to('/PFE/admin');
+            $alerts = json_encode(["ok" => "passed"]);
         } else {
             if($validate->isValid()) {
                 $validate->setError("incorrect username or password", "u_error");
             }
             
-            $errors = $validate->getErrors();
+            $alerts = json_encode($validate->getErrors());
+           
         }
+
+        echo $alerts;
+
     }
+
+
 } else {
     Redirect::to("/PFE/admin");
 }
+

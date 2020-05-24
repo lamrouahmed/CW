@@ -25,7 +25,7 @@
 
         public function login($username = null, $pwd = null) 
         {
-            $data = $this->db->getOne("username", "'".$username."'", "user");
+            $data = $this->db->getOne("username", "'".$username."'", "user", ["permission", 1]);
             if($data->count()) {
                 if(password_verify($pwd,$data->results()[0]->hash)) {
                     $this->data = $data->results()[0];

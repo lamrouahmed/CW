@@ -93,9 +93,11 @@ class DB {
      *
      */
 
-    public function getOne($PK,  $id, string $table)
+    public function getOne($PK,  $id, string $table, array $condition = [])
     {
-        return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id}", [], "SELECT");
+    if(count($condition)) return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id} AND {$condition[0]} = {$condition[1]}", [], "SELECT");
+        else return $this->query("SELECT * FROM {$table} WHERE {$PK} = {$id}", [], "SELECT");
+
     }
 
     
