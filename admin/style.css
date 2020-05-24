@@ -43,7 +43,6 @@ body {
 .headerWrapper {
   height: 5rem;
   width: 100%;
-  background-color: #273036;
   position: absolute;
   top: 0;
   display: -webkit-box;
@@ -69,7 +68,7 @@ body {
 
 .headerWrapper .headerLogo h1 {
   font-weight: 500;
-  color: #FFF;
+  color: #273036;
   font-family: 'Montserrat', sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -92,6 +91,10 @@ body {
 .headerWrapper .logoImg svg {
   height: 3em;
   width: 4em;
+}
+
+.headerWrapper .logoImg svg path {
+  fill: #273036;
 }
 
 .formWrapper {

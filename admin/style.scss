@@ -39,7 +39,6 @@ body {
 .headerWrapper {
     height: 5rem;
     width: 100%;
-    background-color: #273036;
     position: absolute;
     top: 0;
     display: flex;
@@ -54,7 +53,7 @@ body {
 
         h1 {
             font-weight: 500;
-            color: #FFF;
+            color: #273036;
             font-family: 'Montserrat', sans-serif;
             user-select: none;
             display: block;
@@ -77,6 +76,10 @@ body {
         svg {
             height: 3em;
             width: 4em;
+
+            path {
+                fill: #273036;
+            }
         }
     }
 }
