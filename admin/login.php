@@ -65,7 +65,7 @@ require_once '/wamp64/www/PFE/admin/login.inc.php';
                         <button type="submit" name="a_login" class="log">LOG IN</button>
                     </div>
                 </div>
-
+        <span class="gene"></span>
             </form>
         </div>
     </div>

@@ -50,6 +50,24 @@ submit.addEventListener('click', e => {
       })
       .then(function (body) {
         body.ok && (window.location = redirect);
+        
+        $$('.error').forEach((error, index) => {
+             
+
+          if(body[error.dataset.error]) {
+              $$('.input')[index].classList.add('errorTrue')
+              error.textContent = `${body[error.dataset.error]}`
+          } else {
+              error.textContent = ""
+              $$('.input')[index].classList.remove('errorTrue')
+              body.ok && ($('.alerts').textContent = body.ok);
+          }
+
+          if(body["u_error"]) {
+            $('body').classList.add('bodyE');
+            setTimeout(() => $('body').classList.remove('bodyE'), 1000)
+          }
+      })
       });
   }
 

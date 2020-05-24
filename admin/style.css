@@ -21,6 +21,12 @@ body {
   background-size: auto;
   background-size: cover;
   background-color: #f2f2f2;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+.bodyE {
+  background-color: #ea5d5d;
 }
 
 .wrapper {
