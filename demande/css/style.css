@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.headerWrapper {
+  height: 5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerWrapper .headerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.headerWrapper .headerLogo h1 {
+  font-weight: 500;
+  color: #273036;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  margin-left: .4em;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.headerWrapper .headerLogo span {
+  font-weight: 300;
+}
+
+.headerWrapper .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerWrapper .logoImg svg {
+  height: 3em;
+  width: 4em;
+}
+
+.headerWrapper .logoImg svg path {
+  fill: #273036;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.wrapper {
+  height: calc(100% - 5rem);
+}
+
+.formWrapper {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.formWrapper .title h1 {
+  font-weight: 400;
+}
+
+.formWrapper form {
+  width: 60rem;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formWrapper form > div {
+  height: 5rem;
+  margin-top: 1.5rem;
+}
+
+.formWrapper form .lavageDisponible,
+.formWrapper form .vehiculeDisponible,
+.formWrapper form .quantityWrapper,
+.formWrapper form .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.formWrapper form .lavageDisponible > p,
+.formWrapper form .vehiculeDisponible > p,
+.formWrapper form .quantityWrapper > p,
+.formWrapper form .date > p {
+  width: 17rem;
+  font-weight: 500;
+}
+
+.formWrapper form .lavageDisponible .svg svg,
+.formWrapper form .vehiculeDisponible .svg svg,
+.formWrapper form .quantityWrapper .svg svg,
+.formWrapper form .date .svg svg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.formWrapper form .lavageDisponible .svgText,
+.formWrapper form .vehiculeDisponible .svgText,
+.formWrapper form .quantityWrapper .svgText,
+.formWrapper form .date .svgText {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.formWrapper form .lavageDisponible .lavage,
+.formWrapper form .lavageDisponible .vehicule,
+.formWrapper form .vehiculeDisponible .lavage,
+.formWrapper form .vehiculeDisponible .vehicule,
+.formWrapper form .quantityWrapper .lavage,
+.formWrapper form .quantityWrapper .vehicule,
+.formWrapper form .date .lavage,
+.formWrapper form .date .vehicule {
+  margin-right: 2rem;
+}
+
+.formWrapper form .lavageDisponible .label,
+.formWrapper form .vehiculeDisponible .label,
+.formWrapper form .quantityWrapper .label,
+.formWrapper form .date .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0.4em 2em;
+  width: 11rem;
+  height: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.formWrapper form .lavageDisponible input[name=lavage],
+.formWrapper form .vehiculeDisponible input[name=lavage],
+.formWrapper form .quantityWrapper input[name=lavage],
+.formWrapper form .date input[name=lavage] {
+  display: none;
+}
+
+.formWrapper form .quantityWrapper .nbVehicules {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formWrapper form .quantityWrapper .nbVehicules input {
+  font-size: 3rem;
+  font-weight: 600;
+  width: 2rem;
+  margin: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.formWrapper form .quantityWrapper .nbVehicules button {
+  font-weight: 600;
+  font-size: 2.5rem;
+  background-color: white;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.formWrapper form .date input[type=date] {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.formWrapper form .date .label svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.formWrapper form .demande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: auto !important;
+}
+
+.formWrapper form .demande button {
+  border-radius: 5px;
+  height: 70%;
+  width: 25%;
+  color: #FFF;
+  background-color: #121618;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 2px solid #121618;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.formWrapper form .demande button:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

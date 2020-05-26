@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+.headerWrapper {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerWrapper .headerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.headerWrapper .headerLogo h1 {
+  font-weight: 500;
+  color: #273036;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  margin-left: .4em;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.headerWrapper .headerLogo span {
+  font-weight: 300;
+}
+
+.headerWrapper .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerWrapper .logoImg svg {
+  height: 3em;
+  width: 4em;
+}
+
+.headerWrapper .logoImg svg path {
+  fill: #273036;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    //background: url("../img/wave.svg") no-repeat;
+    // background-color:#273036;
+    // background-size: auto;
+    // background-size: auto;
+    // background-size: cover;
+
+}
+
+.headerWrapper {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        h1 {
+            font-weight: 500;
+            color: #273036;
+            font-family: 'Montserrat', sans-serif;
+            user-select: none;
+            display: block;
+            margin-left: .4em;
+            transition: all 400ms ease-in-out;
+
+        }
+
+        span {
+            font-weight: 300;
+
+        }
+
+
+
+
+    }
+
+    .logoImg {
+        display: flex;
+
+        svg {
+            height: 3em;
+            width: 4em;
+
+            path {
+                fill: #273036;
+                transition: all 400ms ease-in-out;
+
+            }
+        }
+    }
+}
+
+
+
+.wrapper {
+    height: calc(100% - 5rem);
+}
+
+.formWrapper {
+    margin: 0 auto;
+    height: 100%;
+
+    .title {
+        h1 {
+            font-weight: 400;
+        }
+    }
+    form {
+        width: 60rem;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        &>div {
+            height: 5rem;
+            margin-top: 1.5rem;
+        }
+
+        .lavageDisponible,
+        .vehiculeDisponible,
+        .quantityWrapper,
+        .date {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .lavageDisponible,
+        .vehiculeDisponible,
+        .quantityWrapper,
+        .date {
+            &>p {
+                width: 17rem;
+                font-weight: 500;
+            }
+
+            .svg {
+                svg {
+                    height: 3rem;
+                    width: 3rem;
+
+                }
+            }
+
+            .svgText {
+                margin-left: 1rem;
+                font-weight: 500;
+            }
+
+            .lavage,
+            .vehicule {
+                margin-right: 2rem;
+            }
+
+            .label {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding: 0.4em 2em;
+                width: 11rem;
+                height: 4rem;
+                justify-content: center;
+                cursor: pointer;
+
+            }
+
+            input[name=lavage] {
+                display: none;
+            }
+        }
+
+        .quantityWrapper {
+            .nbVehicules {
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    width: 2rem;
+                    margin: 1rem;
+                    font-family: 'Quicksand', sans-serif;
+                    display: flex;
+                    text-align: center;
+                }
+
+                button {
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    background-color: white;
+                    cursor: pointer;
+                    font-family: 'Quicksand', sans-serif;
+                }
+            }
+
+        }
+
+        .date {
+            input[type=date] {
+                transform: scale(0);
+            }
+
+            .label {
+                svg {
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+        }
+
+        .demande {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: auto !important;
+
+            button {
+                border-radius: 5px;
+                height: 70%;
+                width: 25%;
+                color: #FFF;
+                background-color: #121618;
+                font-weight: 600;
+                font-size: 1.1rem;
+                border: 2px solid #121618;
+                border-top-left-radius: 35px;
+                border-bottom-right-radius: 35px;
+                transition: all 200ms ease-in-out;
+                transform: scale(1);
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(.96);
+                    transition: all 200ms ease-in-out;
+                }
+            }
+        }
+    }
+}
