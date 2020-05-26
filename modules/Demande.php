@@ -19,7 +19,5 @@
              $this->db->insert($table, $fields);
         }
 
-        public function update($PK,  $id, string $table, $params = []) {
-            $this->db->update($PK, $id, $table, $params);
-        }
+    
 }

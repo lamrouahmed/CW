@@ -57,6 +57,10 @@ submit.addEventListener('click', e => {
           if(body[error.dataset.error]) {
               $$('.input')[index].classList.add('errorTrue')
               error.textContent = `${body[error.dataset.error]}`
+              $('body').classList.add('bodyE');
+
+                          setTimeout(() => $('body').classList.remove('bodyE'), 1000)
+
           } else {
               error.textContent = ""
               $$('.input')[index].classList.remove('errorTrue')
