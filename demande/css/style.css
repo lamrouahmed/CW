@@ -33,6 +33,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #1a1f22;
 }
 
 .headerWrapper .headerLogo {
@@ -47,7 +48,7 @@ body {
 
 .headerWrapper .headerLogo h1 {
   font-weight: 500;
-  color: #273036;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -75,7 +76,7 @@ body {
 }
 
 .headerWrapper .logoImg svg path {
-  fill: #273036;
+  fill: #FFF;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
@@ -91,6 +92,8 @@ body {
 
 .formWrapper .title h1 {
   font-weight: 400;
+  width: 100%;
+  text-align: center;
 }
 
 .formWrapper form {
@@ -110,17 +113,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FFF;
 }
 
 .formWrapper form > div {
   height: 5rem;
   margin-top: 1.5rem;
-}
-
-.formWrapper form .lavageDisponible,
-.formWrapper form .vehiculeDisponible,
-.formWrapper form .quantityWrapper,
-.formWrapper form .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,10 +128,7 @@ body {
   width: 100%;
 }
 
-.formWrapper form .lavageDisponible > p,
-.formWrapper form .vehiculeDisponible > p,
-.formWrapper form .quantityWrapper > p,
-.formWrapper form .date > p {
+.formWrapper form > div > p {
   width: 17rem;
   font-weight: 500;
 }
@@ -187,6 +182,26 @@ body {
   cursor: pointer;
 }
 
+.formWrapper form .lavageDisponible .label .svg,
+.formWrapper form .vehiculeDisponible .label .svg,
+.formWrapper form .quantityWrapper .label .svg,
+.formWrapper form .date .label .svg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formWrapper form .lavageDisponible .label:hover .svg,
+.formWrapper form .vehiculeDisponible .label:hover .svg,
+.formWrapper form .quantityWrapper .label:hover .svg,
+.formWrapper form .date .label:hover .svg {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 .formWrapper form .lavageDisponible input[name=lavage],
 .formWrapper form .vehiculeDisponible input[name=lavage],
 .formWrapper form .quantityWrapper input[name=lavage],
@@ -195,7 +210,7 @@ body {
 }
 
 .formWrapper form .quantityWrapper .nbVehicules {
-  width: 10%;
+  width: 16%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,6 +250,83 @@ body {
 .formWrapper form .date .label svg {
   height: 4rem;
   width: 4rem;
+}
+
+.formWrapper form .localisation .input {
+  border: none;
+  border-bottom: 2px solid #dfdcdc;
+  width: 39rem;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding-top: 2em;
+  height: 5em;
+  resize: none;
+  overflow: hidden;
+}
+
+.formWrapper form .localisation .input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: .9rem;
+  color: #9e9c9c;
+}
+
+.formWrapper form .localisation .input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: .9rem;
+  color: #9e9c9c;
+}
+
+.formWrapper form .localisation .input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: .9rem;
+  color: #9e9c9c;
+}
+
+.formWrapper form .localisation .input::placeholder {
+  font-weight: 500;
+  font-size: .9rem;
+  color: #9e9c9c;
+}
+
+.formWrapper form .localisation .input:focus {
+  outline: none;
+}
+
+.formWrapper form .localisation .Label {
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  display: block;
+}
+
+.formWrapper form .localisation .Label .border {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #273036;
+  bottom: 0%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formWrapper form .localisation .Label .focus {
+  top: .6rem;
+  font-size: .7em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.formWrapper form .localisation .Label .clicked {
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .formWrapper form .demande {

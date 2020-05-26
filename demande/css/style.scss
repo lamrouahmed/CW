@@ -19,7 +19,7 @@ html {
 
 body {
     height: 100%;
-    //background: url("../img/wave.svg") no-repeat;
+    // background: url("../img/wave.svg") no-repeat;
     // background-color:#273036;
     // background-size: auto;
     // background-size: auto;
@@ -33,6 +33,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #1a1f22;
 
 
 
@@ -44,7 +45,7 @@ body {
 
         h1 {
             font-weight: 500;
-            color: #273036;
+            color: #ffffff;
             font-family: 'Montserrat', sans-serif;
             user-select: none;
             display: block;
@@ -71,7 +72,7 @@ body {
             width: 4em;
 
             path {
-                fill: #273036;
+                fill: #FFF;
                 transition: all 400ms ease-in-out;
 
             }
@@ -92,6 +93,8 @@ body {
     .title {
         h1 {
             font-weight: 400;
+            width: 100%;
+            text-align:center;
         }
     }
     form {
@@ -102,35 +105,34 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        background-color: #FFF;
 
         &>div {
             height: 5rem;
             margin-top: 1.5rem;
-        }
-
-        .lavageDisponible,
-        .vehiculeDisponible,
-        .quantityWrapper,
-        .date {
             display: flex;
             align-items: center;
             width: 100%;
-        }
 
-        .lavageDisponible,
-        .vehiculeDisponible,
-        .quantityWrapper,
-        .date {
             &>p {
                 width: 17rem;
                 font-weight: 500;
             }
+        }
+
+  
+
+        .lavageDisponible,
+        .vehiculeDisponible,
+        .quantityWrapper,
+        .date {
+           
 
             .svg {
                 svg {
                     height: 3rem;
                     width: 3rem;
-
+                    
                 }
             }
 
@@ -153,6 +155,16 @@ body {
                 height: 4rem;
                 justify-content: center;
                 cursor: pointer;
+                .svg {
+                    transform: scale(1);
+                    transition: all 200ms ease-in-out;
+                }
+                &:hover {
+                    .svg {
+                        transform: scale(.9);
+                        transition: all 200ms ease-in-out;
+                    }
+                }
 
             }
 
@@ -163,7 +175,7 @@ body {
 
         .quantityWrapper {
             .nbVehicules {
-                width: 10%;
+                width: 16%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -195,6 +207,7 @@ body {
             }
 
             .label {
+
                 svg {
                     height: 4rem;
                     width: 4rem;
@@ -202,6 +215,71 @@ body {
             }
         }
 
+        .localisation {
+
+            .input {
+                border: none;
+                border-bottom: 2px solid rgb(223, 220, 220);
+                width: 39rem;
+                background-color: transparent;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                padding-top: 2em;
+                height: 5em;
+                resize: none;
+                overflow: hidden;
+
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: .9rem;
+                    color: rgb(158, 156, 156);
+                }
+    
+                &:focus {
+                    outline: none;
+    
+    
+                }
+            }
+            .Label {
+                width: 100%;
+                margin-bottom: 1em;
+                position: relative;
+                display: block;
+    
+    
+
+    
+    
+    
+    
+                .border {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #273036;
+                    bottom: 0%;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: all 200ms ease-in-out;
+    
+                }
+    
+    
+                .focus {
+                    top: .6rem;
+                    font-size: .7em;
+                    transition: all 200ms ease-in-out;
+                }
+    
+                .clicked {
+                    transform: scaleX(1) !important;
+                    transition: all 200ms ease-in-out;
+                }
+    
+            }
+        }
         .demande {
             display: flex;
             justify-content: center;
