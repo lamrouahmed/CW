@@ -17,10 +17,11 @@ function get(url, nodes) {
           nodes.forEach((node, i) => node.textContent = `${response[i].prix} M.A.D`)
           price = response;
 
-          $('.price').value = $('.prix h2').textContent.split(' ')[0];
           let checked = $('.lavageLabel.checked input[type=radio]').value;
           let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
           $('.prix h2').textContent = `${prix} M.A.D`;
+          $('.price').value = prix;
+
       });
 }
 
@@ -41,10 +42,11 @@ function modify(e, node) {
         (element.dataset.action === '+' && node.value++) && ($('.btn[data-action="-"]').style.opacity="1");
         (node.value >= 9 && (node.value = 9)) && ($('.btn[data-action="+"]').style.opacity=".4");
         (node.value <= 1 && (node.value = 1)) && ($('.btn[data-action="-"]').style.opacity=".4");
-        $('.price').value = $('.prix h2').textContent.split(' ')[0];
         let checked = $('.lavageLabel.checked input[type=radio]').value;
         let prix = price.filter(e => e.type_lavage === checked)[0].prix * node.value;
         $('.prix h2').textContent = `${prix} M.A.D`;
+        $('.price').value = prix ;
+
 }
 
 lavage.forEach((btn, i) => {
@@ -57,10 +59,11 @@ lavage.forEach((btn, i) => {
 
 
         
-        $('.price').value = $('.prix h2').textContent.split(' ')[0];
         let checked = $('.lavageLabel.checked input[type=radio]').value;
         let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
         $('.prix h2').textContent = `${prix} M.A.D`;
+        $('.price').value = prix;
+
     })
 })
 vehicule.forEach((btn, i) => {
