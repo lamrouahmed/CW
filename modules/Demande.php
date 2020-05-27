@@ -8,7 +8,7 @@
             $this->db = DB::connect();
         }
 
-        public function create($table, $fields) 
+        public function create($fields) 
         {
             //  if(!$this->db->insert($table, $fields)) {
             //      throw new Exception("something went wrong during the creation of an account");
@@ -16,7 +16,7 @@
             //      echo "inserted";
             //  }
 
-             $this->db->insert($table, $fields);
+             $this->db->insert("demande", $fields);
         }
 
     

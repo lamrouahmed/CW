@@ -7,7 +7,9 @@ const vehicule = $$('input[name=vehicule]');
 const quantityModif = $$('.btn');
 const demande = $('.book');
 let price;
-
+const date = new Date();
+$('input[type=date]').valueAsDate = new Date();
+$('input[type=time]').value = `${date.getHours()}:${date.getMinutes()}`
 
 
 

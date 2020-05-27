@@ -54,6 +54,12 @@
                                     $this->setError("{$rules["name"]} is already taken", $field);
                                 }
                             break;
+                            case "exists":
+                                if($this->db->getOne("type_lavage", "'".$value."'", "lavage")->count())
+                                {
+                                    $this->setError("{$rules["name"]} doesn't exists", $field);
+                                }
+                            break;
 
                         }
                     }
