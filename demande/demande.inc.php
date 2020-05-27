@@ -21,9 +21,11 @@
                 "u_id" => $user->getData()->u_id,
                 "lavage_id" => $lavage->getLavage(Input::get('lavage'))->results()[0]->lavage_id,
                 "nb_vehicules" => Input::get('quantite'),
+                "type_vehicule" => Input::get('vehicule'),
                 "status" => "non approve",
                 "localisation" => Input::get('localisation'),
-                "date_demande" => Input::get('date').' '.Input::get('time') 
+                "date_demande" => Input::get('date').' '.Input::get('time'),
+                "date_ajout" => Config::getDate()
             ]);
         //     $user->create("user", ["last_name" => ucfirst(Input::get("u_last_name")),
         //                        "first_name" => ucfirst(Input::get("u_first_name")),
