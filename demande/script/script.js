@@ -9,43 +9,70 @@ const demande = $('.book');
 let price;
 
 
+
+
+
+
+
+
+
+
+
 function get(url, nodes) {
     fetch(url, {
-        method: 'get'
-    }).then(data => data.json())
-      .then(response => {
-          nodes.forEach((node, i) => node.textContent = `${response[i].prix} M.A.D`)
-          price = response;
+            method: 'get'
+        }).then(data => data.json())
+        .then(response => {
+            nodes.forEach((node, i) => node.textContent = `${response[i].prix} M.A.D`)
+            price = response;
 
-          let checked = $('.lavageLabel.checked input[type=radio]').value;
-          let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
-          $('.prix h2').textContent = `${prix} M.A.D`;
-          $('.price').value = prix;
 
-      });
+            const url_string = window.location.href;
+            const url = new URL(url_string);
+            let type = url.searchParams.get("type");
+            type = type.charAt(0).toUpperCase() + type.slice(1)
+            // (response.filter(e => e.type_lavage === type)[0].prix !== 0) && (;
+            let param = response.filter(e => e.type_lavage === type);
+            if(param !== undefined && param.length !== 0) {
+                $$('.lavageLabel input[type=radio]').forEach(input => input.checked = false)
+                $(`.lavageLabel input[type=radio][value=${type}]`).parentNode.classList.add('checked');
+                $(`.lavageLabel input[type=radio][value=${type}]`).checked = true;
+                console.log('qds');
+            } else {
+                $$('.lavageLabel input[type=radio]').forEach(input => input.checked = false)
+                $(`.lavageLabel input[type=radio][value=Normale]`).parentNode.classList.add('checked');
+                $(`.lavageLabel input[type=radio][value=Normale]`).checked = true;
+            }
+            
+            let checked = $('.lavageLabel.checked input[type=radio]').value;
+            let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
+            $('.prix h2').textContent = `${prix} M.A.D`;
+            $('.price').value = prix;
+
+        });
 }
 
 get('/PFE/demande/listLavage.php', $$('.prixLavage h2'));
 
-        // $('.price').value = $('.prix h2').textContent.split(' ')[0];
-        // let checked = $('.lavageLabel.checked input[type=radio]').value;
-        // let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
-        // $('.prix h2').textContent = `${prix}`;
+// $('.price').value = $('.prix h2').textContent.split(' ')[0];
+// let checked = $('.lavageLabel.checked input[type=radio]').value;
+// let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
+// $('.prix h2').textContent = `${prix}`;
 
 
 quantityModif.forEach(btn => btn.addEventListener('click', e => modify(e, $('.quantite'))));
 $('.price').value = $('.prix h2').textContent.split(' ')[0];
 
 function modify(e, node) {
-        const element = e.currentTarget;
-        (element.dataset.action === '-' && node.value--) && ($('.btn[data-action="+"]').style.opacity="1");
-        (element.dataset.action === '+' && node.value++) && ($('.btn[data-action="-"]').style.opacity="1");
-        (node.value >= 9 && (node.value = 9)) && ($('.btn[data-action="+"]').style.opacity=".4");
-        (node.value <= 1 && (node.value = 1)) && ($('.btn[data-action="-"]').style.opacity=".4");
-        let checked = $('.lavageLabel.checked input[type=radio]').value;
-        let prix = price.filter(e => e.type_lavage === checked)[0].prix * node.value;
-        $('.prix h2').textContent = `${prix} M.A.D`;
-        $('.price').value = prix ;
+    const element = e.currentTarget;
+    (element.dataset.action === '-' && node.value--) && ($('.btn[data-action="+"]').style.opacity = "1");
+    (element.dataset.action === '+' && node.value++) && ($('.btn[data-action="-"]').style.opacity = "1");
+    (node.value >= 9 && (node.value = 9)) && ($('.btn[data-action="+"]').style.opacity = ".4");
+    (node.value <= 1 && (node.value = 1)) && ($('.btn[data-action="-"]').style.opacity = ".4");
+    let checked = $('.lavageLabel.checked input[type=radio]').value;
+    let prix = price.filter(e => e.type_lavage === checked)[0].prix * node.value;
+    $('.prix h2').textContent = `${prix} M.A.D`;
+    $('.price').value = prix;
 
 }
 
@@ -58,7 +85,7 @@ lavage.forEach((btn, i) => {
 
 
 
-        
+
         let checked = $('.lavageLabel.checked input[type=radio]').value;
         let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
         $('.prix h2').textContent = `${prix} M.A.D`;
@@ -121,18 +148,16 @@ demande.addEventListener('click', e => {
 
 
 
-  function post(url, form) {
+function post(url, form) {
     let formData = new FormData(form);
     fetch(url, {
-        method: 'post',
-        body: formData
-      })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (body) {
-        console.log(body);
-      });
-  }
-
- 
+            method: 'post',
+            body: formData
+        })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (body) {
+            console.log(body);
+        });
+}
