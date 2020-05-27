@@ -133,6 +133,10 @@ body {
   font-weight: 500;
 }
 
+.formWrapper form > div > div {
+  margin-left: 1rem;
+}
+
 .formWrapper form .lavageDisponible .svg svg,
 .formWrapper form .vehiculeDisponible .svg svg,
 .formWrapper form .quantityWrapper .svg svg,
@@ -147,6 +151,7 @@ body {
 .formWrapper form .date .svgText {
   margin-left: 1rem;
   font-weight: 500;
+  width: 4rem;
 }
 
 .formWrapper form .lavageDisponible .lavage,
@@ -180,32 +185,65 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-}
-
-.formWrapper form .lavageDisponible .label .svg,
-.formWrapper form .vehiculeDisponible .label .svg,
-.formWrapper form .quantityWrapper .label .svg,
-.formWrapper form .date .label .svg {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  border: 1px solid #f0eded;
+  border-radius: 43px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.formWrapper form .lavageDisponible .label:hover .svg,
-.formWrapper form .vehiculeDisponible .label:hover .svg,
-.formWrapper form .quantityWrapper .label:hover .svg,
-.formWrapper form .date .label:hover .svg {
+.formWrapper form .lavageDisponible .label:hover,
+.formWrapper form .vehiculeDisponible .label:hover,
+.formWrapper form .quantityWrapper .label:hover,
+.formWrapper form .date .label:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
+.formWrapper form .lavageDisponible .label:hover .svg svg,
+.formWrapper form .vehiculeDisponible .label:hover .svg svg,
+.formWrapper form .quantityWrapper .label:hover .svg svg,
+.formWrapper form .date .label:hover .svg svg {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.formWrapper form .lavageDisponible .checked,
+.formWrapper form .vehiculeDisponible .checked,
+.formWrapper form .quantityWrapper .checked,
+.formWrapper form .date .checked {
+  background-color: #1a1f22;
+  border: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.formWrapper form .lavageDisponible .checked:hover,
+.formWrapper form .vehiculeDisponible .checked:hover,
+.formWrapper form .quantityWrapper .checked:hover,
+.formWrapper form .date .checked:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.formWrapper form .lavageDisponible .checked .svgText,
+.formWrapper form .vehiculeDisponible .checked .svgText,
+.formWrapper form .quantityWrapper .checked .svgText,
+.formWrapper form .date .checked .svgText {
+  color: #FFF;
+}
+
 .formWrapper form .lavageDisponible input[name=lavage],
+.formWrapper form .lavageDisponible input[name=vehicule],
 .formWrapper form .vehiculeDisponible input[name=lavage],
+.formWrapper form .vehiculeDisponible input[name=vehicule],
 .formWrapper form .quantityWrapper input[name=lavage],
-.formWrapper form .date input[name=lavage] {
+.formWrapper form .quantityWrapper input[name=vehicule],
+.formWrapper form .date input[name=lavage],
+.formWrapper form .date input[name=vehicule] {
   display: none;
 }
 
@@ -245,6 +283,10 @@ body {
 .formWrapper form .date input[type=date] {
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.formWrapper form .date .label {
+  border: none;
 }
 
 .formWrapper form .date .label svg {
