@@ -9,7 +9,11 @@ const demande = $('.book');
 let price;
 const date = new Date();
 $('input[type=date]').valueAsDate = new Date();
-$('input[type=time]').value = `${date.getHours()}:${date.getMinutes()}`
+let min = date.getMinutes();
+let hour = date.getHours();
+date.getMinutes() < 10 && (min = `0${min}`) 
+date.getHours() < 10 && (hour = `0${hour}`) 
+$('input[type=time]').value = `${hour}:${min}`
 
 
 
@@ -32,7 +36,8 @@ function get(url, nodes) {
             const url_string = window.location.href;
             const url = new URL(url_string);
             let type = url.searchParams.get("type");
-            type = type.charAt(0).toUpperCase() + type.slice(1)
+            type === null ? type = "Normale" : type = type.charAt(0).toUpperCase() + type.slice(1)
+            console.log(type);
             // (response.filter(e => e.type_lavage === type)[0].prix !== 0) && (;
             let param = response.filter(e => e.type_lavage === type);
             if(param !== undefined && param.length !== 0) {
