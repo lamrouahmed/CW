@@ -121,6 +121,20 @@ body {
             &>p {
                 width: 17rem;
                 font-weight: 500;
+                display: block;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background-color: #1a1f22;
+                    height: 0.15rem;
+                    width: 30%;
+                    top: 100%;
+                    position: absolute;
+                    top: 1.5rem;
+                }
             }
 
             &>div {
@@ -375,11 +389,10 @@ body {
 
         .total {
             .prix h2 {
-                font-weight: 500;
+                font-weight: 600;
                 letter-spacing: 2px;
                 height: 100%;
                 font-size: 2rem;
-                font-weight: 400;
                 color: rgb(38, 39, 44);
             }
         }
