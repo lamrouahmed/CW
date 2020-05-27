@@ -300,11 +300,12 @@ body {
   width: 39rem;
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   padding-top: 2em;
   height: 5em;
   resize: none;
   overflow: hidden;
+  color: #102335;
 }
 
 .formWrapper form .localisation .input::-webkit-input-placeholder {
