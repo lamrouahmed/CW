@@ -13,6 +13,10 @@
             return $this->db->getOne("type_lavage", "'".$typeLavage."'", "lavage");
         }
 
+        public function getAll() {
+            return $this->db->getAll("lavage");
+        }
+
 
 }
 

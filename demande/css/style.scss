@@ -28,12 +28,15 @@ body {
 }
 
 .headerWrapper {
+    position: sticky;
+    top: 0;
     height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #1a1f22;
+    z-index: 6;
 
 
 
@@ -82,9 +85,9 @@ body {
 
 
 
-.wrapper {
-    height: calc(100% - 5rem);
-}
+// .wrapper {
+//     height: calc(100% - 5rem);
+// }
 
 .formWrapper {
     margin: 0 auto;
@@ -94,9 +97,10 @@ body {
         h1 {
             font-weight: 400;
             width: 100%;
-            text-align:center;
+            text-align: center;
         }
     }
+
     form {
         width: 60rem;
         margin: 0 auto;
@@ -118,25 +122,26 @@ body {
                 width: 17rem;
                 font-weight: 500;
             }
-            & > div {
+
+            &>div {
                 margin-left: 1rem;
             }
         }
 
-     
-  
+
+
 
         .lavageDisponible,
         .vehiculeDisponible,
         .quantityWrapper,
         .date {
-           
+
 
             .svg {
                 svg {
                     height: 3rem;
                     width: 3rem;
-                    
+
                 }
             }
 
@@ -163,30 +168,33 @@ body {
                 border: 1px solid #f0eded;
                 border-radius: 43px;
                 transition: all 200ms ease-in-out;
-                
 
-                
+
+
                 &:hover {
-                    
-                        transform: scale(.9) ;
-                        transition: all 200ms ease-in-out;
-               
-                        .svg svg {
-                            backface-visibility: hidden;
-                            transform: translateZ(0);
-                        }
+
+                    transform: scale(.9);
+                    transition: all 200ms ease-in-out;
+
+                    .svg svg {
+                        backface-visibility: hidden;
+                        transform: translateZ(0);
+                    }
                 }
-               
+
 
             }
+
             .checked {
                 background-color: #1a1f22;
                 border: none;
                 transform: scale(1.05);
+
                 &:hover {
                     transform: scale(1.05);
 
                 }
+
                 .svgText {
                     color: #FFF;
                 }
@@ -195,10 +203,17 @@ body {
             input[name=lavage],
             input[name=vehicule] {
                 display: none;
-              
+
             }
         }
-
+        .prixLavage {
+            width: 14rem;
+            margin: 0;
+            h2 {
+                text-align: center;
+                font-weight: 500;
+            }
+        }
         .quantityWrapper {
             .nbVehicules {
                 width: 16%;
@@ -226,17 +241,38 @@ body {
             }
 
         }
+        
+        .horodatage {
 
-        .date {
-            input[type=date] {
-                transform: scale(0);
+            .timestampWrapper {
+                display: flex;
+                margin-left: -5rem;
             }
-
             .label {
                 border: none;
+                transform: scale(1);
+                width: 100%;
+                margin-left: 3rem;
+                height: 100%;
+                display: block;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    transform: scale(1);
+                }
+
                 svg {
-                    height: 4rem;
-                    width: 4rem;
+                    height: 3rem;
+                    width: 3rem;
+                }
+
+                input {
+                    border-bottom: 2px solid black;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    padding-bottom: .7rem;
+                    margin-left: 2rem;
                 }
             }
         }
@@ -261,25 +297,26 @@ body {
                     font-size: .9rem;
                     color: rgb(158, 156, 156);
                 }
-    
+
                 &:focus {
                     outline: none;
-    
-    
+
+
                 }
             }
+
             .Label {
                 width: 100%;
                 margin-bottom: 1em;
                 position: relative;
                 display: block;
-    
-    
 
-    
-    
-    
-    
+
+
+
+
+
+
                 .border {
                     display: block;
                     position: absolute;
@@ -290,23 +327,24 @@ body {
                     transform: scaleX(0);
                     transform-origin: center;
                     transition: all 200ms ease-in-out;
-    
+
                 }
-    
-    
+
+
                 .focus {
                     top: .6rem;
                     font-size: .7em;
                     transition: all 200ms ease-in-out;
                 }
-    
+
                 .clicked {
                     transform: scaleX(1) !important;
                     transition: all 200ms ease-in-out;
                 }
-    
+
             }
         }
+
         .demande {
             display: flex;
             justify-content: center;
@@ -332,6 +370,17 @@ body {
                     transform: scale(.96);
                     transition: all 200ms ease-in-out;
                 }
+            }
+        }
+
+        .total {
+            .prix h2 {
+                font-weight: 500;
+                letter-spacing: 2px;
+                height: 100%;
+                font-size: 2rem;
+                font-weight: 400;
+                color: rgb(38, 39, 44);
             }
         }
     }

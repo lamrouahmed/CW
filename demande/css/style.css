@@ -22,6 +22,9 @@ body {
 }
 
 .headerWrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   height: 5rem;
   width: 100%;
   display: -webkit-box;
@@ -34,6 +37,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #1a1f22;
+  z-index: 6;
 }
 
 .headerWrapper .headerLogo {
@@ -79,10 +83,6 @@ body {
   fill: #FFF;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
-}
-
-.wrapper {
-  height: calc(100% - 5rem);
 }
 
 .formWrapper {
@@ -247,6 +247,16 @@ body {
   display: none;
 }
 
+.formWrapper form .prixLavage {
+  width: 14rem;
+  margin: 0;
+}
+
+.formWrapper form .prixLavage h2 {
+  text-align: center;
+  font-weight: 500;
+}
+
 .formWrapper form .quantityWrapper .nbVehicules {
   width: 16%;
   display: -webkit-box;
@@ -280,18 +290,45 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.formWrapper form .date input[type=date] {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+.formWrapper form .horodatage .timestampWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -5rem;
 }
 
-.formWrapper form .date .label {
+.formWrapper form .horodatage .label {
   border: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 100%;
+  margin-left: 3rem;
+  height: 100%;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.formWrapper form .date .label svg {
-  height: 4rem;
-  width: 4rem;
+.formWrapper form .horodatage .label:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.formWrapper form .horodatage .label svg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.formWrapper form .horodatage .label input {
+  border-bottom: 2px solid black;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-bottom: .7rem;
+  margin-left: 2rem;
 }
 
 .formWrapper form .localisation .input {
@@ -406,5 +443,14 @@ body {
           transform: scale(0.96);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+.formWrapper form .total .prix h2 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #26272c;
 }
 /*# sourceMappingURL=style.css.map */
