@@ -44,7 +44,7 @@ input.addEventListener('focus', e => {
 input.addEventListener('blur', e => {
     $('.border').classList.remove('clicked')
 })
-
+$('textarea[name=localisation]').value = "Rue du Yémen, Casablanca 20250";
 
 if('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(async position => {
@@ -52,7 +52,7 @@ if('geolocation' in navigator) {
         const longtitude = position.coords.longitude;
 
 
-        const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${longtitude},${latitude}.json?limit=1&access_token=pk.eyJ1IjoibWVkbGFtIiwiYSI6ImNrYW9xZmczbzFxOW8zMXA2MTNhZjYwOWgifQ.ZgCah4mB2plr92Sms1iPrw`)
+    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${longtitude},${latitude}.json?limit=1&country=ma&language=fr&access_token=pk.eyJ1IjoibWVkbGFtIiwiYSI6ImNrYW9xZmczbzFxOW8zMXA2MTNhZjYwOWgifQ.ZgCah4mB2plr92Sms1iPrw`)
     .then(res => res.json())
     .then(data => {
         $('textarea[name=localisation]').value = data.features[0].place_name;
