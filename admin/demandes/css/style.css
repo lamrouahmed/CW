@@ -22,79 +22,97 @@ body {
   height: 100%;
 }
 
-.demandeWrapper {
+.Wrapper {
   margin-left: 7em;
 }
 
-.demande {
-  width: 40rem;
-  margin: 0 auto;
+.header, .demande {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  font-weight: 600;
+}
+
+.header > div, .demande > div {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1rem;
+  height: 4rem;
+}
+
+.header > div:first-child, .demande > div:first-child {
+  width: 3rem;
+}
+
+.demandeWrapper .demande {
   font-weight: 500;
-  border-bottom: 2px solid #1a1f22;
-}
-
-.demande > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.top .id p {
-  font-weight: 700;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.3em;
+.demandeWrapper .demande .img {
+  border-radius: 100%;
+  position: relative;
+  height: 3rem;
+  background-color: #494e51;
 }
 
-.top .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+.demandeWrapper .demande .img img {
+  border-radius: 100%;
 }
 
-.top .img img {
-  width: 3em;
-  height: 3em;
+.demandeWrapper .demande .img .status {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
   border-radius: 100%;
   border: 2px solid #FFF;
+  bottom: -3px;
+  right: 0;
 }
 
-.mid .demandeInfo div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.demandeWrapper .demande .img .offline {
+  background-color: #f52e0b;
 }
 
-.mid .demandeInfo div img {
-  width: 3em;
-  height: 3em;
+.demandeWrapper .demande .img .online {
+  background-color: #49c466;
 }
 
-.mid .demandeInfo div span {
-  font-weight: 600;
+.demandeWrapper .demande > div:nth-child(2) {
+  width: 3rem;
+}
+
+.demandeWrapper .demande .btns div {
+  margin-right: .5rem;
+}
+
+.demandeWrapper .demande .btns div svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.demandeWrapper .demande .btns .accepter svg path {
+  fill: #379b75 !important;
+}
+
+.demandeWrapper .demande .btns .refuser svg path {
+  fill: orangered !important;
+}
+
+.demandeWrapper .demande .btns .supprimer svg {
+  fill: #f44336 !important;
+}
+
+.demandeWrapper .demande .btns .supprimer path {
+  fill: #f44336 !important;
 }
 /*# sourceMappingURL=style.css.map */
