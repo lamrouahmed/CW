@@ -11,8 +11,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     border: none;
+    white-space: nowrap;
 }
-
+//min width 985px 
 html {
     height: 100%;
 }
@@ -102,7 +103,7 @@ body {
     }
 
     form {
-        width: 60rem;
+        // width: 60%;
         margin: 0 auto;
         height: 100%;
         display: flex;
@@ -116,7 +117,7 @@ body {
             margin-top: 1.5rem;
             display: flex;
             align-items: center;
-            width: 100%;
+            width: 59rem;
 
             &>p {
                 width: 17rem;
@@ -142,8 +143,17 @@ body {
             }
         }
 
-
-
+        .lavageDisponible,
+        .vehiculeDisponible,
+        .pricing {
+            justify-content: center;
+        }
+        // .quantityWrapper,
+        // .horodatage,
+        // .total,
+        // .localisation {
+        //     width: 100%;
+        // }
 
         .lavageDisponible,
         .vehiculeDisponible,
@@ -368,7 +378,7 @@ body {
             button {
                 border-radius: 5px;
                 height: 70%;
-                width: 25%;
+                width: 15rem;
                 color: #FFF;
                 background-color: #121618;
                 font-weight: 600;

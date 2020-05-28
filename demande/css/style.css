@@ -11,6 +11,7 @@
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   border: none;
+  white-space: nowrap;
 }
 
 html {
@@ -97,7 +98,6 @@ body {
 }
 
 .formWrapper form {
-  width: 60rem;
   margin: 0 auto;
   height: 100%;
   display: -webkit-box;
@@ -125,7 +125,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 59rem;
 }
 
 .formWrapper form > div > p {
@@ -149,6 +149,14 @@ body {
 
 .formWrapper form > div > div {
   margin-left: 1rem;
+}
+
+.formWrapper form .lavageDisponible,
+.formWrapper form .vehiculeDisponible,
+.formWrapper form .pricing {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .formWrapper form .lavageDisponible .svg svg,
@@ -437,7 +445,7 @@ body {
 .formWrapper form .demande button {
   border-radius: 5px;
   height: 70%;
-  width: 25%;
+  width: 15rem;
   color: #FFF;
   background-color: #121618;
   font-weight: 600;
