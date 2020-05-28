@@ -19,5 +19,9 @@
              $this->db->insert("demande", $fields);
         }
 
+        public function getAll() {
+            return $this->db->query("SELECT * FROM user u JOIN demande d ON (d.u_id = u.u_id) JOIN lavage l ON (l.lavage_id = d.lavage_id) ", [], "SELECT");
+        }
+
     
 }

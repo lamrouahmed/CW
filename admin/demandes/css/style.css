@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  white-space: nowrap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.demandeWrapper {
+  margin-left: 7em;
+}
+
+.demande {
+  width: 40rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  border-bottom: 2px solid #1a1f22;
+}
+
+.demande > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .id p {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+}
+
+.top .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.top .img img {
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+}
+
+.mid .demandeInfo div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mid .demandeInfo div img {
+  width: 3em;
+  height: 3em;
+}
+
+.mid .demandeInfo div span {
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

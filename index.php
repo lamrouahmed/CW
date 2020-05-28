@@ -1,5 +1,6 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -469,7 +470,7 @@ require_once '/wamp64/www/PFE/core/init.php';
         <section>
             <div class="point">
                 <div class="topText">
-                    <h2>We're here & ready to listen.</h2>
+                    <h2>Nous sommes ici et prêts à écouter.</h2>
                 </div>
                 <div class="bottomText">
                     <h4> Lorem ipsum dolor sit amet consectetur adipisicing elit.  repudiandae temporibus quidem consectetur? </h4>
