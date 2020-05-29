@@ -1,8 +1,8 @@
 <?php
-require_once '/wamp64/www/PFE/core/init.php';
+require_once '../../core/init.php';
 if(Session::exists("admin")) {
-    require_once '/wamp64/www/PFE/admin/sideBar/sideBar.html';
-$DB = DB::connect();
+    require_once '../sideBar/sideBar.php';
+    $DB = DB::connect();
 
 
 

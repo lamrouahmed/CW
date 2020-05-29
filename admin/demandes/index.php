@@ -1,6 +1,6 @@
 <?php
-require_once '/wamp64/www/PFE/core/init.php';
-require_once '/wamp64/www/PFE/admin/sideBar/sideBar.html';
+require_once '../../core/init.php';
+require_once '../sideBar/sideBar.php';
 $demande = new Demande();
 $demandes = $demande->getAll();
 
