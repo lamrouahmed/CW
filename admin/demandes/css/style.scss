@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *,
 *::after,
@@ -118,35 +118,86 @@ body {
 
 .Wrapper {
     margin-left: 7em;
+
 }
 
-.header,.demande {
+.header,
+.demande {
     display: flex;
-    font-weight: 600;
+    font-weight: 500;
 
-    & > div {
+
+    &>div {
         width: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 4rem;
+
         &:first-child {
             width: 3rem;
         }
     }
 }
+
 .demandeWrapper {
+    background-color: #f0f4f7;
+
     .demande {
-        font-weight: 500;
+        font-weight: 400;
         align-items: center;
+        background-color: #FFF;
+        margin: 0 auto;
+        margin-top: .3rem;
+        width: 70rem;
+        height: 4rem;
+        transition: all 200ms ease-in-out;
+        transform: scale(1);
+        border-radius: 35px;
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: scale(1.015);
+
+            .btns {
+                
+            .accept {
+                svg path {
+                    fill: #379b75 !important;
+                }
+            }
+
+            .refuse {
+
+                svg path {
+                    fill: orangered !important;
+                }
+            }
+
+            .delete {
+
+                svg {
+                    fill: #f44336 !important;
+
+                }
+
+                path {
+                    fill: #f44336 !important;
+                }
+            }
+            }
+        }
 
         .img {
             border-radius: 100%;
             position: relative;
-            height: 3rem;
-            background-color: #494e51;
+            height: 4rem;
+            width: 4rem;
+
             img {
                 border-radius: 100%;
+                background-color: #494e51;
+                width: 3rem;
+                height: 3rem;
             }
 
             .status {
@@ -155,8 +206,8 @@ body {
                 width: 1rem;
                 border-radius: 100%;
                 border: 2px solid #FFF;
-                bottom: -3px;
-                right: 0;
+                bottom: 5px;
+                right: 5px;
             }
 
             .offline {
@@ -167,8 +218,9 @@ body {
                 background-color: #49c466;
             }
         }
-        & > div {
-        
+
+        &>div {
+
             &:nth-child(2) {
                 width: 3rem;
             }
@@ -176,34 +228,158 @@ body {
 
         .btns {
             div {
-                svg {
-                    height: 1.2rem;
-                    width: 1.2rem;
-                }
-                margin-right: .5rem;
-    
-            }
-            .accepter {
-                svg path {
-                     fill: #379b75 !important;
-                 }
-             }
-             .refuser {
-                svg path {
-                     fill: orangered !important;
-                 }
-             }
-             .supprimer {
-                svg {
-                    fill: #f44336 !important;
+                cursor: pointer;
+                position: relative;
+                height: 2rem;
+                width: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: .3rem;
 
-                } 
+                svg {
+                    height: 1rem;
+                    width: 1rem;
+                    // padding: 1rem;
+
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 100%;
+                    opacity: .5;
+                    transition: all 200ms ease-in-out;
+                    transform: scale(0);
+            
+
+                }
+
+            }
+
+            .accept {
+                &:hover {
+                    &::after {
+                        background-color: #bee6cd;
+                        transform: scale(1);
+                    }
+                }
+                svg path {
+                    fill: #000000 ;
+                }
+            }
+
+            .refuse {
+
+                &:hover {
+                    &::after {
+                        background-color: #f2cc38b5;
+                        transform: scale(1);
+
+                    }
+                }
+
+                svg path {
+                    fill: rgb(0, 0, 0) ;
+                }
+            }
+
+            .delete {
+
+                &:hover {
+                    &::after {
+                        background-color: #ff000069;
+                        transform: scale(1);
+
+                    }
+                }
+
+                svg {
+                    fill: #000000 ;
+
+                }
+
                 path {
-                     fill: #f44336 !important;
-                 }
-             }
+                    fill: #000000 ;
+                }
+            }
         }
-        
+
 
     }
+    .N {
+        background-color: #ff4141;
+        color: #FFF;
+        .btns  {
+            & > div {
+                svg {
+                    fill: #FFF !important;
+                    path {
+                        fill: #FFF !important;
+                    }
+                    
+
+                }
+              
+            }
+        }
+
+
+        &:hover {
+
+
+            .btns {
+                & > div {
+                    &::after {
+                        display: none;
+                    }
+                }
+            .accept {
+                svg path {
+                    fill: #379b75 !important;
+                }
+                .stroke {
+                    fill: #000 !important;
+                }
+            }
+
+            .refuse {
+
+                svg path {
+                    fill: orangered !important;
+                }
+                .stroke {
+                    fill: #000 !important;
+                }
+            }
+
+            .delete {
+
+                svg {
+                    fill: #000000 !important;
+
+                }
+
+                path {
+                    fill: #000000 !important;
+                }
+            }
+            }
+        }
+
+
+
+        
+
+
+
+
+    }
+    .Y {
+        background-color: #b4ecb8;
+    }
 }
+
+

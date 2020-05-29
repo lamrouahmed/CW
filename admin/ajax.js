@@ -20,7 +20,7 @@ const span = $('.border');
 const label = $('.label');
 const option = $('.sort');
 const optionToggle = $('.sortOptions');
-                         const refresh = $('.refresh');
+const refresh = $('.refresh');
 
 
 

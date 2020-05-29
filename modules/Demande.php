@@ -23,5 +23,15 @@
             return $this->db->query("SELECT * FROM user u JOIN demande d ON (d.u_id = u.u_id) JOIN lavage l ON (l.lavage_id = d.lavage_id) ", [], "SELECT");
         }
 
-    
+        public function delete($id) {
+            $this->db->delete("demande_id", $id, "demande");
+        }
+
+        public function accept($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
+        
+        public function refuse($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
 }

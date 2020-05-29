@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
@@ -26,14 +24,16 @@ body {
   margin-left: 7em;
 }
 
-.header, .demande {
+.header,
+.demande {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.header > div, .demande > div {
+.header > div,
+.demande > div {
   width: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,26 +47,67 @@ body {
   height: 4rem;
 }
 
-.header > div:first-child, .demande > div:first-child {
+.header > div:first-child,
+.demande > div:first-child {
   width: 3rem;
 }
 
+.demandeWrapper {
+  background-color: #f0f4f7;
+}
+
 .demandeWrapper .demande {
-  font-weight: 500;
+  font-weight: 400;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FFF;
+  margin: 0 auto;
+  margin-top: .3rem;
+  width: 70rem;
+  height: 4rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-radius: 35px;
+}
+
+.demandeWrapper .demande:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
+}
+
+.demandeWrapper .demande:hover .btns .accept svg path {
+  fill: #379b75 !important;
+}
+
+.demandeWrapper .demande:hover .btns .refuse svg path {
+  fill: orangered !important;
+}
+
+.demandeWrapper .demande:hover .btns .delete svg {
+  fill: #f44336 !important;
+}
+
+.demandeWrapper .demande:hover .btns .delete path {
+  fill: #f44336 !important;
 }
 
 .demandeWrapper .demande .img {
   border-radius: 100%;
   position: relative;
-  height: 3rem;
-  background-color: #494e51;
+  height: 4rem;
+  width: 4rem;
 }
 
 .demandeWrapper .demande .img img {
   border-radius: 100%;
+  background-color: #494e51;
+  width: 3rem;
+  height: 3rem;
 }
 
 .demandeWrapper .demande .img .status {
@@ -75,8 +116,8 @@ body {
   width: 1rem;
   border-radius: 100%;
   border: 2px solid #FFF;
-  bottom: -3px;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
 }
 
 .demandeWrapper .demande .img .offline {
@@ -92,27 +133,117 @@ body {
 }
 
 .demandeWrapper .demande .btns div {
-  margin-right: .5rem;
+  cursor: pointer;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: .3rem;
 }
 
 .demandeWrapper .demande .btns div svg {
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1rem;
+  width: 1rem;
 }
 
-.demandeWrapper .demande .btns .accepter svg path {
+.demandeWrapper .demande .btns div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.demandeWrapper .demande .btns .accept:hover::after {
+  background-color: #bee6cd;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .accept svg path {
+  fill: #000000;
+}
+
+.demandeWrapper .demande .btns .refuse:hover::after {
+  background-color: #f2cc38b5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .refuse svg path {
+  fill: black;
+}
+
+.demandeWrapper .demande .btns .delete:hover::after {
+  background-color: #ff000069;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .delete svg {
+  fill: #000000;
+}
+
+.demandeWrapper .demande .btns .delete path {
+  fill: #000000;
+}
+
+.demandeWrapper .N {
+  background-color: #ff4141;
+  color: #FFF;
+}
+
+.demandeWrapper .N .btns > div svg {
+  fill: #FFF !important;
+}
+
+.demandeWrapper .N .btns > div svg path {
+  fill: #FFF !important;
+}
+
+.demandeWrapper .N:hover .btns > div::after {
+  display: none;
+}
+
+.demandeWrapper .N:hover .btns .accept svg path {
   fill: #379b75 !important;
 }
 
-.demandeWrapper .demande .btns .refuser svg path {
+.demandeWrapper .N:hover .btns .accept .stroke {
+  fill: #000 !important;
+}
+
+.demandeWrapper .N:hover .btns .refuse svg path {
   fill: orangered !important;
 }
 
-.demandeWrapper .demande .btns .supprimer svg {
-  fill: #f44336 !important;
+.demandeWrapper .N:hover .btns .refuse .stroke {
+  fill: #000 !important;
 }
 
-.demandeWrapper .demande .btns .supprimer path {
-  fill: #f44336 !important;
+.demandeWrapper .N:hover .btns .delete svg {
+  fill: #000000 !important;
+}
+
+.demandeWrapper .N:hover .btns .delete path {
+  fill: #000000 !important;
+}
+
+.demandeWrapper .Y {
+  background-color: #b4ecb8;
 }
 /*# sourceMappingURL=style.css.map */
