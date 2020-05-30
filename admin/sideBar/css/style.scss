@@ -1,7 +1,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $colors: (
-    primary: #2c3d50,
+    primary: #23292e,
     primary-light: lighten(#2c3d50, 10%),
     primary-dark: darken(#2c3d50, 5%),
     accent: #7f92b7,
@@ -43,9 +43,10 @@ $maxMobile: 736px;
 *,
 *::after,
 *::before {
-    box-sizing: 0;
+    box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+
 }
 
 body {
@@ -56,9 +57,99 @@ body {
     width: 100vw;
 }
 
+header {
+    height: 10%;
+    background-color: #23292e;
+    color: #FFF;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 420;
+    .logo {
+        margin-left: 2rem;
+        p {
+            color: #FFF;
+            font-weight: 300;
+            font-size: 1.8rem;
+        }
+        span {
+            font-weight: 400;
+        }
+        a {
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                height: 3rem;
+                width: 3rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1.3rem;
+        color: #FFF;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: #FFF;
+            width: 110%;
+            height: 2px;
+            top: 130%;
+            transform: scaleX(0);
+            transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            transform-origin: right;
+        }
+        
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+                transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+            }
+        }
+        svg {
+            margin-right: .4rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            path {
+                fill: #FFF;
+            }
+        }
+       
+    }
+    .logout a {
+        margin-right: 1rem;
+    }
+    .userImg {
+        img {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+        margin-right: .2rem;
+    }
+}
+
+
 .sideWrapper {
 
-    height: 100%;
+    height: 90%;
     position: fixed;
     z-index: 69;
     background-color: color(primary);
@@ -95,6 +186,9 @@ body {
             width: 2em;
             height: 2em;
             margin-bottom: .6em;
+            path {
+                fill: #d0cece;
+            }
         }
 
         .navItem {
@@ -104,7 +198,7 @@ body {
             justify-content: center;
             align-items: center;
             a {
-                color: color(accent);
+                color: #d0cece;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -113,14 +207,14 @@ body {
                 width: 100%;
 
                 &:hover {
-                    background-color: color(primary-light);
+                    background-color: #31373c;
 
                     span {
-                        color: color(accent-light);
+                        color: #e5e8ec;
                     }
 
                     svg path {
-                        fill: color(accent-light);
+                        fill: #ffffff;
                     }
                 }
 
@@ -132,7 +226,7 @@ body {
             }
 
             .active {
-                background-color: #42b993;
+                background-color: #0173aa;
 
                 span {
                     color: color(accent-light);

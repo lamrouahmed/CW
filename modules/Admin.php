@@ -57,5 +57,10 @@
             return $this->isLoggedIn;
         }
 
+        public function getData() 
+        {
+            return $this->data;
+        }
+
         
     }
