@@ -39,12 +39,12 @@ body {
   background-color: #f0f4f7;
 }
 
-.wrapper .content > div:nth-child(2n) {
+.wrapper .content > label:nth-child(2n) {
   -webkit-animation: startup 400ms ease-in-out forwards;
           animation: startup 400ms ease-in-out forwards;
 }
 
-.wrapper .content > div:nth-child(2n+1) {
+.wrapper .content > label:nth-child(2n+1) {
   -webkit-animation: startup 700ms ease-in-out forwards;
           animation: startup 700ms ease-in-out forwards;
 }
@@ -62,6 +62,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 1em auto;
+}
+
+.wrapper .top .checkWrapper {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .wrapper .top div {
@@ -90,6 +96,54 @@ body {
       flex-basis: 4%;
 }
 
+.wrapper .checkInput, .wrapper .parentInput {
+  display: none;
+}
+
+.wrapper .checkInput:checked + label .check, .wrapper .parentInput:checked + label .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.wrapper .checkInput:checked + label .box, .wrapper .parentInput:checked + label .box {
+  fill: #007ce2;
+  stroke: #007ce2;
+  stroke-width: 10px;
+}
+
+.wrapper .checkbox {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  cursor: pointer;
+  width: 2em;
+  stroke: #c0c2c4;
+  stroke-width: 5;
+  fill: white;
+  stroke-width: 6px;
+}
+
+.wrapper .checkbox .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 6px;
+}
+
+.wrapper .checkbox .check {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 83;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .wrapper .mid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,6 +162,7 @@ body {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+  cursor: pointer;
 }
 
 .wrapper .mid:hover {
@@ -467,18 +522,18 @@ body {
   .wrapper .top {
     display: none;
   }
-  .wrapper .mid {
+  .wrapper .user, .wrapper .mid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 23rem;
+    height: 23rem !important;
     margin-top: 1em;
   }
-  .wrapper .mid .p_img {
+  .wrapper .user .p_img, .wrapper .mid .p_img {
     margin-top: 1em;
   }
-  .wrapper .mid .p_img .status {
+  .wrapper .user .p_img .status, .wrapper .mid .p_img .status {
     bottom: -2px !important;
     right: 1px !important;
   }
