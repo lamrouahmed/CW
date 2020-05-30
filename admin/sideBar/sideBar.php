@@ -41,9 +41,9 @@ $admin = new Admin();
                     Logout
                 </a>
             </div>
-            <div class="userImg">
+            <!-- <div class="userImg">
                 <img src="/PFE/uploads/<?php echo $admin->getData()->img ?>">
-            </div>
+            </div> -->
         </div>
     </header>
     <main>

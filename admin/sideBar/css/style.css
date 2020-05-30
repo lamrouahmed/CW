@@ -128,17 +128,6 @@ header .logout a {
   margin-right: 1rem;
 }
 
-header .userImg {
-  margin-right: .2rem;
-}
-
-header .userImg img {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 100%;
-  background-color: white;
-}
-
 .sideWrapper {
   height: 90%;
   position: fixed;
