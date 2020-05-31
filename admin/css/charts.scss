@@ -21,7 +21,14 @@ body {
     height: 100%;
 }
 
-
+// .head {
+//     h2 {
+//         font-size: 1.5rem;
+//         font-weight: 500;
+//     }
+//     width: 90%;
+//     margin-left: 7rem;
+// }
 .generalData {
     display: flex;
     width: calc(100% - 7rem);
@@ -32,13 +39,20 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
+        width: 18%;
         height: 6rem;
         align-items: center;
         color: #FFF;
         margin-right: 2rem;
         .icon {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100%;
+            width: 20%;
+            margin-left: 1rem;
             svg {
+
                 height: 2.5rem;
                 width: 2.5rem;
 
@@ -48,11 +62,22 @@ body {
             }
         }
         .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             margin-left: 2rem;
             font-weight: 500;
+            height: 100%;
+            width: 80%;
             .title {
                 margin-bottom: 1rem;
             }
+            & > div {
+                width: 100%;
+
+            }
+
         }
     }
 

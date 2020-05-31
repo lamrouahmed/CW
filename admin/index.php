@@ -23,6 +23,9 @@ if(Session::exists("admin")) {
 </head>
 
 <body>
+    <!-- <div class="head">
+        <h2>Dashboard</h2>
+    </div> -->
     <div class="generalData">
         <div class="totalUsers">
             <div class="icon">

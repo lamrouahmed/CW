@@ -43,11 +43,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
+  width: 18%;
   height: 6rem;
   align-items: center;
   color: #FFF;
   margin-right: 2rem;
+}
+
+.generalData > div .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 20%;
+  margin-left: 1rem;
 }
 
 .generalData > div .icon svg {
@@ -60,12 +75,31 @@ body {
 }
 
 .generalData > div .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 2rem;
   font-weight: 500;
+  height: 100%;
+  width: 80%;
 }
 
 .generalData > div .text .title {
   margin-bottom: 1rem;
+}
+
+.generalData > div .text > div {
+  width: 100%;
 }
 
 .generalData .totalUsers {
