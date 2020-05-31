@@ -34,4 +34,8 @@
         public function refuse($id, $params = []) {
             $this->db->update("demande_id", $id, "demande", $params);
         }
+
+        public function getDemandes() {
+            return $this->db->query("SELECT * FROM demande", [], "SELECT");
+        }
 }

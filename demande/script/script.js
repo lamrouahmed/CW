@@ -37,7 +37,6 @@ function get(url, nodes) {
             const url = new URL(url_string);
             let type = url.searchParams.get("type");
             type === null ? type = "Normale" : type = type.charAt(0).toUpperCase() + type.slice(1)
-            console.log(type);
             // (response.filter(e => e.type_lavage === type)[0].prix !== 0) && (;
             let param = response.filter(e => e.type_lavage === type);
             if(param !== undefined && param.length !== 0) {

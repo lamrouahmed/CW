@@ -79,6 +79,10 @@
             Session::put($this->sessionName, $data->results()[0]->u_id);
         }
 
+        public function getInsensitiveData() {
+             return $this->db->query("SELECT u_id, last_name, username, created FROM user", [], "SELECT");
+        }
+
 
          public function getData() {
             return $this->data;
