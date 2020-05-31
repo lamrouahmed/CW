@@ -80,7 +80,7 @@
         }
 
         public function getInsensitiveData() {
-             return $this->db->query("SELECT u_id, last_name, username, created FROM user", [], "SELECT");
+             return $this->db->query("SELECT u_id, last_name, username, created, status FROM user WHERE permission = 0", [], "SELECT");
         }
 
 

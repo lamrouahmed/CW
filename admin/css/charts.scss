@@ -22,7 +22,66 @@ body {
 }
 
 
-.usersContainer {
+.generalData {
+    display: flex;
+    width: calc(100% - 7rem);
+    margin-left: 7rem;
+    justify-content: center;
+    align-items: center;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 6rem;
+        align-items: center;
+        color: #FFF;
+        margin-right: 2rem;
+        .icon {
+            svg {
+                height: 2.5rem;
+                width: 2.5rem;
+
+                path {
+                    fill: #FFF;
+                }
+            }
+        }
+        .text {
+            margin-left: 2rem;
+            font-weight: 500;
+            .title {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .totalUsers {
+        background-color: #fbad4b;
+    }
+    .totalSales {
+        
+        background-color: #59cf5d;
+    }
+    
+    .totalDemandes {
+        background-color: #ff646c;
+        
+    }
+    
+    .totalLavages {
+        background-color: #1e62f1;
+
+    }
+}
+.chartsContainer {
+    display: flex;
+    margin-left: 7rem;
+}
+
+
+.usersContainer,
+.demandesContainer {
     position: relative;
     width: 50rem;
     height: 20rem;

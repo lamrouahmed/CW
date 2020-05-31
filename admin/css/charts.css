@@ -19,7 +19,80 @@ body {
   height: 100%;
 }
 
-.usersContainer {
+.generalData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 7rem);
+  margin-left: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.generalData > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  height: 6rem;
+  align-items: center;
+  color: #FFF;
+  margin-right: 2rem;
+}
+
+.generalData > div .icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.generalData > div .icon svg path {
+  fill: #FFF;
+}
+
+.generalData > div .text {
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+.generalData > div .text .title {
+  margin-bottom: 1rem;
+}
+
+.generalData .totalUsers {
+  background-color: #fbad4b;
+}
+
+.generalData .totalSales {
+  background-color: #59cf5d;
+}
+
+.generalData .totalDemandes {
+  background-color: #ff646c;
+}
+
+.generalData .totalLavages {
+  background-color: #1e62f1;
+}
+
+.chartsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 7rem;
+}
+
+.usersContainer,
+.demandesContainer {
   position: relative;
   width: 50rem;
   height: 20rem;
