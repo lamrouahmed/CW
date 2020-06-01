@@ -9,8 +9,9 @@ const globalData = {
             label: 'Nombre des comptes cree par jour',
             backgroundColor: 'rgba(234, 106, 134, 0.16)', 
             borderColor: 'rgb(255, 99, 132)',
-            data: []
-        }]
+            data: [0,0,0,0,0,0,0]
+        }],
+
     },
     demandes: {
         labels: days,
@@ -18,7 +19,7 @@ const globalData = {
             label: 'Nombre de demandes par jour',
             backgroundColor: '#f6f8fd',
             borderColor: '#376ade',
-            data: []
+            data: [0,0,0,0,0,0,0]
         }]
     },
     status: {
