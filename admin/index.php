@@ -148,6 +148,7 @@ if(Session::exists("admin")) {
                 <canvas id="d_chart" width="600" height="300"></canvas>
             </div>
             <div class="pieContainer">
+                
                 <canvas id="pie2" width="350" height="350"></canvas>
             </div>
         </div>

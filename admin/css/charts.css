@@ -210,4 +210,8 @@ body {
   width: calc(100% - 7em);
   margin-left: 4em;
 }
+
+canvas {
+  background-color: #FFF;
+}
 /*# sourceMappingURL=charts.css.map */

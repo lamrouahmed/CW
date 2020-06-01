@@ -60,9 +60,10 @@ const globalData = {
                 display: true,
                 position: 'bottom',
                 labels: {
-                  fontColor: "#000",
+                  fontColor: "#858586",
                 }
-            }
+            },
+            cutoutPercentage: 80
         }
     },
     statusDemande: {
@@ -74,6 +75,8 @@ const globalData = {
                     "#4bc0c0",
                     "#ff9f40"
                 ]
+                
+                
             }] 
         },
         options: {
@@ -81,9 +84,10 @@ const globalData = {
                 display: true,
                 position: 'bottom',
                 labels: {
-                  fontColor: "#000",
+                  fontColor: "#858586",
                 }
-            }
+            },
+            cutoutPercentage: 80
         }   
     }
 }
@@ -94,6 +98,23 @@ const d_chart = createChart($('#d_chart'), 'line', globalData.demandes.data, glo
 const u_chart = createChart($('#u_chart'), 'line', globalData.users.data, globalData.users.options);
 const status_chart = createChart($('#pie'), 'doughnut', globalData.status.data, globalData.status.options);
 const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDemande.data, globalData.statusDemande.options);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 get('/PFE/admin/data.php');
 
@@ -222,3 +243,45 @@ function update(chart, newData) {
     chart.data.datasets[0].data = newData;
     chart.update();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
