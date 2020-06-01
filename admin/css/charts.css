@@ -185,8 +185,8 @@ body {
 .usersContainer,
 .demandesContainer {
   position: relative;
-  width: 800px;
-  height: 400px;
+  width: 850px;
+  height: 350px;
 }
 
 .pieContainer {
@@ -199,7 +199,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
+  margin-left: 3rem;
   background-color: #FFF;
   width: 350px;
   height: 350px;
@@ -208,7 +208,18 @@ body {
 .userChart,
 .demandeChart {
   width: calc(100% - 7em);
-  margin-left: 4em;
+  margin-left: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.demandeChart {
+  margin-bottom: 2rem;
 }
 
 canvas {

@@ -18,10 +18,11 @@ const globalData = {
         options: {
             title: {
                 display: true,
-                text: 'Frequence de creations des comptes par jour',
+                // text: 'Frequence de creations des comptes par jour',
                 fontSize: 17,
                 fontStyle: 400
-            }
+            },
+            maintainAspectRatio: false
         }
 
     },
@@ -38,10 +39,11 @@ const globalData = {
         options: {
             title: {
                 display: true,
-                text: 'Frequence des demandes par jour',
+                // text: 'Frequence des demandes par jour',
                 fontSize: 17,
                 fontStyle: 400
-            }
+            },
+            maintainAspectRatio: false
         }
     },
     status: {
