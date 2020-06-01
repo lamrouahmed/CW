@@ -22,7 +22,7 @@
                 "lavage_id" => $lavage->getLavage(Input::get('lavage'))->results()[0]->lavage_id,
                 "nb_vehicules" => Input::get('quantite'),
                 "type_vehicule" => Input::get('vehicule'),
-                "status_demande" => "non approve",
+                "status_demande" => "N",
                 "localisation" => Input::get('localisation'),
                 "date_demande" => Input::get('date').' '.Input::get('time'),
                 "date_ajout" => Config::getDate()

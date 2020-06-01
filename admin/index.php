@@ -169,15 +169,21 @@ if(Session::exists("admin")) {
         </div>
     </div>
     <div class="chartsContainer">
-        <div class="usersContainer">
-            <canvas id="u_chart" width="600" height="300"></canvas>
+        <div class="lineCharts">
+            <div class="usersContainer">
+                <canvas id="u_chart" width="600" height="300"></canvas>
+            </div>
+            <div class="demandesContainer">
+                <canvas id="d_chart" width="600" height="300"></canvas>
+            </div>
         </div>
-        <div class="demandesContainer">
-            <canvas id="d_chart" width="600" height="300"></canvas>
-        </div>
-        <div class="pieContainer">
-        <canvas id="pie" width="600" height="300"></canvas>
-
+        <div class="pieCharts">
+            <div class="pieContainer">
+                <canvas id="pie" width="600" height="300"></canvas>
+            </div>
+            <div class="pieContainer">
+                <canvas id="pie2" width="600" height="300"></canvas>
+            </div>
         </div>
     </div>
 </body>

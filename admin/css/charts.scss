@@ -100,14 +100,17 @@ body {
     }
 }
 .chartsContainer {
-    display: flex;
     margin-left: 7rem;
+
+    & > div {
+        display: flex;
+    }
 }
 
 
 .usersContainer,
 .demandesContainer {
     position: relative;
-    width: 50rem;
-    height: 20rem;
+    width: 35rem;
+    height: 17rem;
 }

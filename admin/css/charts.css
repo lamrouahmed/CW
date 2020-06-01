@@ -119,16 +119,19 @@ body {
 }
 
 .chartsContainer {
+  margin-left: 7rem;
+}
+
+.chartsContainer > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 7rem;
 }
 
 .usersContainer,
 .demandesContainer {
   position: relative;
-  width: 50rem;
-  height: 20rem;
+  width: 35rem;
+  height: 17rem;
 }
 /*# sourceMappingURL=charts.css.map */

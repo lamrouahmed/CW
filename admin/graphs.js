@@ -2,6 +2,7 @@ const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
 const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 const uStatus = ['offline', 'online']
+const dStatus = ['acceptee', 'refusee']
 const globalData = {
     users: {
         labels: days,
@@ -31,6 +32,16 @@ const globalData = {
                 "#4bc0c0"
             ]
         }]  
+    },
+    statusDemande: {
+        labels: dStatus,
+        datasets: [{
+            data: [],
+            backgroundColor: [
+                "#4bc0c0",
+                "#ff6384"
+            ]
+        }] 
     }
 }
 
@@ -38,6 +49,7 @@ const globalData = {
 const d_chart = createChart($('#d_chart'), 'line', globalData.demandes);
 const u_chart = createChart($('#u_chart'), 'line', globalData.users);
 const status_chart = createChart($('#pie'), 'doughnut', globalData.status);
+const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDemande);
 
 get('/PFE/admin/data.php');
 
@@ -76,6 +88,10 @@ function updateChart(data) {
         status: {
             offline: 0,
             online: 0
+        },
+        demande_status:{
+            N: 0,
+            Y: 0
         }
     }
     days.forEach(dateP => {
@@ -95,6 +111,13 @@ function updateChart(data) {
     update(status_chart, [records.status.offline, records.status.online]);
 
 
+    demandes.forEach(demande => {
+        demande.status_demande === "N" && records.demande_status.N++;
+        demande.status_demande === "Y" && records.demande_status.Y++;
+    })
+
+
+    update(d_statusChart, [records.demande_status.Y, records.demande_status.N]);
 
 
 
