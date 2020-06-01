@@ -15,13 +15,23 @@ const globalData = {
 
     },
     demandes: {
-        labels: days,
-        datasets: [{
-            label: 'Nombre de demandes par jour',
-            backgroundColor: '#f6f8fd',
-            borderColor: '#376ade',
-            data: [0,0,0,0,0,0,0]
-        }]
+        data: {
+            labels: days,
+            datasets: [{
+                label: 'Nombre de demande',
+                backgroundColor: '#f6f8fd',
+                borderColor: '#376ade',
+                data: [0,0,0,0,0,0,0]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Frequence des demandes par jour',
+                fontSize: 18,
+                fontStyle: 500
+            }
+        }
     },
     status: {
         labels: uStatus,
@@ -44,9 +54,10 @@ const globalData = {
         }] 
     }
 }
+Chart.defaults.global.defaultFontFamily = "'Montserrat', 'sans-serif'";
 
 
-const d_chart = createChart($('#d_chart'), 'line', globalData.demandes);
+const d_chart = createChart($('#d_chart'), 'line', globalData.demandes.data, globalData.demandes.options);
 const u_chart = createChart($('#u_chart'), 'line', globalData.users);
 const status_chart = createChart($('#pie'), 'doughnut', globalData.status);
 const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDemande);
@@ -62,6 +73,7 @@ function get(url) {
         .then(response => response.json())
         .then(body => updateChart(body));
 }
+
 
 function updateChart(data) {
     const {users,demandes} = data;
@@ -157,12 +169,11 @@ function getDayName(date, locale) {
 
 
 
-
-
-function createChart(node, type, newData) {
+function createChart(node, type, newData, Options) {
     const status_chart = new Chart(node, {
         type: type,
-        data : newData
+        data : newData,
+        options: Options
     })
     return status_chart;
 }
