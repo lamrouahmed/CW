@@ -15,7 +15,6 @@ function get(url) {
 function createChart(data) {
     const {users,demandes} = data;
     let u_creationDates = users.map(user => getDayName(new Date(user.created), 'fr-FR'));
-    console.log(users.length)
     let records = {
         users: {
             lundi: 0,
@@ -34,6 +33,10 @@ function createChart(data) {
             vendredi: 0,
             samedi: 0,
             dimanche: 0
+        },
+        status: {
+            offline: 0,
+            online: 0
         }
     }
     days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
@@ -61,6 +64,36 @@ function createChart(data) {
         responsive: true,
         options: {}
     });
+    const pie = $('#pie').getContext('2d');
+    users.forEach(user => {
+        user.status === "online" && records.status.online++;
+        user.status === "offline" && records.status.offline++;
+    })
+    const status_chart = new Chart(pie, {
+        type: 'doughnut',
+        data : {
+            datasets: [{
+                data: [records.status.offline, records.status.online],
+                backgroundColor: [
+                    "#ff6384",
+                    "#4bc0c0"
+                ]
+            }],
+
+            labels: [
+                'Offline',
+                'Online'
+            ]
+        },
+        options: {
+
+        }
+    })
+
+
+
+
+
 
 
 
@@ -97,6 +130,13 @@ function createChart(data) {
         responsive: true,
         options: {}
     });
+
+
+
+
+    
+
+
 }
 
 
@@ -104,4 +144,23 @@ function getDayName(date, locale) {
     return date.toLocaleDateString(locale, {
         weekday: 'long'
     });
+}
+
+
+
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
 }

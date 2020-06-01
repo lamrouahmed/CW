@@ -175,6 +175,10 @@ if(Session::exists("admin")) {
         <div class="demandesContainer">
             <canvas id="d_chart" width="600" height="300"></canvas>
         </div>
+        <div class="pieContainer">
+        <canvas id="pie" width="600" height="300"></canvas>
+
+        </div>
     </div>
 </body>
 <script src="./chart.js"></script>
