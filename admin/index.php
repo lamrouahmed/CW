@@ -137,7 +137,7 @@ if(Session::exists("admin")) {
         <div class="userChart">
             <div class="canvasC u">
                 <div class="canvasText">
-                    <p>Nombre de demandes par jour</p>
+                    <p>Nombre de comptes cree par jour</p>
                 </div>
                 <div class="usersContainer">
                     <canvas id="u_chart" width="600" height="300"></canvas>
@@ -145,7 +145,7 @@ if(Session::exists("admin")) {
             </div>
             <div class="pieC status_u">
             <div class="canvasText">
-                    <p>Nombre de demandes par jour</p>
+                    <p>Status des utilisateurs</p>
             </div>
                 <div class="pieContainer">
                     <canvas id="pie" width="300" height="300"></canvas>
@@ -164,7 +164,7 @@ if(Session::exists("admin")) {
             </div>
             <div class="pieC status_d">
                 <div class="canvasText">
-                    <p>Nombre de demandes par jour</p>
+                    <p>Status des demandes</p>
                 </div>
                 <div class="pieContainer">       
                     <canvas id="pie2" width="300" height="300"></canvas>

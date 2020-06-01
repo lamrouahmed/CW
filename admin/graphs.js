@@ -9,8 +9,8 @@ const globalData = {
             labels: days,
             datasets: [{
                 label: 'Nombre des comptes cree',
-                backgroundColor: 'rgb(250, 224, 229)', 
-                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: '#dbc9ff', 
+                borderColor: '#9966ff',
                 data: [0,0,0,0,0,0,0]
             }],
         },
