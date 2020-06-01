@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
@@ -17,20 +16,40 @@ html {
 
 body {
   height: 100%;
+  background-color: #f8f9fc;
+}
+
+.head {
+  margin-left: 7em;
+  width: calc(100%- 7em);
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5rem;
+}
+
+.head h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .generalData {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% - 7rem);
-  margin-left: 7rem;
+  width: calc(100% - 7em);
+  margin-left: 7em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 2rem;
 }
 
 .generalData > div {
@@ -43,11 +62,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 18%;
+  width: 20%;
   height: 6rem;
   align-items: center;
-  color: #FFF;
+  color: black;
   margin-right: 2rem;
+  background-color: #FFF;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px 1px #e8e2e2;
+          box-shadow: 1px 1px 1px 1px #e8e2e2;
+  border-bottom-left-radius: 5px;
+}
+
+.generalData > div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 4px;
+  left: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .generalData > div .icon {
@@ -62,7 +99,7 @@ body {
           align-items: center;
   height: 100%;
   width: 20%;
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .generalData > div .icon svg {
@@ -71,7 +108,7 @@ body {
 }
 
 .generalData > div .icon svg path {
-  fill: #FFF;
+  fill: #dddfea;
 }
 
 .generalData > div .text {
@@ -95,31 +132,48 @@ body {
 }
 
 .generalData > div .text .title {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+  font-size: .8rem;
 }
 
 .generalData > div .text > div {
   width: 100%;
 }
 
-.generalData .totalUsers {
-  background-color: #fbad4b;
+.generalData .totalUsers .text .title {
+  color: #4970de;
 }
 
-.generalData .totalSales {
-  background-color: #59cf5d;
+.generalData .totalUsers::after {
+  background-color: #4970de;
 }
 
-.generalData .totalDemandes {
-  background-color: #ff646c;
+.generalData .totalSales .text .title {
+  color: #08c888;
 }
 
-.generalData .totalLavages {
-  background-color: #1e62f1;
+.generalData .totalSales::after {
+  background-color: #08c888;
+}
+
+.generalData .totalDemandes .text .title {
+  color: #2eb8cb;
+}
+
+.generalData .totalDemandes::after {
+  background-color: #2eb8cb;
+}
+
+.generalData .totalLavages .text .title {
+  color: #f6c239;
+}
+
+.generalData .totalLavages::after {
+  background-color: #f6c239;
 }
 
 .chartsContainer {
-  margin-left: 7rem;
+  margin-left: 7em;
 }
 
 .chartsContainer > div {
@@ -131,7 +185,29 @@ body {
 .usersContainer,
 .demandesContainer {
   position: relative;
-  width: 35rem;
-  height: 17rem;
+  width: 800px;
+  height: 400px;
+}
+
+.pieContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  background-color: #FFF;
+  width: 350px;
+  height: 350px;
+}
+
+.userChart,
+.demandeChart {
+  width: calc(100% - 7em);
+  margin-left: 4em;
 }
 /*# sourceMappingURL=charts.css.map */

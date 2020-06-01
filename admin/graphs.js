@@ -5,13 +5,24 @@ const uStatus = ['offline', 'online']
 const dStatus = ['acceptee', 'refusee']
 const globalData = {
     users: {
-        labels: days,
-        datasets: [{
-            label: 'Nombre des comptes cree par jour',
-            backgroundColor: 'rgba(234, 106, 134, 0.16)', 
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0,0,0,0,0,0,0]
-        }],
+        data: {
+            labels: days,
+            datasets: [{
+                label: 'Nombre des comptes cree',
+                backgroundColor: 'rgb(250, 224, 229)', 
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0,0,0,0,0,0,0]
+            }],
+        },
+
+        options: {
+            title: {
+                display: true,
+                text: 'Frequence de creations des comptes par jour',
+                fontSize: 17,
+                fontStyle: 400
+            }
+        }
 
     },
     demandes: {
@@ -28,39 +39,61 @@ const globalData = {
             title: {
                 display: true,
                 text: 'Frequence des demandes par jour',
-                fontSize: 18,
-                fontStyle: 500
+                fontSize: 17,
+                fontStyle: 400
             }
         }
     },
     status: {
-        labels: uStatus,
-        datasets: [{
-            data: [],
-            backgroundColor: [
-                "#ff6384",
-                "#4bc0c0"
-            ]
-        }]  
+        data: {
+            labels: uStatus,
+            datasets: [{
+                data: [],
+                backgroundColor: [
+                    "#ffcd56",
+                    "#36a2eb"
+                ]
+            }]  
+        },
+        options: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                  fontColor: "#000",
+                }
+            }
+        }
     },
     statusDemande: {
-        labels: dStatus,
-        datasets: [{
-            data: [],
-            backgroundColor: [
-                "#4bc0c0",
-                "#ff6384"
-            ]
-        }] 
+        data: {
+            labels: dStatus,
+            datasets: [{
+                data: [],
+                backgroundColor: [
+                    "#4bc0c0",
+                    "#ff9f40"
+                ]
+            }] 
+        },
+        options: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                  fontColor: "#000",
+                }
+            }
+        }   
     }
 }
 Chart.defaults.global.defaultFontFamily = "'Montserrat', 'sans-serif'";
 
 
 const d_chart = createChart($('#d_chart'), 'line', globalData.demandes.data, globalData.demandes.options);
-const u_chart = createChart($('#u_chart'), 'line', globalData.users);
-const status_chart = createChart($('#pie'), 'doughnut', globalData.status);
-const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDemande);
+const u_chart = createChart($('#u_chart'), 'line', globalData.users.data, globalData.users.options);
+const status_chart = createChart($('#pie'), 'doughnut', globalData.status.data, globalData.status.options);
+const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDemande.data, globalData.statusDemande.options);
 
 get('/PFE/admin/data.php');
 
@@ -132,7 +165,8 @@ function updateChart(data) {
     update(d_statusChart, [records.demande_status.Y, records.demande_status.N]);
 
 
-
+    $('[data-id = users]').textContent = users.length;
+    $('[data-id = demandes]').textContent = demandes.length;
 
 
 

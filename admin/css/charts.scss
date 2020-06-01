@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 *,
@@ -19,48 +19,78 @@ html {
 
 body {
     height: 100%;
+    background-color: #f8f9fc;
 }
 
-// .head {
-//     h2 {
-//         font-size: 1.5rem;
-//         font-weight: 500;
-//     }
-//     width: 90%;
-//     margin-left: 7rem;
-// }
+.head {
+    margin-left: 7em;
+    width: calc(100%- 7em);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+}
+
 .generalData {
     display: flex;
-    width: calc(100% - 7rem);
-    margin-left: 7rem;
+    width: calc(100% - 7em);
+    margin-left: 7em;
     justify-content: center;
     align-items: center;
-    & > div {
+    padding-right: 2rem;
+
+    &>div {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 18%;
+        width: 20%;
         height: 6rem;
         align-items: center;
-        color: #FFF;
+        color: rgb(0, 0, 0);
         margin-right: 2rem;
+        background-color: #FFF;
+        position: relative;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 1px 1px 1px 1px #e8e2e2;
+        border-bottom-left-radius: 5px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 4px;
+            left: 0;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
         .icon {
             display: flex;
             justify-content: left;
             align-items: center;
             height: 100%;
             width: 20%;
-            margin-left: 1rem;
+            margin-right: 1rem;
+
             svg {
 
                 height: 2.5rem;
                 width: 2.5rem;
 
                 path {
-                    fill: #FFF;
+                    fill: #dddfea;
                 }
             }
         }
+
         .text {
             display: flex;
             justify-content: center;
@@ -70,10 +100,13 @@ body {
             font-weight: 500;
             height: 100%;
             width: 80%;
+
             .title {
-                margin-bottom: 1rem;
+                margin-bottom: .5rem;
+                font-size: .8rem;
             }
-            & > div {
+
+            &>div {
                 width: 100%;
 
             }
@@ -82,27 +115,61 @@ body {
     }
 
     .totalUsers {
-        background-color: #fbad4b;
-    }
-    .totalSales {
-        
-        background-color: #59cf5d;
-    }
-    
-    .totalDemandes {
-        background-color: #ff646c;
-        
-    }
-    
-    .totalLavages {
-        background-color: #1e62f1;
 
+        .text {
+            .title {
+                color: #4970de;
+            }
+        }
+
+        &::after {
+            background-color: #4970de;
+        }
+    }
+
+    .totalSales {
+        .text {
+            .title {
+                color: #08c888;
+            }
+        }
+
+        &::after {
+            background-color: #08c888;
+        }
+    }
+
+    .totalDemandes {
+        .text {
+            .title {
+                color: #2eb8cb;
+            }
+        }
+
+        &::after {
+            background-color: #2eb8cb;
+        }
+
+    }
+
+    .totalLavages {
+
+        .text {
+            .title {
+                color: #f6c239;
+            }
+        }
+
+        &::after {
+            background-color: #f6c239;
+        }
     }
 }
-.chartsContainer {
-    margin-left: 7rem;
 
-    & > div {
+.chartsContainer {
+    margin-left: 7em;
+
+    &>div {
         display: flex;
     }
 }
@@ -111,6 +178,23 @@ body {
 .usersContainer,
 .demandesContainer {
     position: relative;
-    width: 35rem;
-    height: 17rem;
+    width: 800px;
+    height: 400px;
 }
+
+.pieContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    background-color: #FFF;
+    width: 350px;
+    height: 350px;
+}
+
+.userChart,
+.demandeChart {
+    width: calc(100% - 7em);
+    margin-left: 4em;
+}
+
