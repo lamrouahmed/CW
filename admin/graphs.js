@@ -65,7 +65,8 @@ const globalData = {
                   fontColor: "#858586",
                 }
             },
-            cutoutPercentage: 80
+            cutoutPercentage: 80,
+            maintainAspectRatio: false
         }
     },
     statusDemande: {
@@ -89,12 +90,14 @@ const globalData = {
                   fontColor: "#858586",
                 }
             },
-            cutoutPercentage: 80
+            cutoutPercentage: 80,
+            maintainAspectRatio: false
+
         }   
     }
 }
 Chart.defaults.global.defaultFontFamily = "'Montserrat', 'sans-serif'";
-
+Chart.defaults.global.legend.display = false;
 
 const d_chart = createChart($('#d_chart'), 'line', globalData.demandes.data, globalData.demandes.options);
 const u_chart = createChart($('#u_chart'), 'line', globalData.users.data, globalData.users.options);

@@ -186,7 +186,7 @@ body {
 .demandesContainer {
   position: relative;
   width: 850px;
-  height: 350px;
+  height: 340px;
 }
 
 .pieContainer {
@@ -199,10 +199,39 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 3rem;
   background-color: #FFF;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 2rem 1rem .5rem 1rem;
+}
+
+.canvasC, .pieC {
+  -webkit-box-shadow: 1px 1px 8px 1px #dddada;
+          box-shadow: 1px 1px 8px 1px #dddada;
+  background-color: #FFF;
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+.canvasC {
+  margin-right: 2.5rem;
+}
+
+.status_d .canvasText {
+  background-color: #4bc0c01a;
+}
+
+.status_d .canvasText p {
+  color: #4bc0c0;
+}
+
+.status_u .canvasText {
+  background-color: #ffdb8947;
+}
+
+.status_u .canvasText p {
+  color: #ff9b39;
 }
 
 .userChart,
@@ -224,5 +253,41 @@ body {
 
 canvas {
   background-color: #FFF;
+}
+
+.u .canvasText {
+  background-color: #ff9cef30;
+}
+
+.u .canvasText p {
+  color: #f88aca;
+}
+
+.d .canvasText {
+  background-color: #f8f9fc;
+}
+
+.d .canvasText p {
+  color: #7890e4;
+}
+
+.canvasText {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+  left: 0;
+}
+
+.canvasText p {
+  padding-left: 1rem;
+  font-weight: 500;
 }
 /*# sourceMappingURL=charts.css.map */
