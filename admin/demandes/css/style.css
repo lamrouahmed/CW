@@ -99,6 +99,7 @@ body {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   opacity: 1;
+  position: relative;
 }
 
 .demandeWrapper .demande:hover .btns .accept svg path {

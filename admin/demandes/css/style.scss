@@ -209,6 +209,7 @@ body {
         height: 4rem;
         transition: all 200ms ease-in-out;
         opacity: 1;
+        position: relative;
 
         &:hover {
             // transition: all 200ms ease-in-out;
@@ -562,6 +563,7 @@ body {
 
 
 
+
 @include tablet {
 
     .Wrapper {
@@ -613,7 +615,7 @@ body {
 }
 
 
-    @include mobile {
+@include mobile {
         .Wrapper {
             margin: 0 !important;
         }

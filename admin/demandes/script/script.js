@@ -47,9 +47,3 @@ btns.forEach(btn => btn.addEventListener('click', e => modify(e, urls[0])));
 
 
 
-
-
-
-
-
-

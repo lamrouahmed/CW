@@ -110,8 +110,7 @@ if(Input::exists()) {
                         </svg>
                     </div>
                 </div>
-            </div>
-
+                        </div>
 
             <?php
       }
