@@ -34,6 +34,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-weight: 500;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .header > div,
@@ -56,6 +58,30 @@ body {
   width: 3rem;
 }
 
+.header {
+  font-weight: 600;
+  width: 65rem;
+  margin: 0 auto;
+}
+
+.header > div {
+  width: 5rem;
+  font-size: .9rem;
+}
+
+.header .void {
+  width: 3rem;
+}
+
+.header .username_h {
+  width: 7rem;
+}
+
+.header .date_demande_h,
+.header .action_h {
+  width: 10rem;
+}
+
 .demandeWrapper {
   background-color: #f0f4f7;
   height: 100%;
@@ -69,19 +95,11 @@ body {
   background-color: #FFF;
   margin: 0 auto;
   margin-top: .3rem;
-  width: 60rem;
+  width: 65rem;
   height: 4rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.demandeWrapper .demande:hover {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  -webkit-transform: scale(1.015);
-          transform: scale(1.015);
+  opacity: 1;
 }
 
 .demandeWrapper .demande:hover .btns .accept svg path {
@@ -89,7 +107,7 @@ body {
 }
 
 .demandeWrapper .demande:hover .btns .refuse svg path {
-  fill: orangered !important;
+  fill: #ffd200 !important;
 }
 
 .demandeWrapper .demande:hover .btns .delete svg {
@@ -100,9 +118,59 @@ body {
   fill: #f44336 !important;
 }
 
+.demandeWrapper .demande .checkBox {
+  width: 2rem;
+}
+
+.demandeWrapper .demande .checkBox .checkB {
+  display: none;
+}
+
+.demandeWrapper .demande .checkBox .checkB:checked + label .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.demandeWrapper .demande .checkBox .checkB:checked + label .box {
+  fill: #007ce2;
+  stroke: #007ce2;
+  stroke-width: 10px;
+}
+
+.demandeWrapper .demande .checkBox .checkboxSvg {
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  stroke: #c0c2c4;
+  stroke-width: 5;
+  fill: white;
+  stroke-width: 6px;
+}
+
+.demandeWrapper .demande .checkBox .checkboxSvg .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 6px;
+}
+
+.demandeWrapper .demande .checkBox .checkboxSvg .check {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 83;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .demandeWrapper .demande .id {
   font-size: 1.1rem;
   font-weight: 600;
+  width: 3rem;
 }
 
 .demandeWrapper .demande .status {
@@ -139,6 +207,14 @@ body {
 
 .demandeWrapper .demande .img .online {
   background-color: #49c466;
+}
+
+.demandeWrapper .demande .prix {
+  width: 5rem;
+}
+
+.demandeWrapper .demande .username {
+  width: 7rem;
 }
 
 .demandeWrapper .demande .status img {
@@ -205,7 +281,7 @@ body {
 }
 
 .demandeWrapper .demande .btns .refuse:hover::after {
-  background-color: #f2cc38b5;
+  background-color: #f2d9638c;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -215,7 +291,7 @@ body {
 }
 
 .demandeWrapper .demande .btns .delete:hover::after {
-  background-color: #ff000069;
+  background-color: #f2624b63;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -228,18 +304,34 @@ body {
   fill: #000000;
 }
 
+.demandeWrapper .deleteAnimation {
+  opacity: 0;
+  scale: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
 @media (min-width: 737px) and (max-width: 1200px) {
   .Wrapper {
     margin-left: 0;
   }
+  .header {
+    width: 45rem !important;
+  }
   .header > div {
-    font-size: .9rem;
+    font-size: .8rem;
+  }
+  .header .action_h {
+    width: 7rem !important;
   }
   .demande {
     width: 45rem !important;
   }
   .demande > div {
     font-size: .75rem !important;
+  }
+  .demande .btns {
+    width: 7rem !important;
   }
   .demande .btns > div {
     margin: 0 !important;

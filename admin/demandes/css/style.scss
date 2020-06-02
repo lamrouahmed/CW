@@ -159,7 +159,7 @@ body {
 .demande {
     display: flex;
     font-weight: 500;
-
+    justify-content: space-around;
 
     &>div {
         width: 10rem;
@@ -174,56 +174,139 @@ body {
     }
 }
 
+.header {
+    font-weight: 600;
+    &>div {
+        width: 5rem;
+        font-size: .9rem;
+    }
+    .void {
+        width: 3rem;
+    }
+    width: 65rem;
+    margin: 0 auto;
+
+    .username_h {
+        width: 7rem;
+    }
+
+    .date_demande_h,
+    .action_h {
+        width: 10rem;
+    }
+}
+
 .demandeWrapper {
     background-color: #f0f4f7;
     height: 100%;
+
     .demande {
         font-weight: 400;
         align-items: center;
         background-color: #FFF;
         margin: 0 auto;
         margin-top: .3rem;
-        width: 60rem;
+        width: 65rem;
         height: 4rem;
         transition: all 200ms ease-in-out;
-        transform: scale(1);
+        opacity: 1;
+
         &:hover {
-            transition: all 200ms ease-in-out;
-            transform: scale(1.015);
+            // transition: all 200ms ease-in-out;
+            // transform: scale(1.015);
 
             .btns {
-                
-            .accept {
-                svg path {
-                    fill: #379b75 !important;
-                }
-            }
 
-            .refuse {
-
-                svg path {
-                    fill: orangered !important;
-                }
-            }
-
-            .delete {
-
-                svg {
-                    fill: #f44336 !important;
-
+                .accept {
+                    svg path {
+                        fill: #379b75 !important;
+                    }
                 }
 
-                path {
-                    fill: #f44336 !important;
+                .refuse {
+
+                    svg path {
+                        fill: #ffd200 !important;
+                    }
                 }
-            }
+
+                .delete {
+
+                    svg {
+                        fill: #f44336 !important;
+
+                    }
+
+                    path {
+                        fill: #f44336 !important;
+                    }
+                }
             }
         }
 
+        .checkBox {
+            width: 2rem;
+
+            .checkB {
+                display: none;
+
+
+                
+            &:checked + label {
+                // .box {
+                //     stroke-dashoffset: 320;
+                    
+                // }
+                .check {
+                    stroke-dashoffset: 0;
+                    stroke: #FFF;
+                }
+                .box {
+                    fill: rgb(0,124,226);
+                    stroke: rgb(0,124,226);
+                    stroke-width: 10px;
+                }
+            }
+            }
+
+
+            .checkboxSvg {
+              
+                height: 1.3rem;
+                width: 1.3rem;
+                cursor: pointer;
+                stroke: rgb(192, 194, 196);
+                stroke-width: 5;
+                fill: white;
+                stroke-width: 6px;
+                
+        
+                .box {
+                    stroke-dasharray: 320;
+                    stroke-dashoffset: 0;
+                    fill: white;
+                    transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+                    stroke-width: 6px;
+        
+        
+                }
+                .check {
+                    stroke-dasharray: 82;
+                    stroke-dashoffset: 83;
+                    fill: none;
+                    transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+                    stroke-width: 11px;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+            }
+        }
         .id {
             font-size: 1.1rem;
             font-weight: 600;
+            width: 3rem;
         }
+
         .status {
             width: 5rem;
         }
@@ -260,12 +343,21 @@ body {
             }
         }
 
+        .prix {
+            width: 5rem;
+        }
+
+        .username {
+            width: 7rem;
+        }
+
         .status {
             img {
                 width: 2rem;
                 height: 2rem;
             }
         }
+
         .lavage,
         .vehicule,
         .nbVehicule {
@@ -299,6 +391,7 @@ body {
                     // padding: 1rem;
 
                 }
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -321,8 +414,9 @@ body {
                         transform: scale(1);
                     }
                 }
+
                 svg path {
-                    fill: #000000 ;
+                    fill: #000000;
                 }
             }
 
@@ -330,14 +424,14 @@ body {
 
                 &:hover {
                     &::after {
-                        background-color: #f2cc38b5;
+                        background-color: #f2d9638c;
                         transform: scale(1);
 
                     }
                 }
 
                 svg path {
-                    fill: rgb(0, 0, 0) ;
+                    fill: rgb(0, 0, 0);
                 }
             }
 
@@ -345,25 +439,32 @@ body {
 
                 &:hover {
                     &::after {
-                        background-color: #ff000069;
+                        background-color: #f2624b63;
                         transform: scale(1);
 
                     }
                 }
 
                 svg {
-                    fill: #000000 ;
+                    fill: #000000;
 
                 }
 
                 path {
-                    fill: #000000 ;
+                    fill: #000000;
                 }
             }
         }
 
 
     }
+
+    .deleteAnimation {
+        opacity: 0;
+        scale: 0;
+        transition: all 300ms ease-in-out;
+    }
+
     // .N {
     //     background-color: #ff4141;
     //     color: #FFF;
@@ -374,10 +475,10 @@ body {
     //                 path {
     //                     fill: #FFF !important;
     //                 }
-                    
+
 
     //             }
-              
+
     //         }
     //     }
 
@@ -426,7 +527,7 @@ body {
 
 
 
-        
+
 
 
 
@@ -441,26 +542,38 @@ body {
 
 
 @include tablet {
-    
+
     .Wrapper {
         margin-left: 0;
     }
 
     .header {
-        & > div {
-            font-size: .9rem;
-        }
-    }
+        width: 45rem !important;
 
+        &>div {
+            font-size: .8rem;
+        }
+
+        .action_h {
+            width: 7rem !important;
+
+        }
+
+
+    }
     .demande {
         width: 45rem !important;
 
-        & > div {
+        &>div {
             font-size: .75rem !important;
         }
 
+
+
         .btns {
-            & > div {
+            width: 7rem !important;
+
+            &>div {
                 margin: 0 !important;
 
                 &::after {
@@ -478,8 +591,9 @@ body {
     }
 }
 
-@include mobile {
-    .Wrapper {
-        margin: 0 !important;
+
+    @include mobile {
+        .Wrapper {
+            margin: 0 !important;
+        }
     }
-}

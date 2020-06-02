@@ -10,7 +10,7 @@ const btns = $$('.btns > div');
 
 
 
-function post(action, id, url, render = false) {
+function post(action, id, url) {
     let formData = new FormData();
     formData.append("action", action);
     formData.append("id", id)
@@ -18,19 +18,29 @@ function post(action, id, url, render = false) {
         method: 'post',
         body: formData
       })
-      .then(function (response) {
-        return response.text();
+      .then( response =>{
+         response.text();
       })
-      .then(function (body) {
-        render ? render.innerHTML = body : console.log(body);
-      });
+  
 }
 
 function modify(e, url) {
     const data = e.currentTarget.dataset;
+    const parentNode = $(`[data-key = '${data.id}']`);
+    const img = parentNode.querySelector('.status img');
     data.action === 'delete' && post('delete', data.id, url);
-    data.action === 'accept' && post('accept', data.id, url);
-    data.action === 'refuse' && post('refuse', data.id, url);
+    data.action === 'accept' && post('accept', data.id, url)  
+    data.action === 'refuse' && post('refuse', data.id, url)
+
+    data.action === 'delete' && remove(parentNode, 300) 
+    data.action === 'accept' && img.setAttribute('src', './img/Y.svg')
+    data.action === 'refuse' && img.setAttribute('src', './img/N.svg')
+                  
+}
+
+function remove(node, time) {
+  node.classList.add('deleteAnimation')
+  setTimeout(() => node.remove(), time)
 }
 
 btns.forEach(btn => btn.addEventListener('click', e => modify(e, urls[0])));
