@@ -1,6 +1,39 @@
 // @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 737px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+/*-------- Mobile Media Queries ---------*/
+
+$minMobile: 300px;
+$maxMobile: 736px;
+
+
+@mixin mobile {
+    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 *,
 *::after,
 *::before {
@@ -119,7 +152,7 @@ body {
 
 .Wrapper {
     margin-left: 7em;
-
+    height: 100%;
 }
 
 .header,
@@ -143,18 +176,17 @@ body {
 
 .demandeWrapper {
     background-color: #f0f4f7;
-
+    height: 100%;
     .demande {
         font-weight: 400;
         align-items: center;
         background-color: #FFF;
         margin: 0 auto;
         margin-top: .3rem;
-        width: 70rem;
+        width: 60rem;
         height: 4rem;
         transition: all 200ms ease-in-out;
         transform: scale(1);
-        border-radius: 35px;
         &:hover {
             transition: all 200ms ease-in-out;
             transform: scale(1.015);
@@ -186,6 +218,14 @@ body {
                 }
             }
             }
+        }
+
+        .id {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .status {
+            width: 5rem;
         }
 
         .img {
@@ -220,11 +260,26 @@ body {
             }
         }
 
-        &>div {
-
-            &:nth-child(2) {
-                width: 3rem;
+        .status {
+            img {
+                width: 2rem;
+                height: 2rem;
             }
+        }
+        .lavage,
+        .vehicule,
+        .nbVehicule {
+            width: 5rem;
+        }
+
+        &>div {
+            font-weight: 500;
+            font-size: .85rem;
+            color: rgb(66, 65, 65);
+
+            // &:nth-child(2) {
+            //     width: 3rem;
+            // }
         }
 
         .btns {
@@ -254,7 +309,6 @@ body {
                     opacity: .5;
                     transition: all 200ms ease-in-out;
                     transform: scale(0);
-            
 
                 }
 
@@ -310,65 +364,65 @@ body {
 
 
     }
-    .N {
-        background-color: #ff4141;
-        color: #FFF;
-        .btns  {
-            & > div {
-                svg {
-                    fill: #FFF !important;
-                    path {
-                        fill: #FFF !important;
-                    }
+    // .N {
+    //     background-color: #ff4141;
+    //     color: #FFF;
+    //     .btns  {
+    //         & > div {
+    //             svg {
+    //                 fill: #FFF !important;
+    //                 path {
+    //                     fill: #FFF !important;
+    //                 }
                     
 
-                }
+    //             }
               
-            }
-        }
+    //         }
+    //     }
 
 
-        &:hover {
+    //     &:hover {
 
 
-            .btns {
-                & > div {
-                    &::after {
-                        display: none;
-                    }
-                }
-            .accept {
-                svg path {
-                    fill: #379b75 !important;
-                }
-                .stroke {
-                    fill: #000 !important;
-                }
-            }
+    //         .btns {
+    //             & > div {
+    //                 &::after {
+    //                     display: none;
+    //                 }
+    //             }
+    //         .accept {
+    //             svg path {
+    //                 fill: #379b75 !important;
+    //             }
+    //             .stroke {
+    //                 fill: #000 !important;
+    //             }
+    //         }
 
-            .refuse {
+    //         .refuse {
 
-                svg path {
-                    fill: orangered !important;
-                }
-                .stroke {
-                    fill: #000 !important;
-                }
-            }
+    //             svg path {
+    //                 fill: orangered !important;
+    //             }
+    //             .stroke {
+    //                 fill: #000 !important;
+    //             }
+    //         }
 
-            .delete {
+    //         .delete {
 
-                svg {
-                    fill: #000000 !important;
+    //             svg {
+    //                 fill: #000000 !important;
 
-                }
+    //             }
 
-                path {
-                    fill: #000000 !important;
-                }
-            }
-            }
-        }
+    //             path {
+    //                 fill: #000000 !important;
+    //             }
+    //         }
+    //         }
+    //     }
 
 
 
@@ -377,10 +431,55 @@ body {
 
 
 
-    }
-    .Y {
-        background-color: #b4ecb8;
-    }
+    // }
+    // .Y {
+    //     background-color: #b4ecb8;
+    // }
 }
 
 
+
+
+@include tablet {
+    
+    .Wrapper {
+        margin-left: 0;
+    }
+
+    .header {
+        & > div {
+            font-size: .9rem;
+        }
+    }
+
+    .demande {
+        width: 45rem !important;
+
+        & > div {
+            font-size: .75rem !important;
+        }
+
+        .btns {
+            & > div {
+                margin: 0 !important;
+
+                &::after {
+                    width: 2rem !important;
+                    height: 2rem !important;
+                }
+
+                svg {
+                    height: .9rem !important;
+                    width: .9rem !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .Wrapper {
+        margin: 0 !important;
+    }
+}

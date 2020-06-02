@@ -1,3 +1,5 @@
+/*-------- Tablet Media Queries ---------*/
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -23,6 +25,7 @@ body {
 
 .Wrapper {
   margin-left: 7em;
+  height: 100%;
 }
 
 .header,
@@ -55,6 +58,7 @@ body {
 
 .demandeWrapper {
   background-color: #f0f4f7;
+  height: 100%;
 }
 
 .demandeWrapper .demande {
@@ -65,13 +69,12 @@ body {
   background-color: #FFF;
   margin: 0 auto;
   margin-top: .3rem;
-  width: 70rem;
+  width: 60rem;
   height: 4rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
-  border-radius: 35px;
 }
 
 .demandeWrapper .demande:hover {
@@ -95,6 +98,15 @@ body {
 
 .demandeWrapper .demande:hover .btns .delete path {
   fill: #f44336 !important;
+}
+
+.demandeWrapper .demande .id {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.demandeWrapper .demande .status {
+  width: 5rem;
 }
 
 .demandeWrapper .demande .img {
@@ -129,8 +141,21 @@ body {
   background-color: #49c466;
 }
 
-.demandeWrapper .demande > div:nth-child(2) {
-  width: 3rem;
+.demandeWrapper .demande .status img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.demandeWrapper .demande .lavage,
+.demandeWrapper .demande .vehicule,
+.demandeWrapper .demande .nbVehicule {
+  width: 5rem;
+}
+
+.demandeWrapper .demande > div {
+  font-weight: 500;
+  font-size: .85rem;
+  color: #424141;
 }
 
 .demandeWrapper .demande .btns div {
@@ -203,48 +228,36 @@ body {
   fill: #000000;
 }
 
-.demandeWrapper .N {
-  background-color: #ff4141;
-  color: #FFF;
+@media (min-width: 737px) and (max-width: 1200px) {
+  .Wrapper {
+    margin-left: 0;
+  }
+  .header > div {
+    font-size: .9rem;
+  }
+  .demande {
+    width: 45rem !important;
+  }
+  .demande > div {
+    font-size: .75rem !important;
+  }
+  .demande .btns > div {
+    margin: 0 !important;
+  }
+  .demande .btns > div::after {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  .demande .btns > div svg {
+    height: .9rem !important;
+    width: .9rem !important;
+    margin: 0 !important;
+  }
 }
 
-.demandeWrapper .N .btns > div svg {
-  fill: #FFF !important;
-}
-
-.demandeWrapper .N .btns > div svg path {
-  fill: #FFF !important;
-}
-
-.demandeWrapper .N:hover .btns > div::after {
-  display: none;
-}
-
-.demandeWrapper .N:hover .btns .accept svg path {
-  fill: #379b75 !important;
-}
-
-.demandeWrapper .N:hover .btns .accept .stroke {
-  fill: #000 !important;
-}
-
-.demandeWrapper .N:hover .btns .refuse svg path {
-  fill: orangered !important;
-}
-
-.demandeWrapper .N:hover .btns .refuse .stroke {
-  fill: #000 !important;
-}
-
-.demandeWrapper .N:hover .btns .delete svg {
-  fill: #000000 !important;
-}
-
-.demandeWrapper .N:hover .btns .delete path {
-  fill: #000000 !important;
-}
-
-.demandeWrapper .Y {
-  background-color: #b4ecb8;
+@media (min-width: 300px) and (max-width: 736px) {
+  .Wrapper {
+    margin: 0 !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
