@@ -59,8 +59,7 @@ body {
 }
 
 .header {
-  font-weight: 600;
-  width: 65rem;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -70,7 +69,7 @@ body {
 }
 
 .header .void {
-  width: 3rem;
+  width: 3.8rem;
 }
 
 .header .username_h {
@@ -95,7 +94,7 @@ body {
   background-color: #FFF;
   margin: 0 auto;
   margin-top: .3rem;
-  width: 65rem;
+  width: 80%;
   height: 4rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -119,7 +118,22 @@ body {
 }
 
 .demandeWrapper .demande .checkBox {
-  width: 2rem;
+  width: 3.8rem;
+}
+
+.demandeWrapper .demande .checkBox label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .demandeWrapper .demande .checkBox .checkB {
@@ -132,6 +146,17 @@ body {
 }
 
 .demandeWrapper .demande .checkBox .checkB:checked + label .box {
+  fill: #007ce2;
+  stroke: #007ce2;
+  stroke-width: 10px;
+}
+
+.demandeWrapper .demande .checkBox .checked .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.demandeWrapper .demande .checkBox .checked .box {
   fill: #007ce2;
   stroke: #007ce2;
   stroke-width: 10px;
@@ -311,12 +336,12 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-@media (min-width: 737px) and (max-width: 1200px) {
+@media (min-width: 300px) and (max-width: 1200px) {
   .Wrapper {
     margin-left: 0;
   }
   .header {
-    width: 45rem !important;
+    width: 90% !important;
   }
   .header > div {
     font-size: .8rem;
@@ -325,7 +350,7 @@ body {
     width: 7rem !important;
   }
   .demande {
-    width: 45rem !important;
+    width: 90% !important;
   }
   .demande > div {
     font-size: .75rem !important;

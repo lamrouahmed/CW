@@ -106,21 +106,6 @@ const d_statusChart = createChart($('#pie2'), 'doughnut', globalData.statusDeman
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 get('/PFE/admin/data.php');
 
 setInterval(() => get('/PFE/admin/data.php'), 1000)
