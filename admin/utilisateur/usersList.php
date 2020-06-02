@@ -11,13 +11,8 @@ $results = $DB->getAll("user", ["permission", 0])->results();
 <?php foreach($results as $result) {
 
 ?>
-<input type="checkbox" name="check" class="checkInput" id="<?php echo $result->u_id?>">
-<label for="<?php echo $result->u_id?>" class="mid" data-key="<?php echo $result->u_id; ?>" data-search="<?php echo "$result->u_id $result->username $result->last_name $result->first_name $result->phone $result->mail $result->created"?>" >
-<svg viewBox="0 0 100 100" class="checkbox">
-	            <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"/>
-                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "/>
-            </svg>
-<div class="user">
+
+<div class="mid"  data-key="<?php echo $result->u_id; ?>" data-search="<?php echo "$result->u_id $result->username $result->last_name $result->first_name $result->phone $result->mail $result->created"?>">
     <div class="p_img">
     <img src="/PFE/uploads/<?php echo $result->img?>" onerror="this.src='/PFE/uploads/user.svg'">
     <div class="<?php echo $result->status?> status"></div>
@@ -50,7 +45,6 @@ $results = $DB->getAll("user", ["permission", 0])->results();
                 </a>
     </div>
 </div>
-</label>
 
 <?php } ?>
 

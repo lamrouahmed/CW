@@ -23,14 +23,12 @@ $maxMobile: 736px;
     font-family: 'Montserrat', sans-serif;
 }
 
-html {
-    height: 100%;
-}
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -44,11 +42,11 @@ body {
         display: flex;
         background-color: #f0f4f7;
 
-        &>label:nth-child(2n) {
+        &>div:nth-child(2n) {
             animation: startup 400ms ease-in-out forwards;
         }
 
-        &>label:nth-child(2n+1) {
+        &>div:nth-child(2n+1) {
             animation: startup 700ms ease-in-out forwards;
         }
 
@@ -66,10 +64,6 @@ body {
         align-items: center;
         margin: 1em auto;
 
-        .checkWrapper {
-            justify-content: left;
-        }
-
         div {
             height: 100%;
             display: flex;
@@ -84,61 +78,7 @@ body {
             flex-basis: 4%;
         }
     }
-    .checkInput, .parentInput {
-        display: none;
 
-        &:checked + label {
-            // .box {
-            //     stroke-dashoffset: 320;
-                
-            // }
-            .check {
-                stroke-dashoffset: 0;
-                stroke: #FFF;
-            }
-            .box {
-                fill: rgb(0,124,226);
-                stroke: rgb(0,124,226);
-                stroke-width: 10px;
-            }
-        }
-    }
-    .checkbox {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        height: 1.2rem;
-        width: 1.2rem;
-        cursor: pointer;
-
-
-        width: 2em;
-        stroke: rgb(192, 194, 196);
-        stroke-width: 5;
-        fill: white;
-        stroke-width: 6px;
-        
-
-        .box {
-            stroke-dasharray: 320;
-            stroke-dashoffset: 0;
-            fill: white;
-            transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-            stroke-width: 6px;
-
-
-        }
-        .check {
-            stroke-dasharray: 82;
-            stroke-dashoffset: 83;
-            fill: none;
-            transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-            stroke-width: 11px;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-    }
-
-  
     .mid {
         display: flex;
         width: 80%;
@@ -150,7 +90,7 @@ body {
         transition: all 200ms ease-in-out;
         transform: scale(1);
         opacity: 1;
-        cursor: pointer;
+
 
         &:hover {
             transform: scale(1.03);
@@ -167,7 +107,7 @@ body {
             }
         }
 
-        div{
+        div {
             font-size: .85em;
             color: #828181;
             font-weight: 500;
@@ -513,9 +453,9 @@ body {
             display: none;
         }
 
-        .user, .mid {
+        .mid {
             flex-direction: column;
-            height: 23rem !important;
+            height: 23rem;
             margin-top: 1em;
 
             .p_img {
