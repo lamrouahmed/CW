@@ -37,7 +37,15 @@ if(Input::exists()) {
 
         <div class="demandeWrapper">
             <div class="header">
-                <div class="void"></div>
+            <div class="checkBox_h">
+            <input type="checkbox" class="checkB" id="-1">
+                    <label class="label" for="-1">
+                    <svg viewBox="0 0 100 100" class="checkboxSvg" >
+	            <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
+                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+            </svg>
+                    </label>
+                </div>
                 <div class="id_h">#</div>
                 <div class="username_h">u_id</div>
                 <div class="type_lavage_h">T_lavage</div>
@@ -57,10 +65,11 @@ if(Input::exists()) {
                 <img src="../../uploads/<?php echo $result->img?>">
                 <div class="status <?php echo $result->status?>"></div>
             </div> -->
+            <input type="checkbox" class="checkB" id = "<?php echo $result->demande_id?>">
+
                 <div class="checkBox">
-                <input type="checkbox" class="checkB" id="<?php echo $result->demande_id?>">
-                    <label for="<?php echo $result->demande_id?>">
-                    <svg viewBox="0 0 100 100" class="checkboxSvg">
+                    <label class="label" for = "<?php echo $result->demande_id?>">
+                    <svg viewBox="0 0 100 100" class="checkboxSvg" ">
 	            <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
                 <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
             </svg>

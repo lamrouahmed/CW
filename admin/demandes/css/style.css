@@ -58,6 +58,66 @@ body {
   width: 3rem;
 }
 
+.checkboxSvg {
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  stroke: #c0c2c4;
+  stroke-width: 5;
+  fill: white;
+  stroke-width: 6px;
+}
+
+.checkboxSvg .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 6px;
+}
+
+.checkboxSvg .check {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 83;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.checked .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.checked .box {
+  fill: #007ce2;
+  stroke: #007ce2;
+  stroke-width: 10px;
+}
+
+.checkB {
+  display: none;
+}
+
 .header {
   width: 80%;
   margin: 0 auto;
@@ -79,6 +139,10 @@ body {
 .header .date_demande_h,
 .header .action_h {
   width: 10rem;
+}
+
+.header .checkBox_h {
+  width: 3.8rem !important;
 }
 
 .demandeWrapper {
@@ -118,85 +182,14 @@ body {
   fill: #f44336 !important;
 }
 
-.demandeWrapper .demande .checkBox {
-  width: 3.8rem;
-}
-
-.demandeWrapper .demande .checkBox label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.demandeWrapper .demande .checkBox .checkB {
-  display: none;
-}
-
-.demandeWrapper .demande .checkBox .checkB:checked + label .check {
-  stroke-dashoffset: 0;
-  stroke: #FFF;
-}
-
-.demandeWrapper .demande .checkBox .checkB:checked + label .box {
-  fill: #007ce2;
-  stroke: #007ce2;
-  stroke-width: 10px;
-}
-
-.demandeWrapper .demande .checkBox .checked .check {
-  stroke-dashoffset: 0;
-  stroke: #FFF;
-}
-
-.demandeWrapper .demande .checkBox .checked .box {
-  fill: #007ce2;
-  stroke: #007ce2;
-  stroke-width: 10px;
-}
-
-.demandeWrapper .demande .checkBox .checkboxSvg {
-  height: 1.3rem;
-  width: 1.3rem;
-  cursor: pointer;
-  stroke: #c0c2c4;
-  stroke-width: 5;
-  fill: white;
-  stroke-width: 6px;
-}
-
-.demandeWrapper .demande .checkBox .checkboxSvg .box {
-  stroke-dasharray: 320;
-  stroke-dashoffset: 0;
-  fill: white;
-  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-  stroke-width: 6px;
-}
-
-.demandeWrapper .demande .checkBox .checkboxSvg .check {
-  stroke-dasharray: 82;
-  stroke-dashoffset: 83;
-  fill: none;
-  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-  stroke-width: 11px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .demandeWrapper .demande .id {
   font-size: 1.1rem;
   font-weight: 600;
   width: 3rem;
+}
+
+.demandeWrapper .demande .checkBox {
+  width: 3.8rem;
 }
 
 .demandeWrapper .demande .status {

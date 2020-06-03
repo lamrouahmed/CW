@@ -174,7 +174,85 @@ body {
     }
 }
 
+
+.checkboxSvg {
+              
+    height: 1.3rem;
+    width: 1.3rem;
+    cursor: pointer;
+    stroke: rgb(192, 194, 196);
+    stroke-width: 5;
+    fill: white;
+    stroke-width: 6px;
+    
+
+    .box {
+        stroke-dasharray: 320;
+        stroke-dashoffset: 0;
+        fill: white;
+        transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+        stroke-width: 6px;
+
+
+    }
+    .check {
+        stroke-dasharray: 82;
+        stroke-dashoffset: 83;
+        fill: none;
+        transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+        stroke-width: 11px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}
+
+.label {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+}
+
+.checked {
+    // .box {
+    //     stroke-dashoffset: 320;
+        
+    // }
+    .check {
+        stroke-dashoffset: 0;
+        stroke: #FFF;
+    }
+    .box {
+        fill: rgb(0,124,226);
+        stroke: rgb(0,124,226);
+        stroke-width: 10px;
+    }
+}
+
+.checkB {
+    display: none;
+}
+
+
+
+
+
+
+
 .header {
+
+
+
+
+
+
+
+
+
+
+
     &>div {
         width: 5rem;
         font-size: .9rem;
@@ -193,6 +271,10 @@ body {
     .action_h {
         width: 10rem;
     }
+    .checkBox_h {
+            width: 3.8rem !important;
+    }
+    
 }
 
 .demandeWrapper {
@@ -244,89 +326,113 @@ body {
             }
         }
 
-        .checkBox {
-            width: 3.8rem;
 
-            label {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
-            .checkB {
-                display: none;
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        // .checkBox {
+        //     width: 3.8rem;
+
+        //     label {
+        //         width: 100%;
+        //         height: 100%;
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         cursor: pointer;
+        //     }
+        //     .checkB {
+        //         display: none;
             
-            &:checked + label {
-                // .box {
-                //     stroke-dashoffset: 320;
+        //     &:checked + label {
+        //         // .box {
+        //         //     stroke-dashoffset: 320;
                     
-                // }
-                .check {
-                    stroke-dashoffset: 0;
-                    stroke: #FFF;
-                }
-                .box {
-                    fill: rgb(0,124,226);
-                    stroke: rgb(0,124,226);
-                    stroke-width: 10px;
-                }
-            }
-            }
+        //         // }
+        //         .check {
+        //             stroke-dashoffset: 0;
+        //             stroke: #FFF;
+        //         }
+        //         .box {
+        //             fill: rgb(0,124,226);
+        //             stroke: rgb(0,124,226);
+        //             stroke-width: 10px;
+        //         }
+        //     }
+        //     }
 
-            .checked {
-                    // .box {
-                    //     stroke-dashoffset: 320;
+        //     .checked {
+        //             // .box {
+        //             //     stroke-dashoffset: 320;
                         
-                    // }
-                    .check {
-                        stroke-dashoffset: 0;
-                        stroke: #FFF;
-                    }
-                    .box {
-                        fill: rgb(0,124,226);
-                        stroke: rgb(0,124,226);
-                        stroke-width: 10px;
-                    }
-            }
+        //             // }
+        //             .check {
+        //                 stroke-dashoffset: 0;
+        //                 stroke: #FFF;
+        //             }
+        //             .box {
+        //                 fill: rgb(0,124,226);
+        //                 stroke: rgb(0,124,226);
+        //                 stroke-width: 10px;
+        //             }
+        //     }
 
 
-            .checkboxSvg {
+        //     .checkboxSvg {
               
-                height: 1.3rem;
-                width: 1.3rem;
-                cursor: pointer;
-                stroke: rgb(192, 194, 196);
-                stroke-width: 5;
-                fill: white;
-                stroke-width: 6px;
+        //         height: 1.3rem;
+        //         width: 1.3rem;
+        //         cursor: pointer;
+        //         stroke: rgb(192, 194, 196);
+        //         stroke-width: 5;
+        //         fill: white;
+        //         stroke-width: 6px;
                 
         
-                .box {
-                    stroke-dasharray: 320;
-                    stroke-dashoffset: 0;
-                    fill: white;
-                    transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-                    stroke-width: 6px;
+        //         .box {
+        //             stroke-dasharray: 320;
+        //             stroke-dashoffset: 0;
+        //             fill: white;
+        //             transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+        //             stroke-width: 6px;
         
         
-                }
-                .check {
-                    stroke-dasharray: 82;
-                    stroke-dashoffset: 83;
-                    fill: none;
-                    transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
-                    stroke-width: 11px;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                }
-            }
-        }
+        //         }
+        //         .check {
+        //             stroke-dasharray: 82;
+        //             stroke-dashoffset: 83;
+        //             fill: none;
+        //             transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+        //             stroke-width: 11px;
+        //             stroke-linecap: round;
+        //             stroke-linejoin: round;
+        //         }
+        //     }
+        // }
         .id {
             font-size: 1.1rem;
             font-weight: 600;
             width: 3rem;
+        }
+
+        .checkBox {
+            width: 3.8rem;
         }
 
         .status {

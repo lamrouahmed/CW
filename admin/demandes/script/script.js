@@ -46,4 +46,15 @@ function remove(node, time) {
 btns.forEach(btn => btn.addEventListener('click', e => modify(e, urls[0])));
 
 
+$$('.label').forEach((label, i) => label.addEventListener('click', e => {
+  // label.querySelector('.checkB').checked === true && console.log('checked');
+  !($$('.checkB')[i].checked) && $$('.checkboxSvg')[i].classList.add('checked');
+  ($$('.checkB')[i].checked) && $$('.checkboxSvg')[i].classList.remove('checked');
+}))
 
+
+
+
+// $('.checkB_h').addEventListener('click', () => {
+
+// })
