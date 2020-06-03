@@ -35,26 +35,57 @@ if(Input::exists()) {
 <body>
     <div class="Wrapper">
 
+    <div class="info">
+        <div class="stats">
+            <div class="totalDemandes">
+                <div class="title">
+                    Total Demandes
+                </div>
+                <div class="text">
+                    45
+                </div>
+            </div>
+            <div class="demandes_r">
+                <div class="title">
+                    Demandes refusees
+                </div>
+                <div class="text">
+                    45
+                </div>
+            </div>
+            <div class="demandes_a">
+                <div class="title">
+                    Demandes acceptees
+                </div>
+                <div class="text">
+                    45
+                </div>
+            </div>
+        </div>
+        <div class="search"></div>
+    </div>
+
+
         <div class="demandeWrapper">
             <div class="header">
-            <div class="checkBox_h">
-            <input type="checkbox" class="checkB" id="-1">
-                    <label class="label" for="-1">
-                    <svg viewBox="0 0 100 100" class="checkboxSvg" >
-	            <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
-                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
-            </svg>
-                    </label>
-                </div>
-                <div class="id_h">#</div>
-                <div class="username_h">u_id</div>
-                <div class="type_lavage_h">T_lavage</div>
-                <div class="type_vehicule_h">T_vehicule</div>
-                <div class="nb_vehicules_h">Nb_vehicule</div>
-                <div class="date_demande_h">D_demande</div>
-                <div class="status_h">Status</div>
-                <div class="prix_h">Prix</div>
-                <div class="action_h">Action</div>
+                <div class="checkBox_h">
+                <input type="checkbox" class="checkB_h" id="-1">
+                        <label class="label_h" for="-1">
+                        <svg viewBox="0 0 100 100" class="checkboxSvg_h" >
+                    <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
+                    <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+                </svg>
+                        </label>
+                    </div>
+                    <div class="id_h">#</div>
+                    <div class="username_h">u_id</div>
+                    <div class="type_lavage_h">T_lavage</div>
+                    <div class="type_vehicule_h">T_vehicule</div>
+                    <div class="nb_vehicules_h">Nb_vehicule</div>
+                    <div class="date_demande_h">D_demande</div>
+                    <div class="status_h">Status</div>
+                    <div class="prix_h">Prix</div>
+                    <div class="action_h">Action</div>
             </div>
             <?php
         if($demandes->count()) {
