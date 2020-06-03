@@ -9,9 +9,18 @@ const demandes = $$('.demande');
 const btns = $$('.btns > div');
 const inputSearch = $('.search');
 
+
+const RemoveAll = $('.delete_h');
+const AcceptAll = $('.accept_h');
+const RefuseAll = $('.refuse_h');
+
+
+
 const Remove = $$('.delete');
 const Accept = $$('.accept');
 const Refuse = $$('.refuse');
+
+const actionAll = $$('.stats > div');
 
 
 function post(action, id, url) {
@@ -54,6 +63,13 @@ Remove.forEach(btn => btn.addEventListener('click', e => remove(e.currentTarget.
 
 
 
+
+AcceptAll.addEventListener('click', () => acceptAll($$('.checkB'), urls[0]));
+RefuseAll.addEventListener('click', () => refuseAll($$('.checkB'), urls[0]));
+RemoveAll.addEventListener('click', () => removeAll($$('.checkB'), urls[0], 300));
+
+
+
 function accept(id, demande, url) {
   const img = demande.querySelector('.status img');
   post('accept', id, url)
@@ -68,6 +84,14 @@ function remove(id, demande, url, time) {
   post('delete', id, url)
   demande.classList.add('deleteAnimation')
   setTimeout(() => demande.remove(), time)
+}
+
+function acceptAll(checkBoxes, url) {
+  Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach(checked => accept(checked.dataset.check, $(`[data-key = '${checked.dataset.check}']`) ,url));
+}
+
+function refuseAll(checkBoxes, url) {
+  Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach(checked => refuse(checked.dataset.check, $(`[data-key = '${checked.dataset.check}']`) ,url));
 }
 
 
