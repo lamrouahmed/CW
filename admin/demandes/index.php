@@ -2,7 +2,9 @@
 require_once '../../core/init.php';
 require_once '../sideBar/sideBar.php';
 $demande = new Demande();
+
 $demandes = $demande->getAll();
+
 
 if(Input::exists()) {
     $id = Input::get('id');
@@ -42,7 +44,7 @@ if(Input::exists()) {
                         Total Demandes
                     </div>
                     <div class="text">
-                        45
+                        0
                     </div>
                 </div>
                 <div class="demandes_r">
@@ -50,7 +52,7 @@ if(Input::exists()) {
                         Demandes refusees
                     </div>
                     <div class="text">
-                        45
+                        0
                     </div>
                 </div>
                 <div class="demandes_a">
@@ -58,7 +60,7 @@ if(Input::exists()) {
                         Demandes acceptees
                     </div>
                     <div class="text">
-                        45
+                        0
                     </div>
                 </div>
             </div>
@@ -105,10 +107,7 @@ if(Input::exists()) {
             foreach($demandes->results() as $result){
                ?>
             <div class="demande <?php echo $result->status_demande?>" data-key="<?php echo $result->demande_id?>" data-search="<?php echo "$result->demande_id $result->username $result->type_lavage $result->type_vehicule $result->nb_vehicules $result->date_demande"?>">
-                <!-- <div class="img">
-                <img src="../../uploads/<?php echo $result->img?>">
-                <div class="status <?php echo $result->status?>"></div>
-            </div> -->
+
                 <input type="checkbox" class="checkB" id="<?php echo $result->demande_id?>">
 
                 <div class="checkBox">
@@ -143,7 +142,7 @@ if(Input::exists()) {
                     <img src="./img/<?php echo $result->status_demande?>.svg">
                 </div>
                 <div class="prix">
-                    <p><?php echo $result->prix?> M.A.D</p>
+                    <p><?php echo $result->prix * $result->nb_vehicules?> M.A.D</p>
                 </div>
                 <div class="btns">
                     <div class="accept" data-action="accept" data-id="<?php echo $result->demande_id?>">

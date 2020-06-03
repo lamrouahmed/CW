@@ -38,4 +38,6 @@
         public function getDemandes() {
             return $this->db->query("SELECT * FROM demande", [], "SELECT");
         }
+
+        
 }
