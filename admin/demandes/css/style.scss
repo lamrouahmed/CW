@@ -166,25 +166,60 @@ body {
     height: 7rem;
     display: flex;
     align-items: center;
+
     .stats {
         display: flex;
 
-        & > div {
+        &>div {
             margin-right: 1.4em;
-         }
+        }
 
         .title,
         .text {
             font-weight: 500;
         }
+
         .text {
             font-size: 1.5rem;
             color: #3976ec;
         }
+
         .title {
             font-size: .8rem;
             color: #5e5959;
             margin-bottom: .5rem;
+        }
+    }
+
+    .searchContainer {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        
+        
+        .search {
+            height: 3rem;
+            border-radius: 30px;
+            border: 1px solid rgb(216, 213, 213);
+            font-weight: 500;
+            padding-left: 1rem;
+    
+        }
+
+        .searchSvg {
+            cursor: pointer;
+            position: absolute;
+            right: 4%;
+            svg {
+                width: 1.8rem;
+                width: 1.8rem;
+
+                path {
+                    fill: rgb(190, 189, 189);
+                }
+            }
         }
     }
 }
@@ -706,6 +741,15 @@ body {
     // .Y {
     //     background-color: #b4ecb8;
     // }
+}
+
+.filter {
+    transition: all 200ms ease-in-out;
+    height: 0 !important;
+    opacity: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    animation: none !important;
 }
 
 

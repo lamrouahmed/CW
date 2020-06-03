@@ -7,7 +7,7 @@ const urls = [
 
 const demandes = $$('.demande');
 const btns = $$('.btns > div');
-
+const inputSearch = $('.search');
 
 
 function post(action, id, url) {
@@ -86,6 +86,21 @@ demandes.forEach((demande, index) => {
 
 })
 
-// $('.checkB_h').addEventListener('click', () => {
 
-// })
+
+
+
+
+
+inputSearch.addEventListener('keyup', e => search(e, demandes))
+
+function search(e, nodes) {
+  nodes.forEach((node) => {
+    console.log(node.dataset.search.trim())
+    if (!node.dataset.search.trim().includes(e.target.value)) {
+      node.classList.add('filter');
+    } else {
+      node.classList.remove('filter');
+    }
+  })
+}

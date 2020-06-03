@@ -35,75 +35,90 @@ if(Input::exists()) {
 <body>
     <div class="Wrapper">
 
-    <div class="info">
-        <div class="stats">
-            <div class="totalDemandes">
-                <div class="title">
-                    Total Demandes
+        <div class="info">
+            <div class="stats">
+                <div class="totalDemandes">
+                    <div class="title">
+                        Total Demandes
+                    </div>
+                    <div class="text">
+                        45
+                    </div>
                 </div>
-                <div class="text">
-                    45
+                <div class="demandes_r">
+                    <div class="title">
+                        Demandes refusees
+                    </div>
+                    <div class="text">
+                        45
+                    </div>
+                </div>
+                <div class="demandes_a">
+                    <div class="title">
+                        Demandes acceptees
+                    </div>
+                    <div class="text">
+                        45
+                    </div>
                 </div>
             </div>
-            <div class="demandes_r">
-                <div class="title">
-                    Demandes refusees
-                </div>
-                <div class="text">
-                    45
-                </div>
-            </div>
-            <div class="demandes_a">
-                <div class="title">
-                    Demandes acceptees
-                </div>
-                <div class="text">
-                    45
+            <div class="searchContainer">
+                <input type="text" class="search">
+                <div class="searchSvg">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
+                        style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+
+                        <path
+                            d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667    S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732    c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667    c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z" />
+
                 </div>
             </div>
         </div>
-        <div class="search"></div>
-    </div>
 
 
         <div class="demandeWrapper">
             <div class="header">
                 <div class="checkBox_h">
-                <input type="checkbox" class="checkB_h" id="-1">
-                        <label class="label_h" for="-1">
-                        <svg viewBox="0 0 100 100" class="checkboxSvg_h" >
-                    <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
-                    <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
-                </svg>
-                        </label>
-                    </div>
-                    <div class="id_h">#</div>
-                    <div class="username_h">u_id</div>
-                    <div class="type_lavage_h">T_lavage</div>
-                    <div class="type_vehicule_h">T_vehicule</div>
-                    <div class="nb_vehicules_h">Nb_vehicule</div>
-                    <div class="date_demande_h">D_demande</div>
-                    <div class="status_h">Status</div>
-                    <div class="prix_h">Prix</div>
-                    <div class="action_h">Action</div>
+                    <input type="checkbox" class="checkB_h" id="-1">
+                    <label class="label_h" for="-1">
+                        <svg viewBox="0 0 100 100" class="checkboxSvg_h">
+                            <path class="box"
+                                d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z">
+                            </path>
+                            <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <div class="id_h">#</div>
+                <div class="username_h">u_id</div>
+                <div class="type_lavage_h">T_lavage</div>
+                <div class="type_vehicule_h">T_vehicule</div>
+                <div class="nb_vehicules_h">Nb_vehicule</div>
+                <div class="date_demande_h">D_demande</div>
+                <div class="status_h">Status</div>
+                <div class="prix_h">Prix</div>
+                <div class="action_h">Action</div>
             </div>
             <?php
         if($demandes->count()) {
             foreach($demandes->results() as $result){
                ?>
-            <div class="demande <?php echo $result->status_demande?>" data-key="<?php echo $result->demande_id?>">
+            <div class="demande <?php echo $result->status_demande?>" data-key="<?php echo $result->demande_id?>" data-search="<?php echo "$result->demande_id $result->username $result->type_lavage $result->type_vehicule $result->nb_vehicules $result->date_demande"?>">
                 <!-- <div class="img">
                 <img src="../../uploads/<?php echo $result->img?>">
                 <div class="status <?php echo $result->status?>"></div>
             </div> -->
-            <input type="checkbox" class="checkB" id = "<?php echo $result->demande_id?>">
+                <input type="checkbox" class="checkB" id="<?php echo $result->demande_id?>">
 
                 <div class="checkBox">
-                    <label class="label" for = "<?php echo $result->demande_id?>">
-                    <svg viewBox="0 0 100 100" class="checkboxSvg" ">
-	            <path class="box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z"></path>
-                <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
-            </svg>
+                    <label class="label" for="<?php echo $result->demande_id?>">
+                        <svg viewBox="0 0 100 100" class="checkboxSvg" ">
+	            <path class=" box"
+                            d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z">
+                            </path>
+                            <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+                        </svg>
                     </label>
                 </div>
                 <div class="id">
@@ -132,10 +147,18 @@ if(Input::exists()) {
                 </div>
                 <div class="btns">
                     <div class="accept" data-action="accept" data-id="<?php echo $result->demande_id?>">
-                    <svg height="417pt" viewBox="0 -46 417.81333 417" width="417pt" xmlns="http://www.w3.org/2000/svg"><path d="m159.988281 318.582031c-3.988281 4.011719-9.429687 6.25-15.082031 6.25s-11.09375-2.238281-15.082031-6.25l-120.449219-120.46875c-12.5-12.5-12.5-32.769531 0-45.246093l15.082031-15.085938c12.503907-12.5 32.75-12.5 45.25 0l75.199219 75.203125 203.199219-203.203125c12.503906-12.5 32.769531-12.5 45.25 0l15.082031 15.085938c12.5 12.5 12.5 32.765624 0 45.246093zm0 0" fill="#2196f3"/></svg>
+                        <svg height="417pt" viewBox="0 -46 417.81333 417" width="417pt"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m159.988281 318.582031c-3.988281 4.011719-9.429687 6.25-15.082031 6.25s-11.09375-2.238281-15.082031-6.25l-120.449219-120.46875c-12.5-12.5-12.5-32.769531 0-45.246093l15.082031-15.085938c12.503907-12.5 32.75-12.5 45.25 0l75.199219 75.203125 203.199219-203.203125c12.503906-12.5 32.769531-12.5 45.25 0l15.082031 15.085938c12.5 12.5 12.5 32.765624 0 45.246093zm0 0"
+                                fill="#2196f3" /></svg>
                     </div>
                     <div class="refuse" data-action="refuse" data-id="<?php echo $result->demande_id?>">
-                    <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg"><path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/></svg> </div>
+                        <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" />
+                            </svg> </div>
                     <div class="delete" data-action="delete" data-id="<?php echo $result->demande_id?>">
                         <svg data-id="115" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384"
@@ -150,7 +173,7 @@ if(Input::exists()) {
                         </svg>
                     </div>
                 </div>
-                        </div>
+            </div>
 
             <?php
       }
