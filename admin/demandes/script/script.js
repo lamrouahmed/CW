@@ -106,8 +106,14 @@ function refuseAll(checkBoxes, url) {
 
 
 $$('.label').forEach((label, i) => label.addEventListener('click', e => {
-  !($$('.checkB')[i].checked) && $$('.checkboxSvg')[i].classList.add('checked');
-  ($$('.checkB')[i].checked) && $$('.checkboxSvg')[i].classList.remove('checked');
+  if(!$$('.checkB')[i].checked)  {
+    $$('.checkboxSvg')[i].classList.add('checked')
+    $('.btns_h').style.display = 'flex';
+  };
+  if($$('.checkB')[i].checked) {
+    $$('.checkboxSvg')[i].classList.remove('checked')
+    if(Array.from($$('.checkB')).filter(check => check.checked).length === 1) $('.btns_h').style.display = 'none';
+  }
 }))
 
 
@@ -122,13 +128,18 @@ function checkAll(checkBoxes) {
       checkBox.checked = true;
       $$('.checkboxSvg')[i].classList.add('checked');
     })
-  
+
+    $('.btns_h').style.display = 'flex';
+
+
   } else if($('.checkB_h').checked){
     $('.checkboxSvg_h').classList.remove('checked')
     checkBoxes.forEach((checkBox, i) => {
       checkBox.checked = false;
       $$('.checkboxSvg')[i].classList.remove('checked');
     })
+    $('.btns_h').style.display = 'none';
+
   }
 
 }

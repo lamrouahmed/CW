@@ -136,9 +136,7 @@ body {
 }
 
 .actions .btns_h {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .actions .btns_h div {
