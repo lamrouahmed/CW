@@ -6,6 +6,8 @@ const urls = [
 ]
 
 
+const labels = $$('.label');
+
 const cross = $('.cross');
 const cancel = $('.annuler');
 const ok = $('.ok');
@@ -90,6 +92,8 @@ function remove(id, demande, url, time) {
   post('delete', id, url)
   demande.classList.add('deleteAnimation')
   setTimeout(() => demande.remove(), time)
+  demandes = $$('.demande');
+
 }
 
 function acceptAll(checkBoxes, url) {
@@ -116,6 +120,10 @@ cancel.addEventListener('click', hidePopUp)
 ok.addEventListener('click', () => {
   hidePopUp()
   removeAll($$('.checkB'), urls[0], 300)
+  demandes = $$('.demande');
+  $('.btns_h').style.display = 'none';
+
+
 })
 
 function hidePopUp() {
@@ -134,13 +142,13 @@ $('.bg').addEventListener('click', e => {
 
 
 
-$$('.label').forEach((label, i) => label.addEventListener('click', e => {
-  if(!$$('.checkB')[i].checked)  {
-    $$('.checkboxSvg')[i].classList.add('checked')
+labels.forEach((label, i) => label.addEventListener('click', e => {
+  if(!document.getElementById(`${label.getAttribute('for')}`).checked)  {
+    label.querySelector('.checkboxSvg').classList.add('checked')
     $('.btns_h').style.display = 'flex';
   };
-  if($$('.checkB')[i].checked) {
-    $$('.checkboxSvg')[i].classList.remove('checked')
+  if(document.getElementById(`${label.getAttribute('for')}`).checked) {
+    label.querySelector('.checkboxSvg').classList.remove('checked')
     if(Array.from($$('.checkB')).filter(check => check.checked).length === 1) $('.btns_h').style.display = 'none';
   }
 }))
@@ -153,9 +161,9 @@ $('.label_h').addEventListener('click', () => checkAll($$('.checkB')));
 function checkAll(checkBoxes) {
   if(!$('.checkB_h').checked) { 
     $('.checkboxSvg_h').classList.add('checked')
-    checkBoxes.forEach((checkBox, i) => {
+    checkBoxes.forEach((checkBox) => {
       checkBox.checked = true;
-      $$('.checkboxSvg')[i].classList.add('checked');
+      $(`[data-for='${checkBox.dataset.check}'] svg`).classList.add('checked');
     })
 
     $('.btns_h').style.display = 'flex';
@@ -163,9 +171,9 @@ function checkAll(checkBoxes) {
 
   } else if($('.checkB_h').checked){
     $('.checkboxSvg_h').classList.remove('checked')
-    checkBoxes.forEach((checkBox, i) => {
+    checkBoxes.forEach((checkBox) => {
       checkBox.checked = false;
-      $$('.checkboxSvg')[i].classList.remove('checked');
+      $(`[data-for='${checkBox.dataset.check}'] svg`).classList.remove('checked');
     })
     $('.btns_h').style.display = 'none';
 
