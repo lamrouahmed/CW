@@ -2,8 +2,10 @@
 require_once '../../core/init.php';
 require_once '../sideBar/sideBar.php';
 $demande = new Demande();
-
+$N = $demande->getDemandesN()->count();
+$Y = $demande->getDemandesY()->count();
 $demandes = $demande->getAll();
+
 
 
 if(Input::exists()) {
@@ -44,7 +46,7 @@ if(Input::exists()) {
                         Total Demandes
                     </div>
                     <div class="text">
-                        0
+                        <?php echo $demandes->count() ?>
                     </div>
                 </div>
                 <div class="demandes_r">
@@ -52,7 +54,7 @@ if(Input::exists()) {
                         Demandes refusees
                     </div>
                     <div class="text">
-                        0
+                    <?php echo $N ?>
                     </div>
                 </div>
                 <div class="demandes_a">
@@ -60,7 +62,7 @@ if(Input::exists()) {
                         Demandes acceptees
                     </div>
                     <div class="text">
-                        0
+                    <?php echo $Y ?>
                     </div>
                 </div>
             </div>
@@ -137,6 +139,7 @@ if(Input::exists()) {
                 <div class="prix_h">Prix</div>
                 <div class="action_h">Action</div>
             </div>
+            <div class="demandes">
             <?php
         if($demandes->count()) {
             foreach($demandes->results() as $result){
@@ -216,6 +219,7 @@ if(Input::exists()) {
       }
     }
 ?>
+            </div>
         </div>
 
 

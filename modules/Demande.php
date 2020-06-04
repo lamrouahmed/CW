@@ -38,6 +38,12 @@
         public function getDemandes() {
             return $this->db->query("SELECT * FROM demande", [], "SELECT");
         }
+        public function getDemandesN() {
+            return $this->db->query("SELECT * FROM demande WHERE status_demande='N'", [], "SELECT");
+        }
+        public function getDemandesY() {
+            return $this->db->query("SELECT * FROM demande WHERE status_demande='Y'", [], "SELECT");
+        }
 
         
 }
