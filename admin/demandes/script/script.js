@@ -190,10 +190,11 @@ $('.label_h').addEventListener('click', () => checkAll($$('.checkB')));
 
 
 function checkAll(checkBoxes) {
+  let color;
   if (!$('.checkB_h').checked) {
     $('.checkboxSvg_h').classList.add('checked')
     checkBoxes.forEach((checkBox) => {
-      let color = colorArray[getRandomInt(colorArray.length)];
+      color = colorArray[getRandomInt(colorArray.length)];
       checkBox.checked = true;
       $(`[data-for='${checkBox.dataset.check}'] svg`).classList.add('checked');
       $(`[data-for='${checkBox.dataset.check}'] svg path`).style.fill = color
