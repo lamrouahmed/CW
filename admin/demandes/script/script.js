@@ -123,6 +123,8 @@ ok.addEventListener('click', () => {
   demandes = $$('.demande');
   $('.btns_h').style.display = 'none';
 
+  $('.checkboxSvg_h').classList.remove('checked')
+  $('.checkB_h').checked=false;
 
 })
 
