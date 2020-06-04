@@ -101,37 +101,7 @@ body {
         }
     }
 
-    .searchContainer {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        position: relative;
 
-        
-        
-        .search {
-            height: 3rem;
-            border-radius: 30px;
-            border: 1px solid rgb(216, 213, 213);
-            font-weight: 500;
-            padding-left: 1rem;
-    
-        }
-
-        .searchSvg {
-            cursor: pointer;
-            position: absolute;
-            right: 4%;
-            svg {
-                width: 1.8rem;
-                width: 1.8rem;
-
-                path {
-                    fill: rgb(190, 189, 189);
-                }
-            }
-        }
-    }
 }
 
 
@@ -145,9 +115,11 @@ body {
     display: flex;
     align-items: center;
 
+
     .checkBox_h {
         width: 3.8rem ;
         height: 3.8rem ;
+        margin-left: .6rem;
 
         .label_h {
             height: 100%;
@@ -176,6 +148,12 @@ body {
                 width: 1rem;
                 // padding: 1rem;
 
+                 path {
+                    fill: grey;
+                }
+                fill: grey;
+
+
             }
 
             &::after {
@@ -198,12 +176,15 @@ body {
                 &::after {
                     background-color: #bee6cd;
                     transform: scale(1);
+
+                }
+                svg path {
+                    fill: #379b75;
+
                 }
             }
 
-            svg path {
-                fill: #379b75;
-            }
+
         }
 
         .refuse_h {
@@ -214,11 +195,12 @@ body {
                     transform: scale(1);
 
                 }
+                svg path {
+                    fill: #ffd200 ;
+                }
             }
 
-            svg path {
-                fill: #ffd200 ;
-            }
+
         }
 
         .delete_h {
@@ -229,16 +211,18 @@ body {
                     transform: scale(1);
 
                 }
+
+                svg {
+                    fill: #f44336 ;
+    
+                }
+    
+                path {
+                    fill: #f44336;
+                }
             }
 
-            svg {
-                fill: #f44336 ;
 
-            }
-
-            path {
-                fill: #f44336;
-            }
         }
     }
 
@@ -348,6 +332,7 @@ body {
 
 .header {
 
+    box-shadow: 0 0 5px 0 #d7d3d3;
 
 
 
@@ -373,7 +358,9 @@ body {
     margin: 0 auto;
 
     .username_h {
-        width: 7rem;
+        width: 5rem;
+        display: flex;
+justify-content: left;
     }
 
     .date_demande_h,
@@ -385,9 +372,53 @@ body {
 
 }
 
+.searchContainer {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 2rem;
+
+    
+    
+    .search {
+        height: 2.5rem;
+        border-radius: 30px;
+        border: 1px solid rgb(216, 213, 213);
+        font-weight: 500;
+        padding-left: 1rem;
+        width: 6rem;
+        transition: all 300ms ease-in-out;
+        transform-origin: left;
+
+        &:focus {
+            width: 12rem;
+            transition: all 300ms ease-in-out;
+        }
+
+    }
+
+    .searchSvg {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        svg {
+            width: 1.5rem;
+            width: 1.5rem;
+
+            path {
+                fill: rgb(190, 189, 189);
+            }
+        }
+    }
+}
+
+
+
+
 .demandeWrapper {
 
- 
+    
 
     .demande {
         font-weight: 400;
@@ -400,10 +431,12 @@ body {
         opacity: 1;
         position: relative;
         margin-bottom: 1px;
-
+        box-shadow: none;
+        transform: scale(1);
         &:hover {
-            // transition: all 200ms ease-in-out;
-            // transform: scale(1.015);
+
+            background-color: rgb(248, 248, 248);
+
 
             .btns {
 

@@ -64,18 +64,7 @@ if(Input::exists()) {
                     </div>
                 </div>
             </div>
-            <div class="searchContainer">
-                <input type="text" class="search">
-                <div class="searchSvg">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
-                        style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
 
-                        <path
-                            d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667    S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732    c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667    c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z" />
-
-                </div>
-            </div>
         </div>
 
 
@@ -120,13 +109,26 @@ if(Input::exists()) {
                         </svg>
                     </div>
                 </div>
+                <div class="searchContainer">
+                    <input type="text" class="search">
+                    <div class="searchSvg">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
+                            style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+
+                            <path
+                                d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667    S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732    c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667    c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z" />
+
+                    </div>
+                </div>
             </div>
 
 
             <div class="header">
 
+                <div class="void"></div>
                 <div class="id_h">#</div>
-                <div class="username_h">u_id</div>
+                <div class="username_h">username</div>
                 <div class="type_lavage_h">T_lavage</div>
                 <div class="type_vehicule_h">T_vehicule</div>
                 <div class="nb_vehicules_h">Nb_vehicule</div>
@@ -142,10 +144,12 @@ if(Input::exists()) {
             <div class="demande <?php echo $result->status_demande?>" data-key="<?php echo $result->demande_id?>"
                 data-search="<?php echo "$result->demande_id $result->username $result->type_lavage $result->type_vehicule $result->nb_vehicules $result->date_demande"?>">
 
-                <input type="checkbox" class="checkB" id="<?php echo $result->demande_id?>" data-check="<?php echo $result->demande_id?>">
+                <input type="checkbox" class="checkB" id="<?php echo $result->demande_id?>"
+                    data-check="<?php echo $result->demande_id?>">
 
                 <div class="checkBox">
-                    <label class="label" for="<?php echo $result->demande_id?>" data-for="<?php echo $result->demande_id?>">
+                    <label class="label" for="<?php echo $result->demande_id?>"
+                        data-for="<?php echo $result->demande_id?>">
                         <svg viewBox="0 0 100 100" class="checkboxSvg" ">
 	            <path class=" box"
                             d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z">
@@ -216,40 +220,43 @@ if(Input::exists()) {
 
 
         <div class="bg">
-        <div class="popupContainer">
-            <div class="point">
-                <div class="Text">
-                    <p>Supprimer</p>
-                </div>
-                <div class="cross">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
-                        <g>
+            <div class="popupContainer">
+                <div class="point">
+                    <div class="Text">
+                        <p>Supprimer</p>
+                    </div>
+                    <div class="cross">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492"
+                            style="enable-background:new 0 0 492 492;" xml:space="preserve">
                             <g>
-                                <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+                                <g>
+                                    <path
+                                        d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" />
+                                </g>
                             </g>
-                        </g>
+                    </div>
                 </div>
-            </div>
-            <div class="mid">
-                <div class="bigText">
-                    <p>Vous êtes sure ?</p>
+                <div class="mid">
+                    <div class="bigText">
+                        <p>Vous êtes sure ?</p>
+                    </div>
                 </div>
-            </div>
-            <div class="anchor">
-                <div class="annuler">
-                    <button class="Btn">ANNULER</button>
-                </div>
-                <div class="ok">
-                    <button class="Btn">OUI</button>
+                <div class="anchor">
+                    <div class="annuler">
+                        <button class="Btn">ANNULER</button>
+                    </div>
+                    <div class="ok">
+                        <button class="Btn">OUI</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
     </div>
 
-  
+
 
 
     <script src="./script/script.js" async></script>
