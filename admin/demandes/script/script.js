@@ -10,7 +10,7 @@ const cross = $('.cross');
 const cancel = $('.annuler');
 const ok = $('.ok');
 
-const demandes = $$('.demande');
+let demandes = $$('.demande');
 const btns = $$('.btns > div');
 const inputSearch = $('.search');
 
@@ -101,11 +101,11 @@ function refuseAll(checkBoxes, url) {
 }
 
 function removeAll(checkBoxes, url, time) {
-  Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach((checked, i) => {
-    setInterval(() => {
+   Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach((checked) => {
       remove(checked.dataset.check, $(`[data-key = '${checked.dataset.check}']`) ,url, time)
-    }, `${i}00`)
   });
+
+  demandes = $$('.demande');
 }
 
 
