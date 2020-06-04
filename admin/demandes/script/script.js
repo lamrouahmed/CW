@@ -5,6 +5,11 @@ const urls = [
     '/PFE/admin/demandes/demandesList.php'
 ]
 
+
+const cross = $('.cross');
+const cancel = $('.annuler');
+const ok = $('.ok');
+
 const demandes = $$('.demande');
 const btns = $$('.btns > div');
 const inputSearch = $('.search');
@@ -66,7 +71,7 @@ Remove.forEach(btn => btn.addEventListener('click', e => remove(e.currentTarget.
 
 AcceptAll.addEventListener('click', () => acceptAll($$('.checkB'), urls[0]));
 RefuseAll.addEventListener('click', () => refuseAll($$('.checkB'), urls[0]));
-RemoveAll.addEventListener('click', () => removeAll($$('.checkB'), urls[0], 300));
+RemoveAll.addEventListener('click', showPopUp);
 
 
 
@@ -74,6 +79,7 @@ function accept(id, demande, url) {
   const img = demande.querySelector('.status img');
   post('accept', id, url)
   img.setAttribute('src', './img/Y.svg')
+  
 }
 function refuse(id, demande, url) {
   const img = demande.querySelector('.status img');
@@ -94,11 +100,34 @@ function refuseAll(checkBoxes, url) {
   Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach(checked => refuse(checked.dataset.check, $(`[data-key = '${checked.dataset.check}']`) ,url));
 }
 
+function removeAll(checkBoxes, url, time) {
+  Array.from(checkBoxes).filter(checkbox => checkbox.checked).forEach((checked, i) => {
+    setInterval(() => {
+      remove(checked.dataset.check, $(`[data-key = '${checked.dataset.check}']`) ,url, time)
+    }, `${i}00`)
+  });
+}
 
 
 
+cross.addEventListener('click', hidePopUp)
+cancel.addEventListener('click', hidePopUp)
 
+ok.addEventListener('click', () => {
+  hidePopUp()
+  removeAll($$('.checkB'), urls[0], 300)
+})
 
+function hidePopUp() {
+  $('.bg').classList.remove('showPopUp')
+}
+function showPopUp() {
+  $('.bg').classList.add('showPopUp')
+}
+
+$('.bg').addEventListener('click', e => {
+  e.currentTarget === e.target && hidePopUp();
+})
 
 
 
@@ -153,7 +182,6 @@ function checkAll(checkBoxes) {
 
 demandes.forEach((demande, index) => {
   demande.style.animation = `startup ${index+3}00ms ease-in-out forwards`
-
 })
 
 
