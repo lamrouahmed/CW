@@ -176,10 +176,15 @@ $('.bg').addEventListener('click', e => {
 labels.forEach((label, i) => label.addEventListener('click', e => {
   if (!document.getElementById(`${label.getAttribute('for')}`).checked) {
     label.querySelector('.checkboxSvg').classList.add('checked')
+    label.querySelector('.checkboxSvg path').style.fill = '#007ce2'
+    label.querySelector('.checkboxSvg path').style.stroke = '#007ce2'
     $('.btns_h').style.display = 'flex';
   };
   if (document.getElementById(`${label.getAttribute('for')}`).checked) {
     label.querySelector('.checkboxSvg').classList.remove('checked')
+    label.querySelector('.checkboxSvg path').style.fill = '#FFF'
+    label.querySelector('.checkboxSvg path').style.stroke = '#c0c2c4'
+
     if (Array.from($$('.checkB')).filter(check => check.checked).length === 1) $('.btns_h').style.display = 'none';
   }
 }))
