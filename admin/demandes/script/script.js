@@ -33,6 +33,7 @@ const urls = [
 
 
 const labels = $$('.label');
+const stats = $('.stats');
 
 const cross = $('.cross');
 const cancel = $('.annuler');
@@ -107,6 +108,10 @@ function accept(id, demande, url) {
   const img = demande.querySelector('.status img');
   post('accept', id, url)
   img.setAttribute('src', './img/Y.svg')
+  demande.classList.remove('N');
+  demande.classList.add('Y');
+  stats.querySelector('.demandes_a .text').textContent = $$('.Y').length;
+  stats.querySelector('.demandes_r .text').textContent = $$('.N').length;
 
 }
 
@@ -114,13 +119,25 @@ function refuse(id, demande, url) {
   const img = demande.querySelector('.status img');
   post('refuse', id, url)
   img.setAttribute('src', './img/N.svg')
+  demande.classList.remove('Y');
+  demande.classList.add('N');
+  stats.querySelector('.demandes_r .text').textContent = $$('.N').length;
+  stats.querySelector('.demandes_a .text').textContent = $$('.Y').length;
+
 }
 
 function remove(id, demande, url, time) {
   post('delete', id, url)
   demande.classList.add('deleteAnimation')
-  setTimeout(() => demande.remove(), time)
-  demandes = $$('.demande');
+  setTimeout(() => {
+    demande.remove()
+    demandes = $$('.demande')
+    stats.querySelector('.totalDemandes .text').textContent = demandes.length;
+    stats.querySelector('.demandes_r .text').textContent = $$('.N').length;
+    stats.querySelector('.demandes_a .text').textContent = $$('.Y').length;
+   }, time)
+
+  
 
 }
 
