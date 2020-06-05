@@ -16,7 +16,7 @@ const colorArray = [
 ];
 
 
-getRandomInt = max  => Math.floor(Math.random() * Math.floor(max))
+getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
 
 // .box {
 //   fill: rgb(0, 124, 226);
@@ -135,9 +135,9 @@ function remove(id, demande, url, time) {
     stats.querySelector('.totalDemandes .text').textContent = demandes.length;
     stats.querySelector('.demandes_r .text').textContent = $$('.N').length;
     stats.querySelector('.demandes_a .text').textContent = $$('.Y').length;
-   }, time)
+  }, time)
 
-  
+
 
 }
 
