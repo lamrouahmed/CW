@@ -162,7 +162,7 @@ if(Session::exists("admin")) {
                     <canvas id="d_chart" width="600" height="300"></canvas>
                 </div>
             </div>
-            <div class="pieC status_d">
+            <div class="pieC status_d" id="last">
                 <div class="canvasText">
                     <p>Status des demandes</p>
                 </div>

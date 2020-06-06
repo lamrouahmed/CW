@@ -345,6 +345,9 @@ canvas {
         margin: 0 auto;
 
     }
+    #last {
+        margin-bottom: 4rem !important;
+    }
     .userChart,
     .demandeChart {
         width: 100% !important;
@@ -358,6 +361,7 @@ canvas {
         }
     }
 
+
     .pieC {
         width: 97%;
         margin: 0 auto;
@@ -365,4 +369,6 @@ canvas {
     .pieContainer {
         width: 650px;
     }
+
+
 }

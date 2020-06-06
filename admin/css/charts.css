@@ -320,6 +320,9 @@ canvas {
     height: 340px;
     margin: 0 auto;
   }
+  #last {
+    margin-bottom: 4rem !important;
+  }
   .userChart,
   .demandeChart {
     width: 100% !important;
