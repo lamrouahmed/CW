@@ -359,6 +359,10 @@ body {
   fill: #bebdbd;
 }
 
+.demandeWrapper {
+  margin-bottom: 2rem;
+}
+
 .demandeWrapper .demandes {
   width: 80%;
   -webkit-box-shadow: 0px 0px 5px 2px #d7d3d3;
@@ -578,8 +582,14 @@ body {
   .header .action_h {
     width: 7rem !important;
   }
-  .demande {
+  .actions {
     width: 90% !important;
+  }
+  .demandes {
+    width: 90% !important;
+  }
+  .demande {
+    width: 100% !important;
   }
   .demande > div {
     font-size: .75rem !important;

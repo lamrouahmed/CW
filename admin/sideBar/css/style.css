@@ -30,10 +30,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  left: 0;
+  position: fixed;
+  right: 0;
   top: 0;
-  z-index: 420;
+  z-index: 6969;
+  margin-top: 0;
 }
 
 header .logo {

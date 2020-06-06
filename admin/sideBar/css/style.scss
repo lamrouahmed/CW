@@ -1,13 +1,11 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$colors: (
-    primary: #23292e,
+$colors: (primary: #23292e,
     primary-light: lighten(#2c3d50, 10%),
     primary-dark: darken(#2c3d50, 5%),
     accent: #7f92b7,
     accent-light: lighten(#7f92b7, 80%),
-    accent-dark: darken(#7f92b7, 10%)
-);
+    accent-dark: darken(#7f92b7, 10%));
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -52,6 +50,7 @@ $maxMobile: 736px;
 html {
     height: 100%
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -66,24 +65,32 @@ header {
     font-weight: 500;
     display: flex;
     align-items: center;
-    position: sticky;
+    left: 0;
+    position: fixed;
+    right: 0;
     top: 0;
-    z-index: 420;
+    z-index: 6969;
+    margin-top: 0;
+
     .logo {
         margin-left: 2rem;
+
         p {
             color: #FFF;
             font-weight: 300;
             font-size: 1.8rem;
         }
+
         span {
             font-weight: 400;
         }
+
         a {
             height: 3rem;
             display: flex;
             justify-content: center;
             align-items: center;
+
             svg {
                 height: 3rem;
                 width: 3rem;
@@ -91,6 +98,7 @@ header {
             }
         }
     }
+
     .user {
         display: flex;
         align-items: center;
@@ -104,6 +112,7 @@ header {
         margin-right: 1.3rem;
         color: #FFF;
         position: relative;
+
         &::after {
             content: '';
             position: absolute;
@@ -116,7 +125,7 @@ header {
             transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
             transform-origin: right;
         }
-        
+
         &:hover {
             &::after {
                 transform: scaleX(1);
@@ -124,19 +133,23 @@ header {
 
             }
         }
+
         svg {
             margin-right: .4rem;
             height: 1.5rem;
             width: 1.5rem;
+
             path {
                 fill: #FFF;
             }
         }
-       
+
     }
+
     .logout a {
         margin-right: 1rem;
     }
+
     // .userImg {
     //     img {
     //         height: 3rem;
@@ -163,7 +176,7 @@ header {
     .sideBar {
         height: 100%;
 
-    
+
     }
 
     .navList {
@@ -189,6 +202,7 @@ header {
             width: 2em;
             height: 2em;
             margin-bottom: .6em;
+
             path {
                 fill: #d0cece;
             }
@@ -200,6 +214,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+
             a {
                 color: #d0cece;
                 display: flex;
@@ -250,7 +265,7 @@ header {
                     // // height: .8rem;
                     // // background-color: #f0f4f7;
                     // // transform: rotate(45deg);
-                    
+
                     // border: solid 1rem;
                     // border-color:  transparent #f0f4f7 transparent transparent ;
                     content: '';
@@ -258,13 +273,13 @@ header {
                     display: block;
                     left: 80%;
                     border: solid .7em;
-                        border-top-color: currentcolor;
-                        border-right-color: currentcolor;
-                        border-bottom-color: currentcolor;
-                        border-left-color: currentcolor;
+                    border-top-color: currentcolor;
+                    border-right-color: currentcolor;
+                    border-bottom-color: currentcolor;
+                    border-left-color: currentcolor;
                     border-color: transparent #ffffff transparent transparent;
-                
-                
+
+
                 }
             }
         }
@@ -284,6 +299,7 @@ header {
         .navList {
             flex-direction: row;
         }
+
         .link {
             height: 100%;
             width: 20%;
