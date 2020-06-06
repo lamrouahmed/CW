@@ -316,7 +316,7 @@ canvas {
   .usersContainer,
   .demandesContainer {
     position: relative;
-    width: 613px;
+    width: 700px;
     height: 340px;
     margin: 0 auto;
   }
@@ -327,18 +327,18 @@ canvas {
   .userChart .canvasC,
   .demandeChart .canvasC {
     margin: 0 auto;
-    width: 90%;
+    width: 97%;
   }
   .userChart > div,
   .demandeChart > div {
     margin-bottom: 2rem !important;
   }
   .pieC {
-    width: 90%;
+    width: 97%;
     margin: 0 auto;
   }
   .pieContainer {
-    width: 580px;
+    width: 650px;
   }
 }
 /*# sourceMappingURL=charts.css.map */
