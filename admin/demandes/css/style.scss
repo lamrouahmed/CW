@@ -76,6 +76,7 @@ body {
     height: 7rem;
     display: flex;
     align-items: center;
+    margin-top: 5%;
 
     .stats {
         display: flex;
@@ -831,6 +832,9 @@ justify-content: left;
         margin-left: 0;
     }
 
+    .info {
+        margin-top: 8% !important;
+    }
     .header {
         width: 90% !important;
 

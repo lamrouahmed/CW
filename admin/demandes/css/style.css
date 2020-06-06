@@ -41,6 +41,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5%;
 }
 
 .info .stats {
@@ -572,6 +573,9 @@ body {
 @media (min-width: 300px) and (max-width: 1200px) {
   .Wrapper {
     margin-left: 0;
+  }
+  .info {
+    margin-top: 8% !important;
   }
   .header {
     width: 90% !important;
