@@ -1,6 +1,23 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+
+
+$minTablet: 200px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
 *,
 *::after,
 *::before {
@@ -195,7 +212,8 @@ body {
     margin: 2rem 1rem .5rem 1rem
 }
 
-.canvasC, .pieC {
+.canvasC,
+.pieC {
     box-shadow: 1px 1px 8px 1px #dddada;
     background-color: #FFF;
     padding: 2rem 1rem 1rem 1rem;
@@ -209,16 +227,17 @@ body {
 .status_d {
     .canvasText {
         background-color: #4bc0c01a;
-        
+
         p {
             color: #4bc0c0;
         }
     }
 }
+
 .status_u {
     .canvasText {
         background-color: #ffdb8947;
-        
+
         p {
             color: #ff9b39;
         }
@@ -235,18 +254,20 @@ body {
     align-items: center;
     margin-top: 2rem;
 }
+
 .demandeChart {
     margin-bottom: 2rem;
 }
+
 canvas {
-     background-color: #FFF;
+    background-color: #FFF;
     //  box-shadow: 1px 1px 1px 1px #e8e2e2;
 }
 
 .u {
     .canvasText {
         background-color: #a785ea29;
-        
+
         p {
             color: #96f;
         }
@@ -256,12 +277,13 @@ canvas {
 .d {
     .canvasText {
         background-color: #f8f9fc;
-        
+
         p {
             color: #7890e4;
         }
     }
 }
+
 .canvasText {
     height: 3rem;
     display: flex;
@@ -274,10 +296,69 @@ canvas {
     left: 0;
 
 
-    
+
 
     p {
         padding-left: 1rem;
         font-weight: 500;
+    }
+}
+
+
+
+
+
+
+@include tablet {
+    body {
+        &>div {
+            margin-left: 0 !important;
+        }
+    }
+
+
+    .generalData {
+        padding: 0 !important;
+        width: 100% !important;
+
+        & > div {
+            width: 21% !important;
+        }
+    }
+    .chartsContainer {
+        &>div {
+            margin-left: 0 !important;
+            flex-direction: column;
+        }
+    }
+
+
+    .usersContainer,
+    .demandesContainer {
+        position: relative;
+        width: 613px;
+        height: 340px ;
+        margin: 0 auto;
+
+    }
+    .userChart,
+    .demandeChart {
+        width: 100% !important;
+        .canvasC {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        & > div {
+            margin-bottom: 2rem !important;
+        }
+    }
+
+    .pieC {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .pieContainer {
+        width: 580px;
     }
 }

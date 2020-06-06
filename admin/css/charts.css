@@ -206,7 +206,8 @@ body {
   margin: 2rem 1rem .5rem 1rem;
 }
 
-.canvasC, .pieC {
+.canvasC,
+.pieC {
   -webkit-box-shadow: 1px 1px 8px 1px #dddada;
           box-shadow: 1px 1px 8px 1px #dddada;
   background-color: #FFF;
@@ -289,5 +290,52 @@ canvas {
 .canvasText p {
   padding-left: 1rem;
   font-weight: 500;
+}
+
+@media (min-width: 200px) and (max-width: 1200px) {
+  body > div {
+    margin-left: 0 !important;
+  }
+  .generalData {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .generalData > div {
+    width: 21% !important;
+  }
+  .chartsContainer > div {
+    margin-left: 0 !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .usersContainer,
+  .demandesContainer {
+    position: relative;
+    width: 613px;
+    height: 340px;
+    margin: 0 auto;
+  }
+  .userChart,
+  .demandeChart {
+    width: 100% !important;
+  }
+  .userChart .canvasC,
+  .demandeChart .canvasC {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .userChart > div,
+  .demandeChart > div {
+    margin-bottom: 2rem !important;
+  }
+  .pieC {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .pieContainer {
+    width: 580px;
+  }
 }
 /*# sourceMappingURL=charts.css.map */
