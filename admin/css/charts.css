@@ -303,6 +303,9 @@ canvas {
   .generalData > div {
     width: 21% !important;
   }
+  .generalData .totalLavages {
+    margin-right: 0 !important;
+  }
   .chartsContainer > div {
     margin-left: 0 !important;
     -webkit-box-orient: vertical;
