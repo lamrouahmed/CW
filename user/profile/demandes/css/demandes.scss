@@ -391,9 +391,17 @@ main {
     background-color: #FFF;
     box-shadow: 0px 0px 4px 1px #d9d6d6;
     // box-shadow: 1px 1px 1px 1px rgb(236, 234, 234);
-    padding: 1rem 0 1rem 1rem;
     z-index: 99;
     border-radius: 10px;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transform: translateY(0);
+    transition: all 200ms ease-in-out;
+    margin-bottom: 1rem;
+    display: flex;
+                border-bottom-right-radius: 20px;
+
 
     &::after {
         content: '';
@@ -402,12 +410,35 @@ main {
         left: 0;
         top: 0;
         height: 100%;
-        width: 8px;
+        width: 10px;
         background-color: rgb(23, 27, 36);
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        transition: all 200ms ease-in-out;
     }
 
+    &:hover {
+        &::after {
+            width: 40px;
+            transition: all 200ms ease-in-out;
+        }
+        transform: scale(1.02);
+
+    }
+
+    .demande_id {
+        position: absolute;
+        left: 1%;
+        transform: rotate(-90deg);
+        z-index: 9999;
+
+        p {
+            font-weight: 600;
+            user-select: none;
+            font-size: 1.3rem;
+            color: #FFF;
+        }
+    }
 
     // .demande_id {
     //     color: rgb(182, 174, 174);
@@ -431,24 +462,100 @@ main {
         display: flex;
         width: 50%;
         .vehicule {
-            height: 4rem;
             width: 4rem;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
 
             img {
-                height: 100%;
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+
+        .demandeInfo {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 2px;
                 width: 100%;
-                background-color: red;
+                background-color: rgb(20, 43, 85);
+                border-radius: 10px;
+                top: 110%;
+            }
+
+            & > div {
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .lavage {
+                margin-bottom: .5rem;
+                 p {
+                     font-weight: 600;
+                 }
+            }
+            .nbVehicule {
+                margin-bottom: .2rem;
+                 p {
+                     font-weight: 500;
+                     font-size: .9rem;
+                 }
+                 span {
+                     font-weight: 600;
+                 }
+            }
+            .localisation {
+                
+                 p {
+                     font-weight: 400;
+                     font-size: .8rem;
+                    color: #7f7b82;
+                 }
             }
         }
     }
 
     .demande_2 {
+        display: flex;
         width: 50%;
-    }
+        .pay {
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+
+            img {
+                height: 4rem;
+                width: 4rem;
+            }
+        }    }
 
 
 
 
-    
-}
+        .date {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(32, 44, 54);
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: #FFF;
+                font-weight: 500;
+                padding: 0;
+                margin: 0;
+                padding: .4rem 0;
+            }
+        }
+
+}   
 

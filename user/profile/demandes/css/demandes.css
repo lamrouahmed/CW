@@ -377,9 +377,20 @@ main {
   background-color: #FFF;
   -webkit-box-shadow: 0px 0px 4px 1px #d9d6d6;
           box-shadow: 0px 0px 4px 1px #d9d6d6;
-  padding: 1rem 0 1rem 1rem;
   z-index: 99;
   border-radius: 10px;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom-right-radius: 20px;
 }
 
 .demande::after {
@@ -389,10 +400,41 @@ main {
   left: 0;
   top: 0;
   height: 100%;
-  width: 8px;
+  width: 10px;
   background-color: #171b24;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.demande:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.demande:hover::after {
+  width: 40px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.demande .demande_id {
+  position: absolute;
+  left: 1%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 9999;
+}
+
+.demande .demande_id p {
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.3rem;
+  color: #FFF;
 }
 
 .demande .demande_1 {
@@ -403,17 +445,115 @@ main {
 }
 
 .demande .demande_1 .vehicule {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.demande .demande_1 .vehicule img {
   height: 4rem;
   width: 4rem;
 }
 
-.demande .demande_1 .vehicule img {
-  height: 100%;
+.demande .demande_1 .demandeInfo {
+  position: relative;
+}
+
+.demande .demande_1 .demandeInfo::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
   width: 100%;
-  background-color: red;
+  background-color: #142b55;
+  border-radius: 10px;
+  top: 110%;
+}
+
+.demande .demande_1 .demandeInfo > div p {
+  margin: 0;
+  padding: 0;
+}
+
+.demande .demande_1 .demandeInfo .lavage {
+  margin-bottom: .5rem;
+}
+
+.demande .demande_1 .demandeInfo .lavage p {
+  font-weight: 600;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule {
+  margin-bottom: .2rem;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule p {
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule span {
+  font-weight: 600;
+}
+
+.demande .demande_1 .demandeInfo .localisation p {
+  font-weight: 400;
+  font-size: .8rem;
+  color: #7f7b82;
 }
 
 .demande .demande_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 50%;
+}
+
+.demande .demande_2 .pay {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.demande .demande_2 .pay img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.demande .date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #202c36;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .date p {
+  color: #FFF;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  padding: .4rem 0;
 }
 /*# sourceMappingURL=demandes.css.map */
