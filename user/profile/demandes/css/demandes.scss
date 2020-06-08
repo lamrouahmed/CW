@@ -19,7 +19,8 @@
 $colors: (Y: #2c7171,
     N: #ff9f40,
     P: #b32553,
-    D: #2f6c4a);
+    D: #2f6c4a,
+    C: #f44654);
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -442,6 +443,10 @@ main {
 
     .D .statusColor {
         background-color: color(D);
+    }
+
+    .C .statusColor {
+        background-color: color(C);
     }
 
 }
@@ -917,4 +922,24 @@ main {
             
         }
     }
+}
+
+.C {
+    &::after {
+        background-color: color(C);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(C);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(C);
+    }
+
+  
 }

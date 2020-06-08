@@ -2,10 +2,31 @@
 require_once '/wamp64/www/PFE/core/init.php';
 
 if (Session::exists("user"))
-{
+{   
+    
     $user = new User();
     $demandes = $user->getDemandes()
         ->results();
+
+    // if(Input::exists()) {
+
+    //     $demande = new Demande();
+
+    //     $id = Input::get('id');
+    //     $action = Input::get('action');
+
+    //     if($action === "delete") {
+    //         $demande->uDelete($id, [
+    //             "status_demande" => "D"
+    //         ]);
+    //     } else if($action === "cancel") {
+    //         $demande->cancel($id, [
+    //             "status_demande" => "C"
+    //         ]);
+    //     } else if($action === "pay") {
+
+    //     }
+    // }    
 ?>
 
 <!DOCTYPE html>
@@ -300,7 +321,13 @@ if (Session::exists("user"))
                 </div>
                 <div class="statusText">
                     <p>Payee</p>
-
+                </div>
+            </div>
+            <div class="state C">
+                <div class="statusColor">
+                </div>
+                <div class="statusText">
+                    <p>Annulee</p>
                 </div>
             </div>
         </div>
@@ -355,7 +382,7 @@ if (Session::exists("user"))
         if ($demande->status_demande === "N")
         {
 ?>
-                                                <div class="delete">
+                                                <div class="delete" data-action="delete" data-id="<?php echo $demande->demande_id?>">
                                     <svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="512"
                                         viewBox="0 0 515.556 515.556" width="512" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -372,12 +399,12 @@ if (Session::exists("user"))
         {
 ?>
 
-                                <div class="pay">
+                                <div class="pay" data-action="pay" data-class="D" data-id="<?php echo $demande->demande_id?>">
                                     <svg id="Layer_1" enable-background="new 0 0 511.334 511.334" height="512" viewBox="0 0 511.334 511.334" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m0 224.667v132.333c0 38.108 30.892 69 69 69h373.334c38.108 0 69-30.892 69-69v-132.333c0-6.627-5.373-12-12-12h-487.334c-6.627 0-12 5.373-12 12zm127.667 84h-32c-11.598 0-21-9.402-21-21s9.402-21 21-21h32c11.598 0 21 9.402 21 21s-9.402 21-21 21z"/><path d="m511.334 158.667v-4.333c0-38.108-30.892-69-69-69h-373.334c-38.108 0-69 30.892-69 69v4.333c0 6.627 5.373 12 12 12h487.334c6.627 0 12-5.373 12-12z"/>
                                     </svg>
                                 </div>
 
-                                <div class="delete">
+                                <div class="delete" data-action="delete" data-id="<?php echo $demande->demande_id?>">
                                     <svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="512"
                                         viewBox="0 0 515.556 515.556" width="512" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -393,7 +420,7 @@ if (Session::exists("user"))
         {
 
 ?>
-                                <div class="cancel" data-action="cancel">
+                                <div class="cancel" data-action="cancel" data-class="P" data-id="<?php echo $demande->demande_id?>">
                                     <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -405,7 +432,7 @@ if (Session::exists("user"))
         else if ($demande->status_demande === "D")
         {
 ?>
-                                <div class="pay">
+                                <div class="pay" data-action="pay" data-class="D" data-id="<?php echo $demande->demande_id?>">
                                         <svg id="Layer_1" enable-background="new 0 0 511.334 511.334" height="512" viewBox="0 0 511.334 511.334" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m0 224.667v132.333c0 38.108 30.892 69 69 69h373.334c38.108 0 69-30.892 69-69v-132.333c0-6.627-5.373-12-12-12h-487.334c-6.627 0-12 5.373-12 12zm127.667 84h-32c-11.598 0-21-9.402-21-21s9.402-21 21-21h32c11.598 0 21 9.402 21 21s-9.402 21-21 21z"/><path d="m511.334 158.667v-4.333c0-38.108-30.892-69-69-69h-373.334c-38.108 0-69 30.892-69 69v4.333c0 6.627 5.373 12 12 12h487.334c6.627 0 12-5.373 12-12z"/></svg> 
                                 </div>
 

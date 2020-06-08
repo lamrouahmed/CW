@@ -35,6 +35,12 @@
             $this->db->update("demande_id", $id, "demande", $params);
         }
 
+        public function uDelete($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
+        public function cancel($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
         public function getDemandes() {
             return $this->db->query("SELECT * FROM demande", [], "SELECT");
         }

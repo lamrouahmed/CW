@@ -407,6 +407,10 @@ main {
   background-color: #2f6c4a;
 }
 
+.guideWrapper .C .statusColor {
+  background-color: #f44654;
+}
+
 .demandesWrapper {
   width: 100%;
   height: 100%;
@@ -806,5 +810,17 @@ main {
 .P .demande_2 .btns .cancel svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.C::after {
+  background-color: #f44654;
+}
+
+.C .demande_1 .demandeInfo::after {
+  background-color: #f44654;
+}
+
+.C .date {
+  background-color: #f44654;
 }
 /*# sourceMappingURL=demandes.css.map */
