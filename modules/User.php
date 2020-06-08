@@ -88,5 +88,10 @@
             return $this->data;
         }
 
+        public function getDemandes() 
+        {
+            return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id}", [], "SELECT");
+        }
+
 
     }

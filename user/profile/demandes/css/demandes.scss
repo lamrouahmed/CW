@@ -1,27 +1,25 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-  // .Y .statusColor {
-    //     background-color: #2c7171;
-    // }
-    // .N .statusColor {
-    //     background-color: #ff9f40;
-    // }
-    // .P .statusColor {
-    //     background-color: #97979b;
-    // }
-    // .D .statusColor {
-    //     background-color: #2f476c;
-    // }
+// .Y .statusColor {
+//     background-color: #2c7171;
+// }
+// .N .statusColor {
+//     background-color: #ff9f40;
+// }
+// .P .statusColor {
+//     background-color: #97979b;
+// }
+// .D .statusColor {
+//     background-color: #2f476c;
+// }
 
 
 
-$colors: (
-    Y: #2c7171,
+$colors: (Y: #2c7171,
     N: #ff9f40,
-    P: #97979b,
-    D: #2f476c
-    );
+    P: #b32553,
+    D: #2f6c4a);
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -66,7 +64,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: rgb(250, 247, 247);
 }
 
@@ -404,7 +402,7 @@ main {
 
 
 .guideWrapper {
-    
+
     width: 40rem;
     display: flex;
     justify-content: space-around;
@@ -412,14 +410,16 @@ main {
     align-items: center;
     margin: .5rem auto;
 
-    & > div {
+    &>div {
         display: flex;
         align-items: center;
     }
+
     .statusText {
         font-weight: 500;
         font-size: .8rem;
     }
+
     .statusColor {
         height: 1.5rem;
         width: 1.5rem;
@@ -431,16 +431,19 @@ main {
     .Y .statusColor {
         background-color: color(Y);
     }
+
     .N .statusColor {
         background-color: color(N);
     }
+
     .P .statusColor {
         background-color: color(P);
     }
+
     .D .statusColor {
         background-color: color(D);
     }
-  
+
 }
 
 
@@ -475,7 +478,7 @@ main {
     transition: all 200ms ease-in-out;
     margin-bottom: 1rem;
     display: flex;
-                border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
 
     &::after {
@@ -497,8 +500,40 @@ main {
             width: 40px;
             transition: all 200ms ease-in-out;
         }
+
         transform: scale(1.02);
 
+
+
+        .demande_2 .btns {
+            .delete {
+                svg {
+                    fill: rgb(250, 65, 65);
+
+                    path {
+                        fill: rgb(250, 65, 65);
+                    }
+                }
+            }
+
+            .cancel {
+                svg {
+                    path {
+                        fill: rgb(255, 153, 0);
+                    }
+                }
+
+            }
+
+            .pay {
+                svg {
+
+                    path {
+                        fill: #11688a;
+                    }
+                }
+            }
+        }
     }
 
     .demande_id {
@@ -536,6 +571,7 @@ main {
     .demande_1 {
         display: flex;
         width: 50%;
+
         .vehicule {
             width: 4rem;
             display: flex;
@@ -550,6 +586,7 @@ main {
 
         .demandeInfo {
             position: relative;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -561,35 +598,41 @@ main {
                 top: 110%;
             }
 
-            & > div {
+            &>div {
                 p {
                     margin: 0;
                     padding: 0;
                 }
             }
+
             .lavage {
                 margin-bottom: .5rem;
-                 p {
-                     font-weight: 600;
-                 }
+
+                p {
+                    font-weight: 600;
+                }
             }
+
             .nbVehicule {
                 margin-bottom: .2rem;
-                 p {
-                     font-weight: 500;
-                     font-size: .9rem;
-                 }
-                 span {
-                     font-weight: 600;
-                 }
+
+                p {
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+
+                span {
+                    font-weight: 600;
+                }
             }
+
             .localisation {
-                
-                 p {
-                     font-weight: 400;
-                     font-size: .8rem;
+
+                p {
+                    font-weight: 400;
+                    font-size: .8rem;
                     color: #7f7b82;
-                 }
+                }
             }
         }
     }
@@ -599,6 +642,7 @@ main {
         width: 50%;
         position: relative;
         margin-left: 2rem;
+
         .payment {
             width: 4rem;
             display: flex;
@@ -609,7 +653,7 @@ main {
                 height: 4rem;
                 width: 4rem;
             }
-        }    
+        }
 
         // &::before {
         //     content: '';
@@ -625,61 +669,183 @@ main {
 
 
 
-        .price {
-            display: flex;
-            align-items: center;
-            
-            p {
-                font-weight: 600;
-                font-size: 2rem;
-                padding: 0;
-                margin:0;
-            }
-            span {
-                font-size: 1rem;
-                font-weight: 600;
-            }
+    .price {
+        display: flex;
+        align-items: center;
 
-            
+        p {
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 0;
+            margin: 0;
         }
 
+        span {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+
+    }
+
+    .btns {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        justify-content: space-evenly;
+        width: 3rem;
+        align-items: center;
+
+        &>div {
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+
+
+    .date {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(32, 44, 54);
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            color: #FFF;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            padding: .4rem 0;
+            font-size: .9rem;
+        }
+    }
+
+}
+
+
+
+
+.N {
+    &::after {
+        background-color: color(N);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(N);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(N);
+    }
+
+
+    .demande_2 {
         .btns {
-            margin-left: auto;
-            display: flex;
-            flex-direction: column;
-            margin-right: 1rem;
-            justify-content: center;
-            & > div {
-                svg {
-                    width: 1.9rem;
-                    height: 1.9rem;
-                }
+            .delete svg {
+                width: 1.5rem;
+                height: 1.5rem;
             }
         }
+    }
+}
 
+.Y {
+    &::after {
+        background-color: color(Y);
+    }
 
-        .date {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background-color: rgb(32, 44, 54);
-            border-bottom-right-radius: 20px;
-            border-top-left-radius: 20px;
-            width: 30%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p {
-                color: #FFF;
-                font-weight: 500;
-                padding: 0;
-                margin: 0;
-                padding: .4rem 0;
-                font-size: .9rem;
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(Y);
             }
         }
+    }
 
-}   
+    .date {
+        background-color: color(Y);
+    }
+
+    .demande_2 {
+        .btns {
+
+            .delete svg {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            .pay svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+.D {
+    &::after {
+        background-color: color(D);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(D);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(D);
+    }
 
 
+    .demande_2 {
+        .btns {
+            .pay svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
 
+.P {
+    &::after {
+        background-color: color(P);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(P);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(P);
+    }
+
+
+    .demande_2 {
+        .btns {
+            .cancel svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}

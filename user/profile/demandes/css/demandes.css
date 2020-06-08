@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #faf7f7;
 }
 
@@ -400,11 +400,11 @@ main {
 }
 
 .guideWrapper .P .statusColor {
-  background-color: #97979b;
+  background-color: #b32553;
 }
 
 .guideWrapper .D .statusColor {
-  background-color: #2f476c;
+  background-color: #2f6c4a;
 }
 
 .demandesWrapper {
@@ -468,6 +468,22 @@ main {
   width: 40px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+.demande:hover .demande_2 .btns .delete svg {
+  fill: #fa4141;
+}
+
+.demande:hover .demande_2 .btns .delete svg path {
+  fill: #fa4141;
+}
+
+.demande:hover .demande_2 .btns .cancel svg path {
+  fill: #ff9900;
+}
+
+.demande:hover .demande_2 .btns .pay svg path {
+  fill: #11688a;
 }
 
 .demande .demande_id {
@@ -614,14 +630,18 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .demande .btns > div svg {
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .demande .date {
@@ -650,5 +670,78 @@ main {
   margin: 0;
   padding: .4rem 0;
   font-size: .9rem;
+}
+
+.N::after {
+  background-color: #ff9f40;
+}
+
+.N .demande_1 .demandeInfo::after {
+  background-color: #ff9f40;
+}
+
+.N .date {
+  background-color: #ff9f40;
+}
+
+.N .demande_2 .btns .delete svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Y::after {
+  background-color: #2c7171;
+}
+
+.Y .demande_1 .demandeInfo::after {
+  background-color: #2c7171;
+}
+
+.Y .date {
+  background-color: #2c7171;
+}
+
+.Y .demande_2 .btns .delete svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.Y .demande_2 .btns .pay svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.D::after {
+  background-color: #2f6c4a;
+}
+
+.D .demande_1 .demandeInfo::after {
+  background-color: #2f6c4a;
+}
+
+.D .date {
+  background-color: #2f6c4a;
+}
+
+.D .demande_2 .btns .pay svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.P::after {
+  background-color: #b32553;
+}
+
+.P .demande_1 .demandeInfo::after {
+  background-color: #b32553;
+}
+
+.P .date {
+  background-color: #b32553;
+}
+
+.P .demande_2 .btns .cancel svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 /*# sourceMappingURL=demandes.css.map */
