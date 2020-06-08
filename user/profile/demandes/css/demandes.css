@@ -639,9 +639,58 @@ main {
           align-items: center;
 }
 
+.demande .btns > div {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .btns > div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.demande .btns > div:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .demande .btns > div svg {
   width: 1rem;
   height: 1rem;
+}
+
+.demande .btns > div svg path {
+  fill: #4f4f4f;
+}
+
+.demande .btns .delete::after {
+  background-color: #ff000057;
+}
+
+.demande .btns .pay::after {
+  background-color: #5e75f257;
+}
+
+.demande .btns .cancel::after {
+  background-color: #ffae0099;
 }
 
 .demande .date {
@@ -684,6 +733,11 @@ main {
   background-color: #ff9f40;
 }
 
+.N .demande_2 .btns .delete::after {
+  width: 3rem;
+  height: 3rem;
+}
+
 .N .demande_2 .btns .delete svg {
   width: 1.5rem;
   height: 1.5rem;
@@ -704,6 +758,10 @@ main {
 .Y .demande_2 .btns .delete svg {
   width: 1.3rem;
   height: 1.3rem;
+}
+
+.Y .demande_2 .btns .pay::after {
+  background-color: #0026ff57;
 }
 
 .Y .demande_2 .btns .pay svg {
@@ -738,6 +796,11 @@ main {
 
 .P .date {
   background-color: #b32553;
+}
+
+.P .demande_2 .btns .cancel::after {
+  width: 3rem;
+  height: 3rem;
 }
 
 .P .demande_2 .btns .cancel svg {
