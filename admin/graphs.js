@@ -2,16 +2,16 @@ const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
 const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 const uStatus = ['offline', 'online']
-const dStatus = ['acceptee', 'refusee']
+const dStatus = ['acceptee', 'refusee', "non_traitee"]
 const globalData = {
     users: {
         data: {
             labels: days,
             datasets: [{
                 label: 'Nombre des comptes cree',
-                backgroundColor: '#dbc9ff', 
+                backgroundColor: '#dbc9ff',
                 borderColor: '#9966ff',
-                data: [0,0,0,0,0,0,0]
+                data: [0, 0, 0, 0, 0, 0, 0]
             }],
         },
 
@@ -33,7 +33,7 @@ const globalData = {
                 label: 'Nombre de demande',
                 backgroundColor: '#f6f8fd',
                 borderColor: '#376ade',
-                data: [0,0,0,0,0,0,0]
+                data: [0, 0, 0, 0, 0, 0, 0]
             }]
         },
         options: {
@@ -55,14 +55,15 @@ const globalData = {
                     "#ffcd56",
                     "#36a2eb"
                 ]
-            }]  
+            }]
         },
         options: {
             legend: {
                 display: true,
                 position: 'bottom',
                 labels: {
-                  fontColor: "#858586",
+                    fontColor: "#858586",
+                    usePointStyle: true
                 }
             },
             cutoutPercentage: 80,
@@ -76,24 +77,26 @@ const globalData = {
                 data: [],
                 backgroundColor: [
                     "#4bc0c0",
+                    "#e76f51",
                     "#ff9f40"
                 ]
-                
-                
-            }] 
+
+
+            }]
         },
         options: {
             legend: {
                 display: true,
                 position: 'bottom',
                 labels: {
-                  fontColor: "#858586",
+                    fontColor: "#858586",
+                    usePointStyle: true
                 }
             },
             cutoutPercentage: 80,
             maintainAspectRatio: false
 
-        }   
+        }
     }
 }
 Chart.defaults.global.defaultFontFamily = "'Montserrat', 'sans-serif'";
@@ -120,7 +123,10 @@ function get(url) {
 
 
 function updateChart(data) {
-    const {users,demandes} = data;
+    const {
+        users,
+        demandes
+    } = data;
     let u_creationDates = users.map(user => getDayName(new Date(user.created), 'fr-FR'));
     let records = {
         users: {
@@ -145,9 +151,10 @@ function updateChart(data) {
             offline: 0,
             online: 0
         },
-        demande_status:{
+        demande_status: {
             N: 0,
-            Y: 0
+            Y: 0,
+            P: 0
         }
     }
     days.forEach(dateP => {
@@ -170,10 +177,11 @@ function updateChart(data) {
     demandes.forEach(demande => {
         demande.status_demande === "N" && records.demande_status.N++;
         demande.status_demande === "Y" && records.demande_status.Y++;
+        demande.status_demande === "P" && records.demande_status.P++;
     })
 
 
-    update(d_statusChart, [records.demande_status.Y, records.demande_status.N]);
+    update(d_statusChart, [records.demande_status.Y, records.demande_status.N, records.demande_status.P]);
 
 
     $('[data-id = users]').textContent = users.length;
@@ -217,7 +225,7 @@ function getDayName(date, locale) {
 function createChart(node, type, newData, Options) {
     const status_chart = new Chart(node, {
         type: type,
-        data : newData,
+        data: newData,
         options: Options
     })
     return status_chart;
@@ -233,45 +241,3 @@ function update(chart, newData) {
     chart.data.datasets[0].data = newData;
     chart.update();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
