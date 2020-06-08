@@ -452,7 +452,7 @@
                             </div>
 
                             <div class="svgText">
-                                <p>Moteur</p>
+                                <p>Moto</p>
                             </div>
                         </label>
                     </div>
