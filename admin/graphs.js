@@ -2,7 +2,7 @@ const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
 const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 const uStatus = ['offline', 'online']
-const dStatus = ['acceptee', 'refusee', "non_traitee"]
+const dStatus = ['acceptee', 'refusee', "non_traitee", "annulee"]
 const globalData = {
     users: {
         data: {
@@ -78,7 +78,8 @@ const globalData = {
                 backgroundColor: [
                     "#4bc0c0",
                     "#e76f51",
-                    "#ff9f40"
+                    "#ff9f40",
+                    "#264653"
                 ]
 
 
@@ -154,7 +155,8 @@ function updateChart(data) {
         demande_status: {
             N: 0,
             Y: 0,
-            P: 0
+            P: 0,
+            C: 0
         }
     }
     days.forEach(dateP => {
@@ -178,10 +180,11 @@ function updateChart(data) {
         demande.status_demande === "N" && records.demande_status.N++;
         demande.status_demande === "Y" && records.demande_status.Y++;
         demande.status_demande === "Pending" && records.demande_status.P++;
+        demande.status_demande === "Canceled" && records.demande_status.C++;
     })
 
 
-    update(d_statusChart, [records.demande_status.Y, records.demande_status.N, records.demande_status.P]);
+    update(d_statusChart, [records.demande_status.Y, records.demande_status.N, records.demande_status.P, records.demande_status.C]);
 
 
     $('[data-id = users]').textContent = users.length;

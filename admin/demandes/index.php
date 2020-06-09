@@ -67,6 +67,49 @@ if(Input::exists()) {
                 </div>
             </div>
 
+            <div class="guide">
+                <div class="Y">
+                    <div class="img">
+                        <img src="./img/Y.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Acceptee</p>
+                    </div>
+                </div>
+                <div class="N">
+                    <div class="img">
+                        <img src="./img/N.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Refusee</p>
+                    </div>
+                </div>
+                <div class="P">
+                    <div class="img">
+                        <img src="./img/Pending.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Non traitee</p>
+                    </div>
+                </div>
+                <div class="C">
+                    <div class="img">
+                        <img src="./img/Canceled.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Annulee</p>
+                    </div>
+                </div>
+                <div class="D">
+                    <div class="img">
+                        <img src="./img/Paid.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Payee</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 

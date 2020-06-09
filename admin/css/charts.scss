@@ -41,6 +41,7 @@ body {
 
 .head {
     margin-left: 7em;
+    margin-top: 4rem;
     width: calc(100%- 7em);
     height: 4rem;
     display: flex;
@@ -61,6 +62,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-right: 2rem;
+    margin-top: 6rem;
 
     &>div {
         display: flex;
