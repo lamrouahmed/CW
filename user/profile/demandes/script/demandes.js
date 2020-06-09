@@ -2,6 +2,15 @@ const $ = e => document.querySelector(e)
 const $$ = e => document.querySelectorAll(e)
 const url = '/PFE/user/profile/demandes/demandesList.php';
 
+const popUp = $('.popUp');
+
+popUp.addEventListener('click', () => {
+    $('.triangle svg').classList.toggle('svgClicked')
+    $('.logout').classList.toggle('displayLog')
+})
+
+
+
 
 let btns = $$('.btns > div');
 
