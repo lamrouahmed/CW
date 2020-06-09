@@ -813,6 +813,11 @@ main {
                     height: 1.5rem;
                 }
             }
+
+            .cancel,
+            .pay {
+                display: none;
+            }
         }
     }
 }
@@ -854,6 +859,10 @@ main {
                     height: 1.5rem;
                 }
             }
+
+            .cancel {
+                display: none;
+            }
         }
     }
 }
@@ -882,11 +891,15 @@ main {
                 width: 1.5rem;
                 height: 1.5rem;
             }
+
+            .cancel {
+                display: none;
+            }
         }
     }
 }
 
-.P {
+.Pending {
     &::after {
         background-color: color(P);
     }
@@ -924,7 +937,7 @@ main {
     }
 }
 
-.C {
+.Canceled {
     &::after {
         background-color: color(C);
     }
@@ -939,6 +952,26 @@ main {
 
     .date {
         background-color: color(C);
+    }
+
+    .demande_2 {
+        .btns {
+            .delete {
+                &::after {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+
+            .cancel,
+            .pay {
+                display: none;
+            }
+        }
     }
 
   

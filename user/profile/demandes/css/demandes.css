@@ -747,6 +747,11 @@ main {
   height: 1.5rem;
 }
 
+.N .demande_2 .btns .cancel,
+.N .demande_2 .btns .pay {
+  display: none;
+}
+
 .Y::after {
   background-color: #2c7171;
 }
@@ -773,6 +778,10 @@ main {
   height: 1.5rem;
 }
 
+.Y .demande_2 .btns .cancel {
+  display: none;
+}
+
 .D::after {
   background-color: #2f6c4a;
 }
@@ -790,37 +799,56 @@ main {
   height: 1.5rem;
 }
 
-.P::after {
+.D .demande_2 .btns .cancel {
+  display: none;
+}
+
+.Pending::after {
   background-color: #b32553;
 }
 
-.P .demande_1 .demandeInfo::after {
+.Pending .demande_1 .demandeInfo::after {
   background-color: #b32553;
 }
 
-.P .date {
+.Pending .date {
   background-color: #b32553;
 }
 
-.P .demande_2 .btns .cancel::after {
+.Pending .demande_2 .btns .cancel::after {
   width: 3rem;
   height: 3rem;
 }
 
-.P .demande_2 .btns .cancel svg {
+.Pending .demande_2 .btns .cancel svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.C::after {
+.Canceled::after {
   background-color: #f44654;
 }
 
-.C .demande_1 .demandeInfo::after {
+.Canceled .demande_1 .demandeInfo::after {
   background-color: #f44654;
 }
 
-.C .date {
+.Canceled .date {
   background-color: #f44654;
+}
+
+.Canceled .demande_2 .btns .delete::after {
+  width: 3rem;
+  height: 3rem;
+}
+
+.Canceled .demande_2 .btns .delete svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Canceled .demande_2 .btns .cancel,
+.Canceled .demande_2 .btns .pay {
+  display: none;
 }
 /*# sourceMappingURL=demandes.css.map */

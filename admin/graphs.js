@@ -177,7 +177,7 @@ function updateChart(data) {
     demandes.forEach(demande => {
         demande.status_demande === "N" && records.demande_status.N++;
         demande.status_demande === "Y" && records.demande_status.Y++;
-        demande.status_demande === "P" && records.demande_status.P++;
+        demande.status_demande === "Pending" && records.demande_status.P++;
     })
 
 

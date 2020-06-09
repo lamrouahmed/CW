@@ -8,25 +8,7 @@ if (Session::exists("user"))
     $demandes = $user->getDemandes()
         ->results();
 
-    // if(Input::exists()) {
-
-    //     $demande = new Demande();
-
-    //     $id = Input::get('id');
-    //     $action = Input::get('action');
-
-    //     if($action === "delete") {
-    //         $demande->uDelete($id, [
-    //             "status_demande" => "D"
-    //         ]);
-    //     } else if($action === "cancel") {
-    //         $demande->cancel($id, [
-    //             "status_demande" => "C"
-    //         ]);
-    //     } else if($action === "pay") {
-
-    //     }
-    // }    
+        
 ?>
 
 <!DOCTYPE html>
@@ -416,7 +398,7 @@ if (Session::exists("user"))
 
 <?php
         }
-        else if ($demande->status_demande === "P")
+        else if ($demande->status_demande === "Pending")
         {
 
 ?>
@@ -437,7 +419,19 @@ if (Session::exists("user"))
                                 </div>
 
                                     <?php
-        } ?>
+        } else if($demande->status_demande === "Canceled") 
+        {
+?>  
+<div class="delete" data-action="delete" data-id="<?php echo $demande->demande_id?>">
+                                    <svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="512"
+                                        viewBox="0 0 515.556 515.556" width="512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z" />
+                                        <path
+                                            d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z" />
+                                        </svg>
+                                </div>
+        <?php }?>
                             </div>
                         </div>
 
