@@ -696,6 +696,9 @@ footer section .mid .prt .twitter svg {
   .navList {
     margin-right: 1em !important;
   }
+  footer section {
+    margin: 0 !important;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 736px) {
