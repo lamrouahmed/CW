@@ -694,6 +694,9 @@ footer section .mid .prt .twitter svg {
   .navItem {
     margin: 0 !important;
   }
+  .navItem a {
+    font-size: .9rem !important;
+  }
   .navList {
     margin-right: 1em !important;
   }
