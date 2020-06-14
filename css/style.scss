@@ -18,7 +18,7 @@ $maxTablet: 1200px;
 
 /*-------- Desktop Media Queries ---------*/
 
-$minDesktop: 1200px;
+$minDesktop: 1000px;
 $maxDesktop: 1600px;
 
 @mixin desktop {
@@ -346,7 +346,7 @@ body {
 
 
     .catalogue {
-        width: 90%;
+        width: 25rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -1109,7 +1109,7 @@ footer {
 
     .wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         height: initial;
         height: 90%;
 
@@ -1120,7 +1120,7 @@ footer {
 
     .catalogue {
         justify-content: start !important;
-        width: 25% !important;
+        width: 35% !important;
         margin: 1em !important;
         border-radius: 20px;
         align-self: center;
@@ -1131,7 +1131,7 @@ footer {
 
         &:nth-child(2) {
             transform: scale(1.1);
-            margin: 2em !important;
+            margin: 1em !important;
         }
 
 

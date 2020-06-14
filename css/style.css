@@ -294,7 +294,7 @@ body {
 }
 
 .wrapper .catalogue {
-  width: 90%;
+  width: 25rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -947,14 +947,14 @@ footer section .mid .prt .twitter svg {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1000px) and (max-width: 1600px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: initial;
     height: 90%;
   }
@@ -965,7 +965,7 @@ footer section .mid .prt .twitter svg {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: start !important;
-    width: 25% !important;
+    width: 35% !important;
     margin: 1em !important;
     border-radius: 20px;
     -ms-flex-item-align: center;
@@ -978,7 +978,7 @@ footer section .mid .prt .twitter svg {
   .catalogue:nth-child(2) {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    margin: 2em !important;
+    margin: 1em !important;
   }
   .catalogue .services {
     margin-top: 3.5em !important;
