@@ -357,7 +357,7 @@ body {
   color: white !important;
 }
 
-.wrapper .catalogue .top svg {
+.wrapper .catalogue .top > svg {
   position: absolute;
   z-index: -1;
   fill: #273036 !important;
@@ -369,7 +369,7 @@ body {
 }
 
 .wrapper .catalogue .top {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .wrapper .catalogue .icon {
@@ -386,7 +386,7 @@ body {
 
 .wrapper .catalogue .icon svg {
   height: 3em;
-  margin: 2em;
+  width: 3em;
 }
 
 .wrapper .catalogue .request {
@@ -401,7 +401,7 @@ body {
 }
 
 .wrapper .catalogue .price {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .wrapper .catalogue .price span {
@@ -696,8 +696,28 @@ footer section .mid .prt .twitter svg {
   .navList {
     margin-right: 1em !important;
   }
+  .footerWrapper::after {
+    top: 110% !important;
+  }
   footer section {
     margin: 0 !important;
+  }
+  footer section .mid .prt div > p {
+    font-size: 1.2rem !important;
+  }
+  footer section .mid .prt div {
+    white-space: nowrap;
+  }
+  footer section .mid .phone,
+  footer section .mid .location,
+  footer section .mid .mail {
+    width: 32rem !important;
+  }
+  footer section .mid .twitter {
+    margin-left: 5rem !important;
+  }
+  footer section .mid .instagram {
+    margin-left: 8.5rem !important;
   }
 }
 
@@ -955,9 +975,9 @@ footer section .mid .prt .twitter svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: initial;
     height: 90%;
   }
@@ -968,7 +988,7 @@ footer section .mid .prt .twitter svg {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: start !important;
-    width: 35% !important;
+    width: 25% !important;
     margin: 1em !important;
     border-radius: 20px;
     -ms-flex-item-align: center;
@@ -981,10 +1001,10 @@ footer section .mid .prt .twitter svg {
   .catalogue:nth-child(2) {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    margin: 1em !important;
+    margin: 2em !important;
   }
   .catalogue .services {
-    margin-top: 3.5em !important;
+    margin-top: 2.5em !important;
   }
   .catalogue .request {
     margin-top: 1em;

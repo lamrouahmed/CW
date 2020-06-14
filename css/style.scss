@@ -413,7 +413,7 @@ body {
                 }
             }
 
-            svg {
+            & > svg {
                 position: absolute;
                 z-index: -1;
                 fill: #273036 !important;
@@ -432,7 +432,7 @@ body {
         // }
 
         .top {
-            margin-bottom: 3em;
+            margin-bottom: 4em;
         }
 
         .icon {
@@ -442,7 +442,7 @@ body {
 
             svg {
                 height: 3em;
-                margin: 2em;
+                width: 3em;
             }
         }
 
@@ -458,7 +458,7 @@ body {
         }
 
         .price {
-            margin-bottom: 2em;
+            margin-bottom: 1em;
         }
 
         .price span {
@@ -770,9 +770,44 @@ footer {
     }
 
 
+    .footerWrapper {
+        &::after {
+            top: 110% !important;
+        }
+    }
+
     footer {
         section {
             margin: 0 !important;
+
+
+
+            .mid {
+                .prt {
+                    div > p {
+                        font-size: 1.2rem !important;
+                    }
+
+                    div {
+                        white-space: nowrap;
+                    }
+                }
+
+                .phone,
+                .location,
+                .mail {
+                    width: 32rem !important;
+                }
+
+
+                .twitter {
+                    margin-left: 5rem !important;
+                }
+
+                .instagram {
+                    margin-left: 8.5rem !important;
+                }
+            }
         }
     }
 }
@@ -1116,7 +1151,7 @@ footer {
 
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         height: initial;
         height: 90%;
 
@@ -1127,7 +1162,7 @@ footer {
 
     .catalogue {
         justify-content: start !important;
-        width: 35% !important;
+        width: 25% !important;
         margin: 1em !important;
         border-radius: 20px;
         align-self: center;
@@ -1138,13 +1173,13 @@ footer {
 
         &:nth-child(2) {
             transform: scale(1.1);
-            margin: 1em !important;
+            margin: 2em !important;
         }
 
 
 
         .services {
-            margin-top: 3.5em !important;
+            margin-top: 2.5em !important;
         }
 
         .request {
