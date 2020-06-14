@@ -721,6 +721,19 @@ footer {
 
     .btn {
         white-space: nowrap;
+
+       
+    }
+
+    .login.btn {
+        a {
+            padding: .8em 1em !important;
+        }
+    }
+    .signup.btn {
+        a {
+            padding: .9em 1em !important;
+        }
     }
 
     .choose {
@@ -751,7 +764,41 @@ footer {
     .navItem {
         margin: 0 !important;
     }
+
+    .navList {
+        margin-right: 1em !important;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @include mobile {
