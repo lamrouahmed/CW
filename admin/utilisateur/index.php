@@ -4,7 +4,9 @@ if(Session::exists("admin")) {
     require_once '../sideBar/sideBar.php';
     $DB = DB::connect();
 
-
+    $User = new User();
+    $online = $User->getOnline()->count();
+    $offline = $User->getOffline()->count();
 
 if(Input::exists()) {
 $id = Input::get('id');
@@ -40,21 +42,24 @@ if($action === "delete") {
                         Nb utilisateurs
                     </div>
                     <div class="text">
-                        4 </div>
+                        <?php echo $online + $offline?>
+                    </div>
                 </div>
                 <div class="OnlineUsres">
                     <div class="title">
                         Utilisateurs connectee
                     </div>
                     <div class="text">
-                        1 </div>
+                        <?php echo $online?>
+                    </div>
                 </div>
                 <div class="OfflineUsers">
                     <div class="title">
                     Utilisateurs deconnecte
                     </div>
                     <div class="text">
-                        1 </div>
+                        <?php echo $offline?>
+                    </div>
                 </div>
             </div>
 

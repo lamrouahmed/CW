@@ -97,5 +97,16 @@
         {
             return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND demande_id = {$id}", [], "SELECT");
         }
+        
+        public function getOnline() 
+        {
+            return $this->db->query("SELECT * FROM user WHERE status = 'online' AND permission = 0", [], "SELECT");
+        }
+        
+        
+        public function getOffline() 
+        {    
+            return $this->db->query("SELECT * FROM user WHERE status = 'offline' AND permission = 0", [], "SELECT");
+        }
 
     }
