@@ -974,7 +974,7 @@ footer section .mid .prt .twitter svg {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1600px) {
+@media (min-width: 1000px) and (max-width: 3200px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

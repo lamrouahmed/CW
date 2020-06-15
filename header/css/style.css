@@ -28,6 +28,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #1a1f22;
 }
 
 .headerWrapper .headerLogo {
@@ -42,7 +43,7 @@ html {
 
 .headerWrapper .headerLogo h1 {
   font-weight: 500;
-  color: #273036;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -70,7 +71,7 @@ html {
 }
 
 .headerWrapper .logoImg svg path {
-  fill: #273036;
+  fill: #ffffff;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }

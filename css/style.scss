@@ -19,7 +19,7 @@ $maxTablet: 1200px;
 /*-------- Desktop Media Queries ---------*/
 
 $minDesktop: 1000px;
-$maxDesktop: 1600px;
+$maxDesktop: 3200px;
 
 @mixin desktop {
     @media (min-width: #{$minDesktop}) and (max-width: #{$maxDesktop}) {
