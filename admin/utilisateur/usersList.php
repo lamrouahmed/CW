@@ -19,7 +19,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
     </div>
     <!-- <div class="p_id"><?php echo $result->u_id; ?></div> -->
     <div class="p_uid"><?php echo $result->username ?></div>
-    <div class="p_name"><?php echo $result->last_name. " " . $result->first_name ?></div>
+    <div class="p_name"><?php echo $result->last_name ?></div>
     <div class="p_tel"><?php echo $result->phone ?></div>
     <div class="p_mail"><?php echo $result->mail?></div>
     <div class="p_joined"><?php echo explode(" ", $result->created)[0]?></div>

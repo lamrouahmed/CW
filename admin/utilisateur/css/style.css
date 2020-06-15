@@ -54,11 +54,12 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-weight: 500;
-  height: 2em;
+  height: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em auto;
+  margin: 0 auto;
+  background-color: #F7F7F7;
 }
 
 .wrapper .top div {
@@ -72,19 +73,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: .1em;
-      -ms-flex: .1em;
-          flex: .1em;
+  color: #999292;
+}
+
+.wrapper .top > div {
+  font-size: .8rem !important;
 }
 
 .wrapper .top .void {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-preferred-size: 4%;
-      flex-basis: 4%;
+  width: 0;
+}
+
+.wrapper .top .tel {
+  width: 7rem;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .wrapper .mid {
@@ -99,12 +103,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: .1em auto;
+  margin: 0 auto;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+  margin-bottom: 1px;
 }
 
 .wrapper .mid:hover {
@@ -122,44 +127,37 @@ body {
   fill: #088070;
 }
 
-.wrapper .mid div {
-  font-size: .85em;
-  color: #828181;
+.wrapper .mid > div {
+  font-size: .75em;
+  color: #424141;
   font-weight: 500;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
 .wrapper .mid .p_uid {
-  color: #a8afb4;
-  font-weight: 500;
+  font-weight: 600;
+  width: 6rem;
 }
 
-.wrapper .mid .p_id {
-  font-weight: 600;
-  font-size: 1em;
+.wrapper .mid .p_tel {
+  width: 6rem;
+}
+
+.wrapper .mid .p_name {
+  width: 4rem;
 }
 
 .wrapper .mid .p_mail {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-preferred-size: 16%;
-      flex-basis: 16%;
+  width: 10rem;
 }
 
 .wrapper .mid .p_img {
@@ -261,7 +259,7 @@ body {
 }
 
 .wrapper .options {
-  background-color: #FFF;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,6 +267,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 10%;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 80%;
 }
 
 .wrapper .options .sort {
@@ -362,67 +363,49 @@ body {
 }
 
 .wrapper .options .search {
-  height: 46%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-right: 2rem;
 }
 
 .wrapper .options .search .searchInput {
-  border: none;
-  border-bottom: 1px solid #0c356b;
-  width: 70%;
-  background-color: transparent;
-  font-family: 'Montserrat', sans-serif;
+  height: 2.5rem;
+  border-radius: 30px;
+  border: 1px solid #d8d5d5;
   font-weight: 500;
-  height: 100%;
-  padding-left: 2em;
+  padding-left: 1rem;
+  width: 6rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .wrapper .options .search .searchInput:focus {
-  outline: none;
+  width: 12rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-.wrapper .options .search .searchInput::-webkit-input-placeholder {
-  font-weight: 400;
-}
-
-.wrapper .options .search .searchInput:-ms-input-placeholder {
-  font-weight: 400;
-}
-
-.wrapper .options .search .searchInput::-ms-input-placeholder {
-  font-weight: 400;
-}
-
-.wrapper .options .search .searchInput::placeholder {
-  font-weight: 400;
-}
-
-.wrapper .options .search .label {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.wrapper .options .search .label .border {
-  display: block;
+.wrapper .options .search .searchSvg {
+  cursor: pointer;
   position: absolute;
-  width: 70%;
-  height: .1em;
-  background-color: #0c356b;
-  bottom: 1%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  right: 31px;
 }
 
-.wrapper .options .search .label .clicked {
-  -webkit-transform: scaleX(1) !important;
-          transform: scaleX(1) !important;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+.wrapper .options .search .searchSvg svg {
+  width: 1.5rem;
+  width: 1.5rem;
+}
+
+.wrapper .options .search .searchSvg svg path {
+  fill: #bebdbd;
 }
 
 .wrapper .options .search svg {
@@ -520,6 +503,13 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 1200px) {
+  .options {
+    width: 90% !important;
+    margin-top: 9% !important;
+  }
+  .top {
+    width: 90% !important;
+  }
   .wrapper {
     margin-left: 0 !important;
   }
