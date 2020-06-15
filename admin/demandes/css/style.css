@@ -609,6 +609,9 @@ body {
   .info {
     margin-top: 8% !important;
   }
+  .guide {
+    display: none !important;
+  }
   .header {
     width: 90% !important;
   }

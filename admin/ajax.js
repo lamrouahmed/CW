@@ -184,3 +184,17 @@ function sort(nodes, sortBy, orderBy) {
 
 options.forEach(option => option.addEventListener('click', e => sort(users, e.currentTarget.dataset.sort, 1)));
 
+
+
+
+
+
+
+
+
+
+
+
+// setInterval(() => {
+//   window.location.href = window.location.href
+// }, 2000)

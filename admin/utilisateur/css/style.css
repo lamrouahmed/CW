@@ -1,4 +1,4 @@
-/*-------- Mobile Media Queries ---------*/
+/*-------- Tablet Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -457,30 +457,6 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-@media (min-width: 300px) and (max-width: 736px) {
-  .wrapper {
-    margin: 0 !important;
-  }
-  .wrapper .top {
-    display: none;
-  }
-  .wrapper .mid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 23rem;
-    margin-top: 1em;
-  }
-  .wrapper .mid .p_img {
-    margin-top: 1em;
-  }
-  .wrapper .mid .p_img .status {
-    bottom: -2px !important;
-    right: 1px !important;
-  }
-}
-
 @-webkit-keyframes delete {
   0% {
     opacity: 1;
@@ -540,6 +516,18 @@ body {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .wrapper {
+    margin-left: 0 !important;
+  }
+  .content .mid {
+    width: 90% !important;
+  }
+  .content .mid > div {
+    font-size: .75rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

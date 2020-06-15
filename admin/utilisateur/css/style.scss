@@ -1,13 +1,24 @@
 //@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/*-------- Mobile Media Queries ---------*/
+// /*-------- Mobile Media Queries ---------*/
 
-$minMobile: 300px;
-$maxMobile: 736px;
+// $minMobile: 300px;
+// $maxMobile: 736px;
 
 
-@mixin mobile {
-    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+// @mixin mobile {
+//     @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+//         @content;
+//     }
+// }
+
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 300px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
         @content;
     }
 }
@@ -444,30 +455,30 @@ body {
 
 
 
-@include mobile {
-    .wrapper {
-        margin: 0 !important;
+// @include mobile {
+//     .wrapper {
+//         margin: 0 !important;
 
-        .top {
-            display: none;
-        }
+//         .top {
+//             display: none;
+//         }
 
-        .mid {
-            flex-direction: column;
-            height: 23rem;
-            margin-top: 1em;
+//         .mid {
+//             flex-direction: column;
+//             height: 23rem;
+//             margin-top: 1em;
 
-            .p_img {
-                margin-top: 1em;
+//             .p_img {
+//                 margin-top: 1em;
 
-                .status {
-                    bottom: -2px !important;
-                    right: 1px !important;
-                }
-            }
-        }
-    }
-}
+//                 .status {
+//                     bottom: -2px !important;
+//                     right: 1px !important;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 
@@ -505,5 +516,21 @@ body {
     to {
         transform: translateX(0%);
         opacity: 1;
+    }
+}
+
+
+@include tablet {
+    .wrapper {
+        margin-left: 0 !important;
+    }
+
+    .content {
+        .mid {
+            width: 90% !important;
+            & > div {
+                font-size: .75rem !important;
+            }
+        }
     }
 }
