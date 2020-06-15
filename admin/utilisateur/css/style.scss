@@ -48,10 +48,14 @@ body {
     position: relative;
     height: 100%;
 
+
     .content {
         flex-direction: column;
         display: flex;
         background-color: #f0f4f7;
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px 2px #d7d3d3;
 
         &>div:nth-child(2n) {
             animation: startup 400ms ease-in-out forwards;
@@ -66,6 +70,7 @@ body {
     }
 
     .top {
+        position: relative;
         display: flex;
         width: 80%;
         justify-content: space-around;
@@ -75,16 +80,18 @@ body {
         align-items: center;
         margin: 0 auto;
         background-color: #F7F7F7;
+        box-shadow: -4px 0px 4px -2px #d7d3d3, 4px 0px 4px -2px #d7d3d3;
 
         div {
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #999292; 
-           
+            color: #999292;
+
         }
-        & > div {
+
+        &>div {
             font-size: .8rem !important;
         }
 
@@ -100,7 +107,7 @@ body {
 
     .mid {
         display: flex;
-        width: 80%;
+        width: 100%;
         justify-content: space-around;
         background-color: #FFF;
         height: 3.6em;
@@ -115,6 +122,7 @@ body {
         &:hover {
             transform: scale(1.03);
             transition: all 200ms ease-in-out;
+            background-color: #f8f8f8;
 
             .action a {
                 .delete {
@@ -127,9 +135,9 @@ body {
             }
         }
 
-        & > div {
+        &>div {
             font-size: .75em;
-            color: #424141;
+            color: #858383;
             font-weight: 500;
             height: 100%;
             display: flex;
@@ -143,8 +151,9 @@ body {
 
 
         .p_uid {
-            font-weight: 600;
+            font-weight: 500;
             width: 6rem;
+            color: rgb(0, 0, 0);
         }
 
         .p_tel {
@@ -154,9 +163,10 @@ body {
         .p_name {
             width: 4rem;
         }
+
         .p_mail {
             width: 10rem;
-            
+
         }
 
 
@@ -197,8 +207,8 @@ body {
 
         .action {
             a {
-                width: 1.2em;
-                height: 1.2em;
+                width: 1.1rem;
+                height: 1.1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -261,32 +271,71 @@ body {
         margin-bottom: 0;
         animation: none !important;
     }
-
+    .info {
+        width: 80%;
+        margin: 0 auto;
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        margin-top: 5%;
+    
+        .stats {
+            display: flex;
+    
+            &>div {
+                margin-right: 1.4em;
+            }
+    
+            .title,
+            .text {
+                font-weight: 500;
+            }
+    
+            .text {
+                font-size: 1.5rem;
+                color: #3976ec;
+            }
+    
+            .title {
+                font-size: .8rem;
+                color: #5e5959;
+                margin-bottom: .5rem;
+            }
+        }
+    
+        
+    
+    
+    }
     .options {
         background-color: #f2f2f2;
         display: flex;
         align-items: center;
         height: 10%;
         margin: 0 auto;
-        margin-top: 5%;
         width: 80%;
-        
+        box-shadow: 0 0 5px 0 #d7d3d3;
+
 
         .sort {
-            height: 2.2rem;
-            width: 6rem;
+            height: 2.9rem;
+            width: 9rem;
             display: flex;
             justify-content: left;
             align-items: center;
             position: relative;
-            border-bottom: 1px solid rgb(12, 53, 107);
+            margin-right: 2rem;
+            margin-left: 2rem;
+
+         
+
 
 
             span {
-                font-weight: 500;
+                font-weight: 600;
                 font-size: .8em;
-                color: rgb(163, 163, 163);
-                margin-left: .5em;
+                background-color: #3b4144;
+                color: #FFF;                
                 display: block;
                 position: relative;
                 width: 100%;
@@ -294,19 +343,21 @@ body {
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                transition: all 200ms ease-in-out;
+                padding-left: .8rem;
+                border-radius: 2px;
 
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: .7em;
-                    height: .7em;
-                    border-top: 2px solid rgb(32, 105, 128);
-                    border-right: 2px solid rgb(32, 105, 128);
-                    right: 15%;
-                    transform: rotate(135deg);
-                    transition: all 100ms ease-in-out;
-                    top: 33%;
+               
+
+                svg {
+                    height: 1rem;
+                    width: 1rem;
+                    margin-left: auto;
+                    margin-right: .8rem;
+
+                        path {
+                            fill: #FFF;
+                        }
                 }
 
                 // &:hover {
@@ -328,19 +379,68 @@ body {
                 display: flex;
                 flex-direction: column;
                 transform: scaleY(0);
-                top: 100%;
+                top: 130%;
                 transform-origin: top;
+                z-index: 99999;
+                box-shadow: 0px 2px 4px -1px #e8e2e2;
 
                 .option {
                     width: 100%;
                     white-space: nowrap;
-                    color: rgb(161, 168, 170);
-                    font-size: .9em;
+                    color: rgba(161, 168, 170, 0.568);
+                    font-size: .75em;
                     background-color: #FFF;
-                    border-bottom: 1px solid rgb(231, 226, 226);
-                    padding: .9em .9em .9em .2em;
+                    padding: 1rem;
+                    // padding: .9em .9em .9em .2em;
                     cursor: pointer;
+                    font-weight: 500;
                     height: 0%;
+                    position: relative;
+                    border-bottom: 1px solid #eff9f8;
+                    padding-left: .5rem;
+                  
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        left: 0;
+                        height: 100%;
+                        top: 0;
+                        width: 3px;
+                        background-color: #3b4144;
+                        transition: all 200ms ease-in-out;
+                        transform: scaleY(0);
+                    }
+                    
+                    &:hover {
+                        color: rgb(161, 168, 170);
+
+                        &::before {
+                            transform: scaleY(1);
+                            transition: all 200ms ease-in-out;
+                        }
+                    }
+
+                    &:first-child {
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+                            background-color: rgb(255, 255, 255);
+                            transform: rotate(45deg) translateY(-50%);
+                            top: 0;
+                            right: 18px;
+                        }
+                    }
+
+
+                    
                 }
             }
 
@@ -354,10 +454,11 @@ body {
 
         .search {
             margin-left: auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-right: 2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: 2rem;
+
             .searchInput {
                 // border: 1px solid rgb(196, 194, 194);
                 // border-radius: 10px;
@@ -377,22 +478,24 @@ body {
                 width: 6rem;
                 transition: all 300ms ease-in-out;
                 transform-origin: left;
-        
+
                 &:focus {
                     width: 12rem;
                     transition: all 300ms ease-in-out;
                 }
 
-               
+
             }
+
             .searchSvg {
                 cursor: pointer;
                 position: absolute;
-                right: 31px;
+                right: 15px;
+
                 svg {
                     width: 1.5rem;
                     width: 1.5rem;
-        
+
                     path {
                         fill: rgb(190, 189, 189);
                     }
@@ -426,27 +529,19 @@ body {
             //     }
             // }
 
-            svg {
-                fill: #257c8b;
-                height: 1.3em;
-                width: 1.3em;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0%;
-            }
+
         }
 
         .refresh {
             svg {
-                height: 2em;
-                width: 2em;
+                height: 1.5em;
+                width: 1.5em;
                 cursor: pointer;
                 transform: scale(1);
                 transition: all 200ms ease-in-out;
 
                 path {
-                    fill: rgb(18, 83, 168);
+                    fill: rgb(84, 86, 88);
                 }
 
                 &:hover {
@@ -542,22 +637,23 @@ body {
 
 @include tablet {
 
-    .options {
+     
+
+    .top,
+    .options,
+    .content {
         width: 90% !important;
-        margin-top: 9% !important;
+
     }
-    .top {
-        width: 90% !important;
-        
-    }
+
     .wrapper {
         margin-left: 0 !important;
     }
 
     .content {
         .mid {
-            width: 90% !important;
-            & > div {
+
+            &>div {
                 font-size: .75rem !important;
             }
         }

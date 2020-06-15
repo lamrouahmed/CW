@@ -34,7 +34,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
                     <polygon
                         points="266.667,21.333 245.333,0 138.667,0 117.333,21.333 42.667,21.333 42.667,64 341.333,64 341.333,21.333 			" />
             </a>
-            <a>
+            <!-- <a>
                 <svg class="update" data-action="update" data-id="<?php echo $result->u_id ;?>" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 383.947 383.947"
                     style="enable-background:new 0 0 383.947 383.947;" xml:space="preserve">
@@ -42,7 +42,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
                     <path d="M377.707,56.053L327.893,6.24c-8.32-8.32-21.867-8.32-30.187,0l-39.04,39.04l80,80l39.04-39.04
         C386.027,77.92,386.027,64.373,377.707,56.053z" />
                 </svg>
-                </a>
+                </a> -->
     </div>
 </div>
 

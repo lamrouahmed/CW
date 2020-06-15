@@ -34,6 +34,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #f0f4f7;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 5px 2px #d7d3d3;
+          box-shadow: 0px 0px 5px 2px #d7d3d3;
 }
 
 .wrapper .content > div:nth-child(2n) {
@@ -47,6 +51,7 @@ body {
 }
 
 .wrapper .top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +65,8 @@ body {
           align-items: center;
   margin: 0 auto;
   background-color: #F7F7F7;
+  -webkit-box-shadow: -4px 0px 4px -2px #d7d3d3, 4px 0px 4px -2px #d7d3d3;
+          box-shadow: -4px 0px 4px -2px #d7d3d3, 4px 0px 4px -2px #d7d3d3;
 }
 
 .wrapper .top div {
@@ -95,7 +102,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #FFF;
@@ -117,6 +124,7 @@ body {
           transform: scale(1.03);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  background-color: #f8f8f8;
 }
 
 .wrapper .mid:hover .action a .delete {
@@ -129,7 +137,7 @@ body {
 
 .wrapper .mid > div {
   font-size: .75em;
-  color: #424141;
+  color: #858383;
   font-weight: 500;
   height: 100%;
   display: -webkit-box;
@@ -144,8 +152,9 @@ body {
 }
 
 .wrapper .mid .p_uid {
-  font-weight: 600;
+  font-weight: 500;
   width: 6rem;
+  color: black;
 }
 
 .wrapper .mid .p_tel {
@@ -196,8 +205,8 @@ body {
 }
 
 .wrapper .mid .action a {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.1rem;
+  height: 1.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,6 +267,45 @@ body {
           animation: none !important;
 }
 
+.wrapper .info {
+  width: 80%;
+  margin: 0 auto;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+
+.wrapper .info .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .info .stats > div {
+  margin-right: 1.4em;
+}
+
+.wrapper .info .stats .title,
+.wrapper .info .stats .text {
+  font-weight: 500;
+}
+
+.wrapper .info .stats .text {
+  font-size: 1.5rem;
+  color: #3976ec;
+}
+
+.wrapper .info .stats .title {
+  font-size: .8rem;
+  color: #5e5959;
+  margin-bottom: .5rem;
+}
+
 .wrapper .options {
   background-color: #f2f2f2;
   display: -webkit-box;
@@ -268,13 +316,14 @@ body {
           align-items: center;
   height: 10%;
   margin: 0 auto;
-  margin-top: 5%;
   width: 80%;
+  -webkit-box-shadow: 0 0 5px 0 #d7d3d3;
+          box-shadow: 0 0 5px 0 #d7d3d3;
 }
 
 .wrapper .options .sort {
-  height: 2.2rem;
-  width: 6rem;
+  height: 2.9rem;
+  width: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,14 +334,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  border-bottom: 1px solid #0c356b;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .wrapper .options .sort span {
-  font-weight: 500;
+  font-weight: 600;
   font-size: .8em;
-  color: #a3a3a3;
-  margin-left: .5em;
+  background-color: #3b4144;
+  color: #FFF;
   display: block;
   position: relative;
   width: 100%;
@@ -304,22 +354,21 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  padding-left: .8rem;
+  border-radius: 2px;
 }
 
-.wrapper .options .sort span::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: .7em;
-  height: .7em;
-  border-top: 2px solid #206980;
-  border-right: 2px solid #206980;
-  right: 15%;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-  top: 33%;
+.wrapper .options .sort span svg {
+  height: 1rem;
+  width: 1rem;
+  margin-left: auto;
+  margin-right: .8rem;
+}
+
+.wrapper .options .sort span svg path {
+  fill: #FFF;
 }
 
 .wrapper .options .sort .sortOptions {
@@ -336,21 +385,70 @@ body {
           flex-direction: column;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  top: 100%;
+  top: 130%;
   -webkit-transform-origin: top;
           transform-origin: top;
+  z-index: 99999;
+  -webkit-box-shadow: 0px 2px 4px -1px #e8e2e2;
+          box-shadow: 0px 2px 4px -1px #e8e2e2;
 }
 
 .wrapper .options .sort .sortOptions .option {
   width: 100%;
   white-space: nowrap;
-  color: #a1a8aa;
-  font-size: .9em;
+  color: rgba(161, 168, 170, 0.568);
+  font-size: .75em;
   background-color: #FFF;
-  border-bottom: 1px solid #e7e2e2;
-  padding: .9em .9em .9em .2em;
+  padding: 1rem;
   cursor: pointer;
+  font-weight: 500;
   height: 0%;
+  position: relative;
+  border-bottom: 1px solid #eff9f8;
+  padding-left: .5rem;
+}
+
+.wrapper .options .sort .sortOptions .option:last-child {
+  border: none;
+}
+
+.wrapper .options .sort .sortOptions .option::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  height: 100%;
+  top: 0;
+  width: 3px;
+  background-color: #3b4144;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.wrapper .options .sort .sortOptions .option:hover {
+  color: #a1a8aa;
+}
+
+.wrapper .options .sort .sortOptions .option:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper .options .sort .sortOptions .option:first-child::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  -webkit-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
+  top: 0;
+  right: 18px;
 }
 
 .wrapper .options .sort .sortOptionsVisible {
@@ -396,7 +494,7 @@ body {
 .wrapper .options .search .searchSvg {
   cursor: pointer;
   position: absolute;
-  right: 31px;
+  right: 15px;
 }
 
 .wrapper .options .search .searchSvg svg {
@@ -408,20 +506,9 @@ body {
   fill: #bebdbd;
 }
 
-.wrapper .options .search svg {
-  fill: #257c8b;
-  height: 1.3em;
-  width: 1.3em;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0%;
-}
-
 .wrapper .options .refresh svg {
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -430,7 +517,7 @@ body {
 }
 
 .wrapper .options .refresh svg path {
-  fill: #1253a8;
+  fill: #545658;
 }
 
 .wrapper .options .refresh svg:hover {
@@ -503,18 +590,13 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 1200px) {
-  .options {
-    width: 90% !important;
-    margin-top: 9% !important;
-  }
-  .top {
+  .top,
+  .options,
+  .content {
     width: 90% !important;
   }
   .wrapper {
     margin-left: 0 !important;
-  }
-  .content .mid {
-    width: 90% !important;
   }
   .content .mid > div {
     font-size: .75rem !important;
