@@ -1,6 +1,8 @@
 <?php
 require_once '../../core/init.php';
-require_once '../sideBar/sideBar.php';
+
+if(Session::exists('admin')){
+    require_once '../sideBar/sideBar.php';
 $demande = new Demande();
 $N = $demande->getDemandesN()->count();
 $Y = $demande->getDemandesY()->count();
@@ -310,3 +312,9 @@ if(Input::exists()) {
 </body>
 
 </html>
+
+<?php
+} else {
+    Redirect::to("/PFE/admin/login.php");
+}
+?>

@@ -1,6 +1,7 @@
 <?php
 require_once '../core/init.php';
-$data = [];
+if(Session::exists('admin')) {
+    $data = [];
 $users = new User();
 $demandes = new Demande();
 
@@ -10,4 +11,5 @@ $data += ["demandes" => $demandes->getDemandes()->results()];
 
 
 echo json_encode($data);
+}
 

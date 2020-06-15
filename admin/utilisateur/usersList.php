@@ -1,7 +1,8 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 
-$DB = DB::connect();
+if(Session::exists(('admin'))) {
+    $DB = DB::connect();
 $results = $DB->getAll("user", ["permission", 0])->results();
 ?>
 
@@ -50,3 +51,11 @@ $results = $DB->getAll("user", ["permission", 0])->results();
 
 </body>
 </html>
+
+
+<?php
+} else {
+    Redirect::to("/PFE/admin/login.php");
+}
+?>
+
