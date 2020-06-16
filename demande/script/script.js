@@ -96,7 +96,6 @@ lavage.forEach((btn, i) => {
         $('.total .prix h2').textContent = `${prix} M.A.D`;
         $('.price').value = prix;
 
-        console.log(prix);
 
     })
 })
@@ -177,6 +176,7 @@ function post(url, form) {
 
             body.date && $('input[type=date]').classList.add('error')
             body.time && $('input[type=time]').classList.add('error')
+            body.localisation && $('textarea').classList.add('textError')
             
             
         });

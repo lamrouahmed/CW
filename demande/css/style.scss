@@ -333,10 +333,6 @@ body {
                 }
             }
 
-            .error {
-                border-color: rgb(236, 60, 60) !important;
-                color: rgb(236, 60, 60);
-            }
         }
 
         .localisation {
@@ -471,6 +467,16 @@ body {
             }
         }
     }
+}
+
+
+.error {
+    border-color: rgb(236, 60, 60) !important;
+    color: rgb(236, 60, 60) !important;
+}
+
+.textError {
+    border-color: rgb(236, 60, 60) !important;
 }
 
 
