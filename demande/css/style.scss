@@ -159,10 +159,10 @@ body {
             }
         }
 
-        
 
 
-        
+
+
 
         .vehicules,
         .lavages,
@@ -332,6 +332,10 @@ body {
                     margin-left: 2rem;
                 }
             }
+
+            .error {
+                border-color: red !important;
+            }
         }
 
         .localisation {
@@ -428,6 +432,32 @@ body {
                     transition: all 200ms ease-in-out;
                 }
             }
+
+            .clicked {
+                color: transparent;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 0;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 100%;
+                position: relative;
+
+                &:hover {
+                    transform: scale(1);
+                }
+
+
+
+                &::after {
+                    content: url("../img/correct.svg");
+                    position: absolute;
+                    display: block;
+                    height: 1rem;
+                    width: 1rem;
+                    transform: scale(0.056);
+                    top: 0;
+                }
+            }
         }
 
         .total {
@@ -467,9 +497,10 @@ body {
     // }
 
     .form {
-        & > div {
+        &>div {
             width: 48rem !important;
-            & > p {
+
+            &>p {
                 width: 13rem !important;
             }
         }
@@ -498,5 +529,5 @@ body {
     .horodatage .label {
         margin-left: 2rem !important;
     }
-   
+
 }

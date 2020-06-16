@@ -43,7 +43,6 @@ function get(url, nodes) {
                 $$('.lavageLabel input[type=radio]').forEach(input => input.checked = false)
                 $(`.lavageLabel input[type=radio][value=${type}]`).parentNode.classList.add('checked');
                 $(`.lavageLabel input[type=radio][value=${type}]`).checked = true;
-                console.log('qds');
             } else {
                 $$('.lavageLabel input[type=radio]').forEach(input => input.checked = false)
                 $(`.lavageLabel input[type=radio][value=Normale]`).parentNode.classList.add('checked');
@@ -140,6 +139,7 @@ if('geolocation' in navigator) {
 demande.addEventListener('click', e => {
     e.preventDefault()
     post('/PFE/demande/demande.inc.php', $('.form'));
+    
 })
 
 
@@ -164,6 +164,18 @@ function post(url, form) {
             return response.json();
         })
         .then(function (body) {
-            console.log(body);
+
+            if(body.ok) {
+                demande.classList.add('clicked')
+
+                setTimeout(() => {  
+                    window.location.href = '/PFE/user/profile/demandes/demandes.php';
+                }, 1000)
+            }
+
+            body.date && $('input[type=date]').classList.add('error')
+            body.time && $('input[type=time]').classList.add('error')
+            
+            
         });
 }
