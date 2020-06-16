@@ -51,7 +51,7 @@ function get(url, nodes) {
             
             let checked = $('.lavageLabel.checked input[type=radio]').value;
             let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
-            $('.prix h2').textContent = `${prix} M.A.D`;
+            $('.total .prix h2').textContent = `${prix} M.A.D`;
             $('.price').value = prix;
 
         });
@@ -66,7 +66,7 @@ get('/PFE/demande/listLavage.php', $$('.prixLavage h2'));
 
 
 quantityModif.forEach(btn => btn.addEventListener('click', e => modify(e, $('.quantite'))));
-$('.price').value = $('.prix h2').textContent.split(' ')[0];
+$('.price').value = $('.total .prix h2').textContent.split(' ')[0];
 
 function modify(e, node) {
     const element = e.currentTarget;
@@ -76,7 +76,7 @@ function modify(e, node) {
     (node.value <= 1 && (node.value = 1)) && ($('.btn[data-action="-"]').style.opacity = ".4");
     let checked = $('.lavageLabel.checked input[type=radio]').value;
     let prix = price.filter(e => e.type_lavage === checked)[0].prix * node.value;
-    $('.prix h2').textContent = `${prix} M.A.D`;
+    $('.total .prix h2').textContent = `${prix} M.A.D`;
     $('.price').value = prix;
 
 }
@@ -93,8 +93,10 @@ lavage.forEach((btn, i) => {
 
         let checked = $('.lavageLabel.checked input[type=radio]').value;
         let prix = price.filter(e => e.type_lavage === checked)[0].prix * $('.quantite').value;
-        $('.prix h2').textContent = `${prix} M.A.D`;
+        $('.total .prix h2').textContent = `${prix} M.A.D`;
         $('.price').value = prix;
+
+        console.log(prix);
 
     })
 })

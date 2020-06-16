@@ -547,7 +547,7 @@
                 <div class="total">
                     <p>Prix totale</p>
                     <div class="prix">
-                        <h2>132 M.A.D</h2>
+                        <h2> M.A.D</h2>
                         <input type="hidden" name="price" class="price">
                     </div>
                 </div>

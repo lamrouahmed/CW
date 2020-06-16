@@ -363,7 +363,8 @@ body {
 }
 
 .formWrapper form .horodatage .error {
-  border-color: red !important;
+  border-color: #ec3c3c !important;
+  color: #ec3c3c;
 }
 
 .formWrapper form .localisation .input {
