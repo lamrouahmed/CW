@@ -60,6 +60,13 @@
                                     $this->setError("{$rules["name"]} doesn't exists", $field);
                                 }
                             break;
+                            case "date":
+                                if($value < explode(' ', Config::getDate())[0])
+                                {
+                                    $this->setError("{$rules["name"]} invalide", $field);
+                                }
+                            break;
+                         
 
                         }
                     }

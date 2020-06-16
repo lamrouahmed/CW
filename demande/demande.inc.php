@@ -6,7 +6,7 @@
         $alerts = [];
         $validate = new Validate();
         $validate->check('POST', [
-            "date" => ["name" => "date"],
+            "date" => ["name" => "date", "date" => Input::get('date')],
             "time" => ["name" => "heure"],
             "localisation" => ["name" => "localisation", "exists" => Input::get('vehicule')]
         ]);

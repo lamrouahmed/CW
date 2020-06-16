@@ -174,9 +174,15 @@ function post(url, form) {
                 }, 1000)
             }
 
-            body.date && $('input[type=date]').classList.add('error')
-            body.time && $('input[type=time]').classList.add('error')
-            body.localisation && $('textarea').classList.add('textError')
+            if(body.date) $('input[type=date]').classList.add('error')
+            else $('input[type=date]').classList.remove('error')
+
+
+            if(body.time) $('input[type=time]').classList.add('error')
+            else $('input[type=time]').classList.remove('error')
+
+            if(body.localisation) $('textarea').classList.add('textError')
+            else $('textarea').classList.remove('textError')
             
             
         });
