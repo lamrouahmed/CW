@@ -9,8 +9,26 @@
                         die();
                     break;
                 }
-            }
+            } else if(is_string($url)){
+                switch($url) {
+                    case 'demande':
+                        header('Location: /PFE/demande/demande.php');
+                        die();
+                    break;
+
+                    case 'review':
+                        header('Location: /PFE/review/review.php');
+                        die();
+                    break;
+
+                    
+                }
+
+              
+            }   
+
             header("Location: {$url}");
             die();
+            
         }
     }

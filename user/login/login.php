@@ -1,7 +1,6 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 require_once '/wamp64/www/PFE/user/login/login.inc.php';
-    
 ?>
 
 
@@ -46,7 +45,7 @@ require_once '/wamp64/www/PFE/user/login/login.inc.php';
                 <h2 class="brand">LOGIN</h2>
             </div>
             <div class="form">
-                <form method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?> >
+                <form method="POST" action=<?php echo escape($_SERVER["PHP_SELF"])."?redirect=".escape(Input::get('redirect'));?> >
                     <label class="sLabel">
                         <input class="input" type="text" name="u_username" placeholder="Username" value=<?php echo Input::get("u_username") ?>>
                         <span class="border"></span>

@@ -51,7 +51,7 @@
         echo json_encode($alerts);
     }
   } else {
-      Redirect::to('/PFE/user/login/login.php');
+      Redirect::to('/PFE/user/login/login.php?redirect=demande');
   }
 
 

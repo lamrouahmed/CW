@@ -70,9 +70,9 @@ body {
 
         .link {
             text-decoration: none;
-            color: #104a66;
+            color: #161718;
             font-family: 'Montserrat', sans-serif;
-            border: 2px solid #244571;
+            border: 2px solid #1a1f22;
             padding: 1em 2em;
             font-weight: 600;
             margin-top: 3em;
@@ -84,7 +84,7 @@ body {
             &:hover {
                 transition: all 200ms ease-in-out;
                 transform: scale(.97);
-                background-color: #244571;
+                background-color: #1a1f22;
                 color: #FFF;
             }
         }
@@ -119,7 +119,7 @@ body {
             transition: all 200ms ease-in-out;
             transform: scale(.97);
             background-color: #FFF !important;
-            color: #1b3760 !important;
+            color: #1a1f22 !important;
             
         }
     }
