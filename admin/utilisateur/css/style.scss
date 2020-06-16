@@ -638,6 +638,9 @@ body {
 @include tablet {
 
      
+    .info {
+        margin-top: 9% !important;
+    }
 
     .top,
     .options,
