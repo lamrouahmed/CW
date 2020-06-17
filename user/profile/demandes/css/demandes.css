@@ -21,10 +21,6 @@ body {
   background-color: #faf7f7;
 }
 
-header {
-  width: 100vw;
-}
-
 header section {
   width: 100%;
   display: -webkit-box;
