@@ -1,3 +1,12 @@
+<?php
+    require_once '/wamp64/www/PFE/core/init.php';
+    require_once '/wamp64/www/PFE/payment/payment.inc.php';
+
+    if(Session::exists("user")) { 
+        $user = new User();
+
+        ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +53,7 @@
                             <path class="darkcolor greydark" d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
                         </g>
                         <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber" class="st2 st3 st4">**** **** **** ****</text>
-                        <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname" class="st2 st5 st6">FULL NAME</text>
+                        <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname" class="st2 st5 st6"><?php echo $user->getData()->last_name. " " . $user->getData()->first_name?></text>
                         <text transform="matrix(1 0 0 1 54.1074 389.8793)" class="st7 st5 st8">cardholder name</text>
                         <text transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">expiration</text>
                         <text transform="matrix(1 0 0 1 65.1054 241.5)" class="st7 st5 st8">card number</text>
@@ -119,16 +128,16 @@
                         </g>
                         <rect x="58.1" y="378.6" class="st11" width="375.5" height="13.5" />
                         <rect x="58.1" y="405.6" class="st11" width="421.7" height="13.5" />
-                        <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback" class="st12 st13">FULL NAME</text>
+                        <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback" class="st12 st13"><?php echo $user->getData()->last_name. " " . $user->getData()->first_name?></text>
                     </g>
                 </svg>
             </div>
         </div>
     </div>
-    <div class="form-container">
+    <form class="form-container form" method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?>>
 
         <label class="label">
-            <input data-check="u_last_name" id="name" maxlength="20" class="input" type="text" name="u_last_name">
+            <input data-check="u_last_name" id="name" maxlength="20" class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name?>">
             <span class="border"></span>
             <span class="text">Name</span>
             <span class="error" data-error="a_username"></span>
@@ -157,7 +166,7 @@
             </label>    
         </div>
             <button class="log">Pay</button>
-    </div>
+    </form>
       
 
 
@@ -168,3 +177,10 @@
 </script>
 </body>
 </html>
+
+
+<?php
+    } else {
+        Redirect::to('/PFE');
+    }
+?>

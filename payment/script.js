@@ -21,56 +21,22 @@ let cctype = null;
 //Mask the Credit Card Number Input
 var cardnumber_mask = new IMask(cardnumber, {
     mask: [
-        /*{
-            mask: '0000 000000 00000',
-            regex: '^3[47]\\d{0,13}',
-            cardtype: 'american express'
-        },*/
+
         {
             mask: '0000 0000 0000 0000',
             regex: '^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}',
             cardtype: 'discover'
         },
-        /*{
-            mask: '0000 000000 0000',
-            regex: '^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}',
-            cardtype: 'diners'
-        },*/
         {
             mask: '0000 0000 0000 0000',
             regex: '^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}',
             cardtype: 'mastercard'
         },
-        // {
-        //     mask: '0000-0000-0000-0000',
-        //     regex: '^(5019|4175|4571)\\d{0,12}',
-        //     cardtype: 'dankort'
-        // },
-        // {
-        //     mask: '0000-0000-0000-0000',
-        //     regex: '^63[7-9]\\d{0,13}',
-        //     cardtype: 'instapayment'
-        // },
-        /*{
-            mask: '0000 000000 00000',
-            regex: '^(?:2131|1800)\\d{0,11}',
-            cardtype: 'jcb15'
-        },*/
-        /*{
-            mask: '0000 0000 0000 0000',
-            regex: '^(?:35\\d{0,2})\\d{0,12}',
-            cardtype: 'jcb'
-        },*/
         {
             mask: '0000 0000 0000 0000',
             regex: '^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}',
             cardtype: 'maestro'
         },
-        // {
-        //     mask: '0000-0000-0000-0000',
-        //     regex: '^220[0-4]\\d{0,12}',
-        //     cardtype: 'mir'
-        // },
         {
             mask: '0000 0000 0000 0000',
             regex: '^4\\d{0,15}',
@@ -149,7 +115,8 @@ const swapColor = function (basecolor) {
 //pop in the appropriate card icon when detected
 cardnumber_mask.on("accept", function () {
     console.log(cardnumber_mask.masked.currentMask.cardtype);
-    
+    document.querySelector('.cardNumber').classList.remove('cardNumberError')
+
     switch (cardnumber_mask.masked.currentMask.cardtype) {
 
         /*case 'american express':
@@ -194,6 +161,9 @@ cardnumber_mask.on("accept", function () {
             break;
         case 'Unknown':
             document.querySelector('.cardNumber').classList.add('cardNumberError')
+            ccicon.innerHTML = '';
+            ccsingle.innerHTML = '';
+            swapColor('grey');
             break;
         default:
             ccicon.innerHTML = '';
@@ -309,6 +279,38 @@ inputs.forEach((input, index) => input.addEventListener('blur', e => {
 inputs.forEach((input, index) => {
     input.value.trim() === '' ?  $$('.text')[index].classList.remove('focus') : $$('.text')[index].classList.add('focus');
 })
+
+
+
+
+
+submit.addEventListener('click', e => {
+    e.preventDefault();
+    post('/PFE/payment/payment.inc.php', $('.form'));
+})
+
+
+
+
+
+
+
+
+
+  function post(url, form) {
+    let formData = new FormData(form);
+    fetch(url, {
+        method: 'post',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(body => console.log(body));
+  }
+
+
+
+
+
 };
 
 

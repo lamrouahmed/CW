@@ -13,6 +13,33 @@
 
         public function check($method, $fields)
         {
+            $regExps = [
+                "discover" => "^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}",
+                "mastercard" => "^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}",
+                "maestro" => "^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}",
+                "visa" => "^4\\d{0,15}",
+                "unionpay" => "^62\\d{0,14}",
+            ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             foreach ($fields as $field => $rules) {
                 foreach ($rules as $ruleName => $rule) {
                     $value =  escape(Input::get($field));
@@ -66,6 +93,25 @@
                                     $this->setError("{$rules["name"]} invalide", $field);
                                 }
                             break;
+                            case "credit_card":            
+                                    if(!preg_match("/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}(?:2131|1800|35\d{3})\d{11})$/", str_replace(' ', '', $rules[$ruleName]))) 
+                                    {
+                                        $this->setError("invalid {$rules["name"]}", $field);
+                                    }                               
+                            break;
+                            case "cvv":            
+                                    if(!preg_match("/^[0-9]{3,4}$/", str_replace(' ', '', $rules[$ruleName]))) 
+                                    {
+                                        $this->setError("invalid {$rules["name"]}", $field);
+                                    }                               
+                            break;
+                            case "expiry":   
+                                    if(!preg_match("/^(0[1-9]|1[0-2])\/?([0-9]{2})$/", str_replace(' ', '', $rules[$ruleName]))) 
+                                    {
+                                        $this->setError("invalid {$rules["name"]}", $field);
+                                    }                               
+                            break;
+                            
                          
 
                         }
