@@ -7,6 +7,12 @@ const securitycode = document.getElementById('securitycode');
 const output = document.getElementById('output');
 const ccicon = document.getElementById('ccicon');
 const ccsingle = document.getElementById('ccsingle');
+const $ = e => document.querySelector(e)
+const $$ = e => document.querySelectorAll(e)
+
+const inputs = $$('.input');
+const submit = $('.log');
+
 // const generatecard = document.getElementById('generatecard');
 
 
@@ -281,21 +287,6 @@ expirationdate.addEventListener('focus', function () {
 securitycode.addEventListener('focus', function () {
     document.querySelector('.creditcard').classList.add('flipped');
 });
-};
-
-
-
-
-
-
-
-
-
-const $ = e => document.querySelector(e)
-const $$ = e => document.querySelectorAll(e)
-
-const inputs = $$('.input');
-const submit = $('.log');
 
 
 inputs.forEach((input, index) => input.addEventListener('focus', e => {
@@ -318,3 +309,15 @@ inputs.forEach((input, index) => input.addEventListener('blur', e => {
 inputs.forEach((input, index) => {
     input.value.trim() === '' ?  $$('.text')[index].classList.remove('focus') : $$('.text')[index].classList.add('focus');
 })
+};
+
+
+
+
+
+
+
+
+
+
+
