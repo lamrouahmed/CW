@@ -7,7 +7,7 @@ const securitycode = document.getElementById('securitycode');
 const output = document.getElementById('output');
 const ccicon = document.getElementById('ccicon');
 const ccsingle = document.getElementById('ccsingle');
-const generatecard = document.getElementById('generatecard');
+// const generatecard = document.getElementById('generatecard');
 
 
 let cctype = null;
@@ -143,7 +143,9 @@ const swapColor = function (basecolor) {
 //pop in the appropriate card icon when detected
 cardnumber_mask.on("accept", function () {
     console.log(cardnumber_mask.masked.currentMask.cardtype);
+    
     switch (cardnumber_mask.masked.currentMask.cardtype) {
+
         /*case 'american express':
             ccicon.innerHTML = amex;
             ccsingle.innerHTML = amex_single;
@@ -178,12 +180,14 @@ cardnumber_mask.on("accept", function () {
             ccicon.innerHTML = mastercard;
             ccsingle.innerHTML = mastercard_single;
             swapColor('lightblue');
-
             break;
         case 'unionpay':
             ccicon.innerHTML = unionpay;
             ccsingle.innerHTML = unionpay_single;
             swapColor('cyan');
+            break;
+        case 'Unknown':
+            document.querySelector('.cardNumber').classList.add('cardNumberError')
             break;
         default:
             ccicon.innerHTML = '';
@@ -211,9 +215,9 @@ const randomCard = function () {
     let randomNumber = Math.floor(Math.random() * testCards.length);
     cardnumber_mask.unmaskedValue = testCards[randomNumber];
 }
-generatecard.addEventListener('click', function () {
-    randomCard();
-});
+// generatecard.addEventListener('click', function () {
+//     randomCard();
+// });
 
 
 // CREDIT CARD IMAGE JS
@@ -278,3 +282,39 @@ securitycode.addEventListener('focus', function () {
     document.querySelector('.creditcard').classList.add('flipped');
 });
 };
+
+
+
+
+
+
+
+
+
+const $ = e => document.querySelector(e)
+const $$ = e => document.querySelectorAll(e)
+
+const inputs = $$('.input');
+const submit = $('.log');
+
+
+inputs.forEach((input, index) => input.addEventListener('focus', e => {
+    $$('.text')[index].classList.add('focus');
+    $$('.border')[index].classList.add('clicked')
+    e.currentTarget.type !== "password" && e.currentTarget.setSelectionRange(0,e.currentTarget.value.length); 
+    if(e.currentTarget.classList.contains('textarea') && e.currentTarget.value.trim() === "") {
+        e.currentTarget.setSelectionRange(0,0); 
+    }
+
+
+}))  
+
+
+inputs.forEach((input, index) => input.addEventListener('blur', e => {
+    e.currentTarget.value.trim() === '' &&  $$('.text')[index].classList.remove('focus');
+    $$('.border')[index].classList.remove('clicked')
+}))
+
+inputs.forEach((input, index) => {
+    input.value.trim() === '' ?  $$('.text')[index].classList.remove('focus') : $$('.text')[index].classList.add('focus');
+})

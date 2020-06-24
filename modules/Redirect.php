@@ -5,7 +5,7 @@
                 switch ($url) {
                     case 404:
                         header('Location: HTTP/1.0 404 not found');
-                        include '/wamp64/www/PFE/includes/errors/404.html';
+                        include '/wamp64/www/PFE/404/';
                         die();
                     break;
                 }
