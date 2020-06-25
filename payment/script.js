@@ -304,7 +304,20 @@ submit.addEventListener('click', e => {
         body: formData
       })
       .then(response => response.json())
-      .then(body => console.log(body));
+      .then(body => {
+        //   body.ok && (window.location.href = '/PFE/user/profile/factures/factures.html');
+
+        $$('.error').forEach((error, index) => {
+            if(body[error.dataset.error]) {
+                error.textContent = body[error.dataset.error];
+                $$('.input')[index].classList.add('errorTrue');
+            } else {
+                $$('.input')[index].classList.remove('errorTrue');
+                error.textContent = "";
+
+            }   
+        })
+      });
   }
 
 

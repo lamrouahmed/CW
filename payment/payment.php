@@ -140,13 +140,13 @@
             <input data-check="u_last_name" id="name" maxlength="20" class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name?>">
             <span class="border"></span>
             <span class="text">Name</span>
-            <span class="error" data-error="a_username"></span>
+            <span class="error" data-error="u_last_name"></span>
         </label>
         <label class="label cardNumber">
             <input data-check="u_card_number" id="cardnumber" class="input" type="text" pattern="[0-9]*" inputmode="numeric"  name="u_card_number">
             <span class="border"></span>
             <span class="text">Card Number</span>
-            <span class="error" data-error="a_username"></span>
+            <span class="error" data-error="u_card_number"></span>
             <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             </svg>
@@ -156,13 +156,13 @@
                 <input data-check="u_expiration" id="expirationdate" class="input" type="text" pattern="[0-9]*" inputmode="numeric" name="u_expiration">
                 <span class="border"></span>
                 <span class="text">Expiration (mm/yy)</span>
-                <span class="error" data-error="a_username"></span>
+                <span class="error" data-error="u_expiration"></span>
             </label>
             <label class="label">
                 <input data-check="u_cvv" id="securitycode" class="input" type="text" pattern="[0-9]*" inputmode="numeric" name="u_cvv">
                 <span class="border"></span>
                 <span class="text">Security Code</span>
-                <span class="error" data-error="a_username"></span>
+                <span class="error" data-error="u_cvv"></span>
             </label>    
         </div>
             <button class="log">Pay</button>
