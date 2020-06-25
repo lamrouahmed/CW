@@ -18,29 +18,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  font-family: 'Raleway';
+  background-color: #ffffff;
+  height: 100%;
 }
 
 .headerWrapper {
   height: 5rem;
   width: 100%;
-  position: absolute;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +34,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #1a1f22;
+  background-color: #f2f2f2;
 }
 
 .headerWrapper .headerLogo {
@@ -65,7 +49,7 @@ body {
 
 .headerWrapper .headerLogo h1 {
   font-weight: 500;
-  color: #ffffff;
+  color: #273036;
   font-family: 'Montserrat', sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -93,19 +77,216 @@ body {
 }
 
 .headerWrapper .logoImg svg path {
-  fill: #ffffff;
+  fill: #273036;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-.payment-title {
-  width: 100%;
-  text-align: center;
-  margin-top: 6rem;
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% - 5rem);
 }
 
-.payment-title > h1 {
-  font-weight: 400;
+.main > section {
+  width: 50%;
+}
+
+.section_1 {
+  background-color: #2b3342;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_1 .titre {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  padding-bottom: 1rem;
+}
+
+.section_1 .titre > h1 {
+  text-align: center;
+  height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+
+.section_1 .titre .img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.section_1 .titre .img > svg {
+  height: 100%;
+  width: 100%;
+}
+
+.section_1 .userInfo {
+  margin-right: 6rem;
+}
+
+.section_1 .userInfo .top {
+  margin-bottom: .6rem;
+}
+
+.section_1 .userInfo .top p {
+  font-weight: 600;
+}
+
+.section_1 .userInfo .bottom p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: .8;
+}
+
+.section_1 .userInfo > div {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+
+.section_1 .userInfo .mailPhone,
+.section_1 .userInfo .lavageVehicule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_1 .userInfo .mailPhone .phone,
+.section_1 .userInfo .mailPhone .typeVehicule,
+.section_1 .userInfo .lavageVehicule .phone,
+.section_1 .userInfo .lavageVehicule .typeVehicule {
+  margin-left: 9rem;
+}
+
+.section_1 .userInfo .mailPhone .mail,
+.section_1 .userInfo .mailPhone .typeLavage,
+.section_1 .userInfo .lavageVehicule .mail,
+.section_1 .userInfo .lavageVehicule .typeLavage {
+  width: 12rem;
+}
+
+.section_1 .paimentDetail {
+  width: 75%;
+}
+
+.section_1 .paimentDetail > div {
+  padding: 1.6rem;
+  padding-left: 2rem !important;
+}
+
+.section_1 .paimentDetail .texte {
+  padding: .2rem;
+}
+
+.section_1 .paimentDetail .texte p {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.section_1 .paimentDetail .total {
+  padding: .3rem;
+}
+
+.section_1 .paimentDetail .total p {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.section_2 {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_2 .formWrapper {
+  -webkit-box-shadow: 3px 3px 1px 1px #757373;
+          box-shadow: 3px 3px 1px 1px #757373;
+  padding: 3em;
+  background-color: #FFF;
+  border-radius: 5px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.section_2 .formWrapper:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: -3px -3px 1px 1px #333232;
+          box-shadow: -3px -3px 1px 1px #333232;
+}
+
+.section_2 .formHeader {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.section_2 .formHeader .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.section_2 .formHeader .logo svg {
+  height: 5rem;
+  width: 5rem;
+  margin-right: .6rem;
+}
+
+.section_2 .formHeader .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_2 .formHeader .title h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .ccicon {
