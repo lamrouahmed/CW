@@ -22,6 +22,7 @@ if (Session::exists("user")) {
                 ]
             );
             $alerts = json_encode(["ok" => "passed"]);
+            Session::delete('pay');
         } else {
             $alerts = json_encode($validate->getErrors());
         }
