@@ -15,7 +15,7 @@
 
         public function getAll() 
         {
-            return $this->db->query("SELECT * FROM facture f JOIN demande d ON (d.demande_id = d.demande_id) JOIN lavage l ON (l.lavage_id = d.lavage_id) ", [], "SELECT");
+            return $this->db->query("SELECT * FROM facture f JOIN demande d ON (f.demande_id = d.demande_id) JOIN lavage l ON (l.lavage_id = d.lavage_id)", [], "SELECT");
         }
 
         public function delete($id) 
