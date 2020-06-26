@@ -14,6 +14,13 @@ if (Session::exists("user")) {
         ]);
 
         if($validate->isValid()) {
+            $facture = new Facture();
+            $facture->create(
+                [
+                    "demande_id" => Session::get('pay'),
+                    "date_paiement" => Config::getDate()
+                ]
+            );
             $alerts = json_encode(["ok" => "passed"]);
         } else {
             $alerts = json_encode($validate->getErrors());

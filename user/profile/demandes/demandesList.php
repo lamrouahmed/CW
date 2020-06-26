@@ -3,6 +3,7 @@ require_once '/wamp64/www/PFE/core/init.php';
 
 if (Session::exists("user"))
 {   
+    $alerts = [];
     $user = new User();
     $demandes = $user->getDemandes()
         ->results();
@@ -18,10 +19,21 @@ if (Session::exists("user"))
                     "status_demande" => "Canceled"
                 ]);
             } else if($action === "pay") {
+                $Demande = $user->getDemande($id);
+                if($Demande->results()) {
+                    if (Session::exists('pay')) Session::delete('pay');
+                    else {
+                        Session::put('pay', $id);
+                    }
+                    $alerts += ['ok' => 'passed'];
+                        $alerts = json_encode($alerts);
+                        echo $alerts;
+                }
             }
             $demandes = $user->getDemandes()
         ->results();
-        }  
+        }
+        if($action !== "pay")  {
     foreach ($demandes as $demande)
     {
 
@@ -156,12 +168,12 @@ if (Session::exists("user"))
 
 
                     <?php
-    }
+    } }
 ?>
+
 
 
 <?php
 }
-
 
 ?>

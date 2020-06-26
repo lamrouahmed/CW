@@ -2,10 +2,10 @@
     require_once '/wamp64/www/PFE/core/init.php';
     require_once '/wamp64/www/PFE/payment/payment.inc.php';
 
-    if(Session::exists("user")) { 
+    if(Session::exists("user") && Session::exists('pay')) { 
         $user = new User();
-
-        ?>
+        $demande = $user->getDemande(Session::get('pay'))->results()[0];
+    ?>
 
 <!DOCTYPE html>
 <html>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="bottom">
                             <p>
-                                Lamrouah Mohamed
+                                <?php echo $user->getData()->last_name. " " .$user->getData()->first_name?>
                             </p>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                         </div>
                         <div class="bottom">
                             <p>
-                                Lorem ipsum dolor sit dolor sit.
+                                <?php echo $demande->localisation?>
                             </p>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                             </div>
                             <div class="bottom">
                                 <p>
-                                    Pro
+                                <?php echo $demande->type_lavage?>
                                 </p>
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                             </div>
                             <div class="bottom">
                                 <p>
-                                    Camion
+                                <?php echo $demande->type_vehicule?>
                                 </p>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                             </div>
                             <div class="bottom">
                                 <p>
-                                    lamrouahmed@gmail.com
+                                    <?php echo $user->getData()->mail?>
                                 </p>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="bottom">
                                 <p>
-                                    06-77-77-89-89
+                                <?php echo $user->getData()->phone?>
                                 </p>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                         <p>Total</p>
                     </div>
                     <div class="total">
-                        <p>635 M.A.D</p>
+                        <p><?php echo $demande->nb_vehicules * $demande->prix ?> M.A.D</p>
                     </div>
                     
                 </div>

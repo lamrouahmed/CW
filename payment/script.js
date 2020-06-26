@@ -305,7 +305,7 @@ window.onload = function () {
             })
             .then(response => response.json())
             .then(body => {
-                //   body.ok && (window.location.href = '/PFE/user/profile/factures/factures.html');
+                body.ok && (window.location.href = '/PFE/user/profile/factures/factures.html');
 
                 $$('.error').forEach((error, index) => {
                     if (body[error.dataset.error]) {
