@@ -15,6 +15,10 @@ if (Session::exists("user")) {
 
         if($validate->isValid()) {
             $facture = new Facture();
+            $demande = new Demande();
+            $demande->pay(Session::get('pay'), [
+                "status_demande" => "Paid"
+            ]);
             $facture->create(
                 [
                     "demande_id" => Session::get('pay'),

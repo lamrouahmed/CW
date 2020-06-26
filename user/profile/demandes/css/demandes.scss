@@ -27,7 +27,7 @@ $maxTablet: 1200px;
 $colors: (Y: #2c7171,
     N: #ff9f40,
     P: #b32553,
-    D: #2f6c4a,
+    Paid: #2f6c4a,
     C: #f44654);
 
 @function color($color-name) {
@@ -489,8 +489,8 @@ main {
         background-color: color(P);
     }
 
-    .D .statusColor {
-        background-color: color(D);
+    .Paid .statusColor {
+        background-color: color(Paid);
     }
 
     .C .statusColor {
@@ -918,27 +918,27 @@ main {
     }
 }
 
-.D {
+.Paid {
     &::after {
-        background-color: color(D);
+        background-color: color(Paid);
     }
 
     .demande_1 {
         .demandeInfo {
             &::after {
-                background-color: color(D);
+                background-color: color(Paid);
             }
         }
     }
 
     .date {
-        background-color: color(D);
+        background-color: color(Paid);
     }
 
 
     .demande_2 {
         .btns {
-            .pay svg {
+            .delete svg {
                 width: 1.5rem;
                 height: 1.5rem;
             }

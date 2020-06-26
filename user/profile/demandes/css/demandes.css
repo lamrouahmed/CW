@@ -443,7 +443,7 @@ main .add svg path {
   background-color: #b32553;
 }
 
-.guideWrapper .D .statusColor {
+.guideWrapper .Paid .statusColor {
   background-color: #2f6c4a;
 }
 
@@ -822,24 +822,24 @@ main .add svg path {
   display: none;
 }
 
-.D::after {
+.Paid::after {
   background-color: #2f6c4a;
 }
 
-.D .demande_1 .demandeInfo::after {
+.Paid .demande_1 .demandeInfo::after {
   background-color: #2f6c4a;
 }
 
-.D .date {
+.Paid .date {
   background-color: #2f6c4a;
 }
 
-.D .demande_2 .btns .pay svg {
+.Paid .demande_2 .btns .delete svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.D .demande_2 .btns .cancel {
+.Paid .demande_2 .btns .cancel {
   display: none;
 }
 
