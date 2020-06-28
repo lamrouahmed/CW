@@ -8,14 +8,16 @@ if(Session::exists('user')) {
         $facture = $user->getFacture($id);
         $a = new \Mpdf\Mpdf();
         $html = '
-                <p>Car Wash</p>
-                <p>username'. $user->getData()->last_name .'</p>'
-        ;
+                    <div style="width:100%; background-color:#1a1f22; text-align:center">
+                        <p style="color:white; width:100%; text-align:center">Car<b>Wash</b></p>
+                    </div>
+                ';
+        
     
     
     
     
-    
+
         $a->WriteHTML($html);
     
         $output = $a->Output('facture.pdf', 'I');
