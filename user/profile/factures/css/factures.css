@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -7,8 +7,6 @@
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -16,9 +14,11 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  background-color: #faf7f7;
   overflow-x: hidden;
+  background-color: #faf7f7;
 }
 
 header section {
@@ -326,6 +326,11 @@ header section div:first-child {
   fill: #FFF;
 }
 
+.demandesWrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .demandes {
   width: 40rem;
   margin: 1rem auto;
@@ -387,10 +392,9 @@ header section div:first-child {
 .demande .demande_id {
   position: absolute;
   left: 1%;
-  -webkit-transform: rotate(-90deg) translateX(50%);
-          transform: rotate(-90deg) translateX(50%);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   z-index: 9999;
-  top: 50%;
 }
 
 .demande .demande_id p {
@@ -600,5 +604,11 @@ header section div:first-child {
   margin: 0;
   padding: .4rem 0;
   font-size: .9rem;
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .demandesWrapper .demandes {
+    width: 33.5rem;
+  }
 }
 /*# sourceMappingURL=factures.css.map */

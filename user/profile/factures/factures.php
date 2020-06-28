@@ -1,3 +1,15 @@
+<?php
+require_once '/wamp64/www/PFE/core/init.php';
+
+if (Session::exists("user"))
+{   
+    
+    $user = new User();
+   
+
+        
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +22,7 @@
 
 <body>
 
-    <header>
+<header>
         <section class="header_1">
             <div class="logo">
 
@@ -35,7 +47,7 @@
                     </svg>
                 </div>
                 <div class="disconnect">
-                    <p class="username"><span>Welcome, </span></p>
+                    <p class="username"><span>Welcome, </span><?php echo $user->getData()->username; ?></p>
                     <div class="popUp">
                         <div class="triangle">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +65,8 @@
 
                         </div>
                         <div class="img">
-                            <img src="" alt="img" class="upload"
-                                >
+                            <img src="/PFE/uploads/<?php echo $user->getData()->img ?>" alt="img" class="upload"
+                                onerror="this.src='/PFE/uploads/user.svg'">
                         </div>
                     </div>
                     <div class="logout">
@@ -191,7 +203,6 @@
                 </div>
             </div>
         </section>
-
     </header>
 
     <div class="facturesWrapper">
@@ -245,30 +256,21 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="date">
                         <p>2020-06-09 15:21:22</p>
                     </div>
-                    <!-- <div class="demandeFooter">
-
-                        <div class="demandeContent">
-                            <div class="demandeDetails">
-
-                            </div>
-                        </div>
-                    </div> -->
-
                 </div>
-
-
-
-
             </div>
-
         </div>
     </div>
-
     <script src="./script/script.js"></script>
 </body>
 
 </html>
+<?php
+}
+else
+{
+    Redirect::to("/PFE/user/login/login.php");
+}
+?>

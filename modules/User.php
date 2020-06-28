@@ -97,6 +97,10 @@
         {
             return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND demande_id = {$id}", [], "SELECT");
         }
+        public function getFacture(int $id) 
+        {
+            return $this->db->query("SELECT * FROM facture f JOIN demande d ON (f.demande_id = d.demande_id) JOIN lavage l ON (l.lavage_id = d.lavage_id) WHERE u_id = {$this->data->u_id} AND facture_id = {$id}", [], "SELECT");
+        }
         
         public function getOnline() 
         {
