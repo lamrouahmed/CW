@@ -6,10 +6,11 @@ if(Session::exists('user')) {
         $user = new User();
         $id = Input::get('id');
         $facture = $user->getFacture($id);
-        $a = new \Mpdf\Mpdf();
+        $mpdf = new \Mpdf\Mpdf(['default_font' => 'montserrat']);
+        $mpdf->SetDisplayMode('fullpage');
         $html = '
                     <div style="width:100%; background-color:#1a1f22; text-align:center">
-                        <p style="color:white; width:100%; text-align:center">Car<b>Wash</b></p>
+                        <h1 style="color:white; width:100%; text-align:center;">Car<b>Wash</b></h1>
                     </div>
                 ';
         
@@ -18,9 +19,9 @@ if(Session::exists('user')) {
     
     
 
-        $a->WriteHTML($html);
+        $mpdf->WriteHTML($html);
     
-        $output = $a->Output('facture.pdf', 'I');
+        $output = $mpdf->Output('facture.pdf', 'I');
         
     }
 
