@@ -391,7 +391,7 @@ header section div:first-child {
 
 .demande .demande_id {
   position: absolute;
-  left: 1%;
+  left: 2%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   z-index: 9999;
