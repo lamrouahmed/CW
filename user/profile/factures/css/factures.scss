@@ -394,23 +394,23 @@ header {
 
 
 
-.demandesWrapper {
+.facturesWrapper {
     width: 100%;
     height: 100%;
 }
 
 
-.demandes {
+.factures {
     width: 40rem;
     margin: 1rem auto;
 }
 
-.demandeContainer {
+.factureContainer {
     width: 100%;
     position: relative;
 }
 
-.demande {
+.facture {
     width: 100%;
     position: relative;
     background-color: #FFF;
@@ -455,7 +455,7 @@ header {
        
     }
 
-    .demande_id {
+    .facture_id {
         position: absolute;
         left: 2%;
         transform: rotate(-90deg);
@@ -469,7 +469,7 @@ header {
         }
     }
 
-    .demande_1 {
+    .facture_1 {
         display: flex;
         width: 50%;
 
@@ -485,7 +485,7 @@ header {
             }
         }
 
-        .demandeInfo {
+        .factureInfo {
             position: relative;
 
             &::after {
@@ -538,7 +538,7 @@ header {
         }
     }
 
-    .demande_2 {
+    .facture_2 {
         display: flex;
         width: 50%;
         position: relative;
@@ -599,7 +599,7 @@ header {
         width: 3rem;
         align-items: center;
     
-        &>div {
+        &>label {
             cursor: pointer;
             position: relative;
             display: flex;
@@ -666,8 +666,8 @@ header {
 
 
 @include tablet {
-    .demandesWrapper {
-        .demandes {
+    .facturesWrapper {
+        .factures {
             width: 33.5rem;
         }
     }

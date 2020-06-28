@@ -1,5 +1,6 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
+require_once '/wamp64/www/PFE/user/profile/factures/facturePdf.php';
 
 if (Session::exists("user"))
 {   
@@ -206,22 +207,22 @@ if (Session::exists("user"))
     </header>
 
     <div class="facturesWrapper">
-        <div class="demandes">
-            <div class="demandeContainer">
+        <div class="factures">
+            <div class="factureContainer">
             <?php
     foreach ($factures as $facture)
     {
 
 ?>
-                <div class="demande Y">
-                    <div class="demande_1">
-                        <div class="demande_id">
+                <div class="facture">
+                    <div class="facture_1">
+                        <div class="facture_id">
                             <p><?php echo $facture->facture_id?></p>
                         </div>
                         <div class="vehicule">
                             <img src="./img/<?php echo $facture->type_vehicule?>.svg" alt="">
                         </div>
-                        <div class="demandeInfo">
+                        <div class="factureInfo">
                             <div class="lavage">
                                 <p>Lavage <span><?php echo $facture->type_lavage?></span></p>
                             </div>
@@ -236,7 +237,7 @@ if (Session::exists("user"))
 
 
                     </div>
-                    <div class="demande_2">
+                    <div class="facture_2">
                         <div class="payment">
                             <div class="img">
                                 <img src="./img/pay.svg" alt="">
@@ -245,8 +246,11 @@ if (Session::exists("user"))
                         <div class="price">
                             <p><?php echo $facture->nb_vehicules * $facture->prix?><span>M.A.D</span></p>
                         </div>
-                        <div class="btn">
-                            <div class="download" data-action="download">
+                        <form style="display: flex; justify-content:center; width: 5rem;" method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?>>
+                            <div class="btn">
+                                <input type="hidden" name="id" id="download" value="<?php echo $facture->facture_id?>">
+                            <label for="submit">
+                            <div class="download" data-action="download" data-id="<?php echo $facture->facture_id?>">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.827 477.827" style="enable-background:new 0 0 477.827 477.827;" xml:space="preserve">
                                     <g>
                                         <g>
@@ -259,7 +263,10 @@ if (Session::exists("user"))
                                         </g>
                                     </g>
                             </div>
+                            </label>
+                            <input type="submit" style="display: none;" id="submit">
                         </div>
+                        </form>
                     </div>
                     <div class="date">
                         <p><?php echo $facture->date_paiement?></p>

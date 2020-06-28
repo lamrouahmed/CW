@@ -326,22 +326,22 @@ header section div:first-child {
   fill: #FFF;
 }
 
-.demandesWrapper {
+.facturesWrapper {
   width: 100%;
   height: 100%;
 }
 
-.demandes {
+.factures {
   width: 40rem;
   margin: 1rem auto;
 }
 
-.demandeContainer {
+.factureContainer {
   width: 100%;
   position: relative;
 }
 
-.demande {
+.facture {
   width: 100%;
   position: relative;
   background-color: #FFF;
@@ -363,7 +363,7 @@ header section div:first-child {
   border-bottom-right-radius: 20px;
 }
 
-.demande::after {
+.facture::after {
   content: '';
   position: absolute;
   display: block;
@@ -378,18 +378,18 @@ header section div:first-child {
   transition: all 200ms ease-in-out;
 }
 
-.demande:hover {
+.facture:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-.demande:hover::after {
+.facture:hover::after {
   width: 40px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.demande .demande_id {
+.facture .facture_id {
   position: absolute;
   left: 2%;
   -webkit-transform: rotate(-90deg);
@@ -397,7 +397,7 @@ header section div:first-child {
   z-index: 9999;
 }
 
-.demande .demande_id p {
+.facture .facture_id p {
   font-weight: 600;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -407,14 +407,14 @@ header section div:first-child {
   color: #FFF;
 }
 
-.demande .demande_1 {
+.facture .facture_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 50%;
 }
 
-.demande .demande_1 .vehicule {
+.facture .facture_1 .vehicule {
   width: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,16 +425,16 @@ header section div:first-child {
   margin-right: 2rem;
 }
 
-.demande .demande_1 .vehicule img {
+.facture .facture_1 .vehicule img {
   height: 4rem;
   width: 4rem;
 }
 
-.demande .demande_1 .demandeInfo {
+.facture .facture_1 .factureInfo {
   position: relative;
 }
 
-.demande .demande_1 .demandeInfo::after {
+.facture .facture_1 .factureInfo::after {
   content: '';
   position: absolute;
   display: block;
@@ -445,39 +445,39 @@ header section div:first-child {
   top: 110%;
 }
 
-.demande .demande_1 .demandeInfo > div p {
+.facture .facture_1 .factureInfo > div p {
   margin: 0;
   padding: 0;
 }
 
-.demande .demande_1 .demandeInfo .lavage {
+.facture .facture_1 .factureInfo .lavage {
   margin-bottom: .5rem;
 }
 
-.demande .demande_1 .demandeInfo .lavage p {
+.facture .facture_1 .factureInfo .lavage p {
   font-weight: 600;
 }
 
-.demande .demande_1 .demandeInfo .nbVehicule {
+.facture .facture_1 .factureInfo .nbVehicule {
   margin-bottom: .2rem;
 }
 
-.demande .demande_1 .demandeInfo .nbVehicule p {
+.facture .facture_1 .factureInfo .nbVehicule p {
   font-weight: 500;
   font-size: .9rem;
 }
 
-.demande .demande_1 .demandeInfo .nbVehicule span {
+.facture .facture_1 .factureInfo .nbVehicule span {
   font-weight: 600;
 }
 
-.demande .demande_1 .demandeInfo .localisation p {
+.facture .facture_1 .factureInfo .localisation p {
   font-weight: 400;
   font-size: .8rem;
   color: #7f7b82;
 }
 
-.demande .demande_2 {
+.facture .facture_2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,7 +486,7 @@ header section div:first-child {
   margin-left: 2rem;
 }
 
-.demande .demande_2 .payment {
+.facture .facture_2 .payment {
   width: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,12 +497,12 @@ header section div:first-child {
   margin-right: 2rem;
 }
 
-.demande .demande_2 .payment img {
+.facture .facture_2 .payment img {
   height: 4rem;
   width: 4rem;
 }
 
-.demande .price {
+.facture .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,19 +511,19 @@ header section div:first-child {
           align-items: center;
 }
 
-.demande .price p {
+.facture .price p {
   font-weight: 600;
   font-size: 2rem;
   padding: 0;
   margin: 0;
 }
 
-.demande .price span {
+.facture .price span {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.demande .btn {
+.facture .btn {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,7 +542,7 @@ header section div:first-child {
           align-items: center;
 }
 
-.demande .btn > div {
+.facture .btn > label {
   cursor: pointer;
   position: relative;
   display: -webkit-box;
@@ -558,27 +558,27 @@ header section div:first-child {
   transition: all 200ms ease-in-out;
 }
 
-.demande .btn > div:hover {
+.facture .btn > label:hover {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform: translateY(10%);
           transform: translateY(10%);
 }
 
-.demande .btn > div:hover svg path {
+.facture .btn > label:hover svg path {
   fill: #494747;
 }
 
-.demande .btn > div svg {
+.facture .btn > label svg {
   width: 2rem;
   height: 2rem;
 }
 
-.demande .btn > div svg path {
+.facture .btn > label svg path {
   fill: #212129;
 }
 
-.demande .date {
+.facture .date {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -597,7 +597,7 @@ header section div:first-child {
           align-items: center;
 }
 
-.demande .date p {
+.facture .date p {
   color: #FFF;
   font-weight: 500;
   padding: 0;
@@ -607,7 +607,7 @@ header section div:first-child {
 }
 
 @media (min-width: 300px) and (max-width: 1200px) {
-  .demandesWrapper .demandes {
+  .facturesWrapper .factures {
     width: 33.5rem;
   }
 }
