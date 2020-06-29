@@ -198,6 +198,22 @@ body {
 
 .section_1 .paimentDetail {
   width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_1 .paimentDetail .paySvg {
+  height: 9rem;
+  width: 9rem;
+}
+
+.section_1 .paimentDetail .paySvg > svg {
+  height: 100%;
+  width: 100%;
 }
 
 .section_1 .paimentDetail > div {
@@ -210,6 +226,7 @@ body {
 }
 
 .section_1 .paimentDetail .texte p {
+  display: none;
   font-weight: 500;
   font-size: 1.7rem;
 }
@@ -219,8 +236,12 @@ body {
 }
 
 .section_1 .paimentDetail .total p {
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 3.6rem;
+}
+
+.section_1 .paimentDetail .total span {
+  font-size: 1.5rem !important;
 }
 
 .section_2 {

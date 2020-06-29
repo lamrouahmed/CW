@@ -242,11 +242,16 @@
             
 
                 <div class="paimentDetail" id="paimentDetail">
-                    <div class="texte">
-                        <p>Total</p>
+                    <div class="paySvg">
+                        <svg id="Layer_1" height="512" viewBox="0 0 150 150" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><circle cx="75" cy="75" fill="#2f4859" r="64"/><path d="m90.42 71.62-8.65-8.22h-19.69a3.75 3.75 0 0 0 -3.78 3.28 3.64 3.64 0 0 0 3.62 4h6.69l.17 14.73-1.93 2.14a15.66 15.66 0 0 0 -4 9.8 39.35 39.35 0 0 0 .52 7.86h19.63l.34-12.21 8-16.55a4.18 4.18 0 0 0 -.92-4.83z" fill="#fcd462"/><path d="m76.48 68.53 3.18 15.35-1.59.9z" fill="#f7be56"/><path d="m60.15 97.49h26.36v23.6h-26.36z" fill="#ebf0f3"/><path d="m62.4 28.91h27.11v48.39h-27.11z" fill="#44c4a1"/><path d="m64.71 31.22h22.49v43.76h-22.49z" fill="#31978c"/><path d="m70.48 33h10.94a4 4 0 0 0 4 4v32.21a4 4 0 0 0 -4 4h-10.94a4 4 0 0 0 -4-4v-32.21a4 4 0 0 0 4-4z" fill="#44c4a1"/><g fill="#31978c"><path d="m81.64 53.1a5.69 5.69 0 1 0 -5.64 5.7 5.69 5.69 0 0 0 5.64-5.7z"/><circle cx="75.95" cy="65.18" r="1.67"/><path d="m77.62 41a1.67 1.67 0 1 0 -1.62 1.69 1.66 1.66 0 0 0 1.62-1.69z"/></g><path d="m72.33 59.65a4.15 4.15 0 0 0 -4.15 4.15v23.27l9.82-1.65-1.52-21.62a4.15 4.15 0 0 0 -4.15-4.15z" fill="#fcd462"/><path d="m74.83 66.53.07-4a1.12 1.12 0 0 0 -1.18-1.14l-3 .14a1.13 1.13 0 0 0 -1.06 1.28l.54 3.91a1.13 1.13 0 0 0 1.16 1l2.43-.1a1.13 1.13 0 0 0 1.04-1.09z" fill="#ebf0f3"/></svg>
                     </div>
-                    <div class="total">
-                        <p><?php echo $demande->nb_vehicules * $demande->prix ?> M.A.D</p>
+                    <div class="pay2">
+                        <div class="texte">
+                            <p>Total</p>
+                        </div>
+                        <div class="total">
+                            <p><?php echo $demande->nb_vehicules * $demande->prix ?> <span>M.A.D</span></p>
+                        </div>
                     </div>
                     
                 </div>

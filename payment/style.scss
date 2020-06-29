@@ -192,6 +192,18 @@ body {
     // }
     .paimentDetail {
         width: 75%;
+        display: flex;
+        align-items: center;
+
+        .paySvg {
+            height: 9rem;
+            width: 9rem;
+
+            & > svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
 
         &>div {
             padding: 1.6rem;
@@ -202,6 +214,7 @@ body {
             padding: .2rem;
 
             p {
+                display: none;
                 font-weight: 500;
                 font-size: 1.7rem;
             }
@@ -210,9 +223,15 @@ body {
         .total {
             padding: .3rem;
 
+
             p {
-                font-weight: 600;
-                font-size: 2rem;
+                font-weight: 300;
+                font-size: 3.6rem;
+                
+            }
+            
+            span {
+                font-size: 1.5rem !important;
             }
         }
 
