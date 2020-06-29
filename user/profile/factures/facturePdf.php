@@ -6,7 +6,7 @@ if(Session::exists('user')) {
         $user = new User();
         $id = Input::get('id');
         $facture = $user->getFacture($id)->results()[0];
-        $nomComplet = $user->getData()->last_name. " " .$user->getData()->last_name;
+        $nomComplet = $user->getData()->last_name. " " .$user->getData()->first_name;
         $localisation = $facture->localisation;
         $typeLavage = $facture->type_lavage;
         $typeVehicule = $facture->type_vehicule;
@@ -19,12 +19,12 @@ if(Session::exists('user')) {
                         <h1 style='color:white; width:100%; text-align:center; font-size: 40px;'>Car<b>Wash</b></h1>
                     </div>
                     <div>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Nom complet</b>: $nomComplet</span></p>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Localisation</b>: $localisation</span></p>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Type lavage</b>: $typeLavage</span></p>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Type vehicule</b>: $typeVehicule</span></p>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Nombre de vehicule</b>: $nomComplet</span></p>
-                        <p><span style='font-size:23px;'><b style='font-size: 25px;'>Prix totale</b>: $prix</span></p>
+                        <p style='height: 50px;'><span style='font-size:23px;'><b style='font-size: 25px;'>Nom complet</b>: $nomComplet</span></p>
+                        <p style='height: 50px;'><span style='font-size:23px;'><b style='font-size: 25px;'>Localisation</b>: $localisation</span></p>
+                        <p style='height: 50px;'><span style='font-size:23px;'><b style='font-size: 25px;'>Type lavage</b>: $typeLavage</span></p>
+                        <p style='height: 50px;'><span style='font-size:23px;'><b style='font-size: 25px;'>Type vehicule</b>: $typeVehicule</span></p>
+                        <p style='height: 50px;'><span style='font-size:23px;'><b style='font-size: 25px;'>Nombre de vehicule</b>: $nomComplet</span></p>
+                        <p style='height: 50px; float:right; margin-left:350px;'><span style='font-size:50px;'><b style='font-size: 25px;'>Prix totale:</b> $prix <span style='font-size: 30px'><b>M.A.D</b></span></span></pan>
                     </div>
                 ";
 
