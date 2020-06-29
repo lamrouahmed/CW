@@ -8,6 +8,7 @@ if (Session::exists("user"))
     $user = new User();
     $factures = $user->getFactures()->results();
 
+
         
 ?>
 
@@ -249,7 +250,7 @@ if (Session::exists("user"))
                         <form style="display: flex; justify-content:center; width: 5rem;" method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?>>
                             <div class="btn">
                                 <input type="hidden" name="id" id="download" value="<?php echo $facture->facture_id?>">
-                            <label for="submit">
+                            <label for="<?php echo $facture->facture_id?>">
                             <div class="download" data-action="download" data-id="<?php echo $facture->facture_id?>">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.827 477.827" style="enable-background:new 0 0 477.827 477.827;" xml:space="preserve">
                                     <g>
@@ -264,7 +265,7 @@ if (Session::exists("user"))
                                     </g>
                             </div>
                             </label>
-                            <input type="submit" style="display: none;" id="submit">
+                            <input type="submit" style="display: none;" id="<?php echo $facture->facture_id?>">
                         </div>
                         </form>
                     </div>
