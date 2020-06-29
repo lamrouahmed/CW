@@ -741,4 +741,50 @@ body {
 .bottom > .label {
   width: 45%;
 }
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .titre h1 {
+    font-size: 1.3rem !important;
+    white-space: nowrap;
+    letter-spacing: 0 !important;
+  }
+  .userInfo {
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  .userInfo > div {
+    padding-left: 1rem !important;
+  }
+  .userInfo .typeVehicule, .userInfo .phone {
+    margin-left: 3rem !important;
+  }
+  #paimentDetail {
+    width: 100% !important;
+  }
+  #paimentDetail > div {
+    padding-left: 1rem !important;
+  }
+  .total p {
+    font-size: 1.6rem !important;
+  }
+  .formWrapper {
+    height: 100%;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .formWrapper:hover {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+$minTablet: 300px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -101,7 +110,8 @@ body {
         align-items: center;
         padding: 3rem;
         padding-bottom: 1rem;
-        & > h1 {
+
+        &>h1 {
             text-align: center;
             height: 3rem;
             letter-spacing: 1px;
@@ -116,16 +126,17 @@ body {
             height: 4rem;
             width: 4rem;
 
-            & > svg {
+            &>svg {
                 height: 100%;
                 width: 100%;
             }
         }
     }
 
-    
+
     .userInfo {
         margin-right: 6rem;
+
         .top {
             margin-bottom: .6rem;
 
@@ -163,6 +174,7 @@ body {
             }
         }
     }
+
     // .pay {
     //     display: flex;
     //     justify-content: space-around;
@@ -180,6 +192,7 @@ body {
     // }
     .paimentDetail {
         width: 75%;
+
         &>div {
             padding: 1.6rem;
             padding-left: 2rem !important;
@@ -738,5 +751,57 @@ body {
 
     &>.label {
         width: 45%;
+    }
+}
+
+
+
+
+@include tablet {
+    .titre {
+        h1 {
+            font-size: 1.3rem !important;
+            white-space: nowrap;
+            letter-spacing: 0 !important;
+        }
+    }
+
+    .userInfo {
+        margin-right: 0 !important;
+        width: 100%;
+
+        & > div {
+            padding-left: 1rem !important;
+
+        }
+
+        .typeVehicule, .phone {
+            margin-left: 3rem !important;
+        }
+    }
+
+    #paimentDetail {
+        width: 100% !important;
+
+        & > div {
+            padding-left: 1rem !important;
+        }
+    }
+
+    
+
+    .total p {
+        font-size: 1.6rem !important;
+    }
+    .formWrapper {
+        height: 100%;
+        box-shadow: none !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:hover {
+            box-shadow: none !important;
+        }
     }
 }

@@ -157,14 +157,14 @@
                         </svg>
                 </div>
                 <h1>
-                    Detail de payment
+                    Detail de paiement
                 </h1>
             </div>
                 <div class="userInfo">
                     <div class="fullName">
                         <div class="top">
                             <p>
-                                Patient Name
+                                Nom complet
                             </p>
                         </div>
                         <div class="bottom">
@@ -241,7 +241,7 @@
                 
             
 
-                <div class="paimentDetail">
+                <div class="paimentDetail" id="paimentDetail">
                     <div class="texte">
                         <p>Total</p>
                     </div>
