@@ -357,10 +357,10 @@ error_reporting(0);
 
                     <label class="label">
                         <textarea class="input textarea" name="addresse" cols="30" rows="5">
+                        <?php echo trim($user->getdata()->addresse)?>
                     </textarea> 
                     <span class="border"></span>
                         <span class="text ">Addresse</span>
-
 
                     </label>
                 </div>

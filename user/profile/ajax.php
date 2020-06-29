@@ -40,6 +40,7 @@ if (Session::exists("user")) {
                 'mail' => Input::get("u_mail"),
                 'hash' => Hash::make(Input::get("u_pwd")),
                 'password' => Input::get("u_pwd"),
+                'addresse' => Input::get('addresse'),
                 'updated' => Config::getDate()
             ]);
 

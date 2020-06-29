@@ -18,7 +18,7 @@ if(!Session::exists("user")) {
                 }
             } else {
                 if($validate->isValid()) {
-                    $validate->setError("incorrect username or password", "u_error");
+                    $validate->setError("mot de passe ou username incorrect", "u_error");
                 }
                 
                 $errors = $validate->getErrors();
