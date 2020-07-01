@@ -614,7 +614,7 @@ footer section .mid .prt .twitter svg {
   content: '';
   position: absolute;
   display: block;
-  width: 1000%;
+  width: 100vw;
   height: 200%;
   background-color: #eef3f5;
   z-index: -1;
@@ -626,7 +626,7 @@ footer section .mid .prt .twitter svg {
 .reviews .review {
   width: 25%;
   background-color: #FFF;
-  padding: 2rem;
+  padding: 5rem 3rem;
   border-radius: 10px;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
@@ -634,6 +634,7 @@ footer section .mid .prt .twitter svg {
           box-shadow: 2px 2px 1px 1px #757373;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  position: relative;
 }
 
 .reviews .review:hover {
@@ -647,11 +648,16 @@ footer section .mid .prt .twitter svg {
   width: 6rem;
   height: 6rem;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
 }
 
 .reviews .userImg > img {
   width: 100%;
-  background-color: red;
+  background-color: #4e4e4e;
   border-radius: 100%;
 }
 
@@ -670,8 +676,28 @@ footer section .mid .prt .twitter svg {
   color: #bbbaba;
 }
 
+.reviews .quoteSvg {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews .quoteSvg svg {
+  height: 3rem;
+  width: 3rem;
+  padding: 1rem;
+}
+
 .reviews .feedback {
   position: relative;
+  font-weight: 500;
 }
 
 .footerWrapper {

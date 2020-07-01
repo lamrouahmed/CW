@@ -672,7 +672,7 @@ footer {
         content: '';
         position: absolute;
         display: block;
-        width: 1000%;
+        width: 100vw;
         height: 200%;
         background-color: #eef3f5;
         z-index: -1;
@@ -684,13 +684,13 @@ footer {
     .review {
         width:25%;
         background-color: #FFF;
-        padding: 2rem;
+        padding: 5rem 3rem;
         border-radius: 10px;
         border-top-left-radius: 60px;
         border-bottom-right-radius: 60px;
         box-shadow: 2px 2px 1px 1px #757373;
         transition: all 200ms ease-in-out;
-        
+        position: relative;
         &:hover {
             transition: all 200ms ease-in-out;
             box-shadow: -2px -2px 1px 1px #333232;
@@ -701,10 +701,14 @@ footer {
         width: 6rem;
         height: 6rem;
         margin: 0 auto;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translate(50%, -50%);
 
         & > img {
             width: 100%;
-            background-color: red;
+            background-color: rgb(78, 78, 78);
             border-radius: 100%;
         }
     }
@@ -727,8 +731,23 @@ footer {
         }
     }
 
+    .quoteSvg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        svg {
+            height: 3rem;
+            width: 3rem;
+
+            padding: 1rem;      
+
+        }
+    }
+
     .feedback {
         position: relative;
+        font-weight: 500;
         // &::before {
         //     content: '“';
         //     display: block;
