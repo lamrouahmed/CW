@@ -793,6 +793,10 @@ footer section .mid .prt .twitter svg {
   z-index: -1;
 }
 
+.footerWrapper > footer {
+  width: 90%;
+}
+
 @-webkit-keyframes girl {
   from {
     opacity: 0;
@@ -888,11 +892,27 @@ footer section .mid .prt .twitter svg {
   .navList {
     margin-right: 1em !important;
   }
+  .reviewSection {
+    margin-top: 6rem !important;
+  }
+  .reviews {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin-bottom: 3rem !important;
+  }
+  .review {
+    margin-bottom: 5rem !important;
+  }
   .footerWrapper::after {
     top: 110% !important;
   }
   footer section {
     margin: 0 !important;
+  }
+  footer section .mid {
+    width: 111% !important;
   }
   footer section .mid .prt div > p {
     font-size: 1.2rem !important;
@@ -1082,8 +1102,28 @@ footer section .mid .prt .twitter svg {
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
   }
+  .reviewSection {
+    margin-top: 6rem !important;
+  }
+  .reviews {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin-bottom: 3rem !important;
+  }
+  .review {
+    margin-bottom: 5rem !important;
+    height: 15rem !important;
+    width: 19rem !important;
+  }
+  .review .userImg {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
   footer {
     padding: 0;
+    width: 100% !important;
   }
   footer section {
     width: 100% !important;

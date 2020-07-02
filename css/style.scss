@@ -880,6 +880,10 @@ footer {
         z-index: -1;
     }
 
+    & > footer {
+        width: 90%;
+    }
+
 }
 
 
@@ -984,6 +988,19 @@ footer {
         margin-right: 1em !important;
     }
 
+    .reviewSection {
+        margin-top: 6rem !important;
+    }
+
+    .reviews {
+        flex-direction: column !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .review {
+        margin-bottom: 5rem !important;
+    }
+
 
     .footerWrapper {
         &::after {
@@ -998,6 +1015,7 @@ footer {
 
 
             .mid {
+                width: 111% !important;
                 .prt {
                     div > p {
                         font-size: 1.2rem !important;
@@ -1254,9 +1272,30 @@ footer {
     }
 
 
+    .reviewSection {
+        margin-top: 6rem !important;
+    }
+
+    .reviews {
+        flex-direction: column !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .review {
+        margin-bottom: 5rem !important;
+        height: 15rem !important;
+        width: 19rem !important;
+
+
+        .userImg {
+            height: 5rem !important;
+            width: 5rem !important;
+        }
+    }
+
     footer {
         padding: 0;
-
+        width: 100% !important;
         section {
             width: 100% !important;
         }
