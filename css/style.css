@@ -590,7 +590,7 @@ footer section .mid .prt .twitter svg {
 }
 
 .reviewSection {
-  margin-top: 10rem;
+  margin-top: 14rem;
 }
 
 .reviews {
@@ -603,10 +603,9 @@ footer section .mid .prt .twitter svg {
   margin: 0 auto;
   margin-top: 5rem;
   margin-bottom: 15rem;
-  width: 80%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
 }
 
@@ -616,32 +615,50 @@ footer section .mid .prt .twitter svg {
   display: block;
   width: 100vw;
   height: 200%;
-  background-color: #eef3f5;
-  z-index: -1;
+  background-color: #fbfcfc;
+  z-index: -2;
   right: 50%;
   -webkit-transform: translateX(50%) skewY(1deg);
           transform: translateX(50%) skewY(1deg);
 }
 
 .reviews .review {
-  width: 25%;
+  width: 20.5rem;
   background-color: #FFF;
   padding: 5rem 3rem;
   border-radius: 10px;
-  border-top-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-  -webkit-box-shadow: 2px 2px 1px 1px #757373;
-          box-shadow: 2px 2px 1px 1px #757373;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   position: relative;
+  padding-bottom: 1rem;
+  color: black;
+  -webkit-box-shadow: 0px 0px 7px -5px #000;
+          box-shadow: 0px 0px 7px -5px #000;
+  height: 17rem;
 }
 
-.reviews .review:hover {
+.reviews .review::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #201e29;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-box-shadow: -2px -2px 1px 1px #333232;
-          box-shadow: -2px -2px 1px 1px #333232;
+}
+
+.reviews .review:hover::after {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .reviews .userImg {
@@ -695,9 +712,69 @@ footer section .mid .prt .twitter svg {
   padding: 1rem;
 }
 
+.reviews .quoteSvg svg path {
+  fill: black;
+}
+
 .reviews .feedback {
   position: relative;
   font-weight: 500;
+}
+
+.reviews .feedback > p {
+  width: 20.5rem;
+  height: 3rem;
+  min-width: 20.5rem;
+  min-height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews .rating {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reviews .star > svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reviews .star > svg > path {
+  fill: #000000;
+}
+
+.reviews .rt-1 .star:nth-child(1), .reviews .rt-1 .star:nth-child(2), .reviews .rt-1 .star:nth-child(3), .reviews .rt-1 .star:nth-child(4) {
+  display: none;
+}
+
+.reviews .rt-2 .star:nth-child(1), .reviews .rt-2 .star:nth-child(2), .reviews .rt-2 .star:nth-child(3) {
+  display: none;
+}
+
+.reviews .rt-3 .star:nth-child(1), .reviews .rt-3 .star:nth-child(2) {
+  display: none;
+}
+
+.reviews .rt-4 .star:nth-child(1) {
+  display: none;
 }
 
 .footerWrapper {
