@@ -55,8 +55,8 @@ $reviews = Review::getAll();
                     <ul class="navList">
                         <li class="navItem"><a href="#about">About</a></li>
                         <li class="navItem"><a href="#pricing">Pricing</a></li>
-                        <li class="navItem"><a href="#">Reviews</a></li>
-                        <li class="navItem"><a href="#">Support</a></li>
+                        <li class="navItem"><a href="#reviews">Reviews</a></li>
+                        <li class="navItem"><a href="#features">Features</a></li>
                     </ul>
 
                     <?php
