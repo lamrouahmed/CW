@@ -501,7 +501,7 @@ body {
           align-items: center;
   margin: 0 auto;
   margin-top: 5rem;
-  margin-bottom: 8rem;
+  margin-bottom: 9rem;
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -599,7 +599,7 @@ body {
 }
 
 .reviewSection {
-  margin-top: 14rem;
+  margin-top: 9rem;
 }
 
 .reviews {
@@ -611,7 +611,7 @@ body {
           align-items: center;
   margin: 0 auto;
   margin-top: 5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 9rem;
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -624,7 +624,6 @@ body {
   display: block;
   width: 100vw;
   height: 200%;
-  background-color: #fbfcfc;
   z-index: -2;
   right: 50%;
   -webkit-transform: translateX(50%) skewY(1deg);
@@ -1015,8 +1014,7 @@ footer section .mid .prt .twitter svg {
             flex-direction: column !important;
   }
   .features::after {
-    margin-top: 32rem !important;
-    height: 140% !important;
+    height: 110% !important;
   }
   .feature {
     margin-bottom: 5rem !important;
@@ -1245,10 +1243,7 @@ footer section .mid .prt .twitter svg {
             flex-direction: column !important;
   }
   .features::after {
-    height: 140% !important;
-  }
-  .features::after {
-    margin-top: 32rem !important;
+    height: 110% !important;
   }
   .feature {
     margin-bottom: 5rem !important;

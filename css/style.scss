@@ -546,7 +546,7 @@ body {
     align-items: center;
     margin: 0 auto;
     margin-top: 5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 9rem;
     width: 100%;
     justify-content: space-around;
     position: relative;
@@ -653,7 +653,7 @@ body {
 
 
 .reviewSection {
-    margin-top: 14rem;
+    margin-top: 9rem;
 }
 
 .reviews {
@@ -661,7 +661,7 @@ body {
     align-items: center;
     margin: 0 auto;
     margin-top: 5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 9rem;
     width: 100%;
     justify-content: space-around;
     position: relative;
@@ -672,7 +672,6 @@ body {
         display: block;
         width: 100vw;
         height: 200%;
-        background-color: #fbfcfc;
         z-index: -2;
         right: 50%;
         transform: translateX(50%) skewY(1deg);
@@ -1127,8 +1126,7 @@ footer {
 
         
         &::after {
-            margin-top: 32rem !important;
-            height: 140% !important;
+            height: 110% !important;
 
         }
     }
@@ -1436,13 +1434,11 @@ footer {
     .features {
 
         &::after {
-            height: 140% !important;
+            height: 110% !important;
         }
         flex-direction: column !important;
 
-        &::after {
-            margin-top: 32rem !important;
-        }
+        
     }
 
     .feature {
