@@ -414,7 +414,7 @@ body {
                 }
             }
 
-            & > svg {
+            &>svg {
                 position: absolute;
                 z-index: -1;
                 fill: #273036 !important;
@@ -567,7 +567,7 @@ body {
 
 
     .feature {
-        width:20.5rem;
+        width: 20.5rem;
         padding: 5rem 1rem;
         border-radius: 10px;
         transition: all 200ms ease-in-out;
@@ -579,30 +579,46 @@ body {
 
         &::after {
             content: '';
-position: absolute;
-display: block;
-height: 100%;
-width: 100%;
-background-color: #ffffff;
-top: 0;
-left: 0;
-z-index: -1;
-border-radius: 10px;
-transform: rotate(10deg);
-transition: all 200ms ease-in-out;
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+            transform: rotate(10deg);
+            transition: all 200ms ease-in-out;
+        }
+        
+        &:hover {
+            background-color: #FFF;
+            color: #000;
+            transition: background-color 500ms ease-in-out !important;
+
+            &::after {
+                transition: all 200ms ease-in-out;
+                transform: rotate(0deg);
+            }
+
+            .icon svg path {
+                fill: #000;
+            }
         }
 
 
-   
+
 
         .icon {
             height: 3rem;
             width: 3rem;
             margin: 1rem auto;
-            
+
             svg {
                 height: 100%;
                 width: 100%;
+
                 path {
                     fill: #FFF;
                 }
@@ -612,7 +628,8 @@ transition: all 200ms ease-in-out;
         .featureName {
             width: 100%;
             margin-bottom: 1rem;
-            & > p {
+
+            &>p {
                 text-align: center;
                 font-weight: 500;
                 font-size: 1.3rem;
@@ -622,8 +639,9 @@ transition: all 200ms ease-in-out;
         .featureText {
             width: 100%;
 
-            & > p {
+            &>p {
                 opacity: .6;
+                text-align: center;
             }
         }
     }
@@ -660,7 +678,7 @@ transition: all 200ms ease-in-out;
     }
 
     .review {
-        width:20.5rem;
+        width: 20.5rem;
         background-color: #FFF;
         padding: 5rem 3rem;
         border-radius: 10px;
@@ -690,7 +708,7 @@ transition: all 200ms ease-in-out;
             transform: rotate(10deg);
             transition: all 200ms ease-in-out;
         }
-        
+
         &:hover {
             &::after {
                 transform: rotate(-10deg);
@@ -708,7 +726,7 @@ transition: all 200ms ease-in-out;
         right: 50%;
         transform: translate(50%, -50%);
 
-        & > img {
+        &>img {
             width: 100%;
             background-color: rgb(78, 78, 78);
             border-radius: 100%;
@@ -720,14 +738,15 @@ transition: all 200ms ease-in-out;
         text-align: center;
         font-weight: 500;
     }
+
     .username {
-        & > p {
+        &>p {
             font-size: 2rem;
         }
     }
 
     .fullName {
-        & > p {
+        &>p {
             font-size: 1rem;
             color: rgb(187, 186, 186);
         }
@@ -737,14 +756,15 @@ transition: all 200ms ease-in-out;
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
         margin-bottom: .7rem;
+
         svg {
             height: 3rem;
             width: 3rem;
 
-            padding: 1rem;    
-            
+            padding: 1rem;
+
             path {
                 fill: rgb(0, 0, 0);
             }
@@ -768,7 +788,7 @@ transition: all 200ms ease-in-out;
         //     color: rgb(48, 44, 44);
         // }
 
-        & > p {
+        &>p {
             width: 20.5rem;
             height: 3rem;
             min-width: 20.5rem;
@@ -780,7 +800,7 @@ transition: all 200ms ease-in-out;
         }
     }
 
-    
+
 
     .rating {
         width: 100%;
@@ -790,12 +810,13 @@ transition: all 200ms ease-in-out;
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
+
     .star {
-        & > svg {
+        &>svg {
             width: 1rem;
             height: 1rem;
 
-            & > path {
+            &>path {
                 fill: #000000;
             }
         }
@@ -803,6 +824,7 @@ transition: all 200ms ease-in-out;
 
     .rt-1 {
         .star {
+
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3),
@@ -811,8 +833,10 @@ transition: all 200ms ease-in-out;
             }
         }
     }
+
     .rt-2 {
         .star {
+
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
@@ -820,14 +844,17 @@ transition: all 200ms ease-in-out;
             }
         }
     }
+
     .rt-3 {
         .star {
+
             &:nth-child(1),
             &:nth-child(2) {
                 display: none;
             }
         }
     }
+
     .rt-4 {
         .star {
             &:nth-child(1) {
@@ -835,7 +862,7 @@ transition: all 200ms ease-in-out;
             }
         }
     }
-    
+
 }
 
 
@@ -860,7 +887,7 @@ transition: all 200ms ease-in-out;
         z-index: -1;
     }
 
-    & > footer {
+    &>footer {
         width: 90%;
     }
 
@@ -1034,7 +1061,7 @@ footer {
     .btn {
         white-space: nowrap;
 
-       
+
     }
 
     .login.btn {
@@ -1042,6 +1069,7 @@ footer {
             padding: .8em 1em !important;
         }
     }
+
     .signup.btn {
         a {
             padding: .9em 1em !important;
@@ -1083,7 +1111,7 @@ footer {
 
     .navList {
         margin-right: 1em !important;
-    }   
+    }
 
     .head {
         h2 {
@@ -1094,7 +1122,7 @@ footer {
 
     .features {
         flex-direction: column !important;
-        
+
         &::after {
             margin-top: 32rem !important;
         }
@@ -1104,6 +1132,7 @@ footer {
         margin-bottom: 5rem !important;
 
     }
+
     .reviewSection {
         margin-top: 6rem !important;
     }
@@ -1136,8 +1165,9 @@ footer {
 
             .mid {
                 width: 111% !important;
+
                 .prt {
-                    div > p {
+                    div>p {
                         font-size: 1.2rem !important;
                     }
 
@@ -1397,9 +1427,10 @@ footer {
             font-size: 2rem !important;
         }
     }
+
     .features {
         flex-direction: column !important;
-        
+
         &::after {
             margin-top: 32rem !important;
         }
@@ -1440,6 +1471,7 @@ footer {
     footer {
         padding: 0;
         width: 100% !important;
+
         section {
             width: 100% !important;
         }

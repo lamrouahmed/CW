@@ -551,6 +551,24 @@ body {
   transition: all 200ms ease-in-out;
 }
 
+.features .feature:hover {
+  background-color: #FFF;
+  color: #000;
+  -webkit-transition: background-color 500ms ease-in-out !important;
+  transition: background-color 500ms ease-in-out !important;
+}
+
+.features .feature:hover::after {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.features .feature:hover .icon svg path {
+  fill: #000;
+}
+
 .features .feature .icon {
   height: 3rem;
   width: 3rem;
@@ -583,6 +601,7 @@ body {
 
 .features .feature .featureText > p {
   opacity: .6;
+  text-align: center;
 }
 
 .reviewSection {
