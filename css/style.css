@@ -488,105 +488,101 @@ body {
   color: #FFF;
 }
 
-footer {
-  color: #FFF;
-  background-color: #1a1f22;
-  -webkit-transform: skewY(-1.667deg);
-          transform: skewY(-1.667deg);
-  width: 100%;
-  padding: 5rem;
-  position: absolute;
+.featureSection {
+  margin-top: 9rem;
 }
 
-footer section {
-  -webkit-transform: skewY(1.667deg);
-          transform: skewY(1.667deg);
-  width: 80%;
-  margin: 0 auto;
-}
-
-footer section .topText h2 {
-  font-size: 3rem;
-}
-
-footer section .bottomText {
-  margin-top: 1rem;
-}
-
-footer section .bottomText h4 {
-  font-weight: 500;
-  font-size: 1.3rem;
-}
-
-footer section .mid {
-  margin-top: 4rem;
-}
-
-footer section .mid .prt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 2rem;
-}
-
-footer section .mid .prt div {
+.features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25rem;
-  cursor: pointer;
-}
-
-footer section .mid .prt div:last-child {
-  margin-left: 7rem;
-}
-
-footer section .mid .prt div:hover p {
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
   color: #FFF;
 }
 
-footer section .mid .prt div p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.555);
+.features::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 140%;
+  background-color: #1e2020;
+  z-index: -2;
+  right: 50%;
+  -webkit-transform: translateX(50%) skewY(-1deg);
+          transform: translateX(50%) skewY(-1deg);
 }
 
-footer section .mid .prt div p span {
-  font-weight: 700;
+.features .feature {
+  width: 20.5rem;
+  padding: 5rem 1rem;
+  border-radius: 10px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  padding-bottom: 1rem;
+  height: 17rem;
+  background-color: #1e2020;
 }
 
-footer section .mid .prt div svg {
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-right: 1rem;
+.features .feature::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
-footer section .mid .prt .phone svg {
-  fill: #ed5f0d;
+.features .feature .icon {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem auto;
 }
 
-footer section .mid .prt .mail svg {
-  fill: #00ef54;
+.features .feature .icon svg {
+  height: 100%;
+  width: 100%;
 }
 
-footer section .mid .prt .location svg {
-  fill: #f0f;
+.features .feature .icon svg path {
+  fill: #FFF;
 }
 
-footer section .mid .prt .facebook svg {
-  fill: #0074FF;
+.features .feature .featureName {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-footer section .mid .prt .instagram svg {
-  fill: #d5664c;
+.features .feature .featureName > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
-footer section .mid .prt .twitter svg {
-  fill: #00d2ff;
+.features .feature .featureText {
+  width: 100%;
+}
+
+.features .feature .featureText > p {
+  opacity: .6;
 }
 
 .reviewSection {
@@ -704,6 +700,7 @@ footer section .mid .prt .twitter svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: .7rem;
 }
 
 .reviews .quoteSvg svg {
@@ -735,6 +732,7 @@ footer section .mid .prt .twitter svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .reviews .rating {
@@ -795,6 +793,107 @@ footer section .mid .prt .twitter svg {
 
 .footerWrapper > footer {
   width: 90%;
+}
+
+footer {
+  color: #FFF;
+  background-color: #1a1f22;
+  -webkit-transform: skewY(-1.667deg);
+          transform: skewY(-1.667deg);
+  width: 100%;
+  padding: 5rem;
+  position: absolute;
+}
+
+footer section {
+  -webkit-transform: skewY(1.667deg);
+          transform: skewY(1.667deg);
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer section .topText h2 {
+  font-size: 3rem;
+}
+
+footer section .bottomText {
+  margin-top: 1rem;
+}
+
+footer section .bottomText h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+footer section .mid {
+  margin-top: 4rem;
+}
+
+footer section .mid .prt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+footer section .mid .prt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25rem;
+  cursor: pointer;
+}
+
+footer section .mid .prt div:last-child {
+  margin-left: 7rem;
+}
+
+footer section .mid .prt div:hover p {
+  color: #FFF;
+}
+
+footer section .mid .prt div p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.555);
+}
+
+footer section .mid .prt div p span {
+  font-weight: 700;
+}
+
+footer section .mid .prt div svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+footer section .mid .prt .phone svg {
+  fill: #ed5f0d;
+}
+
+footer section .mid .prt .mail svg {
+  fill: #00ef54;
+}
+
+footer section .mid .prt .location svg {
+  fill: #f0f;
+}
+
+footer section .mid .prt .facebook svg {
+  fill: #0074FF;
+}
+
+footer section .mid .prt .instagram svg {
+  fill: #d5664c;
+}
+
+footer section .mid .prt .twitter svg {
+  fill: #00d2ff;
 }
 
 @-webkit-keyframes girl {
@@ -892,6 +991,22 @@ footer section .mid .prt .twitter svg {
   .navList {
     margin-right: 1em !important;
   }
+  .head h2 {
+    text-align: center;
+    font-size: 2.3rem !important;
+  }
+  .features {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .features::after {
+    margin-top: 32rem !important;
+  }
+  .feature {
+    margin-bottom: 5rem !important;
+  }
   .reviewSection {
     margin-top: 6rem !important;
   }
@@ -901,6 +1016,9 @@ footer section .mid .prt .twitter svg {
         -ms-flex-direction: column !important;
             flex-direction: column !important;
     margin-bottom: 3rem !important;
+  }
+  .reviews::after {
+    height: 130% !important;
   }
   .review {
     margin-bottom: 5rem !important;
@@ -1102,6 +1220,22 @@ footer section .mid .prt .twitter svg {
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
   }
+  .head h2 {
+    text-align: center;
+    font-size: 2rem !important;
+  }
+  .features {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .features::after {
+    margin-top: 32rem !important;
+  }
+  .feature {
+    margin-bottom: 5rem !important;
+  }
   .reviewSection {
     margin-top: 6rem !important;
   }
@@ -1111,6 +1245,9 @@ footer section .mid .prt .twitter svg {
         -ms-flex-direction: column !important;
             flex-direction: column !important;
     margin-bottom: 3rem !important;
+  }
+  .reviews::after {
+    height: 130% !important;
   }
   .review {
     margin-bottom: 5rem !important;
