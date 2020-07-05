@@ -199,13 +199,180 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  position: absolute;
+  right: 2%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .navBar .logout .logout_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-.header .navBar .logout a {
-  height: 42%;
+.header .navBar .logout .profilImg {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .navBar .logout .profilImg img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 100%;
+  background-color: #4a4d4f;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header .navBar .logout .down {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: .6rem;
+}
+
+.header .navBar .logout .down svg {
+  height: 100%;
+  width: 100%;
+}
+
+.header .navBar .logout .down svg path {
+  fill: #FFF;
+}
+
+.header .navBar .logout .dropDown {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1e2020;
+  color: #FFF;
+  display: none;
+  position: relative;
+  right: -10%;
+}
+
+.header .navBar .logout .dropDown .txt {
+  width: 100%;
+  padding-left: 1rem;
+  margin-top: .6rem;
+}
+
+.header .navBar .logout .dropDown .tant {
+  margin-bottom: .3rem;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.header .navBar .logout .dropDown .u_name {
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.header .navBar .logout .dropDown > a {
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  height: 3rem;
+  width: 10rem;
+}
+
+.header .navBar .logout .dropDown > a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header .navBar .logout .dropDown > a div .btnText p {
+  font-weight: 500;
+  font-size: .9rem;
+  opacity: .7;
+}
+
+.header .navBar .logout .dropDown > a div .btnImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 1rem;
+}
+
+.header .navBar .logout .dropDown > a div .btnImg > svg {
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+}
+
+.header .navBar .logout .dropDown > a div .btnImg > svg path {
+  fill: #FFF;
+}
+
+.header .navBar .logout .dropDown > a div:hover {
+  background-color: #FFF;
+}
+
+.header .navBar .logout .dropDown > a div:hover .btnText p {
+  color: #171b1e;
+  opacity: 1;
+}
+
+.header .navBar .logout .dropDown > a div:hover .btnImg svg path {
+  fill: #171b1e;
+}
+
+.header .navBar .logout .dropDown > a div:hover .btnImg svg {
+  opacity: 1;
+}
+
+.header .navBar .logout .dropDownBlock {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .container {
