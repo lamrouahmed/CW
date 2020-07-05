@@ -260,6 +260,7 @@ body {
                 align-items: center;
                 cursor: pointer;
             }
+
             .profilImg {
                 height: 3rem;
                 width: 3rem;
@@ -267,7 +268,7 @@ body {
                 align-items: center;
                 justify-content: center;
 
-                 img {
+                img {
                     height: 100%;
                     width: 100%;
                     display: block;
@@ -288,9 +289,10 @@ body {
                 svg {
                     height: 100%;
                     width: 100%;
-                     path {
-                         fill: #FFF;
-                     }
+
+                    path {
+                        fill: #FFF;
+                    }
                 }
             }
 
@@ -303,34 +305,44 @@ body {
                 color: #FFF;
                 display: none;
                 position: relative;
-                right: -10%;
+                right: -5%;
+                box-shadow: 2px 2px 1Px 1px #bfb6b6;
+                border-radius: 10px;
 
 
+                .logOut {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
                 .txt {
                     width: 100%;
                     padding-left: 1rem;
                     margin-top: .6rem;
                 }
-                .tant { 
+
+                .tant {
                     margin-bottom: .3rem;
                     font-weight: 400;
-                    font-size:.8rem;
+                    font-size: .8rem;
                 }
 
                 .u_name {
-                    font-size:.85rem;
+                    font-size: .85rem;
                     font-weight: 500;
                 }
-                
+
                 & > a {
                     text-decoration: none;
                     color: #FFF;
                     display: block;
-                    
+
                     height: 3rem;
                     width: 10rem;
+
+                    
                 }
-                & > a div {
+
+                &>a div {
                     display: flex;
                     justify-content: left;
                     align-items: center;
@@ -347,7 +359,8 @@ body {
                         width: 1.5rem;
                         height: 1.5rem;
                         margin: 0 1rem;
-                        & > svg {
+
+                        &>svg {
                             height: 100%;
                             width: 100%;
                             opacity: .7;
@@ -363,13 +376,17 @@ body {
                         background-color: #FFF;
 
 
+
+                        
                         .btnText p {
                             color: #171b1e;
                             opacity: 1;
                         }
+
                         .btnImg svg path {
-                            fill:#171b1e;
+                            fill: #171b1e;
                         }
+
                         .btnImg svg {
                             opacity: 1;
                         }
@@ -380,7 +397,7 @@ body {
             .dropDownBlock {
                 display: flex !important;
             }
-         
+
         }
     }
 }
@@ -721,7 +738,7 @@ body {
             transform: rotate(10deg);
             transition: all 200ms ease-in-out;
         }
-        
+
         &:hover {
             background-color: #FFF;
             color: #000;
@@ -1254,7 +1271,7 @@ footer {
     .features {
         flex-direction: column !important;
 
-        
+
         &::after {
             height: 110% !important;
 
@@ -1566,9 +1583,10 @@ footer {
         &::after {
             height: 110% !important;
         }
+
         flex-direction: column !important;
 
-        
+
     }
 
     .feature {

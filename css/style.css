@@ -288,7 +288,15 @@ body {
   color: #FFF;
   display: none;
   position: relative;
-  right: -10%;
+  right: -5%;
+  -webkit-box-shadow: 2px 2px 1Px 1px #bfb6b6;
+          box-shadow: 2px 2px 1Px 1px #bfb6b6;
+  border-radius: 10px;
+}
+
+.header .navBar .logout .dropDown .logOut {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .header .navBar .logout .dropDown .txt {

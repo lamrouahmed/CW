@@ -104,7 +104,7 @@ $reviews = Review::getAll();
                                     inscrit en tant que
                                 </p>
                                 <p class="u_name">
-                                    lamrouahmed
+                                    <?php echo $user->getData()->username?>
                                 </p>  
                             </div>
                             <a href="./user/profile/profile.php">
@@ -119,7 +119,7 @@ $reviews = Review::getAll();
                                         </svg>
                                     </div>
                                     <div class="btnText">
-                                        <p>My profile</p>
+                                        <p>Mon profile</p>
                                     </div>
                                 </div>
                             </a>
@@ -142,7 +142,7 @@ $reviews = Review::getAll();
                                         </svg>
                                     </div>
                                     <div class="btnText">
-                                        <p>log out</p>
+                                        <p>Deconnexion</p>
                                     </div>
                                 </div>
                             </a>
