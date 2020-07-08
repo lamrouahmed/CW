@@ -658,7 +658,101 @@ header {
 }
 
 
+.A {
+    &::after {
+        background-color: color(N);
+    }
 
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(N);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(N);
+    }
+
+}
+
+.B {
+    &::after {
+        background-color: color(Y);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(Y);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(Y);
+    }
+
+}
+
+.C {
+    &::after {
+        background-color: color(Paid);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(Paid);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(Paid);
+    }
+
+}
+
+.D {
+    &::after {
+        background-color: color(P);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(P);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(P);
+    }
+}
+
+.E {
+    &::after {
+        background-color: color(C);
+    }
+
+    .demande_1 {
+        .demandeInfo {
+            &::after {
+                background-color: color(C);
+            }
+        }
+    }
+
+    .date {
+        background-color: color(C);
+    }
+
+
+
+}
 
 
 

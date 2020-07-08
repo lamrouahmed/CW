@@ -53,10 +53,10 @@ $reviews = Review::getAll();
                 </div>
                 <div class="list">
                     <ul class="navList">
-                        <li class="navItem"><a href="#about">About</a></li>
-                        <li class="navItem"><a href="#pricing">Pricing</a></li>
-                        <li class="navItem"><a href="#reviews">Reviews</a></li>
-                        <li class="navItem"><a href="#features">Features</a></li>
+                        <li class="navItem"><a href="#about">A Propos</a></li>
+                        <li class="navItem"><a href="#pricing">Prix</a></li>
+                        <li class="navItem"><a href="#reviews">Commentaires</a></li>
+                        <li class="navItem"><a href="#features">fonctionnalités</a></li>
                     </ul>
 
                     <?php
@@ -166,14 +166,14 @@ $reviews = Review::getAll();
         <div class="container">
             <div class="content">
                 <div class="desc">
-                    <h3>Mobile Car Wash and Detailing</h3>
+                    <h3>Lavage de voiture mobile et d'esthétique automobile</h3>
                 </div>
                 <div class="text">
-                    <h1>We come to you, at work or at home, for full car wash and detailing services</h1>
+                    <h1>Nous venons à vous, au travail ou à la maison, pour des services complets de lavage de voiture et d'esthétique</h1>
                 </div>
                 <div class="start">
                     <div class="startBtn">
-                        <a href="./user/signup/signup.php">GET STARTED</a>
+                        <a href="./user/signup/signup.php">COMMENCER</a>
                     </div>
                 </div>
             </div>

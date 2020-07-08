@@ -606,6 +606,66 @@ header section div:first-child {
   font-size: .9rem;
 }
 
+.A::after {
+  background-color: #ff9f40;
+}
+
+.A .demande_1 .demandeInfo::after {
+  background-color: #ff9f40;
+}
+
+.A .date {
+  background-color: #ff9f40;
+}
+
+.B::after {
+  background-color: #2c7171;
+}
+
+.B .demande_1 .demandeInfo::after {
+  background-color: #2c7171;
+}
+
+.B .date {
+  background-color: #2c7171;
+}
+
+.C::after {
+  background-color: #2f6c4a;
+}
+
+.C .demande_1 .demandeInfo::after {
+  background-color: #2f6c4a;
+}
+
+.C .date {
+  background-color: #2f6c4a;
+}
+
+.D::after {
+  background-color: #b32553;
+}
+
+.D .demande_1 .demandeInfo::after {
+  background-color: #b32553;
+}
+
+.D .date {
+  background-color: #b32553;
+}
+
+.E::after {
+  background-color: #f44654;
+}
+
+.E .demande_1 .demandeInfo::after {
+  background-color: #f44654;
+}
+
+.E .date {
+  background-color: #f44654;
+}
+
 @media (min-width: 300px) and (max-width: 1200px) {
   .facturesWrapper .factures {
     width: 33.5rem;

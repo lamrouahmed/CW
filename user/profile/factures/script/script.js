@@ -8,8 +8,16 @@ popUp.addEventListener('click', () => {
     $('.logout').classList.toggle('displayLog')
 })
 
+getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
+const classes = ['A', 'B', 'C', 'D', 'E']
+let color = '';
 
+const factures = $$('.facture');
 
+factures.forEach(facture => {
+    // color = classes[getRandomInt(classes.length)]
+    facture.classList.add(`${classes[getRandomInt(classes.length)]}`)
+})
 // downloadPdf.forEach(btn => btn.addEventListener('click', e => download(e.currentTarget.dataset.id, url)))
 
 
