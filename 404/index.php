@@ -13,8 +13,8 @@
         </div> -->
         <div class="text">
             <h1>404</h1>
-            <h2>Page Not Fo<span>und !</span></h2>
-            <a href="/PFE" class="link">Take me home</a>
+            <h2>Page Introu<span>vable !</span></h2>            
+            <a href="/PFE" class="link">Page d'acceuil</a>
         </div>
     </div>
 </body>
