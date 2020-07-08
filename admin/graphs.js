@@ -126,7 +126,9 @@ function get(url) {
 function updateChart(data) {
     const {
         users,
-        demandes
+        demandes,
+        totale,
+        lavages
     } = data;
     let u_creationDates = users.map(user => getDayName(new Date(user.created), 'fr-FR'));
     let records = {
@@ -189,6 +191,8 @@ function updateChart(data) {
 
     $('[data-id = users]').textContent = users.length;
     $('[data-id = demandes]').textContent = demandes.length;
+    $('[data-id = sales]').textContent = totale[0].totale;
+    $('[data-id = lavages]').textContent = lavages[0].lavages;
 
 
 
