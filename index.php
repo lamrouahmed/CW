@@ -67,7 +67,7 @@ $reviews = Review::getAll();
                             <a data-key="log" href="./user/login/login.php">Log in</a>
                         </div>
                         <div class="signup btn">
-                            <a data-key="sign" href="./user/signup/signup.php">Sign up</a>
+                            <a data-key="sign" href="./user/signup/signup.php">S'inscrire</a>
                         </div>
 
                     </div>
@@ -235,7 +235,7 @@ $reviews = Review::getAll();
 
 
     <div class="head">
-        <h2>Pricing Plans</h2>
+        <h2>Plans Tarifaires</h2>
     </div>
     <div class="wrapper" id="pricing">
         <div class="catalogue cat1">

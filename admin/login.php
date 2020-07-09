@@ -47,7 +47,7 @@ require_once '/wamp64/www/PFE/admin/login.inc.php';
                     <label class="label">
                         <input data-check="a_username" class="input" type="text" name="a_username" value="">
                         <span class="border"></span>
-                        <span class="text">Username</span>
+                        <span class="text">Nom d'utilisateur</span>
                         <span class="error" data-error="a_username"></span>
                     </label>
 
@@ -56,7 +56,7 @@ require_once '/wamp64/www/PFE/admin/login.inc.php';
                     <label class="label">
                         <input data-check="a_pwd" class="input" type="password" name="a_pwd" value="">
                         <span class="border"></span>
-                        <span class="text">Password</span>
+                        <span class="text">Mot de passe</span>
                         <span class="error" data-error="a_pwd"></span>
                     </label>
                 </div>
