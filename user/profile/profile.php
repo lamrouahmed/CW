@@ -265,13 +265,13 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_last_name" class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name;?>">
                         <span class="border"></span>
-                        <span class="text">Last Name</span>
+                        <span class="text">Nom</span>
                         <span class="error" data-error="u_last_name"></span>
                     </label>
                     <label class="label">
                         <input data-check="u_first_name" class="input" type="text" name="u_first_name" value="<?php echo $user->getData()->first_name;?>">
                         <span class="border"></span>
-                        <span class="text">First Name</span>
+                        <span class="text">Prénom</span>
                         <span class="error" data-error="u_first_name"></span>
 
                     </label>
@@ -280,7 +280,7 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_username" class="input" type="text" name="u_username" value="<?php echo $user->getData()->username;?>">
                         <span class="border"></span>
-                        <span class="text">Username</span>
+                        <span class="text">Nom d'utilisateur</span>
                         <span class="error" data-error="u_username"></span>
 
                     </label>
@@ -289,7 +289,7 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_phone" class="input" type="tel" name="u_phone" value="<?php echo $user->getData()->phone;?>">
                         <span class="border"></span>
-                        <span class="text">Phone</span>
+                        <span class="text">Telephone</span>
                         <span class="error" data-error="u_phone"></span>
 
 
@@ -311,7 +311,7 @@ error_reporting(0);
                         
                         ?>">
                         <span class="border"></span>
-                        <span class="text">Password</span>
+                        <span class="text">Mot de passe</span>
                         <div class="show"></div>
                         <span class="error" data-error="u_pwd"></span>
 
