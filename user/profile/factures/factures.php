@@ -49,7 +49,7 @@ if (Session::exists("user"))
                         </svg>
                     </div>
                     <div class="disconnect">
-                        <p class="username"><span>Welcome, </span><?php echo $user->getData()->username; ?></p>
+                        <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>
                         <div class="popUp">
                             <div class="triangle">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"

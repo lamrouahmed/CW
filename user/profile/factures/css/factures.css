@@ -610,7 +610,7 @@ header section div:first-child {
   background-color: #ff9f40;
 }
 
-.A .demande_1 .demandeInfo::after {
+.A .facture_1 .factureInfo::after {
   background-color: #ff9f40;
 }
 
@@ -622,7 +622,7 @@ header section div:first-child {
   background-color: #2c7171;
 }
 
-.B .demande_1 .demandeInfo::after {
+.B .facture_1 .factureInfo::after {
   background-color: #2c7171;
 }
 
@@ -634,7 +634,7 @@ header section div:first-child {
   background-color: #2f6c4a;
 }
 
-.C .demande_1 .demandeInfo::after {
+.C .facture_1 .factureInfo::after {
   background-color: #2f6c4a;
 }
 
@@ -646,7 +646,7 @@ header section div:first-child {
   background-color: #b32553;
 }
 
-.D .demande_1 .demandeInfo::after {
+.D .facture_1 .factureInfo::after {
   background-color: #b32553;
 }
 
@@ -658,7 +658,7 @@ header section div:first-child {
   background-color: #f44654;
 }
 
-.E .demande_1 .demandeInfo::after {
+.E .facture_1 .factureInfo::after {
   background-color: #f44654;
 }
 
