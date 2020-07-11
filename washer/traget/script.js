@@ -46,6 +46,19 @@ map.addControl(
   'top-left'
 );
 
+/*$('.mapboxgl-ctrl-geolocate').on('click', function(){
+$('#mapbox-directions-origin-input:input[type=text]').attr("value", 'Sidi Moumen');
+
+});
+*/
+var position;
+loc.on('geolocate', function(e){
+  var lon = e.coords.longitude;
+  var lat = e.coords.latitude;
+  position = [lon, lat];
+  console.log(position);
+});
+
 $('#mapbox-directions-origin-input').on('click', function(){
-  $('input[type=text]').attr("value", 'Sidi Moumen');
+  $('input[type=text]').attr('value', position);
 });
