@@ -25,6 +25,16 @@ require_once '../sideBar/sideBar.php';
         top:10%;
         bottom:0;
       }
+      @media (min-width: 200px) and (max-width: 1200px) {
+        #map {
+          position:absolute;
+          width:100%;
+          height: 80%;
+          left: 0;
+          top:10%;
+          bottom: 0;
+        }
+      }
   </style>
 </head>
 <body>
