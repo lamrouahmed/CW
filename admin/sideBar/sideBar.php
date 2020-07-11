@@ -121,7 +121,7 @@ $admin = new Admin();
     
     
     
-                        <li class="navItem"><a href="/PFE/admin/lavages/">
+                        <li class="navItem"><a href="/PFE/admin/lavage/">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
                                     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px"
