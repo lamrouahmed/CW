@@ -1,0 +1,30 @@
+{"id":"data","lavages":
+[
+{"lavage_id":"1","username":"hami","password":"hami196","nom":"HAMI LAVAGE","tel":"0662241020","addresse":"Derb sultan, 196, rue 1, Casablanca","longtitude":-7.5800701,"latitude":33.5718397},
+{"lavage_id":"2","username":"Lavauto","password":"auto","nom":"Lav Auto","tel":"0522964586","addresse":"Hay Erajaa 2, N°96 Had Soualem","longtitude":-7.5919785,"latitude":33.5730434},
+{"lavage_id":"3","username":"Ghsalni","password":"ghsa","nom":"Ghsalni","tel":"0664-645652","addresse":"N° 220 Magasin N°1, Boulevard de la Résistance","longtitude":-7.6131184,"latitude":33.5839128},
+{"lavage_id":"5","username":"autopower","password":"power","nom":"Auto power","tel":"","addresse":"Avenue 2 Mars, Casablanca","longtitude":-7.6038936,"latitude":33.5469455},
+{"lavage_id":"6","username":"anouar","password":"anouarauto","nom":"Anouar Auto Service","tel":"067686708","addresse":"3 angle Bd bouchaib doukalli et rue 21 pres souk korea","longtitude":-7.6038473,"latitude":33.5616619},
+{"lavage_id":"7","username":"trocado","password":"troca","nom":"TROCADO LAVAGE","tel":"","addresse":"65, Bd Moulay Ismail N1","longtitude":-7.5946796,"latitude":33.5967654},
+{"lavage_id":"8","username":"tarik","password":"tariklav","nom":"Lavage Tarik","tel":"05222-09353","addresse":"","longtitude":-7.6463191,"latitude":33.5557599},
+{"lavage_id":"9","username":"vireo","password":"virelav","nom":"VIREO Car wash","tel":"05222-62610","addresse":"Résidence Titrit 2. Rue Hadj Omar Riffi Benjdia","longtitude":-7.6146056,"latitude":33.5849766},
+{"lavage_id":"10","username":"ktiri","password":"ktirilav","nom":"Lavage Ktiri Auto El Maarif","tel":"0661-30339","addresse":"Rue des Camélias","longtitude":-7.6456325,"latitude":33.5740446},
+{"lavage_id":"11","username":"ainborja","password":"borjalav","nom":"Lavage Ain Borja","tel":"0638-931572","addresse":"18 George Hay Lahcen Ben Ahmed Toto Ain Borja, Rue Rakib Mohamed Al Moussaoui","longtitude":-7.5964987,"latitude":33.5834916},
+{"lavage_id":"12","username":"easywash","password":"easy","nom":"Easy Wash","tel":"0690-998818","addresse":"","longtitude":-7.5878735,"latitude":33.5312524},
+{"lavage_id":"13","username":"lavageautovap","password":"vapeur","nom":"Lavage Auto a la vapeur","tel":"0770-107854","addresse":"21Bis Sidi Abderrahmane","longtitude":-7.6557255,"latitude":33.5313802},
+{"lavage_id":"14","username":"brooklyn","password":"brookcw","nom":"Brooklyn Car Wash","tel":"0699-146282","addresse":"","longtitude":-7.564042287071777,"latitude":33.605308823587684},
+{"lavage_id":"15","username":"royal","password":"royalcw","nom":"Royal Car Wash","tel":"05226-48268","addresse":"Morocco Mall","longtitude":-7.725117303955078,"latitude":33.55163254031068},
+{"lavage_id":"16","username":"jamallav","password":"jamalcw","nom":"LAVAGE Jamal","tel":"0677-639430","addresse":"Nr B2, Boulevard Ibn Rochd, Âïn-Harrouda","longtitude":-7.471860127647949,"latitude":33.62346430526351},
+{"lavage_id":"17","username":"fiveclean","password":"fivecw","nom":"Five clean","tel":"05223-56560","addresse":"BD CHEFCHAOUNI ETG rd RTE 110 12.500","longtitude":-7.553055958946777,"latitude":33.58686351417405},
+{"lavage_id":"18","username":"redoneway","password":"redonewaycw","nom":"red one way","tel":"0661-599312","addresse":"Hay Moulay Abdellah rue 161 N 5 Ainchok","longtitude":-7.479756550987792,"latitude":33.55096250134655},
+{"lavage_id":"19","username":"amisclasse","password":"amiscw","nom":"Amis Classe Auto","tel":"05227-25076","addresse":"Avenue Abdelkader essahraoui lot 111 N°4","longtitude":-7.462762074669433,"latitude":33.54223529946488},
+{"lavage_id":"20","username":"tim","password":"timcw","nom":"Car Wash Tim","tel":"0645-269795","addresse":"","longtitude":-7.667210774620605,"latitude":33.533650306667816},
+{"lavage_id":"21","username":"dinar","password":"dinarcw","nom":"Lavage Dinar","tel":"0663-656229","addresse":"Rue Jabal Oukaimeden, Casablanca","longtitude":-7.648671345909667,"latitude":33.51647776342899},
+{"lavage_id":"22","username":"badr","password":"badrcw","nom":"LAVAGE Badr","tel":"0661-427447","addresse":"","longtitude":-7.7298671772084955,"latitude":33.47983161040274},
+{"lavage_id":"23","username":"arrahma","password":"arrahmacw","nom":"Lavage Arrahma","tel":"","addresse":"Boulevard Cadi Ayad, Arrahma","longtitude":-7.724717335899902,"latitude":33.502880415320305},
+{"lavage_id":"24","username":"bouahim","password":"bouahimcw","nom":"Lavage BOUAHIM","tel":"0655-175424","addresse":" Route du complexe Administratif","longtitude":-7.6818019916616205,"latitude":33.550032595562094},
+{"lavage_id":"25","username":"oulfa","password":"oulfacw","nom":"Lavage El Oulfa","tel":"","addresse":"Bd des Facultées","longtitude":-7.669785695274902,"latitude":33.535653547916716},
+{"lavage_id":"26","username":"almassira","password":"almassiracw","nom":"Lavage almassira","tel":"0657-134117","addresse":" Route du complexe Administratif, Casablanca","longtitude":-7.669785695274902,"latitude":33.535653547916716}
+]
+}
+
