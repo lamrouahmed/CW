@@ -50,6 +50,9 @@
         public function getDemandesY() {
             return $this->db->query("SELECT * FROM demande WHERE status_demande='Y'", [], "SELECT");
         }
+        public function getDemandesP() {
+            return $this->db->query("SELECT * FROM demande WHERE status_demande='Pending'", [], "SELECT");
+        }
 
         
 }
