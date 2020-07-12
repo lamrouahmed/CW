@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+      #map {
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:0;bottom:0;
+      }
+
+ 
+      #searchMap {
+        z-index: 10000 !important;
+        position: relative;
+        right: 50%;
+        float: right;
+        text-overflow: ellipsis;
+        padding: 2px 0px 2px 6px;
+        background-color: #fff;
+        color: gray;
+        font-size: 12pt;
+        font-family: Trebuchet MS;
+        height:30px;
+        width:200px;
+        border: 0px solid transparent;
+        border-radius: 4px 4px 4px 4px;
+        margin:30px 120px 20px 20px;
+}
+
+      .marker {
+        border: none;
+        cursor: pointer;
+        height: 34pt;
+        width: 34pt;
+        background-image: url(marker2.svg);
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .clearfix { display:block; }
+      .clearfix:after {
+        content:'.';
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+      }
+
+      /* Marker tweaks */
+      .mapboxgl-popup {
+        padding-bottom: 50px;
+      }
+
+      .mapboxgl-popup-close-button {
+        display:none;
+      }
+      .mapboxgl-popup-content {
+        font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+        padding:0;
+        width:180px;
+      }
+      .mapboxgl-popup-content-wrapper {
+        padding:1%;
+      }
+      .mapboxgl-popup-content h2,h3 {
+        background:#c3c3c3;
+        color:#fff;
+        margin:0;
+        display:block;
+        padding:10px;
+        border-radius:3px 3px 0 0;
+        font-weight:700;
+        margin-top:-15px;
+      }
+
+      .mapboxgl-popup-content h4 {
+        margin:0;
+        display:block;
+        padding: 10px 10px 10px 10px;
+        font-weight:400;
+      }
+
+      .mapboxgl-popup-content div {
+        padding:10px;
+      }
+
+      .mapboxgl-container .leaflet-marker-icon {
+        cursor:pointer;
+      }
+
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+        margin-top: 15px;
+      }
+
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+        border-bottom-color: #91c949;
+      }

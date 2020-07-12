@@ -28,16 +28,16 @@ var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'bottom-right');
 
         // Add geolocate control to the map.
-        map.addControl(
-           new mapboxgl.GeolocateControl({
-              positionOptions: {
-              enableHighAccuracy: true
-              },
-            trackUserLocation: true
-            })
+        
+var loc = new mapboxgl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    trackUserLocation: true
+})
            
          
-     );
+map.addControl(loc);
 
 map.addControl(
   new MapboxDirections({
@@ -45,3 +45,20 @@ map.addControl(
   }),
   'top-left'
 );
+
+/*$('.mapboxgl-ctrl-geolocate').on('click', function(){
+$('#mapbox-directions-origin-input:input[type=text]').attr("value", 'Sidi Moumen');
+
+});
+*/
+var position;
+loc.on('geolocate', function(e){
+  var lon = e.coords.longitude;
+  var lat = e.coords.latitude;
+  position = [lon, lat];
+  console.log(position);
+});
+
+$('#mapbox-directions-origin-input').on('click', function(){
+  $('input[type=text]').attr('value', position);
+});
