@@ -21,10 +21,6 @@ body {
   background-color: #faf7f7;
 }
 
-header {
-  width: 100vw;
-}
-
 header section {
   width: 100%;
   display: -webkit-box;
@@ -354,6 +350,49 @@ header section div:first-child {
 main {
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+main .add {
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  bottom: 3%;
+  right: 5%;
+  z-index: 699;
+  cursor: pointer;
+  background-color: #2b1b46;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+main .add:hover {
+  background-color: #3e2768;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+main .add svg {
+  height: 45%;
+  width: 45%;
+}
+
+main .add svg path {
+  fill: #FFF;
 }
 
 .guideWrapper {
@@ -404,7 +443,7 @@ main {
   background-color: #b32553;
 }
 
-.guideWrapper .D .statusColor {
+.guideWrapper .Paid .statusColor {
   background-color: #2f6c4a;
 }
 
@@ -783,24 +822,24 @@ main {
   display: none;
 }
 
-.D::after {
+.Paid::after {
   background-color: #2f6c4a;
 }
 
-.D .demande_1 .demandeInfo::after {
+.Paid .demande_1 .demandeInfo::after {
   background-color: #2f6c4a;
 }
 
-.D .date {
+.Paid .date {
   background-color: #2f6c4a;
 }
 
-.D .demande_2 .btns .pay svg {
+.Paid .demande_2 .btns .delete svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.D .demande_2 .btns .cancel {
+.Paid .demande_2 .btns .cancel {
   display: none;
 }
 
@@ -851,5 +890,11 @@ main {
 .Canceled .demande_2 .btns .cancel,
 .Canceled .demande_2 .btns .pay {
   display: none;
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .demandesWrapper .demandes {
+    width: 33.5rem;
+  }
 }
 /*# sourceMappingURL=demandes.css.map */

@@ -1,7 +1,6 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 require_once '/wamp64/www/PFE/user/login/login.inc.php';
-
 ?>
 
 
@@ -12,11 +11,12 @@ require_once '/wamp64/www/PFE/user/login/login.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../header/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="mobileNav">
             <div class="hamburger">
                 <span></span>
@@ -32,7 +32,9 @@ require_once '/wamp64/www/PFE/user/login/login.inc.php';
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
+    <?php require_once '/wamp64/www/PFE/header/header.html'?>
+
     <div class="wrapper">
         <!-- <div class="imgContainer">
             
@@ -43,14 +45,14 @@ require_once '/wamp64/www/PFE/user/login/login.inc.php';
                 <h2 class="brand">LOGIN</h2>
             </div>
             <div class="form">
-                <form method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?> >
+                <form method="POST" action=<?php echo escape($_SERVER["PHP_SELF"])."?redirect=".escape(Input::get('redirect'));?> >
                     <label class="sLabel">
-                        <input class="input" type="text" name="u_username" placeholder="Username" value=<?php echo Input::get("u_username") ?>>
+                        <input class="input" type="text" name="u_username" placeholder="Nom d'utilisateur" value=<?php echo Input::get("u_username") ?>>
                         <span class="border"></span>
                         <span class="error" data-error="error1"><?php if(isset($errors["u_username"])) echo $errors["u_username"]?></span>
                     </label>
                     <label class="sLabel">
-                        <input class="input" type="password" name="u_password" placeholder="Password">
+                        <input class="input" type="password" name="u_password" placeholder="Mot de passe">
                         <span class="border"></span>
                         <span class="error" data-error="error2"><?php if(isset($errors["u_password"])) echo $errors["u_password"]?></span>
                     </label>
@@ -62,7 +64,7 @@ require_once '/wamp64/www/PFE/user/login/login.inc.php';
                 </form>
             </div>
             <div class="notMem">
-                <h2>Not a member ? <span><a href="../signup/signup.php">SignUp now!</a></span></h2>
+                <h2>Non inscrit ? <span><a href="../signup/signup.php">Inscrivez vous !</a></span></h2>
             </div>
         </div>
         <!-- <div id="google_translate_element"></div> -->

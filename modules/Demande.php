@@ -34,6 +34,9 @@
         public function refuse($id, $params = []) {
             $this->db->update("demande_id", $id, "demande", $params);
         }
+        public function pay($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
 
         public function uDelete($id, $params = []) {
             $this->db->update("demande_id", $id, "demande", $params);

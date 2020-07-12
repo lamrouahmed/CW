@@ -1,7 +1,8 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 
-$DB = DB::connect();
+if(Session::exists(('admin'))) {
+    $DB = DB::connect();
 $results = $DB->getAll("user", ["permission", 0])->results();
 ?>
 
@@ -19,7 +20,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
     </div>
     <!-- <div class="p_id"><?php echo $result->u_id; ?></div> -->
     <div class="p_uid"><?php echo $result->username ?></div>
-    <div class="p_name"><?php echo $result->last_name. " " . $result->first_name ?></div>
+    <div class="p_name"><?php echo $result->last_name ?></div>
     <div class="p_tel"><?php echo $result->phone ?></div>
     <div class="p_mail"><?php echo $result->mail?></div>
     <div class="p_joined"><?php echo explode(" ", $result->created)[0]?></div>
@@ -34,7 +35,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
                     <polygon
                         points="266.667,21.333 245.333,0 138.667,0 117.333,21.333 42.667,21.333 42.667,64 341.333,64 341.333,21.333 			" />
             </a>
-            <a>
+            <!-- <a>
                 <svg class="update" data-action="update" data-id="<?php echo $result->u_id ;?>" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 383.947 383.947"
                     style="enable-background:new 0 0 383.947 383.947;" xml:space="preserve">
@@ -42,7 +43,7 @@ $results = $DB->getAll("user", ["permission", 0])->results();
                     <path d="M377.707,56.053L327.893,6.24c-8.32-8.32-21.867-8.32-30.187,0l-39.04,39.04l80,80l39.04-39.04
         C386.027,77.92,386.027,64.373,377.707,56.053z" />
                 </svg>
-                </a>
+                </a> -->
     </div>
 </div>
 
@@ -50,3 +51,11 @@ $results = $DB->getAll("user", ["permission", 0])->results();
 
 </body>
 </html>
+
+
+<?php
+} else {
+    Redirect::to("/PFE/admin/login.php");
+}
+?>
+

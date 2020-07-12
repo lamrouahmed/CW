@@ -29,10 +29,11 @@ function update(id, action, url) {
     })
     .then(response => response.text())
     .then(body => {
-        $('.demandeContainer').innerHTML = body
+        action !== "pay" && ($('.demandeContainer').innerHTML = body);
         btns = $$('.btns > div')
         btns.forEach(btn => btn.addEventListener('click', e => update(e.currentTarget.dataset.id, e.currentTarget.dataset.action, url)));
-
+        JSON.parse(body).ok && (window.location.href = "/PFE/payment/payment.php");
+        
     });
 }
 

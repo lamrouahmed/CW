@@ -11,6 +11,7 @@ const nav = $('.list');
 const popUpB = $$('.popup'); 
 const chooseB = $$('.choose');
 const header = $('.header');
+const logout = $('.logout');
 hamburger.addEventListener('click',toggleBurger);
 btns.forEach(btn => btn.addEventListener('click', (e) => popUp(e)));
 close.forEach(cross => cross.addEventListener('click', (e) => hidePopup(e)));
@@ -44,4 +45,10 @@ function toggleBurger() {
 
 
 
+logout.addEventListener('click', e => {
+    toggleDropDown()
+})
 
+function toggleDropDown() {
+    $('.dropDown').classList.toggle('dropDownBlock');
+}

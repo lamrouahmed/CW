@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$minTablet: 300px;
+$maxTablet: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.headerWrapper {
+    height: 5rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+
+
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        h1 {
+            font-weight: 500;
+            color: #273036;
+            font-family: 'Montserrat', sans-serif;
+            user-select: none;
+            display: block;
+            margin-left: .4em;
+            transition: all 400ms ease-in-out;
+
+        }
+
+        span {
+            font-weight: 300;
+
+        }
+
+
+
+
+    }
+
+    .logoImg {
+        display: flex;
+
+        svg {
+            height: 3em;
+            width: 4em;
+
+            path {
+                fill: #273036;
+                transition: all 400ms ease-in-out;
+
+            }
+        }
+    }
+}
+
+
+.main {
+    display: flex;
+    height: calc(100% - 5rem);
+
+    &>section {
+        width: 50%;
+    }
+}
+
+.section_1 {
+    background-color: rgb(43, 51, 66);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .titre {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        padding-bottom: 1rem;
+
+        &>h1 {
+            text-align: center;
+            height: 3rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .img {
+            height: 4rem;
+            width: 4rem;
+
+            &>svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .userInfo {
+        margin-right: 6rem;
+
+        .top {
+            margin-bottom: .6rem;
+
+            p {
+                font-weight: 600;
+            }
+        }
+
+        .bottom {
+            p {
+                font-weight: 500;
+                font-size: 0.9rem;
+                opacity: .8;
+            }
+        }
+
+        &>div {
+            width: 100%;
+            padding: 1rem;
+            padding-left: 2rem;
+        }
+
+        .mailPhone,
+        .lavageVehicule {
+            display: flex;
+
+            .phone,
+            .typeVehicule {
+                margin-left: 9rem;
+            }
+
+            .mail,
+            .typeLavage {
+                width: 12rem;
+            }
+        }
+    }
+
+    // .pay {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     width: 90%;
+    //     margin: 0 auto;
+    // }
+    // .paySvg {
+    //     height: 10rem;
+    //     width: 10rem;
+    // }
+    // .pay {
+    //     width: 100%;
+    //     display: flex;
+    // }
+    .paimentDetail {
+        width: 75%;
+        display: flex;
+        align-items: center;
+
+        .paySvg {
+            height: 9rem;
+            width: 9rem;
+
+            & > svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &>div {
+            padding: 1.6rem;
+            padding-left: 2rem !important;
+        }
+
+        .texte {
+            padding: .2rem;
+
+            p {
+                display: none;
+                font-weight: 500;
+                font-size: 1.7rem;
+            }
+        }
+
+        .total {
+            padding: .3rem;
+
+
+            p {
+                font-weight: 300;
+                font-size: 3.6rem;
+                
+            }
+            
+            span {
+                font-size: 1.5rem !important;
+            }
+        }
+
+    }
+}
+
+.section_2 {
+    background-color: #3735351c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formWrapper {
+        box-shadow: 3px 3px 1px 1px #757373;
+        padding: 3em;
+        background-color: #FFF;
+        border-radius: 5px;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            transition: all 200ms ease-in-out;
+            box-shadow: -3px -3px 1px 1px #333232;
+        }
+    }
+
+    .formHeader {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+
+            svg {
+                height: 5rem;
+                width: 5rem;
+                margin-right: .6rem;
+
+
+            }
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 500;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ccicon {
+    height: 38px;
+    position: absolute;
+    right: 6px;
+    top: calc(50% - 17px);
+    width: 60px;
+}
+
+/* CREDIT CARD IMAGE STYLING */
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    max-height: 251px;
+    height: 54vw;
+    padding: 20px;
+}
+
+#ccsingle {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+#ccsingle svg {
+    width: 100px;
+    max-height: 60px;
+}
+
+.creditcard svg#cardfront,
+.creditcard svg#cardback {
+    width: 100%;
+
+}
+
+#generatecard {
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    padding: 2px 4px;
+    background-color: #909090;
+    // border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* CHANGEABLE CARD ELEMENTS */
+.creditcard .lightcolor,
+.creditcard .darkcolor {
+    -webkit-transition: fill .5s;
+    transition: fill .5s;
+}
+
+.creditcard .lightblue {
+    fill: #03A9F4;
+}
+
+.creditcard .lightbluedark {
+    fill: #0288D1;
+}
+
+.creditcard .red {
+    fill: #ef5350;
+}
+
+.creditcard .reddark {
+    fill: #d32f2f;
+}
+
+.creditcard .purple {
+    fill: #ab47bc;
+}
+
+.creditcard .purpledark {
+    fill: #7b1fa2;
+}
+
+.creditcard .cyan {
+    fill: #26c6da;
+}
+
+.creditcard .cyandark {
+    fill: #0097a7;
+}
+
+.creditcard .green {
+    fill: #66bb6a;
+}
+
+.creditcard .greendark {
+    fill: #388e3c;
+}
+
+.creditcard .lime {
+    fill: #d4e157;
+}
+
+.creditcard .limedark {
+    fill: #afb42b;
+}
+
+.creditcard .yellow {
+    fill: #ffeb3b;
+}
+
+.creditcard .yellowdark {
+    fill: #f9a825;
+}
+
+.creditcard .orange {
+    fill: #ff9800;
+}
+
+.creditcard .orangedark {
+    fill: #ef6c00;
+}
+
+.creditcard .grey {
+    fill: #071c18db;
+}
+
+.creditcard .greydark {
+    fill: #071c18;
+}
+
+/* FRONT OF CARD */
+#svgname {
+    text-transform: uppercase;
+}
+
+#cardfront .st2 {
+    fill: #FFFFFF;
+}
+
+#cardfront .st3 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+#cardfront .st4 {
+    font-size: 54.7817px;
+}
+
+#cardfront .st5 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardfront .st6 {
+    font-size: 33.1112px;
+}
+
+#cardfront .st7 {
+    opacity: 0.6;
+    fill: #FFFFFF;
+}
+
+#cardfront .st8 {
+    font-size: 24px;
+}
+
+#cardfront .st9 {
+    font-size: 36.5498px;
+}
+
+#cardfront .st10 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+}
+
+#cardfront .st11 {
+    font-size: 16.1716px;
+}
+
+#cardfront .st12 {
+    fill: #4C4C4C;
+}
+
+/* BACK OF CARD */
+#cardback .st0 {
+    fill: none;
+    stroke: #0F0F0F;
+    stroke-miterlimit: 10;
+}
+
+#cardback .st2 {
+    fill: #111111;
+}
+
+#cardback .st3 {
+    fill: #F2F2F2;
+}
+
+#cardback .st4 {
+    fill: #D8D2DB;
+}
+
+#cardback .st5 {
+    fill: #C4C4C4;
+}
+
+#cardback .st6 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardback .st7 {
+    font-size: 27px;
+}
+
+#cardback .st8 {
+    opacity: 0.6;
+}
+
+#cardback .st9 {
+    fill: #FFFFFF;
+}
+
+#cardback .st10 {
+    font-size: 24px;
+}
+
+#cardback .st11 {
+    fill: #EAEAEA;
+}
+
+#cardback .st12 {
+    font-weight: 500;
+}
+
+#cardback .st13 {
+    font-size: 37.769px;
+}
+
+/* FLIP ANIMATION */
+.container {
+    perspective: 1000px;
+}
+
+.creditcard {
+    width: 100%;
+    max-width: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    cursor: pointer;
+}
+
+.creditcard .front,
+.creditcard .back {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    color: #47525d;
+}
+
+.creditcard .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.creditcard.flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+
+.log {
+    border: none;
+    color: #FFF;
+    background-color: #273036;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    border-radius: 2px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1em;
+
+    &:hover,
+    &:focus {
+        transition: all 100ms ease-in-out;
+        background-color: darken(#273036, 10%);
+        transform: scale(.98);
+    }
+}
+
+
+.label {
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+    display: block;
+
+
+    &::after {
+        content: url('../img/update.svg');
+        position: absolute;
+        display: block;
+        width: .8rem;
+        height: .8rem;
+        right: 0;
+        top: 50%;
+        opacity: .2;
+
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+
+        .show {
+            &::after {
+                display: flex;
+            }
+        }
+
+    }
+
+
+
+    .show {
+        position: relative;
+
+
+        &::after {
+            content: url("../img/show.svg");
+            position: absolute;
+            width: 1.5rem;
+            height: 2.5rem;
+            right: 1.5rem;
+            bottom: -.1rem;
+            opacity: 1;
+            cursor: pointer;
+            z-index: 69;
+            display: none;
+            align-items: center;
+        }
+    }
+
+    .hide {
+
+
+        &::after {
+            content: url('../img/hide.svg') !important;
+
+        }
+    }
+
+
+    .border {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #273036;
+        bottom: 0%;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: all 200ms ease-in-out;
+
+    }
+
+    .text {
+        font-weight: 500;
+        color: rgb(180, 179, 179);
+        font-size: .8em;
+        position: absolute;
+        top: 1.7rem;
+        pointer-events: none;
+        transition: all 200ms ease-in-out;
+        left: 0;
+    }
+
+
+
+    .focus {
+        top: .6rem;
+        font-size: .7em;
+        transition: all 200ms ease-in-out;
+    }
+
+    .clicked {
+        transform: scaleX(1) !important;
+        transition: all 200ms ease-in-out;
+    }
+
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid rgb(223, 220, 220);
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding-top: 2em;
+    cursor: pointer;
+    height: 4em;
+    box-shadow: none;
+
+
+
+    &:focus {
+        outline: none;
+
+
+    }
+}
+
+.error {
+    display: block;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: .8em;
+    color: #ff0000b3;
+    width: 100%;
+}
+
+.errorTrue {
+    border-bottom: 2px solid rgb(235, 81, 81) !important;
+}
+
+.cardNumberError {
+    .border {
+        background-color: rgb(221, 90, 90);
+    }
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+
+    &>.label {
+        width: 45%;
+    }
+}
+
+
+
+
+@include tablet {
+    .titre {
+        h1 {
+            font-size: 1.3rem !important;
+            white-space: nowrap;
+            letter-spacing: 0 !important;
+        }
+    }
+
+    .userInfo {
+        margin-right: 0 !important;
+        width: 100%;
+
+        & > div {
+            padding-left: 1rem !important;
+
+        }
+
+        .typeVehicule, .phone {
+            margin-left: 3rem !important;
+        }
+    }
+
+    #paimentDetail {
+        width: 100% !important;
+
+        & > div {
+            padding-left: 1rem !important;
+        }
+    }
+
+    
+
+    .total p {
+        font-size: 1.6rem !important;
+    }
+    .formWrapper {
+        height: 100%;
+        box-shadow: none !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:hover {
+            box-shadow: none !important;
+        }
+    }
+}

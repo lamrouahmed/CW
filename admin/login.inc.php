@@ -15,7 +15,7 @@ if(!Session::exists("admin")) {
             $alerts = json_encode(["ok" => "passed"]);
         } else {
             if($validate->isValid()) {
-                $validate->setError("incorrect username or password", "u_error");
+                $validate->setError("mot de passe ou username incorrecte", "u_error");
             }
             
             $alerts = json_encode($validate->getErrors());

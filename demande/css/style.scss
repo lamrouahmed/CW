@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/*-------- Tablet Media Queries ---------*/
+
+$minTablet: 300px;
+$maxTablet: 980px;
+
+@mixin tablet {
+    @media (min-width: #{$minTablet}) and (max-width: #{$maxTablet}) {
+        @content;
+    }
+}
+
+
+
+
 *,
 *::after,
 *::before {
@@ -13,6 +28,7 @@
     border: none;
     white-space: nowrap;
 }
+
 //min width 985px 
 html {
     height: 100%;
@@ -143,11 +159,24 @@ body {
             }
         }
 
+
+
+
+
+
+        .vehicules,
+        .lavages,
+        .prix {
+            display: flex;
+        }
+
         .lavageDisponible,
         .vehiculeDisponible,
         .pricing {
-            justify-content: center;
+            justify-content: space-between;
         }
+
+
         // .quantityWrapper,
         // .horodatage,
         // .total,
@@ -230,14 +259,17 @@ body {
 
             }
         }
+
         .prixLavage {
             width: 14rem;
             margin: 0;
+
             h2 {
                 text-align: center;
                 font-weight: 500;
             }
         }
+
         .quantityWrapper {
             .nbVehicules {
                 width: 16%;
@@ -265,13 +297,14 @@ body {
             }
 
         }
-        
+
         .horodatage {
 
             .timestampWrapper {
                 display: flex;
                 margin-left: -5rem;
             }
+
             .label {
                 border: none;
                 transform: scale(1);
@@ -299,6 +332,7 @@ body {
                     margin-left: 2rem;
                 }
             }
+
         }
 
         .localisation {
@@ -395,6 +429,32 @@ body {
                     transition: all 200ms ease-in-out;
                 }
             }
+
+            .clicked {
+                color: transparent;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 0;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 100%;
+                position: relative;
+
+                &:hover {
+                    transform: scale(1);
+                }
+
+
+
+                &::after {
+                    content: url("../img/correct.svg");
+                    position: absolute;
+                    display: block;
+                    height: 1rem;
+                    width: 1rem;
+                    transform: scale(0.056);
+                    top: 0;
+                }
+            }
         }
 
         .total {
@@ -407,4 +467,74 @@ body {
             }
         }
     }
+}
+
+
+.error {
+    border-color: rgb(236, 60, 60) !important;
+    color: rgb(236, 60, 60) !important;
+}
+
+.textError {
+    border-color: rgb(236, 60, 60) !important;
+}
+
+
+
+
+
+
+
+@include tablet {
+
+    // .lavageDisponible,
+    // .vehiculeDisponible,
+    // .pricing {
+    //     flex-direction: column;
+    //     margin-bottom: 4rem !important;
+    //     margin-top: 0 !important;
+
+    //    & > p {
+    //         width: 65% !important;
+    //         margin-bottom: 2rem;
+    //     }
+    // }
+    // .pricing {
+    //     margin-bottom: 2rem !important;
+    // }
+
+    .form {
+        &>div {
+            width: 48rem !important;
+
+            &>p {
+                width: 13rem !important;
+            }
+        }
+    }
+
+    .lavages,
+    .vehicules {
+        .label {
+            width: 10rem !important;
+        }
+    }
+
+    .prixLavage {
+        width: 12.5rem !important;
+    }
+
+    .span {
+        display: none;
+    }
+
+
+    textarea.input {
+        width: 32rem !important;
+    }
+
+    .horodatage .label {
+        margin-left: 2rem !important;
+    }
+
 }

@@ -45,7 +45,7 @@ error_reporting(0);
                     </svg>
                 </div>
                 <div class="disconnect">
-                    <p class="username"><span>Welcome, </span><?php echo $user->getData()->username; ?></p>
+                    <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>
                     <div class="popUp">
                         <div class="triangle">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ error_reporting(0);
                             </div>
                             <span>Profile</span>
                         </a>
-                        <a href="#">
+                        <a href="/PFE/user/profile/factures/factures.php">
                             <div class="sVg">
 
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -119,39 +119,6 @@ error_reporting(0);
                                 </svg>
                             </div>
                             <span>Factures</span>
-                        </a>
-
-                        <a href="#">
-                            <div class="sVg">
-
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
-
-                                    <path d="M458.667,85.333H53.333C23.936,85.333,0,109.269,0,138.667v234.667c0,29.397,23.936,53.333,53.333,53.333h405.333
-                                       c29.397,0,53.333-23.936,53.333-53.333V138.667C512,109.269,488.064,85.333,458.667,85.333z M490.667,373.333
-                                       c0,17.643-14.357,32-32,32H53.333c-17.643,0-32-14.357-32-32V138.667c0-17.643,14.357-32,32-32h405.333c17.643,0,32,14.357,32,32
-                                       V373.333z" />
-
-                                    <path d="M501.333,149.333H10.667C4.779,149.333,0,154.112,0,160v64c0,5.888,4.779,10.667,10.667,10.667h490.667
-                                       c5.888,0,10.667-4.779,10.667-10.667v-64C512,154.112,507.221,149.333,501.333,149.333z M490.667,213.333H21.333v-42.667h469.333
-                                       V213.333z" />
-
-                                    <path d="M202.667,298.667h-128c-5.888,0-10.667,4.779-10.667,10.667S68.779,320,74.667,320h128
-                                       c5.888,0,10.667-4.779,10.667-10.667S208.555,298.667,202.667,298.667z" />
-
-                                    <path
-                                        d="M202.667,341.333h-128C68.779,341.333,64,346.112,64,352c0,5.888,4.779,10.667,10.667,10.667h128
-                                       c5.888,0,10.667-4.779,10.667-10.667C213.333,346.112,208.555,341.333,202.667,341.333z" />
-
-                                    <path d="M416,277.333h-21.333c-17.643,0-32,14.357-32,32v21.333c0,17.643,14.357,32,32,32H416c17.643,0,32-14.357,32-32v-21.333
-                                       C448,291.691,433.643,277.333,416,277.333z M426.667,330.667c0,5.888-4.779,10.667-10.667,10.667h-21.333
-                                       c-5.888,0-10.667-4.779-10.667-10.667v-21.333c0-5.888,4.779-10.667,10.667-10.667H416c5.888,0,10.667,4.779,10.667,10.667
-                                       V330.667z" />
-
-                                </svg>
-                            </div>
-                            <span>Paiement</span>
                         </a>
                         <a href="/PFE/user/profile/demandes/demandes.php">
                             <div class="sVg">
@@ -298,13 +265,13 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_last_name" class="input" type="text" name="u_last_name" value="<?php echo $user->getData()->last_name;?>">
                         <span class="border"></span>
-                        <span class="text">Last Name</span>
+                        <span class="text">Nom</span>
                         <span class="error" data-error="u_last_name"></span>
                     </label>
                     <label class="label">
                         <input data-check="u_first_name" class="input" type="text" name="u_first_name" value="<?php echo $user->getData()->first_name;?>">
                         <span class="border"></span>
-                        <span class="text">First Name</span>
+                        <span class="text">Prénom</span>
                         <span class="error" data-error="u_first_name"></span>
 
                     </label>
@@ -313,7 +280,7 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_username" class="input" type="text" name="u_username" value="<?php echo $user->getData()->username;?>">
                         <span class="border"></span>
-                        <span class="text">Username</span>
+                        <span class="text">Nom d'utilisateur</span>
                         <span class="error" data-error="u_username"></span>
 
                     </label>
@@ -322,7 +289,7 @@ error_reporting(0);
                     <label class="label">
                         <input data-check="u_phone" class="input" type="tel" name="u_phone" value="<?php echo $user->getData()->phone;?>">
                         <span class="border"></span>
-                        <span class="text">Phone</span>
+                        <span class="text">Telephone</span>
                         <span class="error" data-error="u_phone"></span>
 
 
@@ -344,7 +311,7 @@ error_reporting(0);
                         
                         ?>">
                         <span class="border"></span>
-                        <span class="text">Password</span>
+                        <span class="text">Mot de passe</span>
                         <div class="show"></div>
                         <span class="error" data-error="u_pwd"></span>
 
@@ -357,10 +324,10 @@ error_reporting(0);
 
                     <label class="label">
                         <textarea class="input textarea" name="addresse" cols="30" rows="5">
+                        <?php echo trim($user->getdata()->addresse)?>
                     </textarea> 
                     <span class="border"></span>
                         <span class="text ">Addresse</span>
-
 
                     </label>
                 </div>

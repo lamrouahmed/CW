@@ -3,10 +3,10 @@ require_once '/wamp64/www/PFE/core/init.php';
 
 if (Session::exists("user"))
 {   
+    $alerts = [];
     $user = new User();
     $demandes = $user->getDemandes()
         ->results();
-
         if(Input::exists()) {
             $demande = new Demande();
             $id = Input::get('id');
@@ -18,10 +18,21 @@ if (Session::exists("user"))
                     "status_demande" => "Canceled"
                 ]);
             } else if($action === "pay") {
+                $Demande = $user->getDemande($id);
+                if($Demande->results()) {
+                    if (Session::exists('pay')) Session::delete('pay');
+                    else {
+                        Session::put('pay', $id);
+                    }
+                    $alerts += ['ok' => 'passed'];
+                        $alerts = json_encode($alerts);
+                        echo $alerts;
+                }
             }
             $demandes = $user->getDemandes()
         ->results();
-        }  
+        }
+        if($action !== "pay")  {
     foreach ($demandes as $demande)
     {
 
@@ -116,11 +127,17 @@ if (Session::exists("user"))
                                 </div>
                                     <?php
         }
-        else if ($demande->status_demande === "D")
+        else if ($demande->status_demande === "Paid")
         {
 ?>
-                                <div class="pay" data-action="pay" data-class="D" data-id="<?php echo $demande->demande_id?>">
-                                        <svg id="Layer_1" enable-background="new 0 0 511.334 511.334" height="512" viewBox="0 0 511.334 511.334" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m0 224.667v132.333c0 38.108 30.892 69 69 69h373.334c38.108 0 69-30.892 69-69v-132.333c0-6.627-5.373-12-12-12h-487.334c-6.627 0-12 5.373-12 12zm127.667 84h-32c-11.598 0-21-9.402-21-21s9.402-21 21-21h32c11.598 0 21 9.402 21 21s-9.402 21-21 21z"/><path d="m511.334 158.667v-4.333c0-38.108-30.892-69-69-69h-373.334c-38.108 0-69 30.892-69 69v4.333c0 6.627 5.373 12 12 12h487.334c6.627 0 12-5.373 12-12z"/></svg> 
+                               <div class="delete" data-action="delete" data-id="<?php echo $demande->demande_id?>">
+                                    <svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="512"
+                                        viewBox="0 0 515.556 515.556" width="512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z" />
+                                        <path
+                                            d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z" />
+                                        </svg>
                                 </div>
 
                                     <?php
@@ -156,12 +173,12 @@ if (Session::exists("user"))
 
 
                     <?php
-    }
+    } }
 ?>
+
 
 
 <?php
 }
-
 
 ?>

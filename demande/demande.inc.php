@@ -6,7 +6,7 @@
         $alerts = [];
         $validate = new Validate();
         $validate->check('POST', [
-            "date" => ["name" => "date"],
+            "date" => ["name" => "date", "date" => Input::get('date')],
             "time" => ["name" => "heure"],
             "localisation" => ["name" => "localisation", "exists" => Input::get('vehicule')]
         ]);
@@ -51,7 +51,7 @@
         echo json_encode($alerts);
     }
   } else {
-      Redirect::to('/PFE/user/login/login.php');
+      Redirect::to('/PFE/user/login/login.php?redirect=demande');
   }
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 /*-------- Desktop Media Queries ---------*/
@@ -36,9 +36,11 @@ $maxTablet: 1200px;
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -52,6 +54,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: calc(100% - 5rem);
+    margin-top: 5rem;
     // background: url('../img/laura-dewilde-MTSq-eEqPmU-unsplash.jpg') no-repeat;
     // background-size: auto 100%;
     // position: relative;
@@ -103,7 +107,7 @@ body {
                     position: absolute;
                     width: 100%;
                     height: 4%;
-                    background-color: #3d7b7d;
+                    background-color: #1a1f22;
                     bottom: 0%;
                     transform: scaleX(0);
                     transform-origin: center;
@@ -119,7 +123,8 @@ body {
 
             }
 
-            input[type=text], input[type=password] {
+            input[type=text],
+            input[type=password] {
                 border: none;
                 border-bottom: 1px solid rgb(168, 162, 162);
                 width: 100%;
@@ -140,14 +145,14 @@ body {
                 }
             }
 
- 
+
 
 
 
             .log {
                 border: none;
                 color: #FFF;
-                background-color: #3d7b7d;
+                background-color: #273036;
                 margin-top: 1em;
                 transition: all 100ms ease-in-out;
                 text-decoration: none;
@@ -157,14 +162,15 @@ body {
                 font-family: 'Montserrat', sans-serif;
                 height: 3em;
                 border-radius: 2px;
-                margin-top: 3em;
+                margin-top: 1em;
                 width: 100%;
                 font-size: 1em;
                 cursor: pointer;
+
                 &:hover,
                 &:focus {
                     transition: all 100ms ease-in-out;
-                    background-color: darken(#3d7b7d, 10%);
+                    background-color: darken(#273036, 10%);
                     transform: scale(.98);
                 }
             }
@@ -207,8 +213,8 @@ body {
     color: #ff0000b3;
     width: 100%;
     margin-top: .5em;
-    
-    
+
+
     // &::after {
     //     content: '';
     //     position: absolute;
@@ -230,16 +236,17 @@ body {
 .errorTrue {
     border-bottom: 2px solid rgb(235, 81, 81) !important;
 
-//     background: url('../img/close.svg') no-repeat;
-//     // &::after {
-//     //     content: url('../img/close.svg');
-//     //     position: absolute;
-//     //     right: 0;
-//     //     bottom: 0;
-//     //     height: .2em;
-//     //     width: .2em;
-//     // }
- }
+    //     background: url('../img/close.svg') no-repeat;
+    //     // &::after {
+    //     //     content: url('../img/close.svg');
+    //     //     position: absolute;
+    //     //     right: 0;
+    //     //     bottom: 0;
+    //     //     height: .2em;
+    //     //     width: .2em;
+    //     // }
+}
+
 // .mobileNav {
 
 //     .hamburger {
@@ -367,6 +374,7 @@ body {
         justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
+
         .imgContainer {
             background-image: url("../img/login4.jpeg");
             width: 68%;
@@ -395,11 +403,13 @@ body {
     .mobileNav {
         display: none;
     }
+
     .wrapper {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
+
         .imgContainer {
             background-image: url("/img/login/login.jpg");
             width: 68%;

@@ -11,10 +11,14 @@ if(!Session::exists("user")) {
             ]);
             $user = new User();
             if($validate->isValid() && $user->login(Input::get("u_username"), Input::get("u_password"))) {
-                Redirect::to('/PFE/user/profile/profile.php');
+                if(Input::get('redirect') === "demande" || Input::get('redirect') === "review") {
+                    Redirect::to(Input::get('redirect'));
+                } else {
+                    Redirect::to('/PFE/user/profile/profile.php');
+                }
             } else {
                 if($validate->isValid()) {
-                    $validate->setError("incorrect username or password", "u_error");
+                    $validate->setError("mot de passe ou username incorrect", "u_error");
                 }
                 
                 $errors = $validate->getErrors();

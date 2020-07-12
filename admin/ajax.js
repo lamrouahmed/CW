@@ -24,30 +24,30 @@ const refresh = $('.refresh');
 
 
 
-window.addEventListener('click', e => removeBorder(e,'INPUT'))
+// window.addEventListener('click', e => removeBorder(e,'INPUT'))
 option.addEventListener('click', () => {
   optionToggle.classList.toggle('sortOptionsVisible')
 })
 
-function removeBorder(e, node) {
-    if (e.target.nodeName != node) {
-        span.classList.remove('clicked')
-    } 
-}
+// function removeBorder(e, node) {
+//     if (e.target.nodeName != node) {
+//         span.classList.remove('clicked')
+//     } 
+// }
 
 // users.forEach((user, index) => {
 //   user.style.animation = `startup ${index+2}00ms ease-in-out forwards`
 
 // })
 
-inputSearch.addEventListener('focus', addBorder);
-label.addEventListener('click', addBorder)
+// inputSearch.addEventListener('focus', addBorder);
+// label.addEventListener('click', addBorder)
 
 
 
-function addBorder() {
-  span.classList.add('clicked');
-}
+// function addBorder() {
+//   span.classList.add('clicked');
+// }
 
 
 
@@ -184,3 +184,17 @@ function sort(nodes, sortBy, orderBy) {
 
 options.forEach(option => option.addEventListener('click', e => sort(users, e.currentTarget.dataset.sort, 1)));
 
+
+
+
+
+
+
+
+
+
+
+
+// setInterval(() => {
+//   window.location.href = window.location.href
+// }, 2000)
