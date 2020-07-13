@@ -314,6 +314,7 @@ body {
                     border-bottom-left-radius: 10px;
                     border-bottom-right-radius: 10px;
                 }
+
                 .txt {
                     width: 100%;
                     padding-left: 1rem;
@@ -331,7 +332,7 @@ body {
                     font-weight: 500;
                 }
 
-                & > a {
+                &>a {
                     text-decoration: none;
                     color: #FFF;
                     display: block;
@@ -339,7 +340,7 @@ body {
                     height: 3rem;
                     width: 10rem;
 
-                    
+
                 }
 
                 &>a div {
@@ -377,7 +378,7 @@ body {
 
 
 
-                        
+
                         .btnText p {
                             color: #171b1e;
                             opacity: 1;
@@ -474,14 +475,26 @@ body {
 
 
 .head {
+
     display: flex;
+
     justify-content: center;
     margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         letter-spacing: 2px;
         font-size: 2.5rem;
         font-weight: 600;
+    }
+
+    p {
+        margin-top: .6rem;
+        font-size: .9rem;
+        font-weight: 500;
+        color: grey;
     }
 }
 
@@ -1011,6 +1024,44 @@ body {
         }
     }
 
+}
+
+.avisContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.avis {
+    border: none;
+    margin-top: 1em;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 3.3em;
+    border-radius: 4px;
+    margin-top: 1em;
+    width: 17rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #121618;
+    color: #FFF;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
+    border: 2px solid #121618;
+    &:hover,
+    &:focus {
+        transition: all 100ms ease-in-out;
+        background-color: #FFF;
+        color: #121618;
+    }
 }
 
 

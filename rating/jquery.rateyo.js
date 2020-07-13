@@ -1,66 +1,71 @@
 /*****
-* rateYo - v2.3.2
-* http://prrashi.github.io/rateyo/
-* Copyright (c) 2014 Prashanth Pamidi; Licensed MIT
-*****/
+ * rateYo - v2.3.2
+ * http://prrashi.github.io/rateyo/
+ * Copyright (c) 2014 Prashanth Pamidi; Licensed MIT
+ *****/
 
-;(function ($) {
+;
+(function ($) {
   "use strict";
 
   // The basic svg string required to generate stars
-  var BASICSTAR = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"+
-                  "<svg version=\"1.1\""+
-                        "xmlns=\"http://www.w3.org/2000/svg\""+
-                        "viewBox=\"0 12.705 512 486.59\""+
-                        "x=\"0px\" y=\"0px\""+
-                        "xml:space=\"preserve\">"+
-                    "<polygon "+
-                              "points=\"256.814,12.705 317.205,198.566"+
-                                      " 512.631,198.566 354.529,313.435 "+
-                                      "414.918,499.295 256.814,384.427 "+
-                                      "98.713,499.295 159.102,313.435 "+
-                                      "1,198.566 196.426,198.566 \"/>"+
-                  "</svg>";
-
+  // var BASICSTAR = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+  //   "<svg version=\"1.1\"" +
+  //   "xmlns=\"http://www.w3.org/2000/svg\"" +
+  //   "viewBox=\"0 12.705 512 486.59\"" +
+  //   "x=\"0px\" y=\"0px\"" +
+  //   "xml:space=\"preserve\">" +
+  //   "<polygon " +
+  //   "points=\"256.814,12.705 317.205,198.566" +
+  //   " 512.631,198.566 354.529,313.435 " +
+  //   "414.918,499.295 256.814,384.427 " +
+  //   "98.713,499.295 159.102,313.435 " +
+  //   "1,198.566 196.426,198.566 \"/>" +
+  //   "</svg>";
+  var BASICSTAR = `<svg height="511pt" viewBox="0 -10 511.98685 511" width="511pt" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0" ></path>
+                </svg>`;
   // The Default values of different options available in the Plugin
   var DEFAULTS = {
 
-    starWidth : "32px",
-    normalFill: "gray",
-    ratedFill : "#f39c12",
-    numStars  : 5,
-    maxValue  : 5,
-    precision : 1,
-    rating    : 0,
-    fullStar  : false,
-    halfStar  : false,
-    readOnly  : false,
-    spacing   : "0px",
-    rtl       : false,
+    starWidth: "25px",
+    normalFill: "#dbd2d2",
+    ratedFill: "#ffc107",
+    numStars: 5,
+    maxValue: 5,
+    precision: 1,
+    rating: 0,
+    fullStar: false,
+    halfStar: false,
+    readOnly: false,
+    spacing: "0px",
+    rtl: false,
     multiColor: null,
-    onInit    : null,
-    onChange  : null,
-    onSet     : null,
-    starSvg   : null
+    onInit: null,
+    onChange: null,
+    onSet: null,
+    starSvg: null
   };
 
   //Default colors for multi-color rating
   var MULTICOLOR_OPTIONS = {
 
     startColor: "#c0392b", //red
-    endColor  : "#f1c40f"  //yellow
+    endColor: "#f1c40f" //yellow
   };
 
   // http://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
-  function isMobileBrowser () {
+  function isMobileBrowser() {
     var check = false;
     /* jshint ignore:start */
-    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+    (function (a) {
+      if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true
+    })(navigator.userAgent || navigator.vendor || window.opera);
     /* jshint ignore:end */
     return check;
   }
 
-  function checkPrecision (value, minValue, maxValue) {
+  function checkPrecision(value, minValue, maxValue) {
 
     /*
      * This function removes the unnecessary precision, at Min and Max Values
@@ -70,8 +75,7 @@
     if (value === minValue) {
 
       value = minValue;
-    }
-    else if(value === maxValue) {
+    } else if (value === maxValue) {
 
       value = maxValue;
     }
@@ -79,7 +83,7 @@
     return value;
   }
 
-  function checkBounds (value, minValue, maxValue) {
+  function checkBounds(value, minValue, maxValue) {
 
     /*
      * Check if the value is between min and max values, if not, throw an error
@@ -87,10 +91,10 @@
 
     var isValid = value >= minValue && value <= maxValue;
 
-    if(!isValid){
+    if (!isValid) {
 
-        throw Error("Invalid Rating, expected value between "+ minValue +
-                    " and " + maxValue);
+      throw Error("Invalid Rating, expected value between " + minValue +
+        " and " + maxValue);
     }
 
     return value;
@@ -118,11 +122,15 @@
     }
 
     var hexValues = hexRegex.exec(hex),
-        r = parseInt(hexValues[1], 16),
-        g = parseInt(hexValues[2], 16),
-        b = parseInt(hexValues[3], 16);
+      r = parseInt(hexValues[1], 16),
+      g = parseInt(hexValues[2], 16),
+      b = parseInt(hexValues[3], 16);
 
-    return {r:r, g:g, b:b};
+    return {
+      r: r,
+      g: g,
+      b: b
+    };
   };
 
   function getChannelValue(startVal, endVal, percent) {
@@ -131,19 +139,19 @@
      * Returns a value between `startVal` and `endVal` based on the percent
      */
 
-    var newVal = (endVal - startVal)*(percent/100);
+    var newVal = (endVal - startVal) * (percent / 100);
 
     newVal = Math.round(startVal + newVal).toString(16);
 
     if (newVal.length === 1) {
 
-        newVal = "0" + newVal;
+      newVal = "0" + newVal;
     }
 
     return newVal;
   }
 
-  function getColor (startColor, endColor, percent) {
+  function getColor(startColor, endColor, percent) {
 
     /*
      * Given the percentage( `percent` ) of `endColor` to be mixed
@@ -156,19 +164,19 @@
       return null;
     }
 
-    percent = isDefined(percent)? percent : 0;
+    percent = isDefined(percent) ? percent : 0;
 
     startColor = hexToRGB(startColor);
     endColor = hexToRGB(endColor);
 
     var r = getChannelValue(startColor.r, endColor.r, percent),
-        b = getChannelValue(startColor.b, endColor.b, percent),
-        g = getChannelValue(startColor.g, endColor.g, percent);
+      b = getChannelValue(startColor.b, endColor.b, percent),
+      g = getChannelValue(startColor.g, endColor.g, percent);
 
     return "#" + r + g + b;
   }
 
-  function RateYo ($node, options) {
+  function RateYo($node, options) {
 
     /*
      * The Contructor, whose instances are used by plugin itself
@@ -195,15 +203,15 @@
      * The rating is displayed by adjusting the width of `$ratedGroup`
      */
     var $groupWrapper = $("<div/>").addClass("jq-ry-group-wrapper")
-                                   .appendTo($node);
+      .appendTo($node);
 
     var $normalGroup = $("<div/>").addClass("jq-ry-normal-group")
-                                  .addClass("jq-ry-group")
-                                  .appendTo($groupWrapper);
+      .addClass("jq-ry-group")
+      .appendTo($groupWrapper);
 
     var $ratedGroup = $("<div/>").addClass("jq-ry-rated-group")
-                                 .addClass("jq-ry-group")
-                                 .appendTo($groupWrapper);
+      .addClass("jq-ry-group")
+      .appendTo($groupWrapper);
 
     /*
      * Variable `step`: store the value of the rating for each star
@@ -218,7 +226,7 @@
      *                              between stars w.r.t the container
      */
     var step, starWidth, percentOfStar, spacing,
-        percentOfSpacing, containerWidth, minValue = 0;
+      percentOfSpacing, containerWidth, minValue = 0;
 
     /*
      * `currentRating` contains rating that is being displayed at the latest point of
@@ -233,7 +241,7 @@
     // A flag to store if the plugin is already being displayed in the UI
     var isInitialized = false;
 
-    function showRating (ratingVal) {
+    function showRating(ratingVal) {
 
       /*
        * The function is responsible for displaying the rating by changing
@@ -248,15 +256,15 @@
       // Storing the value that is being shown in `currentRating`.
       currentRating = ratingVal;
 
-      var numStarsToShow = ratingVal/step;
+      var numStarsToShow = ratingVal / step;
 
       // calculating the percentage of width of $ratedGroup with respect to its parent
-      var percent = numStarsToShow*percentOfStar;
+      var percent = numStarsToShow * percentOfStar;
 
       if (numStarsToShow > 1) {
 
         // adding the percentage of space that is taken by the gap the stars
-        percent += (Math.ceil(numStarsToShow) - 1)*percentOfSpacing;
+        percent += (Math.ceil(numStarsToShow) - 1) * percentOfSpacing;
       }
 
       setRatedFill(options.ratedFill);
@@ -274,25 +282,25 @@
       $ratedGroup.css("width", percent + "%");
     }
 
-    function setContainerWidth () {
+    function setContainerWidth() {
 
       /*
        * Set the width of the `this.node` based on the width of each star and
        * the space between them
        */
 
-      containerWidth = starWidth*options.numStars + spacing*(options.numStars - 1);
+      containerWidth = starWidth * options.numStars + spacing * (options.numStars - 1);
 
-      percentOfStar = (starWidth/containerWidth)*100;
+      percentOfStar = (starWidth / containerWidth) * 100;
 
-      percentOfSpacing = (spacing/containerWidth)*100;
+      percentOfSpacing = (spacing / containerWidth) * 100;
 
       $node.width(containerWidth);
 
       showRating();
     }
 
-    function setStarWidth (newWidth) {
+    function setStarWidth(newWidth) {
 
       /*
        * Set the width and height of each SVG star, called whenever one changes the
@@ -305,19 +313,23 @@
       starWidth = window.parseFloat(options.starWidth.replace("px", ""));
 
       $normalGroup.find("svg")
-                  .attr({width : options.starWidth,
-                         height: starHeight});
+        .attr({
+          width: options.starWidth,
+          height: starHeight
+        });
 
       $ratedGroup.find("svg")
-                 .attr({width : options.starWidth,
-                        height: starHeight});
+        .attr({
+          width: options.starWidth,
+          height: starHeight
+        });
 
       setContainerWidth();
 
       return $node;
     }
 
-    function setSpacing (newSpacing) {
+    function setSpacing(newSpacing) {
 
       /*
        * Set spacing between the SVG stars, called whenever one changes
@@ -329,17 +341,21 @@
       spacing = parseFloat(options.spacing.replace("px", ""));
 
       $normalGroup.find("svg:not(:first-child)")
-                  .css({"margin-left": newSpacing});
+        .css({
+          "margin-left": newSpacing
+        });
 
       $ratedGroup.find("svg:not(:first-child)")
-                 .css({"margin-left": newSpacing});
+        .css({
+          "margin-left": newSpacing
+        });
 
       setContainerWidth();
 
       return $node;
     }
 
-    function setNormalFill (newFill) {
+    function setNormalFill(newFill) {
 
       /*
        * Set the background fill of the Stars, called whenever one changes the
@@ -350,7 +366,9 @@
 
       var $svgs = (options.rtl ? $ratedGroup : $normalGroup).find("svg");
 
-      $svgs.attr({fill: options.normalFill});
+      $svgs.attr({
+        fill: options.normalFill
+      });
 
       return $node;
     }
@@ -362,7 +380,7 @@
      */
     var ratedFill = options.ratedFill;
 
-    function setRatedFill (newFill) {
+    function setRatedFill(newFill) {
 
       /*
        * Set ratedFill of the stars, called when one changes the `ratedFill` option
@@ -375,11 +393,11 @@
       if (options.multiColor) {
 
         var ratingDiff = currentRating - minValue,
-            percentCovered = (ratingDiff/options.maxValue)*100;
+          percentCovered = (ratingDiff / options.maxValue) * 100;
 
-        var colorOpts  = options.multiColor || {},
-            startColor = colorOpts.startColor || MULTICOLOR_OPTIONS.startColor,
-            endColor   = colorOpts.endColor || MULTICOLOR_OPTIONS.endColor;
+        var colorOpts = options.multiColor || {},
+          startColor = colorOpts.startColor || MULTICOLOR_OPTIONS.startColor,
+          endColor = colorOpts.endColor || MULTICOLOR_OPTIONS.endColor;
 
         newFill = getColor(startColor, endColor, percentCovered);
       } else {
@@ -391,12 +409,14 @@
 
       var $svgs = (options.rtl ? $normalGroup : $ratedGroup).find("svg");
 
-      $svgs.attr({fill: options.ratedFill});
+      $svgs.attr({
+        fill: options.ratedFill
+      });
 
       return $node;
     }
 
-    function setRtl (newValue) {
+    function setRtl(newValue) {
 
       newValue = !!newValue;
 
@@ -406,7 +426,7 @@
       showRating();
     }
 
-    function setMultiColor (colorOptions) {
+    function setMultiColor(colorOptions) {
 
       /*
        * called whenever one changes the `multiColor` option
@@ -418,7 +438,7 @@
       setRatedFill(colorOptions ? colorOptions : ratedFill);
     }
 
-    function setNumStars (newValue) {
+    function setNumStars(newValue) {
 
       /*
        * Set the number of stars to use to display the rating, called whenever one
@@ -427,12 +447,12 @@
 
       options.numStars = newValue;
 
-      step = options.maxValue/options.numStars;
+      step = options.maxValue / options.numStars;
 
       $normalGroup.empty();
       $ratedGroup.empty();
 
-      for (var i=0; i<options.numStars; i++) {
+      for (var i = 0; i < options.numStars; i++) {
 
         $normalGroup.append($(options.starSvg || BASICSTAR));
         $ratedGroup.append($(options.starSvg || BASICSTAR));
@@ -447,7 +467,7 @@
       return $node;
     }
 
-    function setMaxValue (newValue) {
+    function setMaxValue(newValue) {
 
       /*
        * set the Maximum Value of rating to be allowed, called whenever
@@ -456,7 +476,7 @@
 
       options.maxValue = newValue;
 
-      step = options.maxValue/options.numStars;
+      step = options.maxValue / options.numStars;
 
       if (options.rating > newValue) {
 
@@ -468,7 +488,7 @@
       return $node;
     }
 
-    function setPrecision (newValue) {
+    function setPrecision(newValue) {
 
       /*
        * Set the precision of the rating value, called if one changes the
@@ -482,7 +502,7 @@
       return $node;
     }
 
-    function setHalfStar (newValue) {
+    function setHalfStar(newValue) {
 
       /*
        * This function will be called if one changes the `halfStar` option
@@ -493,7 +513,7 @@
       return $node;
     }
 
-    function setFullStar (newValue) {
+    function setFullStar(newValue) {
 
       /*
        * This function will be called if one changes the `fullStar` option
@@ -504,16 +524,16 @@
       return $node;
     }
 
-    function round (value) {
+    function round(value) {
 
       /*
        * Rounds the value of rating if `halfStar` or `fullStar` options are chosen
        */
 
-      var remainder = value%step,
-          halfStep = step/2,
-          isHalfStar = options.halfStar,
-          isFullStar = options.fullStar;
+      var remainder = value % step,
+        halfStep = step / 2,
+        isHalfStar = options.halfStar,
+        isFullStar = options.fullStar;
 
       if (!isFullStar && !isHalfStar) {
 
@@ -536,7 +556,7 @@
       return value;
     }
 
-    function calculateRating (e) {
+    function calculateRating(e) {
 
       /*
        * Calculates and returns the rating based on the position of cursor w.r.t the
@@ -544,8 +564,8 @@
        */
 
       var position = $normalGroup.offset(),
-          nodeStartX = position.left,
-          nodeEndX = nodeStartX + $normalGroup.width();
+        nodeStartX = position.left,
+        nodeEndX = nodeStartX + $normalGroup.width();
 
       var maxValue = options.maxValue;
 
@@ -555,19 +575,19 @@
       var calculatedRating = 0;
 
       // If the mouse pointer is to the left of the container
-      if(pageX < nodeStartX) {
+      if (pageX < nodeStartX) {
 
         calculatedRating = minValue;
-      }else if (pageX > nodeEndX) { // If the mouse pointer is right of the container
+      } else if (pageX > nodeEndX) { // If the mouse pointer is right of the container
 
         calculatedRating = maxValue;
-      }else { // If the mouse pointer is inside the continer
+      } else { // If the mouse pointer is inside the continer
 
         /*
          * The fraction of width covered by the pointer w.r.t to the total width
          * of the container.
          */
-        var calcPrcnt = ((pageX - nodeStartX)/(nodeEndX - nodeStartX));
+        var calcPrcnt = ((pageX - nodeStartX) / (nodeEndX - nodeStartX));
 
         if (spacing > 0) {
 
@@ -590,7 +610,7 @@
               remPrcnt -= (percentOfStar + percentOfSpacing);
             } else {
 
-              calculatedRating += remPrcnt/percentOfStar*step;
+              calculatedRating += remPrcnt / percentOfStar * step;
               remPrcnt = 0;
             }
           }
@@ -615,7 +635,7 @@
       return parseFloat(calculatedRating);
     }
 
-    function setReadOnly (newValue) {
+    function setReadOnly(newValue) {
 
       /*
        * UnBinds mouse event handlers, called when whenever one changes the
@@ -638,7 +658,7 @@
       return $node;
     }
 
-    function setRating (newValue) {
+    function setRating(newValue) {
 
       /*
        * Sets the rating of the Plugin, Called when option `rating` is changed
@@ -675,13 +695,15 @@
 
       if (isInitialized) {
 
-        $node.trigger("rateyo.set", {rating: rating});
+        $node.trigger("rateyo.set", {
+          rating: rating
+        });
       }
 
       return $node;
     }
 
-    function setOnInit (method) {
+    function setOnInit(method) {
 
       /*
        * set what method to be called on Initialization
@@ -692,7 +714,7 @@
       return $node;
     }
 
-    function setOnSet (method) {
+    function setOnSet(method) {
 
       /*
        * set what method to be called when rating is set
@@ -703,7 +725,7 @@
       return $node;
     }
 
-    function setOnChange (method) {
+    function setOnChange(method) {
 
       /*
        * set what method to be called rating in the UI is changed
@@ -742,7 +764,7 @@
       }
 
       RateYo.prototype.collection = deleteInstance($node.get(0),
-                                                   this.collection);
+        this.collection);
 
       $node.removeClass("jq-ry-container").children().remove();
 
@@ -766,8 +788,8 @@
       }
 
       var args = Array.prototype.slice.apply(arguments, []),
-          params = args.slice(1),
-          method = this[methodName];
+        params = args.slice(1),
+        method = this[methodName];
 
       return method.apply(this, params);
     };
@@ -859,7 +881,7 @@
       return isDefined(param) ? method(param) : options[optionName];
     };
 
-    function onMouseEnter (e) {
+    function onMouseEnter(e) {
 
       /*
        * If the Mouse Pointer is inside the container, calculate and show the rating
@@ -874,10 +896,12 @@
 
       showRating(rating);
 
-      $node.trigger("rateyo.change", {rating: rating});
+      $node.trigger("rateyo.change", {
+        rating: rating
+      });
     }
 
-    function onMouseLeave () {
+    function onMouseLeave() {
       if (isMobileBrowser()) {
         return;
       }
@@ -890,10 +914,12 @@
 
       showRating();
 
-      $node.trigger("rateyo.change", {rating: options.rating});
+      $node.trigger("rateyo.change", {
+        rating: options.rating
+      });
     }
 
-    function onMouseClick (e) {
+    function onMouseClick(e) {
 
       /*
        * On clicking the mouse inside the container, calculate and set the rating
@@ -907,51 +933,51 @@
 
     function onInit(e, data) {
 
-      if(options.onInit && typeof options.onInit === "function") {
+      if (options.onInit && typeof options.onInit === "function") {
 
         /* jshint validthis:true */
         options.onInit.apply(this, [data.rating, that]);
       }
     }
 
-    function onChange (e, data) {
+    function onChange(e, data) {
 
-      if(options.onChange && typeof options.onChange === "function") {
+      if (options.onChange && typeof options.onChange === "function") {
 
         /* jshint validthis:true */
         options.onChange.apply(this, [data.rating, that]);
       }
     }
 
-    function onSet (e, data) {
+    function onSet(e, data) {
 
-      if(options.onSet && typeof options.onSet === "function") {
+      if (options.onSet && typeof options.onSet === "function") {
 
         /* jshint validthis:true */
         options.onSet.apply(this, [data.rating, that]);
       }
     }
 
-    function bindEvents () {
+    function bindEvents() {
 
       $node.on("mousemove", onMouseEnter)
-           .on("mouseenter", onMouseEnter)
-           .on("mouseleave", onMouseLeave)
-           .on("click", onMouseClick)
-           .on("rateyo.init", onInit)
-           .on("rateyo.change", onChange)
-           .on("rateyo.set", onSet);
+        .on("mouseenter", onMouseEnter)
+        .on("mouseleave", onMouseLeave)
+        .on("click", onMouseClick)
+        .on("rateyo.init", onInit)
+        .on("rateyo.change", onChange)
+        .on("rateyo.set", onSet);
     }
 
-    function unbindEvents () {
+    function unbindEvents() {
 
       $node.off("mousemove", onMouseEnter)
-           .off("mouseenter", onMouseEnter)
-           .off("mouseleave", onMouseLeave)
-           .off("click", onMouseClick)
-           .off("rateyo.init", onInit)
-           .off("rateyo.change", onChange)
-           .off("rateyo.set", onSet);
+        .off("mouseenter", onMouseEnter)
+        .off("mouseleave", onMouseLeave)
+        .off("click", onMouseClick)
+        .off("rateyo.init", onInit)
+        .off("rateyo.change", onChange)
+        .off("rateyo.set", onSet);
     }
 
     setNumStars(options.numStars);
@@ -966,12 +992,14 @@
     this.rating(options.rating, true);
 
     isInitialized = true;
-    $node.trigger("rateyo.init", {rating: options.rating});
+    $node.trigger("rateyo.init", {
+      rating: options.rating
+    });
   }
 
   RateYo.prototype.collection = [];
 
-  function getInstance (node, collection) {
+  function getInstance(node, collection) {
 
     /*
      * Given a HTML element (node) and a collection of RateYo instances,
@@ -983,7 +1011,7 @@
 
     $.each(collection, function () {
 
-      if(node === this.node){
+      if (node === this.node) {
 
         instance = this;
         return false;
@@ -993,7 +1021,7 @@
     return instance;
   }
 
-  function deleteInstance (node, collection) {
+  function deleteInstance(node, collection) {
 
     /*
      * Given a HTML element (node) and a collection of RateYo instances,
@@ -1006,7 +1034,7 @@
       if (node === this.node) {
 
         var firstPart = collection.slice(0, index),
-            secondPart = collection.slice(index+1, collection.length);
+          secondPart = collection.slice(index + 1, collection.length);
 
         collection = firstPart.concat(secondPart);
 
@@ -1017,14 +1045,14 @@
     return collection;
   }
 
-  function _rateYo (options) {
+  function _rateYo(options) {
 
     var rateYoInstances = RateYo.prototype.collection;
 
     /* jshint validthis:true */
     var $nodes = $(this);
 
-    if($nodes.length === 0) {
+    if ($nodes.length === 0) {
 
       return $nodes;
     }
@@ -1035,11 +1063,11 @@
 
       //If args length is 0, Initialize the UI with default settings
       options = args[0] = {};
-    }else if (args.length === 1 && typeof args[0] === "object") {
+    } else if (args.length === 1 && typeof args[0] === "object") {
 
       //If an Object is specified as first argument, it is considered as options
       options = args[0];
-    }else if (args.length >= 1 && typeof args[0] === "string") {
+    } else if (args.length >= 1 && typeof args[0] === "string") {
 
       /*
        * if there is only one argument, and if its a string, it is supposed to be a
@@ -1048,7 +1076,7 @@
        */
 
       var methodName = args[0],
-          params = args.slice(1);
+        params = args.slice(1);
 
       var result = [];
 
@@ -1056,7 +1084,7 @@
 
         var existingInstance = getInstance(node, rateYoInstances);
 
-        if(!existingInstance) {
+        if (!existingInstance) {
 
           throw Error("Trying to set options before even initialization");
         }
@@ -1077,10 +1105,10 @@
        * If the plugin in being called on only one jQuery Element, return only the
        * first value, to support chaining.
        */
-      result = result.length === 1? result[0]: result;
+      result = result.length === 1 ? result[0] : result;
 
       return result;
-    }else {
+    } else {
 
       throw Error("Invalid Arguments");
     }
@@ -1093,38 +1121,38 @@
 
     return $.each($nodes, function () {
 
-               var existingInstance = getInstance(this, rateYoInstances);
+      var existingInstance = getInstance(this, rateYoInstances);
 
-               if (existingInstance) {
+      if (existingInstance) {
 
-                 return existingInstance;
-               }
+        return existingInstance;
+      }
 
-               var $node = $(this),
-                   dataAttrs = {},
-                   optionsCopy = $.extend({}, options);
+      var $node = $(this),
+        dataAttrs = {},
+        optionsCopy = $.extend({}, options);
 
-               $.each($node.data(), function (key, value) {
+      $.each($node.data(), function (key, value) {
 
-                 if (key.indexOf("rateyo") !== 0) {
+        if (key.indexOf("rateyo") !== 0) {
 
-                   return;
-                 }
+          return;
+        }
 
-                 var optionName = key.replace(/^rateyo/, "");
+        var optionName = key.replace(/^rateyo/, "");
 
-                 optionName = optionName[0].toLowerCase() + optionName.slice(1);
+        optionName = optionName[0].toLowerCase() + optionName.slice(1);
 
-                 dataAttrs[optionName] = value;
+        dataAttrs[optionName] = value;
 
-                 delete optionsCopy[optionName];
-               });
+        delete optionsCopy[optionName];
+      });
 
-               return new RateYo($(this), $.extend({}, dataAttrs, optionsCopy));
-           });
+      return new RateYo($(this), $.extend({}, dataAttrs, optionsCopy));
+    });
   }
 
-  function rateYo () {
+  function rateYo() {
 
     /* jshint validthis:true */
     return _rateYo.apply(this, Array.prototype.slice.apply(arguments, []));

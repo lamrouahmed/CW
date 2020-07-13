@@ -1,7 +1,12 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 
-$reviews = Review::getAll();
+$reviews = Review::getThree();
+$allReviews = Review::getAll();
+$total = 0;
+foreach ($allReviews as $review) {
+    $total += $review->rating;
+}
 ?>
 
 <!DOCTYPE html>
@@ -615,6 +620,7 @@ $reviews = Review::getAll();
 
     <div class="head">
         <h2>Avis des utilisateurs</h2>
+        <p><b><?php echo round($total/count($allReviews), 1)?>/5</b> (<b><?php echo count($allReviews)?></b> critiques)</p>
     </div>
     <section class="reviewSection" id="reviews">
         <div class="reviews">
@@ -710,7 +716,14 @@ $reviews = Review::getAll();
 ?>
 
 
+        
 
+
+        </div>
+        <div class="avisContainer">
+            <a href="/PFE/rating/rating" class="avis">
+                Donner votre avis
+            </a>
         </div>
     </section>
 

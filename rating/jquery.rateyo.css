@@ -19,7 +19,6 @@
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
   position: relative;
   line-height: 0;
-  z-index: 10;
   white-space: nowrap;
 }
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
