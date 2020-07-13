@@ -174,7 +174,7 @@ foreach ($allReviews as $review) {
                     <h3>Lavage de voiture mobile et d'esthétique automobile</h3>
                 </div>
                 <div class="text">
-                    <h1>Nous venons à vous, au travail ou à la maison, pour des services complets de lavage de voiture et d'esthétique</h1>
+                    <h1>Nous venons chez vous, au travail ou à la maison, pour des services complets de lavage de voiture et d'esthétique</h1>
                 </div>
                 <div class="start">
                     <div class="startBtn">
@@ -734,10 +734,10 @@ foreach ($allReviews as $review) {
                     <div class="topText">
                         <h2>Nous sommes ici et prêts à écouter.</h2>
                     </div>
-                    <div class="bottomText">
+                    <!-- <div class="bottomText">
                         <h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. repudiandae temporibus quidem
                             consectetur? </h4>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="mid">
                     <div class="prt">
