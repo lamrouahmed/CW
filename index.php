@@ -734,10 +734,9 @@ foreach ($allReviews as $review) {
                     <div class="topText">
                         <h2>Nous sommes ici et prêts à écouter.</h2>
                     </div>
-                    <!-- <div class="bottomText">
-                        <h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. repudiandae temporibus quidem
-                            consectetur? </h4>
-                    </div> -->
+                    <div class="bottomText">
+                        <h4> Pour plus d'informations sur carWash, nous vous invitons à nous joindre dès aujourd'hui pour plus d'information sur nos services. </h4>
+                    </div>
                 </div>
                 <div class="mid">
                     <div class="prt">
