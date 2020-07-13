@@ -722,7 +722,7 @@ foreach ($allReviews as $review) {
         </div>
         <div class="avisContainer">
             <a href="/PFE/rating/rating" class="avis">
-                Donner votre avis
+                Donnez votre avis
             </a>
         </div>
     </section>
