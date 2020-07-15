@@ -69,7 +69,7 @@ foreach ($allReviews as $review) {
                     if(!$user->isLoggedIn()){ ?>
                     <div class="btns">
                         <div class="login btn">
-                            <a data-key="log" href="./user/login/login.php">Log in</a>
+                            <a data-key="log" >Log in</a>
                         </div>
                         <div class="signup btn">
                             <a data-key="sign" href="./user/signup/signup.php">S'inscrire</a>
@@ -186,7 +186,7 @@ foreach ($allReviews as $review) {
                 <img src="img/SVG/girlCar.svg">
             </div>
         </div>
-        <!-- <div class="signP popup ">
+        <div class="signP popup ">
             <div class="cross">
                 <svg data-key="signupCross" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
@@ -205,7 +205,7 @@ foreach ($allReviews as $review) {
                     <a href="./user/signup/signup.php" class="Btn">Sign up as a user</a>
                 </div>
                 <div class="washSignup choice">
-                    <a href="./wash/signup/signup.php" class="Btn">Sign up as a car washer</a>
+                    <a href="./washer/signup/signup.php" class="Btn">Sign up as a car washer</a>
                 </div>
             </div>
         </div>
@@ -228,12 +228,12 @@ foreach ($allReviews as $review) {
                     <a href="./user/login/login.php" class="Btn">Log in as a user</a>
                 </div>
                 <div class="washLogin choice">
-                    <a href="./wash/login/login.php" class="Btn">Log in as a car washer</a>
+                    <a href="./washer/login/login.php" class="Btn">Log in as a car washer</a>
                 </div>
             </div>
 
 
-        </div> -->
+        </div>
     </div>
 
 
