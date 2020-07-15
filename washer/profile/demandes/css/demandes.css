@@ -1,0 +1,900 @@
+/*-------- Mobile Media Queries ---------*/
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #faf7f7;
+}
+
+header section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #273036;
+  color: #FFF;
+}
+
+header section div {
+  height: 100%;
+}
+
+header section div:first-child {
+  margin-left: 1em;
+}
+
+.header_1 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_1 .logo h1 {
+  font-weight: 500;
+  color: #FFF;
+}
+
+.header_1 .logo h1 span {
+  font-weight: 300;
+}
+
+.header_1 .logoImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_1 .logoImg svg {
+  height: 3em;
+  width: 4em;
+}
+
+.header_1 .userInfo {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1em;
+}
+
+.header_1 .userInfo .disconnect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header_1 .userInfo .disconnect .username {
+  margin-left: 1em;
+  font-weight: 600;
+  font-size: .9em;
+}
+
+.header_1 .userInfo .disconnect .username span {
+  font-weight: 500;
+  font-size: .85em;
+  color: #e9e5e5;
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.header_1 .userInfo .disconnect .triangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1em;
+}
+
+.header_1 .userInfo .disconnect .triangle svg {
+  width: .8em;
+  height: .8em;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .triangle svg path {
+  fill: #FFF;
+}
+
+.header_1 .userInfo .disconnect .triangle .svgClicked {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.header_1 .userInfo .disconnect .logout > a:nth-child(4) > span:nth-child(2) {
+  display: block;
+  margin-right: 1.5rem;
+}
+
+.header_1 .userInfo .disconnect .logout {
+  position: absolute;
+  top: 124%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  z-index: 1;
+}
+
+.header_1 .userInfo .disconnect .logout a {
+  font-weight: 500;
+  padding: .7em .5em;
+  display: block;
+  font-size: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  color: #000;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  left: 20rem;
+}
+
+.header_1 .userInfo .disconnect .logout a:nth-child(1) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:nth-child(2) {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:nth-child(3) {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.header_1 .userInfo .disconnect .logout a:hover .sVg {
+  right: 150%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a:hover span {
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a span {
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #273036;
+  border-radius: 100%;
+  padding: .7rem;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg svg {
+  display: block;
+  height: 4rem !important;
+  width: 4rem !important;
+  margin: 0 !important;
+}
+
+.header_1 .userInfo .disconnect .logout a .sVg svg path {
+  fill: #FFF;
+  stroke: #FFF;
+  stroke-width: 10;
+}
+
+.header_1 .userInfo .disconnect .displayLog a {
+  left: 12.5rem;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(1) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(2) {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(3) {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.header_1 .userInfo .disconnect .displayLog a:nth-child(4) {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.header_1 .userInfo .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: navajowhite;
+  border-radius: 100%;
+  margin-left: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header_1 .userInfo .img img {
+  display: block;
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 100%;
+}
+
+.header_1 .popUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header_1 .notifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.header_1 .notifications svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.header_1 .notifications svg path {
+  fill: #FFF;
+}
+
+.header_2 .title {
+  font-weight: 500;
+}
+
+.header_2 .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-weight: 500;
+  margin-right: 1em;
+}
+
+.header_2 .right div {
+  margin-left: 1em;
+  opacity: .7;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+main .add {
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  bottom: 3%;
+  right: 5%;
+  z-index: 699;
+  cursor: pointer;
+  background-color: #2b1b46;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+main .add:hover {
+  background-color: #3e2768;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+main .add svg {
+  height: 45%;
+  width: 45%;
+}
+
+main .add svg path {
+  fill: #FFF;
+}
+
+.guideWrapper {
+  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5rem auto;
+}
+
+.guideWrapper > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guideWrapper .statusText {
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.guideWrapper .statusColor {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  margin-left: .6rem;
+  margin-right: .4rem;
+}
+
+.guideWrapper .Y .statusColor {
+  background-color: #2c7171;
+}
+
+.guideWrapper .N .statusColor {
+  background-color: #ff9f40;
+}
+
+.guideWrapper .P .statusColor {
+  background-color: #b32553;
+}
+
+.guideWrapper .Paid .statusColor {
+  background-color: #2f6c4a;
+}
+
+.guideWrapper .C .statusColor {
+  background-color: #f44654;
+}
+
+.demandesWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.demandes {
+  width: 40rem;
+  margin: 1rem auto;
+}
+
+.demandeContainer {
+  width: 100%;
+  position: relative;
+}
+
+.demande {
+  width: 100%;
+  position: relative;
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 0px 4px 1px #d9d6d6;
+          box-shadow: 0px 0px 4px 1px #d9d6d6;
+  z-index: 99;
+  border-radius: 10px;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+
+.demande::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #171b24;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.demande:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.demande:hover::after {
+  width: 40px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.demande:hover .demande_2 .btns .delete svg {
+  fill: #fa4141;
+}
+
+.demande:hover .demande_2 .btns .delete svg path {
+  fill: #fa4141;
+}
+
+.demande:hover .demande_2 .btns .cancel svg path {
+  fill: #ff9900;
+}
+
+.demande:hover .demande_2 .btns .pay svg path {
+  fill: #11688a;
+}
+
+.demande .demande_id {
+  position: absolute;
+  left: 1%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 9999;
+}
+
+.demande .demande_id p {
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.3rem;
+  color: #FFF;
+}
+
+.demande .demande_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.demande .demande_1 .vehicule {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.demande .demande_1 .vehicule img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.demande .demande_1 .demandeInfo {
+  position: relative;
+}
+
+.demande .demande_1 .demandeInfo::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #142b55;
+  border-radius: 10px;
+  top: 110%;
+}
+
+.demande .demande_1 .demandeInfo > div p {
+  margin: 0;
+  padding: 0;
+}
+
+.demande .demande_1 .demandeInfo .lavage {
+  margin-bottom: .5rem;
+}
+
+.demande .demande_1 .demandeInfo .lavage p {
+  font-weight: 600;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule {
+  margin-bottom: .2rem;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule p {
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.demande .demande_1 .demandeInfo .nbVehicule span {
+  font-weight: 600;
+}
+
+.demande .demande_1 .demandeInfo .localisation p {
+  font-weight: 400;
+  font-size: .8rem;
+  color: #7f7b82;
+}
+
+.demande .demande_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.demande .demande_2 .payment {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+.demande .demande_2 .payment img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.demande .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .price p {
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.demande .price span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.demande .btns {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .btns > div {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .btns > div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.demande .btns > div:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demande .btns > div svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.demande .btns > div svg path {
+  fill: #4f4f4f;
+}
+
+.demande .btns .delete::after {
+  background-color: #ff000057;
+}
+
+.demande .btns .pay::after {
+  background-color: #5e75f257;
+}
+
+.demande .btns .cancel::after {
+  background-color: #ffae0099;
+}
+
+.demande .date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #202c36;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demande .date p {
+  color: #FFF;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  padding: .4rem 0;
+  font-size: .9rem;
+}
+
+.N::after {
+  background-color: #ff9f40;
+}
+
+.N .demande_1 .demandeInfo::after {
+  background-color: #ff9f40;
+}
+
+.N .date {
+  background-color: #ff9f40;
+}
+
+.N .demande_2 .btns .delete::after {
+  width: 3rem;
+  height: 3rem;
+}
+
+.N .demande_2 .btns .delete svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.N .demande_2 .btns .cancel,
+.N .demande_2 .btns .pay {
+  display: none;
+}
+
+.Y::after {
+  background-color: #2c7171;
+}
+
+.Y .demande_1 .demandeInfo::after {
+  background-color: #2c7171;
+}
+
+.Y .date {
+  background-color: #2c7171;
+}
+
+.Y .demande_2 .btns .delete svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.Y .demande_2 .btns .pay::after {
+  background-color: #0026ff57;
+}
+
+.Y .demande_2 .btns .pay svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Y .demande_2 .btns .cancel {
+  display: none;
+}
+
+.Paid::after {
+  background-color: #2f6c4a;
+}
+
+.Paid .demande_1 .demandeInfo::after {
+  background-color: #2f6c4a;
+}
+
+.Paid .date {
+  background-color: #2f6c4a;
+}
+
+.Paid .demande_2 .btns .delete svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Paid .demande_2 .btns .cancel {
+  display: none;
+}
+
+.Pending::after {
+  background-color: #b32553;
+}
+
+.Pending .demande_1 .demandeInfo::after {
+  background-color: #b32553;
+}
+
+.Pending .date {
+  background-color: #b32553;
+}
+
+.Pending .demande_2 .btns .cancel::after {
+  width: 3rem;
+  height: 3rem;
+}
+
+.Pending .demande_2 .btns .cancel svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Canceled::after {
+  background-color: #f44654;
+}
+
+.Canceled .demande_1 .demandeInfo::after {
+  background-color: #f44654;
+}
+
+.Canceled .date {
+  background-color: #f44654;
+}
+
+.Canceled .demande_2 .btns .delete::after {
+  width: 3rem;
+  height: 3rem;
+}
+
+.Canceled .demande_2 .btns .delete svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.Canceled .demande_2 .btns .cancel,
+.Canceled .demande_2 .btns .pay {
+  display: none;
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+  .demandesWrapper .demandes {
+    width: 33.5rem;
+  }
+}
+/*# sourceMappingURL=demandes.css.map */

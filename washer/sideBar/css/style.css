@@ -264,6 +264,11 @@ header .logout a {
   border-color: transparent #ffffff transparent transparent;
 }
 
+.sideWrapper #profilLink {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 @media (min-width: 200px) and (max-width: 1200px) {
   .sideWrapper {
     -webkit-transition: width 200ms ease-in-out;

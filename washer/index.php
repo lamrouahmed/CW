@@ -3,6 +3,7 @@ session_start();
 
 if(isset($_SESSION["username"])) {
     require_once './sideBar/sideBar.php';
+
 ?>
 
 <!DOCTYPE html>
