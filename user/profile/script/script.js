@@ -145,7 +145,7 @@ function get(url) {
     .then(data => {
 
 
-         if(data.length !== parseInt(notifications.textContent)) {
+         if(data.length > parseInt(notifications.textContent)) {
              audio.play();
          }
             

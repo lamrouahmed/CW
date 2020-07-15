@@ -705,6 +705,12 @@ header section div:first-child {
   transition: all 200ms ease-in-out;
 }
 
+.alert {
+  position: absolute;
+  z-index: 420;
+  width: 14rem;
+}
+
 @media (min-width: 300px) and (max-width: 736px) {
   .wrapper {
     -webkit-box-orient: vertical;
