@@ -30,6 +30,7 @@ error_reporting(0);
             </div>
             <div class="userInfo">
                 <div class="notifications">
+                    <a href="./notifications/notification.php">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -41,8 +42,8 @@ error_reporting(0);
 
                         <path
                             d="M188.815,469.333C200.847,494.464,226.319,512,255.993,512s55.147-17.536,67.179-42.667H188.815z" />
-
                     </svg>
+                </a>
                 </div>
                 <div class="disconnect">
                     <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>
