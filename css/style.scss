@@ -314,6 +314,7 @@ body {
                     border-bottom-left-radius: 10px;
                     border-bottom-right-radius: 10px;
                 }
+
                 .txt {
                     width: 100%;
                     padding-left: 1rem;
@@ -331,7 +332,7 @@ body {
                     font-weight: 500;
                 }
 
-                & > a {
+                &>a {
                     text-decoration: none;
                     color: #FFF;
                     display: block;
@@ -339,7 +340,7 @@ body {
                     height: 3rem;
                     width: 10rem;
 
-                    
+
                 }
 
                 &>a div {
@@ -377,7 +378,7 @@ body {
 
 
 
-                        
+
                         .btnText p {
                             color: #171b1e;
                             opacity: 1;
@@ -400,6 +401,121 @@ body {
 
         }
     }
+}
+
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    position: fixed;
+    right: 0;
+    top: -100%;
+    z-index: 2;
+    transition: opacity 1000ms ease-in-out;
+    opacity: 0;
+
+    .choose {
+        position: relative;
+        z-index: 69;
+        width: 90%;
+        height: 100%;
+    }
+
+
+    .Btn {
+        text-decoration: none;
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.9em;
+        position: relative;
+        margin-right: 2em;
+        display: block;
+        padding-bottom: 1em;
+
+        &::after {
+            content: url('../img/SVG/right2.svg');
+            position: absolute;
+            right: 0;
+            width: 1.2em;
+            bottom: 28%;
+            display: block;
+            left: 100%;
+            transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                left: 105%;
+                transition: all 200ms ease-in-out;
+
+            }
+        }
+    }
+
+    .choice {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        width: 30em;
+        position: relative;
+        padding-bottom: 2em;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            position: absolute;
+            background-color: #183435;
+            transform: scaleX(0);
+            transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+}
+
+
+.popupBlock {
+    top: 0%;
+    transition: all 400ms ease-in-out;
+    opacity: 1;
+
+    .choose {
+        top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.cross {
+    svg {
+        position: absolute;
+        z-index: 70;
+        bottom: 80%;
+        width: 1.5em;
+        height: 1.5em;
+        right: 20%;
+        cursor: pointer;
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: all 200ms ease-in-out;
+        padding: .5em;
+
+        &:hover {
+            transition: all 200ms ease-in-out;
+            fill: #df4c41;
+            transform: rotate(180deg);
+
+        }
+    }
+
 }
 
 .container {
@@ -474,14 +590,26 @@ body {
 
 
 .head {
+
     display: flex;
+
     justify-content: center;
     margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         letter-spacing: 2px;
         font-size: 2.5rem;
         font-weight: 600;
+    }
+
+    p {
+        margin-top: .6rem;
+        font-size: .9rem;
+        font-weight: 500;
+        color: grey;
     }
 }
 
@@ -1013,6 +1141,44 @@ body {
 
 }
 
+.avisContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.avis {
+    border: none;
+    margin-top: 1em;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 3.3em;
+    border-radius: 4px;
+    margin-top: 1em;
+    width: 17rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #121618;
+    color: #FFF;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
+    border: 2px solid #121618;
+    &:hover,
+    &:focus {
+        transition: all 100ms ease-in-out;
+        background-color: #FFF;
+        color: #121618;
+    }
+}
+
 
 
 
@@ -1067,7 +1233,7 @@ footer {
 
             h4 {
                 font-weight: 500;
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
         }
 

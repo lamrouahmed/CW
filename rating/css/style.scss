@@ -26,15 +26,90 @@ $maxTablet: 1200px;
 
 /*---------------------------------------------------  Desktop  --------------------------------------------------------- */
 
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    border: none;}
 
 
+html {
+    height: 100%;
+}
 body {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+.headerWrapper {
+    position: sticky;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1f22;
+    z-index: 6;
+
+
+    & > a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+
+
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        h1 {
+            font-weight: 500;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            user-select: none;
+            display: block;
+            margin: 0;
+            margin-left: .4em !important;
+            font-size: 3.2rem !important;
+            transition: all 400ms ease-in-out;
+
+        }
+
+        span {
+            font-weight: 300;
+
+        }
+
+
+
+
+    }
+
+    .logoImg {
+        display: flex;
+
+        svg {
+            height: 3.4em;
+            width: 4.4em;
+
+            path {
+                fill: #FFF;
+                transition: all 400ms ease-in-out;
+
+            }
+        }
+    }
+}
 
 .wrapper {
     width: 100%;
@@ -185,24 +260,36 @@ body {
 
 }
 
-.alreadyMember {
-    margin-top: 2em;
+.log {
+    border: none;
+    color: #FFF;
+    background-color: #273036;
+    margin-top: 1em;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
     display: flex;
+    align-items: center;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.692);
+    font-family: 'Montserrat', sans-serif;
+    height: 3em;
+    border-radius: 2px;
+    margin-top: 1em;
+    width: 25%;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
 
-    h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
+    &:hover,
+    &:focus {
+        transition: all 100ms ease-in-out;
+        background-color: darken(#273036, 10%);
     }
+}
 
-    span a {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        color: rgb(107, 102, 102);
-
-    }
+.comment {
+    margin: 0;
+    margin-bottom: .5rem;
+    white-space:break-spaces ;
 }
 
 
