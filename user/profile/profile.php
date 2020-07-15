@@ -1,12 +1,13 @@
 <?php
     require_once '/wamp64/www/PFE/core/init.php';
-error_reporting(0);
+// error_reporting(0);
 
 
 
     if(Session::exists("user")) { 
         $user = new User();
-
+        $demandes = new Demande();
+            
         ?>
 
 <!DOCTYPE html>
@@ -43,6 +44,9 @@ error_reporting(0);
                             d="M188.815,469.333C200.847,494.464,226.319,512,255.993,512s55.147-17.536,67.179-42.667H188.815z" />
 
                     </svg>
+                    <div class="notif">
+                        <p><?php echo $demandes->getDemandesY()->count()?></p>
+                    </div>
                 </div>
                 <div class="disconnect">
                     <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>
@@ -371,7 +375,7 @@ error_reporting(0);
     </div> -->
 
     <div class="alerts"></div>
-
+    <audio src="audio.mp3" class="audio"></audio>
     <script src="./script/script.js"></script>
 </body>
 

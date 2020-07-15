@@ -603,6 +603,9 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 1200px) {
+  .demandeWrapper {
+    margin-bottom: 8rem !important;
+  }
   .Wrapper {
     margin-left: 0;
   }

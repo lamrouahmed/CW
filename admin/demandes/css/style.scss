@@ -851,6 +851,10 @@ justify-content: left;
 
 @include tablet {
 
+
+    .demandeWrapper {
+        margin-bottom: 8rem !important;
+    }
     .Wrapper {
         margin-left: 0;
     }

@@ -316,15 +316,40 @@ header section div:first-child {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  position: relative;
 }
 
 .header_1 .notifications svg {
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .header_1 .notifications svg path {
   fill: #FFF;
+}
+
+.header_1 .notifications .notif {
+  position: absolute;
+  border-radius: 100%;
+  background-color: red;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+}
+
+.header_1 .notifications .notif p {
+  position: relative;
+  z-index: 3;
+  font-weight: 600;
 }
 
 .header_2 .title {

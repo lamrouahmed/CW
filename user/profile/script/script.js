@@ -7,6 +7,9 @@ const inputs = $$('.input');
 const show = $('.show')
 let results = "";
 const upload = $('.modify');
+const notifications = $('.notif > p');
+const audio = document.querySelector('.audio');
+
 
 const urls = [
     '/PFE/user/profile/ajax.php'
@@ -132,7 +135,38 @@ function post(url, form) {
 
 
       });
-  }
+}
 
+function get(url) {
+    fetch(url, {
+      method: 'get'  
+    })
+    .then(response => response.json())
+    .then(data => {
+
+
+         if(data.length !== parseInt(notifications.textContent)) {
+             audio.play();
+         }
+            
+        
+        notifications.textContent = data.length;
+
+    })
+}
+
+
+
+
+
+
+
+
+
+
+get('/PFE/user/profile/notifications.php')
+
+setInterval(() => get('/PFE/user/profile/notifications.php'), 1000)
+     
 
 
