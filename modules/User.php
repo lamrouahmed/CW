@@ -93,6 +93,16 @@
             return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND status_demande <> 'D' ", [], "SELECT");
         }
 
+        public function getDemandeY() 
+        {
+            return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND status_demande = 'Y' ORDER BY date_demande DESC", [], "SELECT");
+        }
+
+        public function getDemandeN() 
+        {
+            return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND status_demande = 'N' ORDER BY date_demande DESC", [], "SELECT");
+        }
+
         public function getDemande(int $id) 
         {
             return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND demande_id = {$id}", [], "SELECT");
