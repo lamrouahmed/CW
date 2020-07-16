@@ -386,6 +386,8 @@ header {
     display: flex;
     align-items: center;
     height: 90%;
+    transition: all 300ms ease-in-out;
+
 
     .imgContainer {
         display: flex;
@@ -442,6 +444,10 @@ header {
         }
     }
 
+}
+.blur {
+    opacity: .3;
+    transition: all 300ms ease-in-out;
 }
 
 .formContainer {

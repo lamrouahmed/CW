@@ -8,7 +8,7 @@ if (Session::exists("user"))
     $user = new User();
     $factures = $user->getFactures()->results();
 
-
+    $demandes = new Demande();
         
 ?>
 
@@ -47,6 +47,38 @@ if (Session::exists("user"))
                                 d="M188.815,469.333C200.847,494.464,226.319,512,255.993,512s55.147-17.536,67.179-42.667H188.815z" />
 
                         </svg>
+                        <div class="notif">
+                            <p><?php echo $demandes->getDemandesY()->count()?></p>
+                        </div>
+
+                    <div class="alert">
+                        <div class="alertHeader">
+                            <p>Notifications</p>
+                        </div>
+                        <div class="alertContent">
+                            <?php
+                                foreach ($demandes->getDemandesY()->results() as $demande) {
+                                    # code...
+                                
+                            ?>
+
+                            <a href="/PFE/user/profile/demandes/demandes.php#<?php echo $demande->demande_id?>">
+                                <div class="Alert">
+                                    <div class="image">
+                                        <img src="./img/<?php echo $demande->type_vehicule?>.svg" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <p class="inf">Demande <?php echo $demande->demande_id?> est acceptée</p>
+                                        <p class="time"><?php echo explode(' ', $demande->date_maj)[1]?></p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
                     </div>
                     <div class="disconnect">
                         <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>

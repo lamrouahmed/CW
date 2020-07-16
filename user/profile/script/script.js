@@ -35,7 +35,10 @@ inputs.forEach((input, index) => input.addEventListener('focus', e => {
 }))    
 
 $('#file').addEventListener('change', e => modify(e.currentTarget.files[0], urls[0]))
-bell.addEventListener('click', () => $('.alert').classList.toggle('bellDisplay'))
+bell.addEventListener('click', () => {
+    $('.alert').classList.toggle('bellDisplay')
+    $('.wrapper').classList.toggle('blur');
+})
 
 
 function modify(e, url) {
