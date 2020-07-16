@@ -34,11 +34,11 @@ header section {
   color: #FFF;
 }
 
-header section div {
+header section > div {
   height: 100%;
 }
 
-header section div:first-child {
+header section > div:first-child {
   margin-left: 1em;
 }
 
@@ -315,13 +315,13 @@ header section div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   position: relative;
 }
 
 .header_1 .notifications svg {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 
 .header_1 .notifications svg path {
@@ -344,6 +344,11 @@ header section div:first-child {
       -ms-flex-align: center;
           align-items: center;
   right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .header_1 .notifications .notif p {
@@ -705,10 +710,130 @@ header section div:first-child {
   transition: all 200ms ease-in-out;
 }
 
+.bellDisplay {
+  display: block !important;
+}
+
 .alert {
   position: absolute;
   z-index: 420;
-  width: 14rem;
+  width: 16rem;
+  top: 133%;
+  right: -33%;
+  display: none;
+}
+
+.alert .alertHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #FFF;
+  background-color: #f34d4d;
+  position: relative;
+  margin-left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.alert .alertHeader::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  -webkit-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
+  background-color: #f34d4d;
+  right: 10%;
+  top: 0;
+}
+
+.alert .alertHeader > p {
+  font-weight: 600;
+  margin-left: 1rem;
+  font-size: .8rem;
+}
+
+.alert .alertContent {
+  color: #000;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 3px 0Px #dfdede;
+          box-shadow: 0px 0px 3px 0Px #dfdede;
+  padding: .4rem;
+}
+
+.alert .alertContent .Alert {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0;
+  background-color: #FFF;
+  height: 3.3rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.alert .alertContent .Alert:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #f7f3f3;
+}
+
+.alert .alertContent .Alert .image {
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  margin-right: .5rem;
+  border-radius: 100%;
+  background-color: #1c1f20;
+}
+
+.alert .alertContent .Alert .image img {
+  height: 100%;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.alert .alertContent .Alert .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alert .alertContent .Alert .txt p {
+  margin: 0;
+}
+
+.alert .alertContent .Alert .txt .inf {
+  font-weight: 600;
+  font-size: .8rem;
+  color: #000 !important;
+}
+
+.alert .alertContent .Alert .txt .time {
+  font-weight: 600;
+  font-size: .7rem;
+  color: #9f9f9f;
 }
 
 @media (min-width: 300px) and (max-width: 736px) {

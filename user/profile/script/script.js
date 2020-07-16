@@ -9,6 +9,7 @@ let results = "";
 const upload = $('.modify');
 const notifications = $('.notif > p');
 const audio = document.querySelector('.audio');
+const bell = $('.notifications > svg')
 
 
 const urls = [
@@ -34,6 +35,7 @@ inputs.forEach((input, index) => input.addEventListener('focus', e => {
 }))    
 
 $('#file').addEventListener('change', e => modify(e.currentTarget.files[0], urls[0]))
+bell.addEventListener('click', () => $('.alert').classList.toggle('bellDisplay'))
 
 
 function modify(e, url) {

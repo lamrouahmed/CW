@@ -312,7 +312,7 @@ if (Session::exists("user"))
     {
 
 ?>
-                    <div class="demande <?php echo $demande->status_demande ?>">
+                    <div class="demande <?php echo $demande->status_demande ?>" id="<?php echo $demande->demande_id?>">
                         <div class="demande_1">
                             <div class="demande_id">
                                 <p><?php echo $demande->demande_id ?></p>

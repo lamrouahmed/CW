@@ -49,8 +49,33 @@
                     </div>
 
                     <div class="alert">
-        <p>Demande <b>14</b> est approve</p>
-    </div>
+                        <div class="alertHeader">
+                            <p>Notifications</p>
+                        </div>
+                        <div class="alertContent">
+                            <?php
+                                foreach ($demandes->getDemandesY()->results() as $demande) {
+                                    # code...
+                                
+                            ?>
+
+                            <a href="/PFE/user/profile/demandes/demandes.php#<?php echo $demande->demande_id?>">
+                            <div class="Alert">
+                                <div class="image">
+                                    <img src="./img/<?php echo $demande->type_vehicule?>.svg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="inf">Demande 2 est approve</p>
+                                    <p class="time">2 heure</p>
+                                </div>
+                            </div>
+                            </a>
+
+                            <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="disconnect">
                     <p class="username"><span>Bienvenu(e), </span><?php echo $user->getData()->username; ?></p>
