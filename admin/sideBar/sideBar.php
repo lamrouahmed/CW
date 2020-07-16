@@ -118,13 +118,9 @@ $demandes = new Demande();
                                         </g>
                                     </g>
                                 </svg>
-                                <?php
-                                if($demandes->getDemandesP()->count() !== 0) {
-                                ?>
                                 <div class="notif">
                                     <p><?php echo $demandes->getDemandesP()->count()?></p>
                                 </div>
-                                <?php }?>
                                 <span>Demandes</span>
                             </a>
                         </li>

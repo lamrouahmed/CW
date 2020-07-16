@@ -294,10 +294,15 @@ function get(url, dataType) {
         //  if(data.length > parseInt(notifications.textContent)) {
         //     audio.play();
         // }
-
+        if(data.pending !== 0) {
+          $('.notif > p').textContent = data.pending;
+          $('.notif').style.display = 'flex';
+        } else {
+          $('.notif').style.display = 'none';
+        }
 
         // notifications.textContent = data.length;
-        if (data > $$('.demande').length) {
+        if (data.totale > $$('.demande').length) {
           get('/PFE/admin/demandes/demandesList.php', 'text');
 
 
