@@ -1,3 +1,6 @@
+const $ = e => document.querySelector(e);
+const $$ = e => document.querySelectorAll(e);
+
 import "https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js";
 
 /* This will let you use the .remove() function later on */
