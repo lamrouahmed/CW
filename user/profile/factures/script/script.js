@@ -57,6 +57,11 @@ function get(url, dataType) {
             audio.play();
         }
            
+        if(data.length === 0) {
+            $('.notif').style.display = 'none';
+        } else {
+            $('.notif').style.display = 'flex';
+        }
        
         notifications.textContent = data.length;
         }

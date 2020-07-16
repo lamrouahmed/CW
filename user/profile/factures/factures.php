@@ -272,6 +272,7 @@ if (Session::exists("user"))
             </div>
         </div>
     </div>
+    <audio src="../audio.mp3" class="audio"></audio>
     <script src="./script/script.js"></script>
 </body>
 
