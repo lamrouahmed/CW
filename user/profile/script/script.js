@@ -139,20 +139,35 @@ function post(url, form) {
       });
 }
 
-function get(url) {
+function get(url, dataType) {
     fetch(url, {
       method: 'get'  
     })
-    .then(response => response.json())
+    .then(response => {
+        if(dataType === 'json')  {return response.json()}
+        if(dataType === 'text')  {return response.text()}
+    })
     .then(data => {
 
-
-         if(data.length > parseInt(notifications.textContent)) {
-             audio.play();
-         }
+        if(dataType === 'json') {
             
-        
+         if(data.length > parseInt(notifications.textContent)) {
+            audio.play();
+        }
+           
+       
         notifications.textContent = data.length;
+        }
+        
+        if(dataType === 'text') {
+            let dataLength = data.replace(/\s/g,'').length;
+            let htmlLength = $('.alertContent').innerHTML.replace(/\s/g,'').length;
+           
+            if(dataLength !== htmlLength) {
+                $('.alertContent').innerHTML = data;
+            }
+
+        }
 
     })
 }
@@ -166,9 +181,12 @@ function get(url) {
 
 
 
-get('/PFE/user/profile/notifications.php')
+get('/PFE/user/profile/notifications.php', 'json')
 
-setInterval(() => get('/PFE/user/profile/notifications.php'), 1000)
+get('/PFE/user/profile/notificationsList.php', 'text')
+
+setInterval(() => get('/PFE/user/profile/notifications.php', 'json'), 1000)
+setInterval(() => get('/PFE/user/profile/notificationsList.php', 'text'), 1000)
      
 
 

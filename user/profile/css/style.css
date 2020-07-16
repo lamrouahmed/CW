@@ -763,7 +763,6 @@ header section > div:first-child {
   width: 100%;
   -webkit-box-shadow: 0px 0px 3px 0Px #dfdede;
           box-shadow: 0px 0px 3px 0Px #dfdede;
-  padding: .4rem;
 }
 
 .alert .alertContent .Alert {
@@ -778,6 +777,7 @@ header section > div:first-child {
   background-color: #FFF;
   height: 3.3rem;
   cursor: pointer;
+  padding: .4rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(1);

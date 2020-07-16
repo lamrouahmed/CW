@@ -18,11 +18,13 @@ if(Input::exists()) {
        $demande->delete($id);
     } else if ($action === "accept") {
         $demande->accept($id, [
-            "status_demande" => "Y"
+            "status_demande" => "Y",
+            "date_maj" => Config::getDate()
         ]);
     } else if ($action === "refuse") {
         $demande->refuse($id, [
-            "status_demande" => "N"
+            "status_demande" => "N",
+            "date_maj" => Config::getDate()
         ]);
     }
 }
