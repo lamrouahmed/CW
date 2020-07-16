@@ -2,9 +2,8 @@
 require_once '/wamp64/www/PFE/core/init.php';
 
 if(Session::exists('user')) {
-    $demandes = new Demande();
-
-        foreach ($demandes->getDemandesY()->results() as $demande) {
+    $user = new User();
+        foreach ($user->getDemandesY()->results() as $demande) {
         
     ?>
 

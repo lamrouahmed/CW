@@ -831,6 +831,47 @@ main {
 }
 
 
+.big {
+    &::after {
+        width: 40px;
+        transition: all 200ms ease-in-out;
+    }
+
+    transform: scale(1.09);
+
+
+
+    .demande_2 .btns {
+        .delete {
+            svg {
+                fill: rgb(250, 65, 65);
+
+                path {
+                    fill: rgb(250, 65, 65);
+                }
+            }
+        }
+
+        .cancel {
+            svg {
+                path {
+                    fill: rgb(255, 153, 0);
+                }
+            }
+
+        }
+
+        .pay {
+            svg {
+
+                path {
+                    fill: #11688a;
+                }
+            }
+        }
+    }
+}
+
 
 
 .N {

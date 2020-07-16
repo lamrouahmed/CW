@@ -780,15 +780,11 @@ header section > div:first-child {
   padding: .4rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .alert .alertContent .Alert:hover {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   background-color: #f7f3f3;
 }
 

@@ -766,6 +766,33 @@ main .add svg path {
   font-size: .9rem;
 }
 
+.big {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
+.big::after {
+  width: 40px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.big .demande_2 .btns .delete svg {
+  fill: #fa4141;
+}
+
+.big .demande_2 .btns .delete svg path {
+  fill: #fa4141;
+}
+
+.big .demande_2 .btns .cancel svg path {
+  fill: #ff9900;
+}
+
+.big .demande_2 .btns .pay svg path {
+  fill: #11688a;
+}
+
 .N::after {
   background-color: #ff9f40;
 }

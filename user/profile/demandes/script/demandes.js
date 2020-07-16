@@ -37,6 +37,13 @@ function update(id, action, url) {
     });
 }
 
+const indexes = Array.from($$('.demande')).map(demande => demande.dataset.url)
+
+
+if(indexes.some(index => window.location.href.split('#')[1] === index)) {
+    $(`#d_${window.location.href.split('#')[1]}`).classList.add('big');
+}
+
 
 
 

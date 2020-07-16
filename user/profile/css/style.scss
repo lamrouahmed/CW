@@ -770,11 +770,9 @@ header {
             cursor: pointer;
             padding: .4rem;
             transition: all 200ms ease-in-out;
-            transform: scale(1);
             
             &:hover {
                 transition: all 200ms ease-in-out;
-                transform: scale(1.05);
                 background-color: rgb(247, 243, 243);
             }
 
