@@ -19,6 +19,8 @@ const urls = [
 popUp.addEventListener('click', () => {
     $('.triangle svg').classList.toggle('svgClicked')
     $('.logout').classList.toggle('displayLog')
+    $('.wrapper').classList.toggle('blur');
+
 })
 
 

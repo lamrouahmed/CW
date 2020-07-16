@@ -409,6 +409,7 @@ main {
     height: 100%;
     width: 100%;
     position: relative;
+    transition: all 300ms ease-in-out;
 
     .add {
         position: fixed;
@@ -830,6 +831,10 @@ main {
 
 }
 
+.blur {
+    opacity: .3;
+    transition: all 300ms ease-in-out;
+}
 
 .big {
     &::after {

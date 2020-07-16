@@ -7,6 +7,7 @@ const popUp = $('.popUp');
 popUp.addEventListener('click', () => {
     $('.triangle svg').classList.toggle('svgClicked')
     $('.logout').classList.toggle('displayLog')
+    $('main').classList.toggle('blur');
 })
 
 

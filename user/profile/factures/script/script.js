@@ -10,6 +10,8 @@ const audio = document.querySelector('.audio');
 popUp.addEventListener('click', () => {
     $('.triangle svg').classList.toggle('svgClicked')
     $('.logout').classList.toggle('displayLog')
+    factures.forEach(facture => facture.classList.toggle('factureBlur'))
+
 })
 
 getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
