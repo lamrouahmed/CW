@@ -178,6 +178,7 @@ header .logout a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 20%;
+  position: relative;
 }
 
 .sideWrapper .link svg {
@@ -264,6 +265,36 @@ header .logout a {
   border-bottom-color: currentcolor;
   border-left-color: currentcolor;
   border-color: transparent #ffffff transparent transparent;
+}
+
+.sideWrapper .link .notif {
+  position: absolute;
+  border-radius: 100%;
+  background-color: red;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 32%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  top: 25%;
+}
+
+.sideWrapper .link .notif p {
+  position: relative;
+  z-index: 3;
+  font-weight: 600;
 }
 
 @media (min-width: 200px) and (max-width: 1200px) {

@@ -32,29 +32,29 @@ const urls = [
 ]
 
 
-const labels = $$('.label');
-const stats = $('.stats');
+let labels = $$('.label');
+let stats = $('.stats');
 
-const cross = $('.cross');
-const cancel = $('.annuler');
-const ok = $('.ok');
+let cross = $('.cross');
+let cancel = $('.annuler');
+let ok = $('.ok');
 
 let demandes = $$('.demande');
-const btns = $$('.btns > div');
-const inputSearch = $('.search');
+let btns = $$('.btns > div');
+let inputSearch = $('.search');
 
 
-const RemoveAll = $('.delete_h');
-const AcceptAll = $('.accept_h');
-const RefuseAll = $('.refuse_h');
+let RemoveAll = $('.delete_h');
+let AcceptAll = $('.accept_h');
+let RefuseAll = $('.refuse_h');
 
 
 
-const Remove = $$('.delete');
-const Accept = $$('.accept');
-const Refuse = $$('.refuse');
+let Remove = $$('.delete');
+let Accept = $$('.accept');
+let Refuse = $$('.refuse');
 
-const actionAll = $$('.stats > div');
+let actionAll = $$('.stats > div');
 
 
 function post(action, id, url) {
@@ -270,3 +270,136 @@ function search(e, nodes) {
     }
   })
 }
+
+
+
+
+
+function get(url, dataType) {
+  fetch(url, {
+      method: 'get'
+    })
+    .then(response => {
+      if (dataType === 'json') {
+        return response.json()
+      }
+      if (dataType === 'text') {
+        return response.text()
+      }
+    })
+    .then(data => {
+
+      if (dataType === 'json') {
+
+        //  if(data.length > parseInt(notifications.textContent)) {
+        //     audio.play();
+        // }
+
+
+        // notifications.textContent = data.length;
+        if (data > $$('.demande').length) {
+          get('/PFE/admin/demandes/demandesList.php', 'text');
+
+
+
+
+
+
+        }
+      }
+
+      if (dataType === 'text') {
+        $('.demandes').innerHTML = data;
+
+        labels = $$('.label');
+        stats = $('.stats');
+
+        cross = $('.cross');
+        cancel = $('.annuler');
+        ok = $('.ok');
+
+        demandes = $$('.demande');
+        btns = $$('.btns > div');
+        inputSearch = $('.search');
+
+
+        RemoveAll = $('.delete_h');
+        AcceptAll = $('.accept_h');
+        RefuseAll = $('.refuse_h');
+
+
+
+        Remove = $$('.delete');
+        Accept = $$('.accept');
+        Refuse = $$('.refuse');
+
+        actionAll = $$('.stats > div');
+        
+        labels.forEach((label, i) => label.addEventListener('click', e => {
+          if (!document.getElementById(`${label.getAttribute('for')}`).checked) {
+            label.querySelector('.checkboxSvg').classList.add('checked')
+            label.querySelector('.checkboxSvg path').style.fill = '#007ce2'
+            label.querySelector('.checkboxSvg path').style.stroke = '#007ce2'
+            $('.btns_h').style.display = 'flex';
+          };
+          if (document.getElementById(`${label.getAttribute('for')}`).checked) {
+            label.querySelector('.checkboxSvg').classList.remove('checked')
+            label.querySelector('.checkboxSvg path').style.fill = '#FFF'
+            label.querySelector('.checkboxSvg path').style.stroke = '#c0c2c4'
+
+            if (Array.from($$('.checkB')).filter(check => check.checked).length === 1) $('.btns_h').style.display = 'none';
+          }
+        }))
+
+
+        $('.label_h').addEventListener('click', () => checkAll($$('.checkB')));
+
+
+
+        $('.bg').addEventListener('click', e => {
+          e.currentTarget === e.target && hidePopUp();
+        })
+
+
+
+
+
+        cross.addEventListener('click', hidePopUp)
+        cancel.addEventListener('click', hidePopUp)
+
+        ok.addEventListener('click', () => {
+          hidePopUp()
+          removeAll($$('.checkB'), urls[0], 300)
+          demandes = $$('.demande');
+          $('.btns_h').style.display = 'none';
+
+          $('.checkboxSvg_h').classList.remove('checked')
+          $('.checkB_h').checked = false;
+
+        })
+
+
+
+
+
+        Accept.forEach(btn => btn.addEventListener('click', e => accept(e.currentTarget.dataset.id, $(`[data-key = '${e.currentTarget.dataset.id}']`), urls[0])));
+        Refuse.forEach(btn => btn.addEventListener('click', e => refuse(e.currentTarget.dataset.id, $(`[data-key = '${e.currentTarget.dataset.id}']`), urls[0])));
+        Remove.forEach(btn => btn.addEventListener('click', e => remove(e.currentTarget.dataset.id, $(`[data-key = '${e.currentTarget.dataset.id}']`), urls[0], 300)));
+
+
+
+
+        AcceptAll.addEventListener('click', () => acceptAll($$('.checkB'), urls[0]));
+        RefuseAll.addEventListener('click', () => refuseAll($$('.checkB'), urls[0]));
+        RemoveAll.addEventListener('click', showPopUp);
+
+
+       
+      }
+
+    })
+}
+get('/PFE/admin/demandes/nbDemandes.php', 'json');
+
+
+setInterval(() => get('/PFE/admin/demandes/nbDemandes.php', 'json'), 1000)

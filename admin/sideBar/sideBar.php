@@ -1,6 +1,7 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
 $admin = new Admin();
+$demandes = new Demande();
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +93,8 @@ $admin = new Admin();
                     </div>
                     <div class="link">
     
-                        <li class="navItem"><a href="/PFE/admin/demandes/">
+                        <li class="navItem">
+                            <a href="/PFE/admin/demandes/">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
                                     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px"
@@ -115,7 +117,17 @@ $admin = new Admin();
                                             </g>
                                         </g>
                                     </g>
-                                </svg><span>Demandes</span></a></li>
+                                </svg>
+                                <?php
+                                if($demandes->getDemandesP()->count() !== 0) {
+                                ?>
+                                <div class="notif">
+                                    <p><?php echo $demandes->getDemandesP()->count()?></p>
+                                </div>
+                                <?php }?>
+                                <span>Demandes</span>
+                            </a>
+                        </li>
                     </div>
                     <div class="link">
     

@@ -195,6 +195,7 @@ header {
         align-items: center;
         justify-content: center;
         height: 20%;
+        position: relative;
 
 
         svg {
@@ -281,6 +282,27 @@ header {
 
 
                 }
+            }
+        }
+
+        .notif {
+            position: absolute;
+            border-radius: 100%;
+            background-color: red;
+            width: 1.3rem;
+            height: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 32%;
+            user-select: none;
+            pointer-events: none;
+            top: 25%;
+
+            p {
+                position: relative;
+                z-index: 3;
+                font-weight: 600;
             }
         }
     }
