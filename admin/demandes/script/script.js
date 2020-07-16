@@ -55,6 +55,7 @@ let Accept = $$('.accept');
 let Refuse = $$('.refuse');
 
 let actionAll = $$('.stats > div');
+const audio = document.querySelector('.audio');
 
 
 function post(action, id, url) {
@@ -304,6 +305,7 @@ function get(url, dataType) {
         // notifications.textContent = data.length;
         if (data.totale > $$('.demande').length) {
           get('/PFE/admin/demandes/demandesList.php', 'text');
+          audio.play();
 
 
 
