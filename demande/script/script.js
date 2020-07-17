@@ -15,7 +15,8 @@ date.getMinutes() < 10 && (min = `0${min}`)
 date.getHours() < 10 && (hour = `0${hour}`) 
 $('input[type=time]').value = `${hour}:${min}`
 
-
+let long = '';
+let lat = '';
 
 
 
@@ -124,13 +125,15 @@ if('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(async position => {
         const latitude = position.coords.latitude;
         const longtitude = position.coords.longitude;
-
+        lat = latitude
+        long = longtitude
 
     const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${longtitude},${latitude}.json?limit=1&country=ma&language=fr&access_token=pk.eyJ1IjoibWVkbGFtIiwiYSI6ImNrYW9xZmczbzFxOW8zMXA2MTNhZjYwOWgifQ.ZgCah4mB2plr92Sms1iPrw`)
     .then(res => res.json())
     .then(data => {
         $('textarea[name=localisation]').value = data.features[0].place_name;
         input.value !== "" && $('.border').classList.add('clicked');
+        
     });
     })
 }
@@ -139,7 +142,7 @@ if('geolocation' in navigator) {
 
 demande.addEventListener('click', e => {
     e.preventDefault()
-    post('/PFE/demande/demande.inc.php', $('.form'));
+    post('/PFE/demande/demande.inc.php', $('.form'), lat, long);
     
 })
 
@@ -155,8 +158,10 @@ demande.addEventListener('click', e => {
 
 
 
-function post(url, form) {
+function post(url, form, latitude, longtitude) {
     let formData = new FormData(form);
+    formData.append("latitude", latitude);
+  formData.append("longtitude", longtitude)
     fetch(url, {
             method: 'post',
             body: formData

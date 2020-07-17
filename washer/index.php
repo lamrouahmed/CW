@@ -1,9 +1,10 @@
 <?php
-session_start();
+require_once '/wamp64/www/PFE/core/init.php';
 
 if(isset($_SESSION["username"])) {
     require_once './sideBar/sideBar.php';
-
+    $lavage = new LavageMobile($_SESSION["username"]);
+    var_dump($lavage)
 ?>
 
 <!DOCTYPE html>

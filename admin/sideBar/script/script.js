@@ -19,12 +19,12 @@ function get(url) {
       .then(data => {
        
         if(data.pending !== 0) {
-          $('.notif > p').textContent = data.pending;
-          $('.notif').style.display = 'flex';
+          document.querySelector('.notif > p').textContent = data.pending;
+          document.querySelector('.notif').style.display = 'flex';
         } else {
-          $('.notif').style.display = 'none';
+          document.querySelector('.notif').style.display = 'none';
         }
-        notifications = $('.notif > p')
+        notifications = document.querySelector('.notif > p')
         let dataP = data.pending;
         if((data.pending > parseInt(notifications.innerText)) && data.pending!== undefined) {
             audio.play();

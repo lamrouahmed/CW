@@ -1,5 +1,8 @@
 <?php
-    require_once '/wamp64/www/PFE/core/init.php';
+
+use Mpdf\Tag\Ins;
+
+require_once '/wamp64/www/PFE/core/init.php';
 
   if(Session::exists('user')) {
     if(Input::exists()) {
@@ -25,7 +28,9 @@
                 "status_demande" => "Pending",
                 "localisation" => Input::get('localisation'),
                 "date_demande" => Input::get('date').' '.Input::get('time'),
-                "date_ajout" => Config::getDate()
+                "date_ajout" => Config::getDate(),
+                "longtitude" => Input::get('longtitude'),
+                "latitude" => Input::get('latitude')
             ]);
         //     $user->create("user", ["last_name" => ucfirst(Input::get("u_last_name")),
         //                        "first_name" => ucfirst(Input::get("u_first_name")),
