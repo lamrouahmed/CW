@@ -2,8 +2,7 @@
 
 const links = document.querySelectorAll('.navItem a');
 const loc = window.location.pathname;
-let notifications = $('.notif > p')
-const audio = $('.audio');
+let notifications = document.querySelector('.notif > p')
 
 links.forEach(link => {
     link.getAttribute('href') === loc && link.classList.add('active');

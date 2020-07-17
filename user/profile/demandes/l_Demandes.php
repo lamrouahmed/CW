@@ -7,32 +7,12 @@ if (Session::exists("user"))
     $user = new User();
     $demandes = $user->getDemandes()
         ->results();
-        if(Input::exists()) {
-            $demande = new Demande();
-            $id = Input::get('id');
-            $action = Input::get('action');
-            if($action === "delete") {
-                $demande->delete($id);
-            } else if($action === "cancel") {
-                $demande->cancel($id, [
-                    "status_demande" => "Canceled"
-                ]);
-            } else if($action === "pay") {
-                $Demande = $user->getDemande($id);
-                if($Demande->results()) {
-                    if (Session::exists('pay')) Session::delete('pay');
-                    else {
-                        Session::put('pay', $id);
-                    }
-                    $alerts += ['ok' => 'passed'];
-                        $alerts = json_encode($alerts);
-                        echo $alerts;
-                }
-            }
+        
+        
             $demandes = $user->getDemandes()
         ->results();
-        }
-        if($action !== "pay")  {
+        
+        
     foreach ($demandes as $demande)
     {
 
@@ -172,7 +152,8 @@ if (Session::exists("user"))
 
 
                     <?php
-    } }
+    } 
+
 ?>
 
 
