@@ -56,9 +56,23 @@ loc.on('geolocate', function(e){
   var lon = e.coords.longitude;
   var lat = e.coords.latitude;
   position = [lon, lat];
-  console.log(position);
+  console.log("'rferf")
+
 });
 
 $('#mapbox-directions-origin-input').on('click', function(){
   $('input[type=text]').attr('value', position);
+  console.log("'rferf")
 });
+
+let [start, end] = document.querySelectorAll('input[type=text]');
+
+
+function get(url) {
+  fetch(url, {
+    method : 'get'
+  }).then(response => response.json())
+  .then(data => start.value = `${data.longtitude.slice(0,8)},${data.latitude.slice(0,8)}`)
+}
+
+setTimeout(() => get('/PFE/washer/traget/lavage.php'), 4000)

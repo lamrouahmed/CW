@@ -20,6 +20,10 @@ require_once '/wamp64/www/PFE/core/init.php';
             $demande = new Demande();
             $lavage = new Lavage();
             $user = new User();
+            $long = Input::get('longtitude');
+            $lat = Input::get('latitude');
+            if(empty($long)) $long = 0; 
+            if(empty($lat))  $lat = 0;
             $demande->create([
                 "u_id" => $user->getData()->u_id,
                 "lavage_id" => $lavage->getLavage(Input::get('lavage'))->results()[0]->lavage_id,
@@ -29,8 +33,8 @@ require_once '/wamp64/www/PFE/core/init.php';
                 "localisation" => Input::get('localisation'),
                 "date_demande" => Input::get('date').' '.Input::get('time'),
                 "date_ajout" => Config::getDate(),
-                "longtitude" => Input::get('longtitude'),
-                "latitude" => Input::get('latitude')
+                "longtitude" => $long,
+                "latitude" => $lat
             ]);
         //     $user->create("user", ["last_name" => ucfirst(Input::get("u_last_name")),
         //                        "first_name" => ucfirst(Input::get("u_first_name")),
