@@ -111,7 +111,7 @@ $demandes = $d->getDemandesP()->results();
         font-weight:700;
         margin-top:-15px;
       }
-      .mapboxgl-popup-content .trigger_popup
+      .mapboxgl-popup-content
       {
         cursor: pointer;
       }
@@ -188,8 +188,11 @@ type="text/css"
     <span class="helper"></span>
     <div>
         <div class="popupCloseButton">&times;</div>
+
   <form action=<?php echo escape($_SERVER["PHP_SELF"]);?> method="POST">
+
       <label for="lavages">Choisissez un lavage mobile :</label><br>
+
         <select id="lavages" name="lavages">
           <?php
           foreach ($lavages as $lavage) {
@@ -219,7 +222,9 @@ type="text/css"
       </div>
 </div>
 <style type="text/css">
-  .hover{
+
+  .hover
+  {
     background:rgba(0,0,0,.4);
     cursor:pointer;
     display:none;
