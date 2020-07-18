@@ -1,6 +1,14 @@
 <?php
 require_once '/wamp64/www/PFE/core/init.php';
+require_once '/wamp64/www/PFE/admin/lavage/lavage.inc.php';
 require_once '/wamp64/www/PFE/admin/sideBar/sideBar.php';
+
+$l = new Washer();
+$lavages = $l->getWashers()->results();
+
+$d = new Demande();
+$demandes = $d->getDemandesP()->results();
+
 ?>
 
 <!DOCTYPE html>
@@ -103,6 +111,10 @@ require_once '/wamp64/www/PFE/admin/sideBar/sideBar.php';
         font-weight:700;
         margin-top:-15px;
       }
+      .mapboxgl-popup-content .trigger_popup
+      {
+        cursor: pointer;
+      }
 
       .mapboxgl-popup-content h4 {
         margin:0;
@@ -127,6 +139,10 @@ require_once '/wamp64/www/PFE/admin/sideBar/sideBar.php';
         border-bottom-color: #91c949;
       }
 
+      .name 
+      {
+        cursor: pointer;
+      }
 
     </style>
   </head>
@@ -163,12 +179,136 @@ type="text/css"
       margin: 0;
       padding: 5px 10px;
       border-radius: 3px;
-}
+    }
 </style>
 
      <div id='map'></div>
 
+     <div class="hover">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+  <form action=<?php echo escape($_SERVER["PHP_SELF"]);?> method="POST">
+      <label for="lavages">Choisissez un lavage mobile :</label><br>
+        <select id="lavages" name="lavages">
+          <?php
+          foreach ($lavages as $lavage) {
+          ?>
+
+          <option value="<?php $lavage->username ?>"><?php echo $lavage->nom ?></option>
+
+          <?php
+        }
+        ?>
+    </select><br><br>
+
+    <label for="lavages">Choisissez une demande :</label><br>
+        <select id="demandes" name="demandes">
+          <?php
+          foreach ($demandes as $demande) {
+          ?>
+
+          <option value="<?php $demande->demande_id ?>"><?php echo $demande->demande_id ?></option>
+
+          <?php
+        }
+        ?>
+    </select><br><br>
+    <input type="submit" value="Envoyer">
+  </form>
+      </div>
 </div>
+<style type="text/css">
+  .hover{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.hover label
+{
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.hover select 
+{
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+    background: transparent;
+    line-height: 1;  
+    width: 50%;
+    z-index: 10;  
+}
+
+.hover input
+{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    line-height: 2;
+    font-size: 13px;
+}
+
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
 <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
 <script type="module" src="script.js"></script>
