@@ -38,6 +38,10 @@
             $this->db->update("demande_id", $id, "demande", $params);
         }
 
+        public function forward($id, $params = []) {
+            $this->db->update("demande_id", $id, "demande", $params);
+        }
+
         public function uDelete($id, $params = []) {
             $this->db->update("demande_id", $id, "demande", $params);
         }
