@@ -343,13 +343,13 @@
         **/
         function createPopUp(currentFeature) {
           var popUps = document.getElementsByClassName('mapboxgl-popup');
-          if (popUps[0]) popUps[0].remove();
+          
           var popup = new mapboxgl.Popup({closeOnClick: false})
             .setLngLat([currentFeature.longtitude, currentFeature.latitude])
-            .setHTML('<h2><a href="#">' + currentFeature.nom + '</a></h2>' + '<h3>' + currentFeature.tel + '</h3>' +
+            .setHTML('<h2><a class="name">' + currentFeature.nom + '</a></h2>' + '<h3>' + currentFeature.tel + '</h3>' +
               '<h4>' + currentFeature.addresse + '</h4>')
             .addTo(map);
-        }
+          }
       });    
      });   
       
@@ -407,10 +407,17 @@
               .setHTML('<h2>' + client.demande_id + '</h2>')
               .addTo(map);
 
-              popupId.addClassName('popupClient')
+              popupId.addClassName('popupClient');
             }
         });
           });
         });
 
-   
+      $(window).load(function () {
+    $(".mapboxgl-ctrl-attrib").click(function(){
+       $('.hover').show();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover').hide();
+    });
+});
