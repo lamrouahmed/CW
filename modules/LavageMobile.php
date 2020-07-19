@@ -20,8 +20,11 @@
                         $this->data = $data->results()[0];
                     }
                 }
-            
-        }
+            }
+
+
+
+    }
 
 
 
