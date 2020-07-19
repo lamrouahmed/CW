@@ -1,5 +1,4 @@
-const $ = e => document.querySelector(e);
-const $$ = e => document.querySelectorAll(e);
+
 
 import "https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js";
 
@@ -346,10 +345,10 @@ fetch("./lavage.json")
       **/
       function createPopUp(currentFeature) {
         var popUps = document.getElementsByClassName('mapboxgl-popup');
-        if (popUps[0]) popUps[0].remove();
+       
         var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat([currentFeature.longtitude, currentFeature.latitude])
-          .setHTML('<h2><a href="#">' + currentFeature.nom + '</a></h2>' + '<h3>' + currentFeature.tel + '</h3>' +
+          .setHTML('<h2><a class="name">' + currentFeature.nom + '</a></h2>' + '<h3>' + currentFeature.tel + '</h3>' +
             '<h4>' + currentFeature.addresse + '</h4>')
           .addTo(map);
       }
@@ -417,7 +416,6 @@ fetch("./user.php")
     });
 
 
-
     function distance(lat1, lon1, lat2, lon2) {
       let radlat1 = Math.PI * lat1/180
       let radlat2 = Math.PI * lat2/180
@@ -434,4 +432,13 @@ fetch("./user.php")
       return dist
   }
 
-   
+  
+      $(window).load(function () {
+    $(".mapboxgl-ctrl-attrib").click(function(){
+       $('.hover').show();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover').hide();
+    });
+});
+    
