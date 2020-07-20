@@ -20,7 +20,12 @@
                         $this->data = $data->results()[0];
                     }
                 }
-       
+            }
+
+
+        public function getLavageMobile(string $nom) {
+            return $this->db->getOne("nom", "'".$nom."'", "lavage_mobile");
+        }
 
 
     }
