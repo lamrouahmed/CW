@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*-------- Mobile Media Queries ---------*/
 /*-------- Tablet Media Queries ---------*/
 *,
 *::after,
@@ -541,6 +542,132 @@ body {
   }
   .horodatage .label {
     margin-left: 2rem !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .lavageDisponible,
+  .vehiculeDisponible,
+  .pricing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lavageDisponible #l, .lavageDisponible #v,
+  .vehiculeDisponible #l,
+  .vehiculeDisponible #v,
+  .pricing #l,
+  .pricing #v {
+    width: 89% !important;
+    margin-bottom: 2rem;
+  }
+  #l_d,
+  #v_d,
+  #h_d,
+  #loc_d,
+  #t_d,
+  #p_d,
+  #d_d {
+    width: 100% !important;
+  }
+  #loc_d {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #loc_d > p {
+    width: 89% !important;
+  }
+  #loc_d textarea {
+    width: 25rem !important;
+  }
+  #q_d,
+  #t_d {
+    width: 89% !important;
+  }
+  #q_d {
+    margin-top: 3rem;
+  }
+  .lavages,
+  .vehicules {
+    margin-left: 0 !important;
+  }
+  .lavages .vehicule,
+  .vehicules .vehicule {
+    margin-right: 0 !important;
+  }
+  .lavages .vehicule:nth-child(2) .label,
+  .vehicules .vehicule:nth-child(2) .label {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+  .lavages .lavage,
+  .vehicules .lavage {
+    margin-right: 0 !important;
+  }
+  .lavages .lavage:nth-child(2) .label,
+  .vehicules .lavage:nth-child(2) .label {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+  .lavages .label,
+  .vehicules .label {
+    width: 8rem !important;
+  }
+  .lavages .label .svg > svg,
+  .vehicules .label .svg > svg {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  .lavages .label .svgText,
+  .vehicules .label .svgText {
+    margin-left: 0 !important;
+  }
+  .lavages .label .svgText > p,
+  .vehicules .label .svgText > p {
+    font-size: .85rem;
+  }
+  .lavages .lavage,
+  .lavages .vehicules,
+  .vehicules .lavage,
+  .vehicules .vehicules {
+    margin-right: 0 !important;
+  }
+  .pricing {
+    height: 2rem !important;
+    margin-top: 3rem !important;
+  }
+  .pricing > p {
+    display: none !important;
+  }
+  .pricing .prix {
+    width: 100% !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .pricing .prix .prixLavage {
+    width: auto !important;
+  }
+  .pricing .prix .prixLavage h2 {
+    font-weight: 400 !important;
+    font-size: 1.2rem !important;
+  }
+  .horodatage {
+    margin-top: 0 !important;
+  }
+  .horodatage > p {
+    display: none !important;
+  }
+  .horodatage .timestampWrapper {
+    margin-left: -3.5rem !important;
+  }
+  .horodatage .timestampWrapper > div .label input {
+    margin-left: .5rem !important;
+  }
+  .horodatage .timestampWrapper .time .label {
+    margin-left: 0 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@ if(Session::exists(('admin'))) {
 
         if($validate->isValid()) {
             $demande = new Demande();
-            $lavage = new LavgeMobile();
+            $lavage = new LavageMobile();
             $id = $demande->getDemandes(Input::get('demandes'))->results()[0]->demande_id;
             $demande->forward($id, [
                 "lavage_mobile_id" => $lavage->getLavageMobile(Input::get('lavages'))->results()[0]->lavage_id

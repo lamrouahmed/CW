@@ -68,11 +68,11 @@
     <div class="wrapper">
         <div class="formWrapper">
             <form class="form" method="POST" action=<?php echo escape($_SERVER["PHP_SELF"]);?>>
-                <div class="title">
+                <div class="title" id="t_d">
                     <h1>Demandez votre lavage</h1>
                 </div>
-                <div class="lavageDisponible">
-                    <p><span class="span">Choisissez votre </span>type de lavage</p>
+                <div class="lavageDisponible" id="l_d">
+                    <p id="l"><span class="span">Choisissez votre </span>type de lavage</p>
 
                     <div class="lavages">
                         <div class="lavage">
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pricing">
+                <div class="pricing" id="p_d">
                     <p>Prix de lavage</p>
                     <div class="prix">
                         <div class="prixLavage">
@@ -227,8 +227,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="vehiculeDisponible">
-                    <p><span class="span">Choisissez votre </span>type de vehicule</p>
+                <div class="vehiculeDisponible" id="v_d">
+                    <p id="v"><span class="span">Choisissez votre </span>type de vehicule</p>
 
                     <div class="vehicules">
                         <div class="vehicule">
@@ -464,8 +464,8 @@
                     </div>
                 </div>
 
-                <div class="quantityWrapper">
-                    <p>Nombre de vehicule</p>
+                <div class="quantityWrapper" id="q_d">
+                    <p id="q">Nombre de vehicule</p>
                     <div class="nbVehicules">
                         <button class="dec btn" data-action="-" type="button">-</button>
                         <input type="text" name="quantite" class="quantite" value="1" min="1" max="9">
@@ -473,7 +473,7 @@
                     </div>
                 </div>
 
-                <div class="horodatage">
+                <div class="horodatage" id="h_d">
                     <p><span class="span">Choissisez</span> l'heure et la date</p>
                     <div class="timestampWrapper">
                     <div class="date">
@@ -534,7 +534,7 @@
 
                 </div>
 
-                <div class="localisation">
+                <div class="localisation" id="loc_d">
                     <p><span class="span">Choissisez</span> votre localisation</p>
                     <label class="label">
                         <label class="Label">
@@ -544,14 +544,14 @@
                         </label>
                     </label>
                 </div>
-                <div class="total">
+                <div class="total" id="t_d">
                     <p>Prix totale</p>
                     <div class="prix">
                         <h2> M.A.D</h2>
                         <input type="hidden" name="price" class="price">
                     </div>
                 </div>
-                <div class="demande">
+                <div class="demande" id="d_d">
                     <button type="submit" name="demande" class="book">Demandez</button>
                 </div>
             </form>
