@@ -9,6 +9,19 @@ $maxTablet: 1200px;
     }
 }
 
+
+/*-------- Mobile Media Queries ---------*/
+
+$minMobile: 300px;
+$maxMobile: 736px;
+
+
+@mixin mobile {
+    @media (min-width: #{$minMobile}) and (max-width: #{$maxMobile}) {
+        @content;
+    }
+}
+
 // .Y .statusColor {
 //     background-color: #2c7171;
 // }
@@ -1085,5 +1098,11 @@ main {
         .demandes {
             width: 33.5rem;
         }
+    }
+}
+
+@include mobile {
+    .guideWrapper {
+        width: 34rem !important;
     }
 }

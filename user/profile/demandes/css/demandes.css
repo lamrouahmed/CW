@@ -1,4 +1,5 @@
 /*-------- Mobile Media Queries ---------*/
+/*-------- Mobile Media Queries ---------*/
 *,
 *::after,
 *::before {
@@ -931,6 +932,12 @@ main .add svg path {
 @media (min-width: 300px) and (max-width: 1200px) {
   .demandesWrapper .demandes {
     width: 33.5rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .guideWrapper {
+    width: 34rem !important;
   }
 }
 /*# sourceMappingURL=demandes.css.map */
