@@ -1365,6 +1365,7 @@ footer {
 
 @include tablet {
 
+
     .girl {
         img {
             height: 38em !important;
@@ -1380,13 +1381,13 @@ footer {
 
     .login.btn {
         a {
-            padding: .8em 1em !important;
+            padding: .8em .8em !important;
         }
     }
 
     .signup.btn {
         a {
-            padding: .9em 1em !important;
+            padding: .9em .7em !important;
         }
     }
 
@@ -1425,6 +1426,7 @@ footer {
 
     .navList {
         margin-right: 1em !important;
+        white-space: nowrap;
     }
 
     .head {

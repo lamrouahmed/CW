@@ -1331,10 +1331,10 @@ footer section .mid .prt .twitter svg {
     white-space: nowrap;
   }
   .login.btn a {
-    padding: .8em 1em !important;
+    padding: .8em .8em !important;
   }
   .signup.btn a {
-    padding: .9em 1em !important;
+    padding: .9em .7em !important;
   }
   .choose {
     -webkit-box-orient: vertical;
@@ -1364,6 +1364,7 @@ footer section .mid .prt .twitter svg {
   }
   .navList {
     margin-right: 1em !important;
+    white-space: nowrap;
   }
   .head h2 {
     text-align: center;
