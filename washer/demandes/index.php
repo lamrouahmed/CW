@@ -9,6 +9,23 @@ $Y = $d->getDemandesY()->count();
 $N = $d->getDemandesN()->count();
 $demandes = $d->getDemandes();
 
+if(Input::exists()) {
+    $id = Input::get('id');
+    $action = Input::get('action');
+
+    if ($action === "accept") {
+        $demande->accept($id, [
+            "status_demande" => "Y",
+            "date_maj" => Config::getDate()
+        ]);
+    } else if ($action === "refuse") {
+        $demande->refuse($id, [
+            "status_demande" => "Pending",
+            "date_maj" => Config::getDate()
+        ]);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -242,9 +259,11 @@ $demandes = $d->getDemandes();
     </div>
 
 
-        
+ <script type="text/javascript" src="./script/script.js"></script>       
 </body>
 </html>
+
+
 <?php
 }
 else
