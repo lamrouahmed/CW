@@ -440,5 +440,11 @@ fetch("./user.php")
     $('.popupCloseButton').click(function(){
         $('.hover').hide();
     });
+
+    setTimeout(() => {
+      const links = document.querySelectorAll('.mapboxgl-ctrl-attrib-inner a');
+      links.forEach(link => link.addEventListener('click', e => e.preventDefault()))
+    }, 1000)
+    
 });
     
