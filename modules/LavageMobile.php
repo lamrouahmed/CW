@@ -28,10 +28,9 @@
         }
 
 
-    
-
-
-
+        public function getAll() {
+            return $this->db->query("SELECT * FROM lavage_mobile", [], "SELECT");
+        }
 
 
 
@@ -60,12 +59,27 @@
 
         public function getDemandes() 
         {
-            return $this->db->query("SELECT * FROM demande JOIN lavage USING(lavage_id) WHERE u_id = {$this->data->u_id} AND status_demande <> 'D' ", [], "SELECT");
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON(l.lavage_id = d.lavage_mobile_id) JOIN user u ON (u.u_id = d.u_id) WHERE d.status_demande <> 'D' ", [], "SELECT");
         }
 
-        public function addDemande($id) {
-            $this->update("lavage_id", Session::get($this->sessionName), "lavage_mobile", [
-                'demande_id' => $id
+        public function getDemandesY() 
+        {
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON (l.lavage_id = d.lavage_mobile_id) WHERE d.status_demande = 'Y' ", [], "SELECT");
+        }
+
+        public function getDemandesN() 
+        {
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON (l.lavage_id = d.lavage_mobile_id) WHERE d.status_demande = 'N' ", [], "SELECT");
+        }
+
+        public function getDemandesP() 
+        {
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON (l.lavage_id = d.lavage_mobile_id) WHERE d.status_demande = 'Pending' ", [], "SELECT");
+        }
+
+        public function addDemande($l_id, $d_id) {
+            $this->update("lavage_id", $l_id, "lavage_mobile", [
+                'demande_id' => $d_id
             ]);
         }
     }

@@ -1,6 +1,27 @@
 <?php
 require_once '../../core/init.php';
 require_once '../sideBar/sideBar.php';
+
+$s = new Status();
+$d = new LavageMobile(Session::get('username'));
+if (Input::exists()) {
+  $date = Input::get('date');
+  $id = $d->getDemandesY()->demande_id;
+  $s->addStatus($id, [
+    'u_id' => $d->getDemandesY()->u_id,
+    'h_arrive' => $date
+  ]);
+}
+
+if (Input::exists()) {
+  $date = Input::get('date');
+  $id = $d->getDemandesY()->demande_id;
+  $s->addStatus($id, [
+    'u_id' => $d->getDemandesY()->u_id,
+    'h_voiture_main' => $date
+  ]);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en" >

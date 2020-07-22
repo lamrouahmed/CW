@@ -1,0 +1,604 @@
+/*-------- Tablet Media Queries ---------*/
+/*-------- Mobile Media Queries ---------*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  white-space: nowrap;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f4f7;
+}
+
+.Wrapper {
+  margin-left: 7em;
+  height: 100%;
+  position: relative;
+
+}
+
+.info {
+  width: 80%;
+  margin: 0 auto;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+
+.info .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info .stats > div {
+  margin-right: 1.4em;
+}
+
+.info .stats .title,
+.info .stats .text {
+  font-weight: 500;
+}
+
+.info .stats .text {
+  font-size: 1.5rem;
+  color: #3976ec;
+}
+
+.info .stats .title {
+  font-size: .8rem;
+  color: #5e5959;
+  margin-bottom: .5rem;
+}
+
+.info .guide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.info .guide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1.5rem;
+}
+
+.info .guide > div .text {
+  font-weight: 500;
+  color: #5e5959;
+  font-size: .8rem;
+}
+
+.info .guide > div .img {
+  margin-right: .5rem;
+}
+
+.info .guide > div .img img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.actions {
+  width: 80%;
+  margin: 0 auto;
+  height: 4rem;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 5px 0 #d7d3d3;
+          box-shadow: 0 0 5px 0 #d7d3d3;
+}
+
+.actions .checkBox_h {
+  width: 3.8rem;
+  height: 3.8rem;
+  margin-left: .6rem;
+}
+
+.actions .checkBox_h .label_h {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.actions .btns_h {
+  display: none;
+}
+
+.actions .btns_h div {
+  cursor: pointer;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: .3rem;
+}
+
+.actions .btns_h div svg {
+  height: 1rem;
+  width: 1rem;
+  fill: grey;
+}
+
+.actions .btns_h div svg path {
+  fill: grey;
+}
+
+.actions .btns_h div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.actions .btns_h .accept_h:hover::after {
+  background-color: #bee6cd;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.actions .btns_h .accept_h:hover svg path {
+  fill: #379b75;
+}
+
+.actions .btns_h .refuse_h:hover::after {
+  background-color: #f2d9638c;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.actions .btns_h .refuse_h:hover svg path {
+  fill: #ffd200;
+}
+
+.actions .btns_h .delete_h:hover::after {
+  background-color: #f2624b63;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.actions .btns_h .delete_h:hover svg {
+  fill: #f44336;
+}
+
+.actions .btns_h .delete_h:hover path {
+  fill: #f44336;
+}
+
+.header,
+.demande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header > div,
+.demande > div {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+}
+
+.header > div:first-child,
+.demande > div:first-child {
+  width: 3rem;
+}
+
+.checkboxSvg,
+.checkboxSvg_h {
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  stroke: #c0c2c4;
+  stroke-width: 5;
+  fill: white;
+  stroke-width: 6px;
+}
+
+.checkboxSvg .box,
+.checkboxSvg_h .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 6px;
+}
+
+.checkboxSvg .check,
+.checkboxSvg_h .check {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 83;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.checked .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.checked .box {
+  fill: #007ce2;
+  stroke: #007ce2;
+  stroke-width: 10px;
+}
+
+.checkB,
+.checkB_h {
+  display: none;
+}
+
+.header {
+  -webkit-box-shadow: -4px 0px 4px -2px #d7d3d3, 4px 0px 4px -2px #d7d3d3;
+          box-shadow: -4px 0px 4px -2px #d7d3d3, 4px 0px 4px -2px #d7d3d3;
+  position: relative;
+  background-color: #F7F7F7;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header > div {
+  width: 5rem;
+  font-size: .8rem;
+  color: #999292;
+  font-weight: 500;
+}
+
+.header .void {
+  width: 3.8rem;
+}
+
+.header .username_h {
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.header .date_demande_h,
+.header .action_h {
+  width: 10rem;
+}
+
+.searchContainer {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.searchContainer .search {
+  height: 2.5rem;
+  border-radius: 30px;
+  border: 1px solid #d8d5d5;
+  font-weight: 500;
+  padding-left: 1rem;
+  width: 6rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.searchContainer .search:focus {
+  width: 12rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.searchContainer .searchSvg {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.searchContainer .searchSvg svg {
+  width: 1.5rem;
+  width: 1.5rem;
+}
+
+.searchContainer .searchSvg svg path {
+  fill: #bebdbd;
+}
+
+.demandeWrapper {
+  margin-bottom: 2rem;
+}
+
+.demandeWrapper .demandes {
+  width: 80%;
+  -webkit-box-shadow: 0px 0px 5px 2px #d7d3d3;
+          box-shadow: 0px 0px 5px 2px #d7d3d3;
+  margin: 0 auto;
+}
+
+.demandeWrapper .demande {
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFF;
+  margin: 0 auto;
+  width: 100%;
+  height: 4rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+  position: relative;
+  margin-bottom: 1px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande:hover {
+  background-color: #f8f8f8;
+}
+
+.demandeWrapper .demande:hover .btns .accept svg path {
+  fill: #379b75 !important;
+}
+
+.demandeWrapper .demande:hover .btns .refuse svg path {
+  fill: #ffd200 !important;
+}
+
+.demandeWrapper .demande:hover .btns .delete svg {
+  fill: #f44336 !important;
+}
+
+.demandeWrapper .demande:hover .btns .delete path {
+  fill: #f44336 !important;
+}
+
+.demandeWrapper .demande .id {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 3rem;
+}
+
+.demandeWrapper .demande .checkBox {
+  width: 3.8rem;
+}
+
+.demandeWrapper .demande .status {
+  width: 5rem;
+}
+
+.demandeWrapper .demande .img {
+  border-radius: 100%;
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+}
+
+.demandeWrapper .demande .img img {
+  border-radius: 100%;
+  background-color: #494e51;
+  width: 3rem;
+  height: 3rem;
+}
+
+.demandeWrapper .demande .img .status {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+  bottom: 5px;
+  right: 5px;
+}
+
+.demandeWrapper .demande .img .offline {
+  background-color: #f52e0b;
+}
+
+.demandeWrapper .demande .img .online {
+  background-color: #49c466;
+}
+
+.demandeWrapper .demande .prix {
+  width: 5rem;
+}
+
+.demandeWrapper .demande .username {
+  width: 7rem;
+}
+
+.demandeWrapper .demande .status img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.demandeWrapper .demande .lavage,
+.demandeWrapper .demande .vehicule,
+.demandeWrapper .demande .nbVehicule {
+  width: 5rem;
+}
+
+.demandeWrapper .demande > div {
+  font-weight: 500;
+  font-size: .75rem;
+  color: #424141;
+}
+
+.demandeWrapper .demande .btns div {
+  cursor: pointer;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: .3rem;
+}
+
+.demandeWrapper .demande .btns div svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.demandeWrapper .demande .btns div::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  opacity: .5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.demandeWrapper .demande .btns .accept:hover::after {
+  background-color: #bee6cd;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .accept svg path {
+  fill: #000000;
+}
+
+.demandeWrapper .demande .btns .refuse:hover::after {
+  background-color: #f2d9638c;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .refuse svg path {
+  fill: black;
+}
+
+.demandeWrapper .demande .btns .delete:hover::after {
+  background-color: #f2624b63;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demandeWrapper .demande .btns .delete svg {
+  fill: #000000;
+}
+
+.demandeWrapper .demande .btns .delete path {
+  fill: #000000;
+}
+
+.demandeWrapper .deleteAnimation {
+  opacity: 0;
+  scale: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.filter {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  height: 0 !important;
+  opacity: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-animation: none !important;
+          animation: none !important;
+}

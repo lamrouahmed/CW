@@ -6,8 +6,8 @@ require_once '/wamp64/www/PFE/admin/lavage/lavage.inc.php';
 
 
 if(Session::exists(('admin'))) {
-  $DB = DB::connect();
-$lavages = $DB->getAll('lavage_mobile')->results();
+$l = new LavageMobile(Session::get('username'));
+$lavages = $l->getAll()->results();
 
 $d = new Demande();
 $demandes = $d->getDemandesP()->results();
@@ -185,7 +185,7 @@ type="text/css"
     <div>
         <div class="popupCloseButton">&times;</div>
 
-  <form action=<?php echo escape($_SERVER["PHP_SELF"]);?> method="post">
+  <form action=<?php echo escape($_SERVER["PHP_SELF"]);?> method="POST">
 
       <label for="lavages">Choisissez un lavage mobile :</label><br>
 
@@ -194,7 +194,7 @@ type="text/css"
           foreach ($lavages as $lavage) {
           ?>
 
-          <option value="<?php $lavage->username ?>"><?php echo $lavage->nom ?></option>
+          <option><?php echo $lavage->nom ?></option>
 
           <?php
         }
@@ -207,7 +207,7 @@ type="text/css"
           foreach ($demandes as $demande) {
           ?>
 
-          <option value="<?php $demande->demande_id ?>"><?php echo $demande->demande_id ?></option>
+          <option><?php echo $demande->demande_id ?></option>
 
           <?php
         }
