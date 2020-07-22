@@ -25,7 +25,7 @@ session_start();
             if ($count > 0) 
             {
                 $_SESSION["username"] = $_POST["l_username"];
-                header("location:/PFE/washer");
+                header("location:/PFE/washer/demandes/index.php");
             }
             else
             {
