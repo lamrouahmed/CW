@@ -25,6 +25,68 @@ require_once '../sideBar/sideBar.php';
         top:10%;
         bottom:0;
       }
+      .popupClient .mapboxgl-popup-content {
+        width: 60px;
+        background-color: #6f6b6b;
+      }
+
+      .mapboxgl-popup {
+        padding-bottom: 50px;
+      }
+
+      .mapboxgl-popup-close-button {
+        display: all;
+      }
+      .mapboxgl-popup-content {
+        font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+        padding:0;
+        width:180px;
+      }
+      .mapboxgl-popup-content-wrapper {
+        padding:1%;
+      }
+      .mapboxgl-popup-content h2,h3 {
+        background:#c3c3c3;
+        color:#fff;
+        margin:0;
+        display:block;
+        padding:10px;
+        border-radius:3px 3px 0 0;
+        font-weight:700;
+        margin-top:-15px;
+      }
+      .mapboxgl-popup-content
+      {
+        cursor: pointer;
+      }
+
+      .mapboxgl-popup-content h4 {
+        margin:0;
+        display:block;
+        padding: 10px 10px 10px 10px;
+        font-weight:400;
+      }
+
+      .mapboxgl-popup-content div {
+        padding:10px;
+      }
+
+      .mapboxgl-container .leaflet-marker-icon {
+        cursor:pointer;
+      }
+
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+        margin-top: 15px;
+      }
+
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+        border-bottom-color: #91c949;
+      }
+
+      .name 
+      {
+        cursor: pointer;
+      }
       @media (min-width: 200px) and (max-width: 1200px) {
         #map {
           position:absolute;
@@ -45,6 +107,8 @@ require_once '../sideBar/sideBar.php';
     <div id='map'>Map</div>
 
 </div>
+<script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
 <script type="module" src="script.js"></script>
 
 </body>
