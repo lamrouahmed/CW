@@ -1,5 +1,5 @@
 var d = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit', second:'2-digit'});
-  var t = $("<span class='date'></span>").text(d);
+  var t = $("<span class='date' name='date'></span>").text(d);
 $('.steps').on('click', '.step--active', function() {
   $(this).removeClass('step--incomplete').addClass('step--complete');
   $(this).removeClass('step--active').addClass('step--inactive');
