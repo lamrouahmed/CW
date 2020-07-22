@@ -59,7 +59,7 @@
 
         public function getDemandes() 
         {
-            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON(l.lavage_id = d.lavage_mobile_id) JOIN user u ON (u.u_id = d.u_id)", [], "SELECT");
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON(l.lavage_id = d.lavage_mobile_id) JOIN user u ON (u.u_id = d.u_id) WHERE d.status_demande <> 'D' ", [], "SELECT");
         }
 
         public function getDemandesY() 
@@ -70,6 +70,11 @@
         public function getDemandesN() 
         {
             return $this->db->query("SELECT * FROM demande d JOIN lavage l ON (l.lavage_id = d.lavage_mobile_id) WHERE d.status_demande = 'N' ", [], "SELECT");
+        }
+
+        public function getDemandesP() 
+        {
+            return $this->db->query("SELECT * FROM demande d JOIN lavage l ON (l.lavage_id = d.lavage_mobile_id) WHERE d.status_demande = 'Pending' ", [], "SELECT");
         }
 
         public function addDemande($l_id, $d_id) {
