@@ -74,22 +74,6 @@ $demandes = $d->getDemandes();
                         <p>Non traitee</p>
                     </div>
                 </div>
-                <div class="C">
-                    <div class="img">
-                        <img src="./img/Canceled.svg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>Annulee</p>
-                    </div>
-                </div>
-                <div class="D">
-                    <div class="img">
-                        <img src="./img/Paid.svg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>Payee</p>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -160,7 +144,6 @@ $demandes = $d->getDemandes();
                 <div class="nb_vehicules_h">Nb_vehicule</div>
                 <div class="date_demande_h">D_demande</div>
                 <div class="status_h">Status</div>
-                <div class="prix_h">Prix</div>
                 <div class="action_h">Action</div>
             </div>
             <div class="demandes">
@@ -206,9 +189,7 @@ $demandes = $d->getDemandes();
                 <div class="status">
                     <img src="./img/<?php echo $result->status_demande?>.svg">
                 </div>
-                <div class="prix">
-                    <p><?php echo $result->prix * $result->nb_vehicules?> M.A.D</p>
-                </div>
+                
                 <div class="btns">
                     <?php
                         if(($result->status_demande === "Y") || ($result->status_demande === "N") || ($result->status_demande === "Pending")) { ?>
